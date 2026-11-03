@@ -1,7 +1,7 @@
 
-/* =================================
-   STAR LIGHT - MAIN STYLESHEET
-================================= */
+/* ==========================================
+   STAR LIGHT - FINAL HOMEPAGE THEME
+========================================== */
 
 * {
     margin: 0;
@@ -17,34 +17,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #10265f;
     background: linear-gradient(
-        120deg,
-        #e5f5ff 0%,
-        #eeeaff 35%,
-        #ffe5f6 70%,
-        #f4e7ff 100%
+        115deg,
+        #d9efff 0%,
+        #e8e8ff 35%,
+        #f4dfff 65%,
+        #ffdff2 100%
     );
-    line-height: 1.6;
     min-height: 100vh;
+    line-height: 1.5;
 }
 
-/* =================================
-   NAVIGATION
-================================= */
+
+/* ==========================================
+   NAVIGATION BAR
+========================================== */
 
 .header {
     width: 100%;
-    background: rgba(255, 255, 255, 0.48);
-    border-bottom: 2px solid rgba(119, 157, 235, 0.25);
-    box-shadow: 0 2px 8px rgba(42, 66, 125, 0.06);
+    background: linear-gradient(
+        100deg,
+        rgba(225, 244, 255, 0.94),
+        rgba(255, 225, 247, 0.94)
+    );
+    border-bottom: 2px solid rgba(120, 153, 226, 0.3);
+    box-shadow: 0 2px 8px rgba(30, 50, 100, 0.08);
 }
 
 .navbar {
-    min-height: 105px;
+    min-height: 108px;
     padding: 10px 4.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
 }
 
 .brand {
@@ -67,7 +71,7 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -77,19 +81,19 @@ body {
     font-weight: 600;
     padding: 9px 25px;
     border-radius: 20px;
-    transition: 0.25s ease;
+    transition: background 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #ffffff;
-    background: #10265f;
+    background: #071c56;
 }
 
 
-/* =================================
+/* ==========================================
    HERO SECTION
-================================= */
+========================================== */
 
 .hero {
     min-height: 340px;
@@ -99,12 +103,12 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 35px 220px 25px;
+    padding: 25px 220px;
     background: linear-gradient(
         110deg,
-        rgba(190, 225, 255, 0.45),
-        rgba(238, 225, 255, 0.48),
-        rgba(255, 205, 240, 0.45)
+        rgba(190, 225, 255, 0.55),
+        rgba(231, 222, 255, 0.48),
+        rgba(255, 204, 239, 0.55)
     );
 }
 
@@ -115,7 +119,7 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(30px, 3.3vw, 49px);
+    font-size: 49px;
     line-height: 1.25;
     font-weight: 800;
     color: #0c2053;
@@ -173,33 +177,34 @@ body {
 }
 
 
-/* =================================
-   DECORATIONS
-================================= */
-
-.decoration {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0.85;
-}
+/* ==========================================
+   HERO DECORATIONS
+========================================== */
 
 .book-decoration {
+    position: absolute;
     width: 205px;
     left: 3%;
     top: 43%;
     transform: translateY(-30%);
+    opacity: 0.85;
+    pointer-events: none;
 }
 
 .cap-decoration {
+    position: absolute;
     width: 190px;
     right: 4%;
     top: 32%;
+    opacity: 0.85;
+    pointer-events: none;
 }
 
 .sparkle {
     position: absolute;
     color: rgba(255, 255, 255, 0.85);
     font-size: 55px;
+    pointer-events: none;
 }
 
 .sparkle-left {
@@ -213,9 +218,9 @@ body {
 }
 
 
-/* =================================
-   SUBJECT SECTION
-================================= */
+/* ==========================================
+   SUBJECT HEADING
+========================================== */
 
 .subjects-section {
     padding: 10px 4% 35px;
@@ -248,9 +253,9 @@ body {
 }
 
 
-/* =================================
+/* ==========================================
    SUBJECT CARDS
-================================= */
+========================================== */
 
 .subject-grid {
     display: grid;
@@ -261,7 +266,7 @@ body {
 }
 
 .subject-card {
-    min-height: 290px;
+    min-height: 296px;
     padding: 20px 12px 23px;
     border-radius: 25px;
     display: flex;
@@ -269,7 +274,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .subject-card:hover {
@@ -278,30 +283,31 @@ body {
 }
 
 .mathematics-card {
-    background: linear-gradient(145deg, #b9dcff, #c5e2ff);
+    background: #b9dcff;
 }
 
 .physics-card {
-    background: linear-gradient(145deg, #f9c2e2, #f8c9e9);
+    background: #f8c5e5;
 }
 
 .chemistry-card {
-    background: linear-gradient(145deg, #ddccff, #e5caff);
+    background: #dfceff;
 }
 
 .computer-card {
-    background: linear-gradient(145deg, #b8f0e2, #c3f1e4);
+    background: #bdeee1;
 }
 
 .subject-icon {
     width: 112px;
     height: 112px;
+    flex-shrink: 0;
     margin-bottom: 5px;
 }
 
 .subject-card h3 {
     color: #0c2053;
-    font-size: clamp(19px, 2vw, 32px);
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 800;
     margin-bottom: 7px;
@@ -321,9 +327,9 @@ body {
 }
 
 
-/* =================================
-   BRAND / ABOUT SECTION
-================================= */
+/* ==========================================
+   STAR LIGHT BRAND SECTION
+========================================== */
 
 .brand-section {
     padding: 28px 4% 15px;
@@ -361,9 +367,9 @@ body {
 }
 
 
-/* =================================
+/* ==========================================
    FOOTER
-================================= */
+========================================== */
 
 .footer {
     background: #071c56;
@@ -374,15 +380,11 @@ body {
 }
 
 
-/* =================================
-   TABLET RESPONSIVENESS
-================================= */
+/* ==========================================
+   TABLET SCREEN
+========================================== */
 
 @media (max-width: 1000px) {
-
-    .navbar {
-        padding: 10px 3%;
-    }
 
     .brand {
         font-size: 32px;
@@ -406,6 +408,10 @@ body {
         padding-right: 150px;
     }
 
+    .hero h1 {
+        font-size: 38px;
+    }
+
     .book-decoration {
         width: 140px;
     }
@@ -424,9 +430,9 @@ body {
 }
 
 
-/* =================================
-   MOBILE RESPONSIVENESS
-================================= */
+/* ==========================================
+   MOBILE SCREEN
+========================================== */
 
 @media (max-width: 600px) {
 
