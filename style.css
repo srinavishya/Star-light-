@@ -1,4 +1,8 @@
 
+/* =================================
+   STAR LIGHT - MAIN STYLESHEET
+================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,196 +14,532 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f7ff, #fff5f8, #f5f0ff);
-    color: #263445;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #10265f;
+    background: linear-gradient(
+        120deg,
+        #e5f5ff 0%,
+        #eeeaff 35%,
+        #ffe5f6 70%,
+        #f4e7ff 100%
+    );
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* Navigation */
-header {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 18px 8%;
-    box-shadow: 0 2px 12px rgba(30, 50, 90, 0.08);
+/* =================================
+   NAVIGATION
+================================= */
+
+.header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.48);
+    border-bottom: 2px solid rgba(119, 157, 235, 0.25);
+    box-shadow: 0 2px 8px rgba(42, 66, 125, 0.06);
 }
 
 .navbar {
+    min-height: 105px;
+    padding: 10px 4.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-.logo {
-    color: #263b68;
-    font-size: 25px;
-    font-weight: bold;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #10265f;
     text-decoration: none;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand-logo {
+    width: 105px;
+    height: 75px;
+    flex-shrink: 0;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 22px;
 }
 
 .nav-links a {
-    color: #344563;
+    color: #10265f;
     text-decoration: none;
+    font-size: 21px;
     font-weight: 600;
+    padding: 9px 25px;
+    border-radius: 20px;
+    transition: 0.25s ease;
 }
 
-.nav-links a:hover {
-    color: #667eea;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    background: #10265f;
 }
 
-/* Hero section */
+
+/* =================================
+   HERO SECTION
+================================= */
+
 .hero {
+    min-height: 340px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 90px 20px 75px;
-    background: linear-gradient(135deg, #e5efff, #fff0f5, #f1eaff);
+    padding: 35px 220px 25px;
+    background: linear-gradient(
+        110deg,
+        rgba(190, 225, 255, 0.45),
+        rgba(238, 225, 255, 0.48),
+        rgba(255, 205, 240, 0.45)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
 }
 
 .hero h1 {
-    max-width: 850px;
-    margin: 0 auto 20px;
-    color: #263b68;
-    font-size: 38px;
-    line-height: 1.35;
+    font-size: clamp(30px, 3.3vw, 49px);
+    line-height: 1.25;
+    font-weight: 800;
+    color: #0c2053;
+    margin-bottom: 22px;
 }
 
-.hero p {
-    font-size: 19px;
-    color: #52627c;
-    margin-bottom: 30px;
+.board-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 7px 22px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: rgba(163, 177, 255, 0.32);
+    color: #10265f;
+    font-size: 21px;
+    font-weight: 600;
 }
 
-.explore-button {
-    display: inline-block;
-    background: #293f70;
-    color: white;
-    padding: 13px 28px;
-    border-radius: 30px;
+.board-label span {
+    font-size: 23px;
+}
+
+.primary-button,
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #071c56;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(10, 30, 80, 0.12);
+    transition: 0.25s ease;
 }
 
-.explore-button:hover {
-    background: #526da8;
-    transform: translateY(-2px);
+.primary-button {
+    padding: 13px 30px;
+    font-size: 21px;
 }
 
-/* Subjects */
-.subjects {
-    padding: 65px 8%;
+.primary-button:hover,
+.card-button:hover {
+    background: #354f99;
+    transform: translateY(-3px);
+}
+
+.primary-button span,
+.card-button span {
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* =================================
+   DECORATIONS
+================================= */
+
+.decoration {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.book-decoration {
+    width: 205px;
+    left: 3%;
+    top: 43%;
+    transform: translateY(-30%);
+}
+
+.cap-decoration {
+    width: 190px;
+    right: 4%;
+    top: 32%;
+}
+
+.sparkle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 55px;
+}
+
+.sparkle-left {
+    left: 4%;
+    top: 17%;
+}
+
+.sparkle-right {
+    right: 5%;
+    bottom: 14%;
+}
+
+
+/* =================================
+   SUBJECT SECTION
+================================= */
+
+.subjects-section {
+    padding: 10px 4% 35px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 5px auto 12px;
+}
+
+.section-heading span {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #8bbcff,
+        #b88ce9
+    );
+}
+
+.section-heading h2 {
+    color: #10265f;
+    font-size: 38px;
+    font-weight: 800;
     text-align: center;
+    white-space: nowrap;
 }
 
-.subjects h2,
-.about h2 {
-    color: #263b68;
-    font-size: 29px;
-    margin-bottom: 35px;
-}
+
+/* =================================
+   SUBJECT CARDS
+================================= */
 
 .subject-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 850px;
-    margin: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
 .subject-card {
-    padding: 40px 20px;
-    border-radius: 18px;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    color: #293b60;
-    box-shadow: 0 5px 18px rgba(40, 55, 90, 0.08);
-    transition: 0.3s;
+    min-height: 290px;
+    padding: 20px 12px 23px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
 }
 
 .subject-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(40, 55, 90, 0.14);
+    box-shadow: 0 12px 25px rgba(34, 55, 110, 0.12);
 }
 
-.mathematics {
-    background: #e4edff;
+.mathematics-card {
+    background: linear-gradient(145deg, #b9dcff, #c5e2ff);
 }
 
-.physics {
-    background: #fce8ef;
+.physics-card {
+    background: linear-gradient(145deg, #f9c2e2, #f8c9e9);
 }
 
-.chemistry {
-    background: #eee8ff;
+.chemistry-card {
+    background: linear-gradient(145deg, #ddccff, #e5caff);
 }
 
-.computer-science {
-    background: #e2f5ec;
+.computer-card {
+    background: linear-gradient(145deg, #b8f0e2, #c3f1e4);
 }
 
-/* About */
-.about {
-    max-width: 900px;
-    margin: 20px auto 65px;
-    padding: 45px 35px;
+.subject-icon {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 5px;
+}
+
+.subject-card h3 {
+    color: #0c2053;
+    font-size: clamp(19px, 2vw, 32px);
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.subject-card p {
+    color: #10265f;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.card-button {
+    width: 72%;
+    max-width: 230px;
+    padding: 9px 18px;
+    font-size: 20px;
+}
+
+
+/* =================================
+   BRAND / ABOUT SECTION
+================================= */
+
+.brand-section {
+    padding: 28px 4% 15px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
 }
 
-.about p {
-    color: #52627c;
-    font-size: 16px;
+.brand-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 
-.creator {
-    margin-top: 28px;
-    line-height: 1.9;
-    font-size: 14px !important;
+.brand-divider span {
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(
+        90deg,
+        #83b9ff,
+        #9274db
+    );
 }
 
-/* Footer */
-footer {
-    background: #263b68;
-    color: white;
+.brand-title {
+    color: #10265f;
+    font-size: 34px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.brand-section p {
+    color: #10265f;
+    font-size: 21px;
+    margin-top: 2px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    background: #071c56;
+    color: #ffffff;
     text-align: center;
-    padding: 22px;
-    font-size: 14px;
+    padding: 16px 10px;
+    font-size: 19px;
 }
 
-/* Mobile layout */
-@media (max-width: 600px) {
-    header {
-        padding: 16px 5%;
-    }
+
+/* =================================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 1000px) {
 
     .navbar {
-        flex-direction: column;
+        padding: 10px 3%;
+    }
+
+    .brand {
+        font-size: 32px;
+    }
+
+    .brand-logo {
+        width: 80px;
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+        padding: 8px 15px;
     }
 
     .hero {
-        padding: 65px 20px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    .book-decoration {
+        width: 140px;
+    }
+
+    .cap-decoration {
+        width: 135px;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .subject-card h3 {
+        font-size: 27px;
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 12px 10px 16px;
+        gap: 8px;
+    }
+
+    .brand {
+        font-size: 30px;
+    }
+
+    .brand-logo {
+        width: 75px;
+        height: 55px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 7px 13px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 55px 20px;
     }
 
     .hero h1 {
-        font-size: 27px;
+        font-size: 29px;
+    }
+
+    .board-label {
+        font-size: 15px;
+        padding: 7px 12px;
+    }
+
+    .primary-button {
+        font-size: 17px;
+        padding: 11px 22px;
+    }
+
+    .book-decoration {
+        width: 85px;
+        left: -18px;
+        top: 5px;
+        transform: none;
+        opacity: 0.35;
+    }
+
+    .cap-decoration {
+        width: 85px;
+        right: -15px;
+        top: auto;
+        bottom: 5px;
+        opacity: 0.35;
+    }
+
+    .sparkle {
+        font-size: 30px;
+    }
+
+    .subjects-section {
+        padding: 25px 18px;
+    }
+
+    .section-heading {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
     }
 
     .subject-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-    .about {
-        margin: 15px;
-        padding: 30px 20px;
+    .subject-card {
+        min-height: 270px;
+    }
+
+    .subject-card h3 {
+        font-size: 27px;
+    }
+
+    .subject-card p {
+        font-size: 18px;
+    }
+
+    .brand-section {
+        padding: 25px 15px;
+    }
+
+    .brand-divider {
+        gap: 10px;
+    }
+
+    .brand-title {
+        font-size: 25px;
+    }
+
+    .brand-section p {
+        font-size: 17px;
+    }
+
+    .footer {
+        font-size: 15px;
     }
 }
