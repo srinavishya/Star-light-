@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics Chapter | Star Light</title>
+    <link rel="stylesheet" href="style.css?v=4">
+
+    <style>
+        .chapter-hero {
+            text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(
+                110deg,
+                #e4f1ff,
+                #eee8ff,
+                #ffeafa
+            );
+        }
+
+        .chapter-hero h1 {
+            color: #10265f;
+            font-size: 34px;
+            max-width: 850px;
+            margin: 12px auto;
+        }
+
+        .chapter-hero p {
+            color: #465579;
+            font-size: 16px;
+        }
+
+        .chapter-label {
+            display: inline-block;
+            background: white;
+            color: #6559a9;
+            border-radius: 20px;
+            padding: 7px 16px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .learning-container {
+            max-width: 1050px;
+            margin: 35px auto 60px;
+            padding: 0 22px;
+        }
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .back-link {
+            color: #253d79;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bookmark-button {
+            border: 1px solid #b8b2e5;
+            background: white;
+            color: #263c79;
+            border-radius: 25px;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .bookmark-button.saved {
+            background: #eeeaff;
+            border-color: #8274d0;
+        }
+
+        .chapter-intro {
+            background: white;
+            border: 1px solid #e0e5f3;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 16px rgba(30, 50, 100, 0.06);
+        }
+
+        .chapter-intro h2 {
+            color: #10265f;
+            margin-bottom: 10px;
+        }
+
+        .chapter-intro p {
+            color: #52617c;
+            line-height: 1.7;
+        }
+
+        .section-heading {
+            color: #10265f;
+            text-align: center;
+            margin: 35px 0 20px;
+            font-size: 25px;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .learning-card {
+            background: white;
+            border: 1px solid #e1e5f2;
+            border-radius: 17px;
+            padding: 23px;
+            box-shadow: 0 5px 15px rgba(30, 50, 100, 0.05);
+        }
+
+        .learning-card h3 {
+            color: #172e68;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .learning-card p {
+            color: #596782;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .material-list {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: #465579;
+            line-height: 1.9;
+        }
+
+        .chapter-selector {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin: 25px auto;
+            padding: 12px;
+            border: 1px solid #c8cde2;
+            border-radius: 10px;
+            background: white;
+            color: #263b70;
+            font-size: 15px;
+        }
+
+        .bookmark-message {
+            text-align: center;
+            color: #4b5680;
+            min-height: 22px;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .chapter-note {
+            background: #f5f4ff;
+            border-left: 4px solid #9386d8;
+            border-radius: 9px;
+            padding: 16px;
+            color: #485477;
+            line-height: 1.6;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 650px) {
+            .chapter-hero h1 {
+                font-size: 27px;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chapter-navigation {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                <svg class="brand-logo" viewBox="0 0 100 75"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 53 C25 75 72 65 91 22"
+                          fill="none" stroke="#c66be8"
+                          stroke-width="6" stroke-linecap="round"/>
+                    <path d="M48 5 L56 24 L77 25 L61 39
+                             L66 59 L48 48 L30 59 L35 39
+                             L19 25 L40 24 Z"
+                          fill="#10265f"/>
+                </svg>
+                <span>Star Light</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="mathematics.html" class="active">Subjects</a>
+                <a href="about.html">About</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CHAPTER HEADING -->
+    <main>
+
+        <section class="chapter-hero">
+            <span class="chapter-label" id="chapter-label">
+                MATHEMATICS
+            </span>
+
+            <h1 id="chapter-title">Mathematics</h1>
+
+            <p id="volume-title">
+                Tamil Nadu State Board – Class 12
+            </p>
+        </section>
+
+
+        <section class="learning-container">
+
+            <div class="chapter-navigation">
+
+                <a href="mathematics.html" class="back-link">
+                    ← Back to Mathematics
+                </a>
+
+                <button
+                    type="button"
+                    class="bookmark-button"
+                    id="bookmark-button"
+                    onclick="toggleBookmark()">
+                    ☆ Bookmark Chapter
+                </button>
+
+            </div>
+
+
+            <div class="chapter-intro">
+                <h2>Welcome to this chapter!</h2>
+
+                <p id="chapter-description">
+                    Choose a chapter from the Mathematics page to begin
+                    learning.
+                </p>
+
+                <select
+                    class="chapter-selector"
+                    id="chapter-selector"
+                    aria-label="Select Mathematics chapter"
+                    onchange="changeChapter()">
+
+                    <option value="1">Chapter 1</option>
+                    <option value="2">Chapter 2</option>
+                    <option value="3">Chapter 3</option>
+                    <option value="4">Chapter 4</option>
+                    <option value="5">Chapter 5</option>
+                    <option value="6">Chapter 6</option>
+                    <option value="7">Chapter 7</option>
+                    <option value="8">Chapter 8</option>
+                    <option value="9">Chapter 9</option>
+                    <option value="10">Chapter 10</option>
+                    <option value="11">Chapter 11</option>
+                    <option value="12">Chapter 12</option>
+
+                </select>
+
+                <p class="bookmark-message" id="bookmark-message"
+                   aria-live="polite"></p>
+            </div>
+
+
+            <h2 class="section-heading">Explore Your Learning</h2>
+
+            <div class="learning-grid">
+
+                <article class="learning-card">
+                    <h3>📘 Book-back Questions</h3>
+                    <p>
+                        Practise the questions from the exercises
+                        and evaluation sections of your prescribed
+                        Mathematics textbook.
+                    </p>
+                </article>
+
+                <article class="learning-card">
+                    <h3>⭐ Important Questions</h3>
+                    <p>
+                        Revise selected questions organised by
+                        marks and question type.
+                    </p>
+                </article>
+
+                <article class="learning-card">
+                    <h3>✏️ Worked Examples</h3>
+                    <p>
+                        Study solved textbook examples with
+                        clear, step-by-step explanations.
+                    </p>
+                </article>
+
+                <article class="learning-card">
+                    <h3>📐 Formula Sheet</h3>
+                    <p>
+                        Review the important formulas and
+                        mathematical results used in this chapter.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <div class="chapter-note">
+                <strong>Learning tip:</strong>
+                Start with the textbook concepts and worked examples.
+                Then practise the exercises to strengthen your
+                understanding.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Star Light | Your Learning Companion</p>
+    </footer>
+
+
+    <script>
+        const chapters = {
+            1: {
+                title: "Applications of Matrices and Determinants",
+                volume: "Volume 1"
+            },
+            2: {
+                title: "Complex Numbers",
+                volume: "Volume 1"
+            },
+            3: {
+                title: "Theory of Equations",
+                volume: "Volume 1"
+            },
+            4: {
+                title: "Inverse Trigonometric Functions",
+                volume: "Volume 1"
+            },
+            5: {
+                title: "Two Dimensional Analytical Geometry – II",
+                volume: "Volume 1"
+            },
+            6: {
+                title: "Applications of Vector Algebra",
+                volume: "Volume 1"
+            },
+            7: {
+                title: "Applications of Differential Calculus",
+                volume: "Volume 2"
+            },
+            8: {
+                title: "Differentials and Partial Derivatives",
+                volume: "Volume 2"
+            },
+            9: {
+                title: "Applications of Integration",
+                volume: "Volume 2"
+            },
+            10: {
+                title: "Ordinary Differential Equations",
+                volume: "Volume 2"
+            },
+            11: {
+                title: "Probability Distributions",
+                volume: "Volume 2"
+            },
+            12: {
+                title: "Discrete Mathematics",
+                volume: "Volume 2"
+            }
+        };
+
+
+        const bookmarkKey = "starLightMathBookmarks";
+
+
+        function getCurrentChapter() {
+            const params = new URLSearchParams(window.location.search);
+            const number = Number(params.get("chapter"));
+
+            if (Number.isInteger(number) && chapters[number]) {
+                return number;
+            }
+
+            return 1;
+        }
+
+
+        function getBookmarks() {
+            try {
+                const saved = JSON.parse(
+                    localStorage.getItem(bookmarkKey) || "[]"
+                );
+
+                if (!Array.isArray(saved)) {
+                    return [];
+                }
+
+                return saved.filter(number =>
+                    Number.isInteger(number) && chapters[number]
+                );
+
+            } catch (error) {
+                return [];
+            }
+        }
+
+
+        function showChapter() {
+            const number = getCurrentChapter();
+            const chapter = chapters[number];
+
+            document.title = chapter.title + " | Star Light";
+
+            document.getElementById("chapter-label").textContent =
+                "CHAPTER " + String(number).padStart(2, "0");
+
+            document.getElementById("chapter-title").textContent =
+                chapter.title;
+
+            document.getElementById("volume-title").textContent =
+                "Tamil Nadu State Board – Class 12 | " + chapter.volume;
+
+            document.getElementById("chapter-description").textContent =
+                "You are viewing Chapter " + number + " from Mathematics " +
+                chapter.volume + ". Explore the learning resources for this chapter.";
+
+            document.getElementById("chapter-selector").value =
+                String(number);
+
+            updateBookmarkButton();
+        }
+
+
+        function changeChapter() {
+            const number =
+                document.getElementById("chapter-selector").value;
+
+            window.location.href =
+                "math-chapter.html?chapter=" + number;
+        }
+
+
+        function updateBookmarkButton() {
+            const number = getCurrentChapter();
+            const saved = getBookmarks();
+            const button = document.getElementById("bookmark-button");
+
+            if (saved.includes(number)) {
+                button.textContent = "★ Bookmarked";
+                button.classList.add("saved");
+            } else {
+                button.textContent = "☆ Bookmark Chapter";
+                button.classList.remove("saved");
+            }
+        }
+
+
+        function toggleBookmark() {
+            const number = getCurrentChapter();
+            let saved = getBookmarks();
+
+            if (saved.includes(number)) {
+                saved = saved.filter(item => item !== number);
+
+                document.getElementById("bookmark-message").textContent =
+                    "Chapter removed from your bookmarks.";
+            } else {
+                saved.push(number);
+
+                document.getElementById("bookmark-message").textContent =
+                    "Chapter added to your bookmarks.";
+            }
+
+            try {
+                localStorage.setItem(bookmarkKey, JSON.stringify(saved));
+                updateBookmarkButton();
+            } catch (error) {
+                document.getElementById("bookmark-message").textContent =
+                    "Your browser could not save this bookmark.";
+            }
+        }
+
+
+        showChapter();
+    </script>
+
+</body>
+</html>
