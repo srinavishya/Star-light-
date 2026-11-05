@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathematics Chapter Learning | Star Light</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,30 +18,42 @@
       line-height: 1.6;
       background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
     }
-    a { color: inherit; text-decoration: none; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .header, main {
       max-width: 1150px;
       margin: auto;
       padding: 22px 24px;
     }
+
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 18px;
     }
+
     .brand {
       font-size: 23px;
       font-weight: 800;
       color: #18356b;
     }
+
     nav {
       display: flex;
       gap: 22px;
       font-weight: bold;
       color: #18356b;
     }
-    main { margin: 10px auto 50px; }
+
+    main {
+      margin: 10px auto 50px;
+    }
+
     .top {
       display: flex;
       justify-content: space-between;
@@ -45,8 +61,17 @@
       margin: 8px 0 28px;
       gap: 14px;
     }
-    .back { font-weight: bold; color: #18356b; }
-    button, select { font: inherit; cursor: pointer; }
+
+    .back {
+      font-weight: bold;
+      color: #18356b;
+    }
+
+    button, select {
+      font: inherit;
+      cursor: pointer;
+    }
+
     .bookmark {
       border: 1px solid #b9b0ee;
       background: white;
@@ -55,27 +80,35 @@
       font-weight: bold;
       color: #18356b;
     }
+
     .hero, .card, .panel, .tip {
       background: white;
       border-radius: 20px;
       box-shadow: 0 10px 28px #455b8610;
     }
+
     .hero {
       padding: 28px;
       margin-bottom: 38px;
       min-height: 245px;
     }
+
     .hero h1 {
       margin: 0 0 14px;
       color: #18356b;
       font-size: 28px;
     }
+
     .hero p {
       color: #536783;
       font-size: 17px;
       margin: 0 0 26px;
     }
-    .selectwrap { text-align: center; }
+
+    .selectwrap {
+      text-align: center;
+    }
+
     select {
       width: min(520px, 100%);
       padding: 12px;
@@ -84,17 +117,23 @@
       color: #263b63;
       background: #fff;
     }
-    h2, h3 { color: #18356b; }
+
+    h2, h3 {
+      color: #18356b;
+    }
+
     .sectiontitle {
       text-align: center;
       font-size: 28px;
       margin: 0 0 26px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
+
     .card {
       padding: 24px;
       text-align: left;
@@ -102,31 +141,51 @@
       min-height: 145px;
       color: #263b63;
     }
+
     .card:hover, .card.active {
       border-color: #a99be9;
       transform: translateY(-2px);
     }
-    .card h3 { font-size: 21px; margin: 0 0 12px; }
-    .card p { margin: 0; color: #536783; }
+
+    .card h3 {
+      font-size: 21px;
+      margin: 0 0 12px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #536783;
+    }
+
     .tip {
       margin: 28px 0;
       padding: 18px 20px;
       border-left: 5px solid #9788df;
       background: #f8f5ff;
     }
+
     .panel {
       padding: 25px;
       margin-top: 25px;
       scroll-margin-top: 18px;
     }
+
     .panelhead {
       display: flex;
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .panelhead h2 { margin: 0; }
-    .note { font-size: 13px; color: #6b7890; }
+
+    .panelhead h2 {
+      margin: 0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #6b7890;
+    }
+
     .question, .formula {
       border: 1px solid #e1e5f0;
       border-radius: 13px;
@@ -134,20 +193,31 @@
       margin: 16px 0;
       background: #fff;
     }
-    .question h3 { font-size: 18px; line-height: 1.5; }
+
+    .question h3 {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
     .meta {
       font-size: 13px;
       color: #7669b2;
       font-weight: bold;
     }
+
     .answer {
       background: #f5f3ff;
       border-radius: 10px;
       padding: 16px;
       margin-top: 12px;
       white-space: pre-line;
+      line-height: 1.8;
     }
-    .answer[hidden], .panel[hidden] { display: none; }
+
+    .answer[hidden], .panel[hidden] {
+      display: none;
+    }
+
     .action {
       border: 0;
       background: #263f7a;
@@ -157,33 +227,59 @@
       font-weight: bold;
       margin-top: 8px;
     }
+
+    .action:hover {
+      background: #405b9b;
+    }
+
     .formula {
       background: #f8f7ff;
       border-left: 4px solid #9b8be4;
+      line-height: 1.8;
     }
+
     .footer {
       text-align: center;
       padding: 23px;
       background: #1d376e;
       color: white;
     }
+
     @media (max-width: 700px) {
       .header {
         align-items: flex-start;
         flex-direction: column;
       }
-      .grid { grid-template-columns: 1fr; }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
       .top {
         align-items: flex-start;
         flex-direction: column;
       }
-      .hero { padding: 22px; }
+
+      .hero {
+        padding: 22px;
+      }
+
+      .panel {
+        padding: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header class="header">
     <a class="brand" href="index.html">✦ Star Light</a>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="mathematics.html">Subjects</a>
@@ -192,6 +288,7 @@
   </header>
 
   <main>
+
     <div class="top">
       <a class="back" href="mathematics.html">← Back to Mathematics</a>
       <button class="bookmark" id="bookmark">☆ Bookmark Chapter</button>
@@ -199,14 +296,21 @@
 
     <section class="hero">
       <h1 id="welcome">Welcome to this chapter!</h1>
-      <p id="intro">Explore the learning resources for this chapter.</p>
+
+      <p id="intro">
+        Explore the learning resources for this chapter.
+      </p>
+
       <div class="selectwrap">
-        <select id="chapterSelect" aria-label="Choose chapter"></select>
+        <select id="chapterSelect" aria-label="Choose chapter">
+        </select>
       </div>
     </section>
 
     <h2 class="sectiontitle">Explore Your Learning</h2>
+
     <section class="grid">
+
       <button class="card" data-section="bookback">
         <h3>📘 Book-back Practice</h3>
         <p>Practise six chapter-based questions with answers.</p>
@@ -226,604 +330,3132 @@
         <h3>📐 Formula Sheet</h3>
         <p>Review important formulas and mathematical results.</p>
       </button>
+
     </section>
 
     <div class="tip">
       <b>Learning tip:</b>
-      Start with the worked examples. Then practise the questions to strengthen your understanding.
+      Start with the Worked Examples. Understand each step, then practise
+      the questions yourself before revealing the solutions.
     </div>
 
     <section class="panel" id="panel" hidden>
+
       <div class="panelhead">
         <h2 id="panelTitle"></h2>
         <span class="note" id="panelSub"></span>
       </div>
+
       <div id="content"></div>
+
     </section>
+
   </main>
 
-  <footer class="footer">Star Light | Your Learning Companion</footer>
+  <footer class="footer">
+    Star Light | Your Learning Companion
+  </footer>
 
   <script>
     const chapters = [
-{
-"title":"Applications of Matrices and Determinants","volume":1,
-"bookback":[
-["Evaluate det([[4,1],[2,3]]).","4×3−1×2=10."],
-["Find the inverse of [[1,2],[3,5]].","det=5−6=−1; adjoint=[[5,−2],[−3,1]]. Divide by −1: inverse=[[-5,2],[3,−1]]."],
-["Find the determinant of [[3,2],[5,4]].","Answer: 2."],
-["Find the inverse of A=[[2,1],[1,1]].","Answer: A⁻¹=[[1,−1],[−1,2]]."],
-["Solve 2x+y=7 and x−y=2 using elimination.","Answer: (x,y)=(3,1)."],
-["Find the adjoint of [[2,3],[1,4]].","Answer: adj(A)=[[4,−3],[−1,2]]."]
-],
-"important":[
-["Explain and solve: Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],
-["Explain and solve: Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],
-["Explain and solve: Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],
-["Explain and solve: Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],
-["Explain and solve: Use Cramer's rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],
-["Explain and solve: Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]
-],
-"worked":[
-["Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],
-["Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],
-["Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],
-["Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],
-["Use Cramer's rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],
-["Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]
-],
-"formula":[
-"det([[a,b],[c,d]])=ad−bc.",
-"A⁻¹=adj(A)/det(A), when det(A)≠0.",
-"For AX=B, X=A⁻¹B when A is invertible.",
-"Cramer's rule: xᵢ=Dᵢ/D when D≠0."
-]
+
+      // =====================================================
+      // CHAPTER 1 – APPLICATIONS OF MATRICES AND DETERMINANTS
+      // =====================================================
+
+      {
+        title: "Applications of Matrices and Determinants",
+        volume: 1,
+
+        bookback: [
+
+          [
+            "1. Evaluate the determinant | 4  3; 2  5 |.",
+
+            `Step 1: Recall the determinant formula.
+
+For a matrix
+A = [ a  b ]
+    [ c  d ]
+
+det(A) = ad - bc
+
+Step 2: Identify the values.
+
+a = 4, b = 3, c = 2, d = 5
+
+Step 3: Substitute into the formula.
+
+det(A) = (4 × 5) - (3 × 2)
+       = 20 - 6
+       = 14
+
+Final Answer: 14`
+          ],
+
+          [
+            "2. Find the determinant of the matrix A = [ 2  1; 5  3 ].",
+
+            `Step 1: Use the formula for a 2 × 2 determinant.
+
+det(A) = ad - bc
+
+Step 2: Identify the entries.
+
+a = 2, b = 1, c = 5, d = 3
+
+Step 3: Substitute.
+
+det(A) = (2 × 3) - (1 × 5)
+       = 6 - 5
+       = 1
+
+Final Answer: det(A) = 1`
+          ],
+
+          [
+            "3. Find the adjoint of A = [ 3  2; 1  4 ].",
+
+            `Step 1: Recall the adjoint formula for a 2 × 2 matrix.
+
+If A = [ a  b ]
+       [ c  d ]
+
+then adj(A) = [ d  -b ]
+              [ -c  a ]
+
+Step 2: Compare the given matrix.
+
+a = 3, b = 2, c = 1, d = 4
+
+Step 3: Interchange the diagonal elements.
+
+The diagonal elements 3 and 4 are interchanged.
+
+Step 4: Change the signs of the other two elements.
+
+2 becomes -2, and 1 becomes -1.
+
+Therefore,
+
+adj(A) = [ 4  -2 ]
+         [ -1  3 ]
+
+Final Answer: adj(A) = [ 4  -2; -1  3 ]`
+          ],
+
+          [
+            "4. Determine whether A = [ 2  4; 1  2 ] is singular or non-singular.",
+
+            `Step 1: Find the determinant.
+
+det(A) = ad - bc
+
+Step 2: Substitute the values.
+
+det(A) = (2 × 2) - (4 × 1)
+       = 4 - 4
+       = 0
+
+Step 3: Apply the condition.
+
+A square matrix is:
+• Singular if its determinant is zero.
+• Non-singular if its determinant is not zero.
+
+Since det(A) = 0, the matrix is singular.
+
+Final Answer: A is a singular matrix.`
+          ],
+
+          [
+            "5. Find the inverse of A = [ 2  1; 1  1 ], if it exists.",
+
+            `Step 1: Check whether the inverse exists.
+
+An inverse exists only if det(A) ≠ 0.
+
+det(A) = (2 × 1) - (1 × 1)
+       = 2 - 1
+       = 1
+
+Since the determinant is not zero, the inverse exists.
+
+Step 2: Find the adjoint.
+
+For a 2 × 2 matrix,
+
+adj(A) = [ d  -b ]
+         [ -c  a ]
+
+Therefore,
+
+adj(A) = [ 1  -1 ]
+         [ -1  2 ]
+
+Step 3: Use the inverse formula.
+
+A⁻¹ = adj(A) / det(A)
+
+Step 4: Substitute.
+
+A⁻¹ = [ 1  -1 ] / 1
+      [ -1  2 ]
+
+Final Answer:
+
+A⁻¹ = [ 1  -1 ]
+      [ -1  2 ]`
+          ],
+
+          [
+            "6. Solve the equations 2x + y = 7 and x - y = 2.",
+
+            `Step 1: Write the given equations.
+
+2x + y = 7  ...(1)
+x - y = 2   ...(2)
+
+Step 2: Add the two equations.
+
+2x + y + x - y = 7 + 2
+
+3x = 9
+
+Step 3: Find x.
+
+x = 9 / 3
+x = 3
+
+Step 4: Substitute x = 3 into equation (2).
+
+3 - y = 2
+
+-y = 2 - 3
+-y = -1
+
+y = 1
+
+Step 5: Verify.
+
+Equation (1): 2(3) + 1 = 7 ✓
+Equation (2): 3 - 1 = 2 ✓
+
+Final Answer: x = 3, y = 1`
+          ]
+
+        ],
+
+        important: [
+
+          [
+            "1. Using the inverse matrix method, solve 3x + 2y = 8 and x + y = 3.",
+
+            `Step 1: Express the equations in matrix form.
+
+3x + 2y = 8
+x + y = 3
+
+AX = B
+
+A = [ 3  2 ]
+    [ 1  1 ]
+
+X = [ x ]
+    [ y ]
+
+B = [ 8 ]
+    [ 3 ]
+
+Step 2: Find det(A).
+
+det(A) = (3 × 1) - (2 × 1)
+       = 3 - 2
+       = 1
+
+Since det(A) ≠ 0, A has an inverse.
+
+Step 3: Find adj(A).
+
+adj(A) = [ 1  -2 ]
+         [ -1  3 ]
+
+Step 4: Find A⁻¹.
+
+A⁻¹ = adj(A) / det(A)
+
+A⁻¹ = [ 1  -2 ]
+      [ -1  3 ]
+
+Step 5: Calculate X = A⁻¹B.
+
+[ x ]   [ 1  -2 ] [ 8 ]
+[ y ] = [ -1  3 ] [ 3 ]
+
+x = 1(8) - 2(3)
+  = 8 - 6
+  = 2
+
+y = -1(8) + 3(3)
+  = -8 + 9
+  = 1
+
+Final Answer: x = 2, y = 1`
+          ],
+
+          [
+            "2. Find the inverse of A = [ 4  3; 2  2 ] using the adjoint method.",
+
+            `Step 1: Calculate the determinant.
+
+det(A) = (4 × 2) - (3 × 2)
+       = 8 - 6
+       = 2
+
+Step 2: Find the adjoint.
+
+For a 2 × 2 matrix, interchange the diagonal entries and change the signs of the other entries.
+
+adj(A) = [ 2  -3 ]
+         [ -2  4 ]
+
+Step 3: Apply the inverse formula.
+
+A⁻¹ = adj(A) / det(A)
+
+Step 4: Divide every entry by 2.
+
+A⁻¹ = [ 2/2  -3/2 ]
+      [ -2/2  4/2 ]
+
+Final Answer:
+
+A⁻¹ = [ 1  -3/2 ]
+      [ -1  2 ]`
+          ],
+
+          [
+            "3. Use Cramer's rule to solve 2x + 3y = 13 and 3x - y = 3.",
+
+            `Step 1: Calculate the main determinant D.
+
+D = | 2   3 |
+    | 3  -1 |
+
+D = (2 × -1) - (3 × 3)
+  = -2 - 9
+  = -11
+
+Step 2: Calculate Dx by replacing the x-column with the constants.
+
+Dx = | 13   3 |
+     |  3  -1 |
+
+Dx = (13 × -1) - (3 × 3)
+   = -13 - 9
+   = -22
+
+Step 3: Calculate Dy by replacing the y-column.
+
+Dy = | 2  13 |
+     | 3   3 |
+
+Dy = (2 × 3) - (13 × 3)
+   = 6 - 39
+   = -33
+
+Step 4: Apply Cramer's rule.
+
+x = Dx / D = -22 / -11 = 2
+
+y = Dy / D = -33 / -11 = 3
+
+Final Answer: x = 2, y = 3`
+          ],
+
+          [
+            "4. Determine whether the equations 2x + 4y = 8 and x + 2y = 4 have a unique solution.",
+
+            `Step 1: Compare the two equations.
+
+2x + 4y = 8  ...(1)
+x + 2y = 4   ...(2)
+
+Step 2: Multiply equation (2) by 2.
+
+2(x + 2y) = 2(4)
+
+2x + 4y = 8
+
+Step 3: Compare with equation (1).
+
+Both equations are exactly the same equation.
+
+Step 4: Interpret the result.
+
+The equations represent the same straight line.
+Therefore, every point on that line satisfies both equations.
+
+Final Answer: There is no unique solution.
+The system has infinitely many solutions and is consistent and dependent.`
+          ],
+
+          [
+            "5. Find the determinant of A = [ 1  2  3; 0  1  4; 2  0  1 ].",
+
+            `Step 1: Expand the determinant along the first row.
+
+det(A) = 1(1 × 1 - 4 × 0)
+       - 2(0 × 1 - 4 × 2)
+       + 3(0 × 0 - 1 × 2)
+
+Step 2: Simplify each term.
+
+= 1(1 - 0) - 2(0 - 8) + 3(0 - 2)
+
+= 1 - 2(-8) + 3(-2)
+
+Step 3: Calculate.
+
+= 1 + 16 - 6
+= 11
+
+Final Answer: det(A) = 11`
+          ],
+
+          [
+            "6. A matrix A has determinant -3. Find det(2A) when A is a 3 × 3 matrix.",
+
+            `Step 1: Recall the determinant property.
+
+For an n × n matrix,
+
+det(kA) = kⁿ det(A)
+
+Here:
+k = 2
+n = 3
+det(A) = -3
+
+Step 2: Substitute.
+
+det(2A) = 2³ × (-3)
+
+Step 3: Calculate.
+
+= 8 × (-3)
+= -24
+
+Final Answer: det(2A) = -24`
+          ]
+
+        ],
+
+        worked: [
+
+          [
+            "1. Find the inverse of A = [ 3  2; 5  4 ] and verify the result.",
+
+            `Given:
+
+A = [ 3  2 ]
+    [ 5  4 ]
+
+Step 1: Find the determinant.
+
+det(A) = (3 × 4) - (2 × 5)
+       = 12 - 10
+       = 2
+
+Since det(A) ≠ 0, the inverse exists.
+
+Step 2: Find the adjoint.
+
+adj(A) = [ 4  -2 ]
+         [ -5  3 ]
+
+Step 3: Apply the inverse formula.
+
+A⁻¹ = adj(A) / det(A)
+
+A⁻¹ = [ 4/2  -2/2 ]
+      [ -5/2  3/2 ]
+
+Therefore,
+
+A⁻¹ = [ 2   -1 ]
+      [ -5/2  3/2 ]
+
+Step 4: Verify by multiplication.
+
+AA⁻¹ =
+
+[ 3  2 ] [ 2    -1  ]
+[ 5  4 ] [ -5/2  3/2 ]
+
+First row, first column:
+
+3(2) + 2(-5/2)
+= 6 - 5
+= 1
+
+First row, second column:
+
+3(-1) + 2(3/2)
+= -3 + 3
+= 0
+
+Second row, first column:
+
+5(2) + 4(-5/2)
+= 10 - 10
+= 0
+
+Second row, second column:
+
+5(-1) + 4(3/2)
+= -5 + 6
+= 1
+
+Thus,
+
+AA⁻¹ = [ 1  0 ]
+       [ 0  1 ]
+
+This is the identity matrix.
+
+Final Answer:
+
+A⁻¹ = [ 2    -1  ]
+      [ -5/2  3/2 ]
+
+The inverse is verified.`
+          ],
+
+          [
+            "2. Solve 4x + y = 11 and 2x - y = 1 using the matrix inverse method.",
+
+            `Step 1: Convert the equations into matrix form.
+
+4x + y = 11
+2x - y = 1
+
+AX = B
+
+A = [ 4   1 ]
+    [ 2  -1 ]
+
+X = [ x ]
+    [ y ]
+
+B = [ 11 ]
+    [  1 ]
+
+Step 2: Find det(A).
+
+det(A) = 4(-1) - 1(2)
+       = -4 - 2
+       = -6
+
+Step 3: Find adj(A).
+
+adj(A) = [ -1  -1 ]
+         [ -2   4 ]
+
+Step 4: Find the inverse.
+
+A⁻¹ = 1/(-6) [ -1  -1 ]
+             [ -2   4 ]
+
+Step 5: Calculate X = A⁻¹B.
+
+x = [(-1)(11) + (-1)(1)] / (-6)
+  = (-11 - 1) / (-6)
+  = 2
+
+y = [(-2)(11) + 4(1)] / (-6)
+  = (-22 + 4) / (-6)
+  = 3
+
+Final Answer: x = 2, y = 3`
+          ],
+
+          [
+            "3. Find the value of k if the matrix A = [ k  2; 3  6 ] is singular.",
+
+            `Step 1: Understand the condition.
+
+A matrix is singular when its determinant is zero.
+
+Therefore,
+
+det(A) = 0
+
+Step 2: Calculate the determinant.
+
+det(A) = (k × 6) - (2 × 3)
+
+       = 6k - 6
+
+Step 3: Set the determinant equal to zero.
+
+6k - 6 = 0
+
+6k = 6
+
+Step 4: Solve for k.
+
+k = 6/6
+k = 1
+
+Step 5: Check.
+
+For k = 1,
+
+det(A) = (1 × 6) - (2 × 3)
+       = 6 - 6
+       = 0
+
+The condition is satisfied.
+
+Final Answer: k = 1`
+          ],
+
+          [
+            "4. Solve x + 2y = 8 and 3x - y = 3 using Cramer's rule.",
+
+            `Step 1: Write the coefficients.
+
+a₁ = 1, b₁ = 2, c₁ = 8
+a₂ = 3, b₂ = -1, c₂ = 3
+
+Step 2: Calculate D.
+
+D = | 1   2 |
+    | 3  -1 |
+
+D = (1 × -1) - (2 × 3)
+  = -1 - 6
+  = -7
+
+Step 3: Calculate Dx.
+
+Dx = | 8   2 |
+     | 3  -1 |
+
+Dx = (8 × -1) - (2 × 3)
+   = -8 - 6
+   = -14
+
+Step 4: Calculate Dy.
+
+Dy = | 1   8 |
+     | 3   3 |
+
+Dy = (1 × 3) - (8 × 3)
+   = 3 - 24
+   = -21
+
+Step 5: Find x and y.
+
+x = Dx/D = -14/-7 = 2
+
+y = Dy/D = -21/-7 = 3
+
+Final Answer: x = 2, y = 3`
+          ],
+
+          [
+            "5. Evaluate the determinant | 2  1  3; 1  0  2; 4  1  8 |.",
+
+            `Step 1: Expand along the first row.
+
+D = 2(0 × 8 - 2 × 1)
+    - 1(1 × 8 - 2 × 4)
+    + 3(1 × 1 - 0 × 4)
+
+Step 2: Calculate each minor.
+
+First term:
+
+2(0 - 2) = -4
+
+Second term:
+
+-1(8 - 8) = 0
+
+Third term:
+
+3(1 - 0) = 3
+
+Step 3: Add the terms.
+
+D = -4 + 0 + 3
+  = -1
+
+Final Answer: -1`
+          ],
+
+          [
+            "6. A shop sells notebooks and pens. Two notebooks and one pen cost ₹70. One notebook and two pens cost ₹50. Find the price of each using simultaneous equations.",
+
+            `Step 1: Assign variables.
+
+Let the price of one notebook be ₹x.
+Let the price of one pen be ₹y.
+
+Step 2: Form the equations.
+
+Two notebooks and one pen cost ₹70:
+
+2x + y = 70  ...(1)
+
+One notebook and two pens cost ₹50:
+
+x + 2y = 50  ...(2)
+
+Step 3: Make the coefficients of y equal.
+
+Multiply equation (1) by 2:
+
+4x + 2y = 140  ...(3)
+
+Subtract equation (2) from equation (3).
+
+(4x + 2y) - (x + 2y) = 140 - 50
+
+3x = 90
+
+x = 30
+
+Step 4: Substitute x = 30 into equation (1).
+
+2(30) + y = 70
+
+60 + y = 70
+
+y = 10
+
+Step 5: Verify.
+
+Two notebooks and one pen:
+
+2(30) + 10 = 70 ✓
+
+One notebook and two pens:
+
+30 + 2(10) = 50 ✓
+
+Final Answer:
+
+One notebook costs ₹30.
+One pen costs ₹10.`
+          ]
+
+        ],
+
+        formula: [
+
+          "For A = [a b; c d], det(A) = ad - bc. Use this to calculate the determinant of a 2 × 2 matrix.",
+
+          "A square matrix is singular when det(A) = 0. It is non-singular when det(A) ≠ 0.",
+
+          "For A = [a b; c d], adj(A) = [d -b; -c a]. Interchange the diagonal entries and change the signs of the other two entries.",
+
+          "Inverse matrix: A⁻¹ = adj(A) / det(A), provided det(A) ≠ 0. Use this to find the inverse of a non-singular square matrix.",
+
+          "Matrix equation AX = B can be solved using X = A⁻¹B, provided A has an inverse.",
+
+          "Cramer's rule for two equations: x = Dx/D and y = Dy/D, provided D ≠ 0.",
+
+          "For an n × n matrix, det(kA) = kⁿ det(A). Use this when every entry of a square matrix is multiplied by the same scalar k.",
+
+          "For a triangular matrix, the determinant is the product of its diagonal entries.",
+
+          "For a matrix A, det(Aᵀ) = det(A). Transposing a matrix does not change its determinant.",
+
+          "For two square matrices A and B of the same order, det(AB) = det(A) det(B)."
+        ]
+      },
+
+      // =====================================================
+      // CHAPTER 2 – COMPLEX NUMBERS
+      // =====================================================
+
+      {
+        title: "Complex Numbers",
+        volume: 1,
+
+        bookback: [
+
+          [
+            "1. Find the modulus of z = 3 + 4i.",
+
+            `Step 1: Recall the modulus formula.
+
+For z = a + bi,
+
+|z| = √(a² + b²)
+
+Step 2: Identify the real and imaginary parts.
+
+a = 3
+b = 4
+
+Step 3: Substitute.
+
+|z| = √(3² + 4²)
+    = √(9 + 16)
+    = √25
+    = 5
+
+Final Answer: |z| = 5`
+          ],
+
+          [
+            "2. Find the conjugate of z = 7 - 5i.",
+
+            `Step 1: Understand complex conjugation.
+
+The conjugate of a complex number is obtained by changing the sign of its imaginary part.
+
+If z = a + bi, then z̄ = a - bi.
+
+Step 2: Apply the rule.
+
+Given z = 7 - 5i
+
+Its real part is 7 and its imaginary part is -5.
+
+Changing the sign of the imaginary part gives:
+
+z̄ = 7 + 5i
+
+Final Answer: 7 + 5i`
+          ],
+
+          [
+            "3. Simplify (4 + 3i) + (2 - 5i).",
+
+            `Step 1: Group the real parts.
+
+4 + 2 = 6
+
+Step 2: Group the imaginary parts.
+
+3i - 5i = -2i
+
+Step 3: Combine them.
+
+(4 + 3i) + (2 - 5i)
+= 6 - 2i
+
+Final Answer: 6 - 2i`
+          ],
+
+          [
+            "4. Simplify (3 + 2i)(2 - i).",
+
+            `Step 1: Expand using multiplication.
+
+(3 + 2i)(2 - i)
+
+= 3(2) + 3(-i) + 2i(2) + 2i(-i)
+
+= 6 - 3i + 4i - 2i²
+
+Step 2: Use i² = -1.
+
+-2i² = -2(-1) = 2
+
+Step 3: Combine real and imaginary parts.
+
+= 6 + 2 - 3i + 4i
+= 8 + i
+
+Final Answer: 8 + i`
+          ],
+
+          [
+            "5. Express z = 1 + √3 i in polar form.",
+
+            `Step 1: Find the modulus r.
+
+r = √(a² + b²)
+
+r = √(1² + (√3)²)
+  = √(1 + 3)
+  = 2
+
+Step 2: Find the argument θ.
+
+tan θ = b/a
+      = √3/1
+      = √3
+
+Therefore, θ = π/3 because the point is in the first quadrant.
+
+Step 3: Write the polar form.
+
+z = r(cos θ + i sin θ)
+
+z = 2(cos π/3 + i sin π/3)
+
+Final Answer:
+
+2(cos π/3 + i sin π/3)`
+          ],
+
+          [
+            "6. Find the square roots of -25.",
+
+            `Step 1: We need a number whose square is -25.
+
+Recall:
+
+i² = -1
+
+Step 2: Check 5i.
+
+(5i)² = 25i²
+      = 25(-1)
+      = -25
+
+Step 3: Check -5i.
+
+(-5i)² = 25i²
+       = -25
+
+Both numbers satisfy the condition.
+
+Final Answer: ±5i`
+          ]
+
+        ],
+
+        important: [
+
+          [
+            "1. Simplify (2 + 3i) / (1 - i) and express the result in a + bi form.",
+
+            `Step 1: Multiply the numerator and denominator by the conjugate of the denominator.
+
+The conjugate of 1 - i is 1 + i.
+
+(2 + 3i)/(1 - i)
+= [(2 + 3i)(1 + i)] / [(1 - i)(1 + i)]
+
+Step 2: Expand the numerator.
+
+(2 + 3i)(1 + i)
+= 2 + 2i + 3i + 3i²
+= 2 + 5i - 3
+= -1 + 5i
+
+Step 3: Simplify the denominator.
+
+(1 - i)(1 + i)
+= 1 - i²
+= 1 - (-1)
+= 2
+
+Step 4: Divide.
+
+= (-1 + 5i)/2
+
+Final Answer:
+
+-1/2 + (5/2)i`
+          ],
+
+          [
+            "2. If z = 4 - 3i, calculate z × z̄.",
+
+            `Step 1: Find the conjugate.
+
+z = 4 - 3i
+
+z̄ = 4 + 3i
+
+Step 2: Multiply the complex number by its conjugate.
+
+z z̄ = (4 - 3i)(4 + 3i)
+
+Step 3: Use the identity (a - b)(a + b) = a² - b².
+
+= 4² - (3i)²
+= 16 - 9i²
+
+Step 4: Use i² = -1.
+
+= 16 - 9(-1)
+= 16 + 9
+= 25
+
+Final Answer: z z̄ = 25`
+          ],
+
+          [
+            "3. Find the modulus and principal argument of z = -1 + √3 i.",
+
+            `Step 1: Identify the real and imaginary parts.
+
+a = -1
+b = √3
+
+Step 2: Find the modulus.
+
+r = √(a² + b²)
+
+r = √((-1)² + (√3)²)
+  = √(1 + 3)
+  = 2
+
+Step 3: Find the reference angle.
+
+tan α = |b/a|
+      = √3
+
+Therefore, α = π/3.
+
+Step 4: Identify the quadrant.
+
+The real part is negative and the imaginary part is positive.
+
+Therefore, z lies in the second quadrant.
+
+Step 5: Calculate the principal argument.
+
+θ = π - π/3
+  = 2π/3
+
+Final Answer:
+
+Modulus = 2
+Principal argument = 2π/3`
+          ],
+
+          [
+            "4. Evaluate (cos π/6 + i sin π/6)⁴ using De Moivre's theorem.",
+
+            `Step 1: Recall De Moivre's theorem.
+
+[cos θ + i sin θ]ⁿ
+= cos(nθ) + i sin(nθ)
+
+Step 2: Identify the values.
+
+θ = π/6
+n = 4
+
+Step 3: Substitute.
+
+= cos(4π/6) + i sin(4π/6)
+
+= cos(2π/3) + i sin(2π/3)
+
+Step 4: Use standard trigonometric values.
+
+cos(2π/3) = -1/2
+
+sin(2π/3) = √3/2
+
+Final Answer:
+
+-1/2 + (√3/2)i`
+          ],
+
+          [
+            "5. Solve z² - 4z + 13 = 0.",
+
+            `Step 1: Compare with the quadratic equation.
+
+az² + bz + c = 0
+
+Here:
+
+a = 1, b = -4, c = 13
+
+Step 2: Apply the quadratic formula.
+
+z = [-b ± √(b² - 4ac)] / 2a
+
+Step 3: Substitute.
+
+z = [4 ± √((-4)² - 4(1)(13))] / 2
+
+= [4 ± √(16 - 52)] / 2
+
+= [4 ± √(-36)] / 2
+
+Step 4: Simplify the square root.
+
+√(-36) = 6i
+
+Therefore,
+
+z = (4 ± 6i)/2
+
+Step 5: Divide by 2.
+
+z = 2 ± 3i
+
+Final Answer:
+
+z = 2 + 3i or z = 2 - 3i`
+          ],
+
+          [
+            "6. Find the cube roots of 8 using the polar form.",
+
+            `Step 1: Express 8 in polar form.
+
+8 = 8(cos 0 + i sin 0)
+
+Step 2: Use the formula for cube roots.
+
+If z = r(cos θ + i sin θ), its cube roots are:
+
+wₖ = r^(1/3) [cos((θ + 2kπ)/3) + i sin((θ + 2kπ)/3)]
+
+where k = 0, 1, 2.
+
+Step 3: Substitute r = 8 and θ = 0.
+
+wₖ = 2[cos(2kπ/3) + i sin(2kπ/3)]
+
+Step 4: Calculate each root.
+
+For k = 0:
+
+w₀ = 2(cos 0 + i sin 0) = 2
+
+For k = 1:
+
+w₁ = 2(cos 2π/3 + i sin 2π/3)
+   = -1 + √3 i
+
+For k = 2:
+
+w₂ = 2(cos 4π/3 + i sin 4π/3)
+   = -1 - √3 i
+
+Final Answer:
+
+2, -1 + √3 i, -1 - √3 i`
+          ]
+
+        ],
+
+        worked: [
+
+          [
+            "1. Divide (5 + 2i) by (1 + i) and express the answer in standard form.",
+
+            `Step 1: Write the given expression.
+
+z = (5 + 2i)/(1 + i)
+
+We cannot leave a complex number in the denominator if we want the standard form a + bi.
+
+Step 2: Multiply the numerator and denominator by the conjugate.
+
+The conjugate of 1 + i is 1 - i.
+
+z = [(5 + 2i)(1 - i)] / [(1 + i)(1 - i)]
+
+Step 3: Expand the numerator.
+
+(5 + 2i)(1 - i)
+= 5 - 5i + 2i - 2i²
+
+Since i² = -1,
+
+= 5 - 3i + 2
+= 7 - 3i
+
+Step 4: Simplify the denominator.
+
+(1 + i)(1 - i)
+= 1 - i²
+= 1 + 1
+= 2
+
+Step 5: Divide.
+
+z = (7 - 3i)/2
+
+Final Answer:
+
+z = 7/2 - (3/2)i`
+          ],
+
+          [
+            "2. Find the square roots of 7 + 24i.",
+
+            `Step 1: Let the square root be a + bi.
+
+Assume:
+
+(a + bi)² = 7 + 24i
+
+Step 2: Expand the left side.
+
+a² + 2abi + b²i² = 7 + 24i
+
+Using i² = -1:
+
+(a² - b²) + 2ab i = 7 + 24i
+
+Step 3: Compare the real and imaginary parts.
+
+a² - b² = 7  ...(1)
+
+2ab = 24
+
+ab = 12  ...(2)
+
+Step 4: Find a² + b².
+
+Square equation (1) and use equation (2):
+
+(a² - b²)² + (2ab)²
+= 7² + 24²
+
+But,
+
+(a² - b²)² + (2ab)²
+= (a² + b²)²
+
+Therefore,
+
+(a² + b²)² = 49 + 576
+           = 625
+
+a² + b² = 25
+
+Step 5: Add and subtract the equations.
+
+a² + b² = 25
+a² - b² = 7
+
+Adding:
+
+2a² = 32
+a² = 16
+
+Therefore a = ±4.
+
+Subtracting:
+
+2b² = 18
+b² = 9
+
+Therefore b = ±3.
+
+Since ab = 12, a and b must have the same sign.
+
+The two roots are:
+
+4 + 3i
+-4 - 3i
+
+Final Answer: ±(4 + 3i)`
+          ],
+
+          [
+            "3. Convert z = -√3 + i into polar form.",
+
+            `Step 1: Identify the real and imaginary parts.
+
+a = -√3
+b = 1
+
+Step 2: Calculate the modulus.
+
+r = √(a² + b²)
+
+r = √((-√3)² + 1²)
+  = √(3 + 1)
+  = 2
+
+Step 3: Find the reference angle.
+
+tan α = |b/a|
+      = 1/√3
+
+Therefore, α = π/6.
+
+Step 4: Identify the quadrant.
+
+The real part is negative.
+The imaginary part is positive.
+
+Therefore, the point lies in the second quadrant.
+
+Step 5: Calculate the argument.
+
+θ = π - π/6
+  = 5π/6
+
+Step 6: Write the polar form.
+
+z = r(cos θ + i sin θ)
+
+Final Answer:
+
+z = 2(cos 5π/6 + i sin 5π/6)`
+          ],
+
+          [
+            "4. Use De Moivre's theorem to find (1 + i)⁶.",
+
+            `Step 1: Express 1 + i in polar form.
+
+Modulus:
+
+r = √(1² + 1²)
+  = √2
+
+Argument:
+
+tan θ = 1/1 = 1
+
+Since the number lies in the first quadrant,
+
+θ = π/4
+
+Therefore,
+
+1 + i = √2(cos π/4 + i sin π/4)
+
+Step 2: Apply De Moivre's theorem.
+
+(1 + i)⁶
+= (√2)⁶ [cos(6π/4) + i sin(6π/4)]
+
+Step 3: Simplify.
+
+(√2)⁶ = 8
+
+6π/4 = 3π/2
+
+Therefore,
+
+= 8[cos(3π/2) + i sin(3π/2)]
+
+Step 4: Use standard values.
+
+cos(3π/2) = 0
+sin(3π/2) = -1
+
+Final Answer:
+
+(1 + i)⁶ = -8i`
+          ],
+
+          [
+            "5. Solve z² + 2z + 5 = 0 and represent the roots in a + bi form.",
+
+            `Step 1: Identify the coefficients.
+
+a = 1, b = 2, c = 5
+
+Step 2: Use the quadratic formula.
+
+z = [-b ± √(b² - 4ac)] / 2a
+
+Step 3: Substitute the values.
+
+z = [-2 ± √(2² - 4(1)(5))] / 2
+
+= [-2 ± √(4 - 20)] / 2
+
+= [-2 ± √(-16)] / 2
+
+Step 4: Simplify the imaginary square root.
+
+√(-16) = 4i
+
+Therefore,
+
+z = (-2 ± 4i)/2
+
+Step 5: Divide by 2.
+
+z = -1 ± 2i
+
+Final Answer:
+
+z = -1 + 2i
+or
+z = -1 - 2i`
+          ],
+
+          [
+            "6. Find all fourth roots of 16.",
+
+            `Step 1: Express 16 in polar form.
+
+16 = 16(cos 0 + i sin 0)
+
+Step 2: Use the formula for fourth roots.
+
+wₖ = r^(1/4)[cos((θ + 2kπ)/4) + i sin((θ + 2kπ)/4)]
+
+where k = 0, 1, 2, 3.
+
+Step 3: Substitute r = 16 and θ = 0.
+
+wₖ = 2[cos(kπ/2) + i sin(kπ/2)]
+
+Step 4: Calculate each root.
+
+For k = 0:
+
+w₀ = 2
+
+For k = 1:
+
+w₁ = 2i
+
+For k = 2:
+
+w₂ = -2
+
+For k = 3:
+
+w₃ = -2i
+
+Final Answer:
+
+The four fourth roots are:
+
+2, 2i, -2, -2i`
+          ]
+
+        ],
+
+        formula: [
+
+          "Standard form: z = a + bi, where a is the real part, b is the imaginary coefficient and i² = -1.",
+
+          "Modulus: |z| = √(a² + b²). Use this to find the distance of a complex number from the origin in the Argand plane.",
+
+          "Conjugate: If z = a + bi, then z̄ = a - bi. The conjugate changes the sign of the imaginary part.",
+
+          "Product with conjugate: z z̄ = a² + b² = |z|². This is useful when simplifying complex fractions.",
+
+          "Division: Multiply the numerator and denominator by the conjugate of the denominator to remove the imaginary part from the denominator.",
+
+          "Polar form: z = r(cos θ + i sin θ), where r = |z| and θ is an argument of z.",
+
+          "Argument: tan θ = b/a, but always identify the correct quadrant before choosing θ.",
+
+          "De Moivre's theorem: [cos θ + i sin θ]ⁿ = cos(nθ) + i sin(nθ).",
+
+          "For z = r(cos θ + i sin θ), zⁿ = rⁿ[cos(nθ) + i sin(nθ)].",
+
+          "The nth roots of z are r^(1/n)[cos((θ + 2kπ)/n) + i sin((θ + 2kπ)/n)], where k = 0, 1, ..., n - 1.",
+
+          "Quadratic formula: z = [-b ± √(b² - 4ac)] / 2a. Complex roots occur when the discriminant is negative."
+        ]
+      },
+
+      // =====================================================
+      // CHAPTER 3 – THEORY OF EQUATIONS
+      // =====================================================
+
+      {
+        title: "Theory of Equations",
+        volume: 1,
+
+        bookback: [
+
+          [
+            "1. Find the sum and product of the roots of x² - 5x + 6 = 0.",
+
+            `Step 1: Compare with the standard quadratic equation.
+
+ax² + bx + c = 0
+
+Here:
+
+a = 1, b = -5, c = 6
+
+Step 2: Use the relations between roots and coefficients.
+
+Sum of roots = -b/a
+
+Product of roots = c/a
+
+Step 3: Calculate the sum.
+
+Sum = -(-5)/1
+    = 5
+
+Step 4: Calculate the product.
+
+Product = 6/1
+        = 6
+
+Final Answer:
+
+Sum = 5
+Product = 6`
+          ],
+
+          [
+            "2. Find the quadratic equation whose roots are 2 and 3.",
+
+            `Step 1: Recall the equation formed from two roots.
+
+If the roots are α and β,
+
+x² - (α + β)x + αβ = 0
+
+Step 2: Identify the roots.
+
+α = 2
+β = 3
+
+Step 3: Find their sum and product.
+
+α + β = 2 + 3 = 5
+
+αβ = 2 × 3 = 6
+
+Step 4: Substitute.
+
+x² - 5x + 6 = 0
+
+Final Answer: x² - 5x + 6 = 0`
+          ],
+
+          [
+            "3. Find the discriminant of 2x² - 4x + 5 = 0.",
+
+            `Step 1: Recall the discriminant formula.
+
+D = b² - 4ac
+
+Step 2: Identify the coefficients.
+
+a = 2
+b = -4
+c = 5
+
+Step 3: Substitute.
+
+D = (-4)² - 4(2)(5)
+
+= 16 - 40
+
+= -24
+
+Final Answer: D = -24`
+          ],
+
+          [
+            "4. Form a quadratic equation whose roots are -1 and 4.",
+
+            `Step 1: Find the sum of the roots.
+
+α + β = -1 + 4 = 3
+
+Step 2: Find the product.
+
+αβ = (-1)(4) = -4
+
+Step 3: Use the quadratic equation formula.
+
+x² - (sum)x + product = 0
+
+Step 4: Substitute.
+
+x² - 3x - 4 = 0
+
+Final Answer: x² - 3x - 4 = 0`
+          ],
+
+          [
+            "5. Determine the nature of the roots of x² + 4x + 4 = 0.",
+
+            `Step 1: Calculate the discriminant.
+
+D = b² - 4ac
+
+Here:
+
+a = 1, b = 4, c = 4
+
+D = 4² - 4(1)(4)
+  = 16 - 16
+  = 0
+
+Step 2: Interpret the discriminant.
+
+If D > 0, the roots are real and distinct.
+If D = 0, the roots are real and equal.
+If D < 0, the roots are non-real complex conjugates.
+
+Since D = 0, the roots are real and equal.
+
+Final Answer: The equation has two equal real roots.`
+          ],
+
+          [
+            "6. Find the roots of x² - 7x + 12 = 0.",
+
+            `Step 1: Factorise the quadratic expression.
+
+We need two numbers whose:
+
+Product = 12
+Sum = 7
+
+The numbers are 3 and 4.
+
+Step 2: Split the middle term.
+
+x² - 3x - 4x + 12 = 0
+
+Step 3: Factorise by grouping.
+
+x(x - 3) - 4(x - 3) = 0
+
+(x - 3)(x - 4) = 0
+
+Step 4: Apply the zero-product property.
+
+x - 3 = 0  or  x - 4 = 0
+
+Therefore,
+
+x = 3 or x = 4
+
+Final Answer: 3 and 4`
+          ]
+
+        ],
+
+        important: [
+
+          [
+            "1. If α and β are the roots of 2x² - 7x + 3 = 0, find α² + β².",
+
+            `Step 1: Find the sum of roots.
+
+For ax² + bx + c = 0,
+
+α + β = -b/a
+
+Here,
+
+α + β = -(-7)/2 = 7/2
+
+Step 2: Find the product of roots.
+
+αβ = c/a = 3/2
+
+Step 3: Use the identity.
+
+α² + β² = (α + β)² - 2αβ
+
+Step 4: Substitute.
+
+= (7/2)² - 2(3/2)
+
+= 49/4 - 3
+
+= 49/4 - 12/4
+
+= 37/4
+
+Final Answer: α² + β² = 37/4`
+          ],
+
+          [
+            "2. Form a quadratic equation whose roots are 3 + √2 and 3 - √2.",
+
+            `Step 1: Find the sum of the roots.
+
+α + β = (3 + √2) + (3 - √2)
+
+The radical terms cancel.
+
+α + β = 6
+
+Step 2: Find the product.
+
+αβ = (3 + √2)(3 - √2)
+
+Use the difference of squares.
+
+= 3² - (√2)²
+= 9 - 2
+= 7
+
+Step 3: Form the equation.
+
+x² - (α + β)x + αβ = 0
+
+Step 4: Substitute.
+
+x² - 6x + 7 = 0
+
+Final Answer: x² - 6x + 7 = 0`
+          ],
+
+          [
+            "3. Find the nature of the roots of 3x² + 2x + 5 = 0.",
+
+            `Step 1: Identify the coefficients.
+
+a = 3, b = 2, c = 5
+
+Step 2: Calculate the discriminant.
+
+D = b² - 4ac
+
+= 2² - 4(3)(5)
+
+= 4 - 60
+
+= -56
+
+Step 3: Interpret the result.
+
+Since D < 0, the square root of the discriminant is imaginary.
+
+Therefore, the equation has two non-real complex conjugate roots.
+
+Final Answer: Two distinct non-real complex conjugate roots.`
+          ],
+
+          [
+            "4. If α and β are the roots of x² - 6x + 4 = 0, find 1/α + 1/β.",
+
+            `Step 1: Recall the relations between roots and coefficients.
+
+α + β = 6
+
+αβ = 4
+
+Step 2: Combine the fractions.
+
+1/α + 1/β
+= (β + α)/(αβ)
+
+Step 3: Substitute the known values.
+
+= (α + β)/(αβ)
+
+= 6/4
+
+Step 4: Simplify.
+
+= 3/2
+
+Final Answer: 1/α + 1/β = 3/2`
+          ],
+
+          [
+            "5. Find the equation whose roots are the reciprocals of the roots of 2x² - 5x + 3 = 0.",
+
+            `Step 1: Let the original roots be α and β.
+
+For 2x² - 5x + 3 = 0:
+
+α + β = 5/2
+
+αβ = 3/2
+
+Step 2: The new roots are 1/α and 1/β.
+
+Their sum is:
+
+1/α + 1/β
+= (α + β)/(αβ)
+
+= (5/2)/(3/2)
+= 5/3
+
+Their product is:
+
+1/(αβ) = 1/(3/2) = 2/3
+
+Step 3: Form the new quadratic equation.
+
+x² - (sum)x + product = 0
+
+x² - (5/3)x + 2/3 = 0
+
+Step 4: Multiply the equation by 3.
+
+3x² - 5x + 2 = 0
+
+Final Answer: 3x² - 5x + 2 = 0`
+          ],
+
+          [
+            "6. If α and β are the roots of x² - 4x + 1 = 0, find α³ + β³.",
+
+            `Step 1: Find the sum and product.
+
+α + β = 4
+αβ = 1
+
+Step 2: Use the identity.
+
+α³ + β³ = (α + β)³ - 3αβ(α + β)
+
+Step 3: Substitute.
+
+= 4³ - 3(1)(4)
+
+= 64 - 12
+
+= 52
+
+Final Answer: α³ + β³ = 52`
+          ]
+
+        ],
+
+        worked: [
+
+          [
+            "1. Solve x³ - 6x² + 11x - 6 = 0 by factorisation.",
+
+            `Step 1: Look for a simple integer root.
+
+Possible integer roots are factors of 6:
+
+±1, ±2, ±3, ±6
+
+Step 2: Test x = 1.
+
+1³ - 6(1)² + 11(1) - 6
+= 1 - 6 + 11 - 6
+= 0
+
+Therefore, x - 1 is a factor.
+
+Step 3: Divide the cubic polynomial by x - 1.
+
+The quotient is:
+
+x² - 5x + 6
+
+Therefore,
+
+x³ - 6x² + 11x - 6
+= (x - 1)(x² - 5x + 6)
+
+Step 4: Factorise the quadratic.
+
+x² - 5x + 6
+= (x - 2)(x - 3)
+
+Step 5: Write the complete factorisation.
+
+(x - 1)(x - 2)(x - 3) = 0
+
+Step 6: Find the roots.
+
+x = 1, 2, 3
+
+Final Answer: 1, 2 and 3`
+          ],
+
+          [
+            "2. If α and β are the roots of x² - 5x + 6 = 0, find α²β + αβ².",
+
+            `Step 1: Identify what is required.
+
+We need to calculate:
+
+α²β + αβ²
+
+Step 2: Take the common factor.
+
+α²β + αβ² = αβ(α + β)
+
+Step 3: Use the relations between roots and coefficients.
+
+For x² - 5x + 6 = 0:
+
+α + β = -(-5)/1 = 5
+
+αβ = 6/1 = 6
+
+Step 4: Substitute.
+
+αβ(α + β) = 6 × 5
+
+= 30
+
+Final Answer: 30`
+          ],
+
+          [
+            "3. Find the quadratic equation whose roots are twice the roots of x² - 3x + 2 = 0.",
+
+            `Step 1: Find the original roots' sum and product.
+
+For x² - 3x + 2 = 0:
+
+α + β = 3
+αβ = 2
+
+Step 2: The new roots are 2α and 2β.
+
+New sum:
+
+2α + 2β = 2(α + β)
+        = 2(3)
+        = 6
+
+New product:
+
+(2α)(2β) = 4αβ
+         = 4(2)
+         = 8
+
+Step 3: Form the new quadratic equation.
+
+x² - (new sum)x + (new product) = 0
+
+x² - 6x + 8 = 0
+
+Final Answer: x² - 6x + 8 = 0`
+          ],
+
+          [
+            "4. Find the roots of 2x² + x - 6 = 0 using the quadratic formula.",
+
+            `Step 1: Identify the coefficients.
+
+a = 2
+b = 1
+c = -6
+
+Step 2: Recall the quadratic formula.
+
+x = [-b ± √(b² - 4ac)] / 2a
+
+Step 3: Substitute.
+
+x = [-1 ± √(1² - 4(2)(-6))] / 4
+
+= [-1 ± √(1 + 48)] / 4
+
+= [-1 ± √49] / 4
+
+Step 4: Simplify.
+
+x = (-1 ± 7)/4
+
+Step 5: Calculate both roots.
+
+First root:
+
+x = (-1 + 7)/4
+  = 6/4
+  = 3/2
+
+Second root:
+
+x = (-1 - 7)/4
+  = -8/4
+  = -2
+
+Final Answer: x = 3/2 or x = -2`
+          ],
+
+          [
+            "5. If α and β are the roots of 3x² - 8x + 2 = 0, find α/β + β/α.",
+
+            `Step 1: Use the relations between roots and coefficients.
+
+α + β = 8/3
+
+αβ = 2/3
+
+Step 2: Combine the fractions.
+
+α/β + β/α
+= (α² + β²)/(αβ)
+
+Step 3: Calculate α² + β².
+
+α² + β² = (α + β)² - 2αβ
+
+= (8/3)² - 2(2/3)
+
+= 64/9 - 4/3
+
+= 64/9 - 12/9
+
+= 52/9
+
+Step 4: Divide by αβ.
+
+(α² + β²)/(αβ)
+= (52/9)/(2/3)
+
+= (52/9) × (3/2)
+
+= 26/3
+
+Final Answer: 26/3`
+          ],
+
+          [
+            "6. Find the cubic equation whose roots are 1, 2 and -3.",
+
+            `Step 1: Write the equation using its roots.
+
+If the roots are α, β and γ, then:
+
+(x - α)(x - β)(x - γ) = 0
+
+Step 2: Substitute the given roots.
+
+(x - 1)(x - 2)(x + 3) = 0
+
+Step 3: Multiply the first two factors.
+
+(x - 1)(x - 2)
+= x² - 3x + 2
+
+Step 4: Multiply by the third factor.
+
+(x² - 3x + 2)(x + 3)
+
+= x³ + 3x² - 3x² - 9x + 2x + 6
+
+Step 5: Combine like terms.
+
+= x³ - 7x + 6
+
+Final Answer:
+
+x³ - 7x + 6 = 0`
+          ]
+
+        ],
+
+        formula: [
+
+          "For ax² + bx + c = 0, sum of roots α + β = -b/a.",
+
+          "For ax² + bx + c = 0, product of roots αβ = c/a.",
+
+          "Quadratic equation from roots α and β: x² - (α + β)x + αβ = 0.",
+
+          "Discriminant: D = b² - 4ac. It determines the nature of the roots.",
+
+          "If D > 0, the quadratic has two distinct real roots.",
+
+          "If D = 0, the quadratic has two equal real roots.",
+
+          "If D < 0, the quadratic has two non-real complex conjugate roots.",
+
+          "Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a.",
+
+          "α² + β² = (α + β)² - 2αβ. Use this when the sum and product of roots are known.",
+
+          "α³ + β³ = (α + β)³ - 3αβ(α + β).",
+
+          "For a cubic equation ax³ + bx² + cx + d = 0 with roots α, β and γ: α + β + γ = -b/a.",
+
+          "For a cubic equation ax³ + bx² + cx + d = 0: αβ + βγ + γα = c/a.",
+
+          "For a cubic equation ax³ + bx² + cx + d = 0: αβγ = -d/a.",
+
+          "If the roots are α, β and γ, the monic cubic equation is x³ - (α + β + γ)x² + (αβ + βγ + γα)x - αβγ = 0."
+        ]
+      },
+      {
+    title: "Inverse Trigonometric Functions",
+    volume: "Volume 1",
+    bookback: [
+        [
+            "Find the principal value of sin⁻¹(1/2).",
+            "Step 1: Recall that sin 30° = 1/2.\n\nStep 2: The principal value range of sin⁻¹x is [-90°, 90°].\n\nStep 3: Since 30° lies within this range, we get:\n\nsin⁻¹(1/2) = 30°.\n\nFinal Answer: 30° or π/6 radians."
+        ],
+        [
+            "Find the principal value of cos⁻¹(-1/2).",
+            "Step 1: We know that cos 120° = -1/2.\n\nStep 2: The principal value range of cos⁻¹x is [0°, 180°].\n\nStep 3: Since 120° lies within this range:\n\ncos⁻¹(-1/2) = 120°.\n\nFinal Answer: 120° or 2π/3 radians."
+        ],
+        [
+            "Evaluate tan⁻¹(1) + tan⁻¹(0).",
+            "Step 1: Recall the standard inverse trigonometric values:\n\ntan⁻¹(1) = π/4\n\ntan⁻¹(0) = 0\n\nStep 2: Add the values:\n\nπ/4 + 0 = π/4.\n\nFinal Answer: π/4."
+        ],
+        [
+            "Find the value of sin(sin⁻¹(3/5)).",
+            "Step 1: Let θ = sin⁻¹(3/5).\n\nThis means sin θ = 3/5.\n\nStep 2: Substitute this into the expression:\n\nsin(sin⁻¹(3/5)) = sin θ.\n\nStep 3: Therefore:\n\nsin θ = 3/5.\n\nFinal Answer: 3/5."
+        ],
+        [
+            "Evaluate cos(tan⁻¹(3/4)).",
+            "Step 1: Let θ = tan⁻¹(3/4).\n\nTherefore, tan θ = 3/4.\n\nStep 2: Consider a right-angled triangle with opposite side 3 and adjacent side 4.\n\nStep 3: Find the hypotenuse using Pythagoras' theorem:\n\nHypotenuse = √(3² + 4²) = √25 = 5.\n\nStep 4: Calculate cosine:\n\ncos θ = Adjacent / Hypotenuse = 4/5.\n\nFinal Answer: 4/5."
+        ],
+        [
+            "Evaluate sin⁻¹(0) + cos⁻¹(1).",
+            "Step 1: Recall the standard values:\n\nsin⁻¹(0) = 0\n\ncos⁻¹(1) = 0\n\nStep 2: Add the two values:\n\n0 + 0 = 0.\n\nFinal Answer: 0."
+        ]
+    ],
+    important: [
+        [
+            "Prove that sin⁻¹x + cos⁻¹x = π/2, for -1 ≤ x ≤ 1.",
+            "Step 1: Let θ = sin⁻¹x.\n\nThen sin θ = x.\n\nStep 2: Since θ is in the principal range of sin⁻¹x, we have:\n\n-π/2 ≤ θ ≤ π/2.\n\nStep 3: Using the identity:\n\ncos(π/2 - θ) = sin θ\n\nwe get:\n\ncos(π/2 - θ) = x.\n\nStep 4: Apply cos⁻¹ to both sides:\n\ncos⁻¹x = π/2 - θ.\n\nStep 5: Since θ = sin⁻¹x:\n\ncos⁻¹x = π/2 - sin⁻¹x.\n\nTherefore:\n\nsin⁻¹x + cos⁻¹x = π/2.\n\nHence proved."
+        ],
+        [
+            "Simplify tan⁻¹(1/2) + tan⁻¹(1/3).",
+            "Step 1: Let A = tan⁻¹(1/2) and B = tan⁻¹(1/3).\n\nThen tan A = 1/2 and tan B = 1/3.\n\nStep 2: Use the tangent addition formula:\n\ntan(A + B) = (tan A + tan B) / (1 - tan A tan B).\n\nStep 3: Substitute:\n\ntan(A + B) = (1/2 + 1/3) / (1 - 1/6).\n\n= (5/6) / (5/6) = 1.\n\nStep 4: Both A and B are positive acute angles, and their sum is in the principal range of tan⁻¹.\n\nTherefore:\n\nA + B = tan⁻¹(1) = π/4.\n\nFinal Answer: π/4."
+        ],
+        [
+            "Evaluate 2tan⁻¹(1/3) + tan⁻¹(4/7).",
+            "Step 1: Let θ = tan⁻¹(1/3).\n\nThen tan θ = 1/3.\n\nStep 2: Use the double-angle formula:\n\ntan 2θ = 2tan θ / (1 - tan²θ).\n\n= 2(1/3) / (1 - 1/9)\n\n= (2/3) / (8/9)\n\n= 3/4.\n\nStep 3: Let φ = tan⁻¹(4/7).\n\nWe need tan(2θ + φ).\n\nStep 4: Apply the addition formula:\n\ntan(2θ + φ) = (3/4 + 4/7) / (1 - (3/4)(4/7)).\n\n= (21/28 + 16/28) / (1 - 12/28)\n\n= (37/28) / (16/28)\n\n= 37/16.\n\nStep 5: Therefore:\n\n2tan⁻¹(1/3) + tan⁻¹(4/7) = tan⁻¹(37/16).\n\nFinal Answer: tan⁻¹(37/16)."
+        ],
+        [
+            "Find the domain of f(x) = sin⁻¹(2x - 1).",
+            "Step 1: The expression sin⁻¹u is defined only when:\n\n-1 ≤ u ≤ 1.\n\nStep 2: Here u = 2x - 1.\n\nTherefore:\n\n-1 ≤ 2x - 1 ≤ 1.\n\nStep 3: Add 1 throughout:\n\n0 ≤ 2x ≤ 2.\n\nStep 4: Divide by 2:\n\n0 ≤ x ≤ 1.\n\nFinal Answer: Domain = [0, 1]."
+        ],
+        [
+            "Evaluate sin⁻¹(√3/2) - cos⁻¹(1/2).",
+            "Step 1: Recall the standard values:\n\nsin 60° = √3/2.\n\nSince 60° is in the principal range of sin⁻¹:\n\nsin⁻¹(√3/2) = 60°.\n\nStep 2: Also:\n\ncos 60° = 1/2.\n\nSince 60° is in the principal range of cos⁻¹:\n\ncos⁻¹(1/2) = 60°.\n\nStep 3: Subtract:\n\n60° - 60° = 0°.\n\nFinal Answer: 0."
+        ],
+        [
+            "Prove that tan⁻¹x + tan⁻¹(1/x) = π/2, when x > 0.",
+            "Step 1: Let A = tan⁻¹x.\n\nThen tan A = x.\n\nStep 2: Since x > 0, A lies between 0 and π/2.\n\nStep 3: Consider the complementary angle π/2 - A.\n\nUsing the identity:\n\ntan(π/2 - A) = 1/tan A.\n\nTherefore:\n\ntan(π/2 - A) = 1/x.\n\nStep 4: Apply tan⁻¹:\n\ntan⁻¹(1/x) = π/2 - A.\n\nStep 5: Since A = tan⁻¹x:\n\ntan⁻¹(1/x) = π/2 - tan⁻¹x.\n\nHence:\n\ntan⁻¹x + tan⁻¹(1/x) = π/2.\n\nProved."
+        ]
+    ],
+    worked: [
+        [
+            "Simplify sin⁻¹(3/5) + cos⁻¹(3/5).",
+            "Step 1: Identify the identity that connects inverse sine and inverse cosine:\n\nsin⁻¹x + cos⁻¹x = π/2.\n\nStep 2: Compare the given expression with the identity. Here, x = 3/5.\n\nStep 3: Substitute:\n\nsin⁻¹(3/5) + cos⁻¹(3/5) = π/2.\n\nFinal Answer: π/2 radians."
+        ],
+        [
+            "Evaluate tan⁻¹(2) + tan⁻¹(3).",
+            "Step 1: Let A = tan⁻¹2 and B = tan⁻¹3.\n\nThen tan A = 2 and tan B = 3.\n\nStep 2: Use the tangent addition formula:\n\ntan(A + B) = (tan A + tan B) / (1 - tan A tan B).\n\n= (2 + 3) / (1 - 2 × 3)\n\n= 5 / (-5) = -1.\n\nStep 3: Since A and B are both between 0 and π/2, their sum lies between π/2 and π.\n\nThe angle in this interval whose tangent is -1 is 3π/4.\n\nFinal Answer: 3π/4 radians."
+        ],
+        [
+            "Find the value of cos(2tan⁻¹(1/2)).",
+            "Step 1: Let θ = tan⁻¹(1/2).\n\nThen tan θ = 1/2.\n\nStep 2: Use the double-angle identity:\n\ncos 2θ = (1 - tan²θ) / (1 + tan²θ).\n\nStep 3: Substitute tan θ = 1/2:\n\ncos 2θ = (1 - 1/4) / (1 + 1/4).\n\n= (3/4) / (5/4).\n\nStep 4: Simplify:\n\ncos 2θ = 3/5.\n\nFinal Answer: 3/5."
+        ],
+        [
+            "Find the principal value of tan⁻¹(-√3).",
+            "Step 1: Recall that tan 60° = √3.\n\nStep 2: Therefore, tan(-60°) = -√3.\n\nStep 3: The principal value range of tan⁻¹x is (-90°, 90°).\n\nSince -60° lies in this range:\n\ntan⁻¹(-√3) = -60°.\n\nFinal Answer: -π/3 radians."
+        ],
+        [
+            "Evaluate cos⁻¹(0) + sin⁻¹(-1/2).",
+            "Step 1: Find the first inverse value.\n\ncos 90° = 0.\n\nSince 90° lies in the principal range of cos⁻¹:\n\ncos⁻¹(0) = 90° = π/2.\n\nStep 2: Find the second inverse value.\n\nsin(-30°) = -1/2.\n\nTherefore:\n\nsin⁻¹(-1/2) = -30° = -π/6.\n\nStep 3: Add the two values:\n\nπ/2 - π/6 = 3π/6 - π/6 = 2π/6 = π/3.\n\nFinal Answer: π/3 radians."
+        ],
+        [
+            "If θ = tan⁻¹(3/4), find sin θ and cos θ.",
+            "Step 1: Given:\n\ntan θ = 3/4.\n\nStep 2: Use the definition of tangent:\n\nOpposite / Adjacent = 3/4.\n\nConsider a right-angled triangle with opposite side 3 and adjacent side 4.\n\nStep 3: Find the hypotenuse:\n\nh = √(3² + 4²) = √(9 + 16) = 5.\n\nStep 4: Calculate sine:\n\nsin θ = Opposite / Hypotenuse = 3/5.\n\nStep 5: Calculate cosine:\n\ncos θ = Adjacent / Hypotenuse = 4/5.\n\nFinal Answer: sin θ = 3/5 and cos θ = 4/5."
+        ]
+    ],
+    formula: [
+        "Principal range of sin⁻¹x: [-π/2, π/2]. This tells us which angle is returned by inverse sine.",
+        "Principal range of cos⁻¹x: [0, π]. The answer must lie between 0 and π radians.",
+        "Principal range of tan⁻¹x: (-π/2, π/2). The endpoints are excluded.",
+        "sin⁻¹x + cos⁻¹x = π/2, for -1 ≤ x ≤ 1. Useful when inverse sine and inverse cosine have the same argument.",
+        "tan(A + B) = (tan A + tan B) / (1 - tan A tan B). Useful for combining two inverse tangent expressions.",
+        "tan(A - B) = (tan A - tan B) / (1 + tan A tan B). Useful for subtracting angles.",
+        "tan 2A = 2tan A / (1 - tan²A). Useful for double-angle inverse tangent problems.",
+        "sin( sin⁻¹x ) = x, for -1 ≤ x ≤ 1. Inverse sine and sine cancel each other in this order.",
+        "cos( cos⁻¹x ) = x, for -1 ≤ x ≤ 1. Inverse cosine and cosine cancel each other in this order.",
+        "tan( tan⁻¹x ) = x, for every real number x. Inverse tangent and tangent cancel each other in this order."
+    ]
 },
 {
-"title":"Complex Numbers","volume":1,
-"bookback":[
-["Find |3+4i|.","√(9+16)=5."],
-["Simplify (2+i)+(4−3i).","Add real and imaginary parts: 6−2i."],
-["Find the modulus and conjugate of z=5−12i.","Answer: |z|=13 and z̄=5+12i."],
-["Simplify (3+2i)(1−i).","Answer: 5−i."],
-["Express 1+√3 i in polar form.","Answer: 2(cos π/3+i sin π/3)."],
-["Find the square roots of −16.","Answer: ±4i."]
-],
-"important":[
-["Explain and solve: Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],
-["Explain and solve: Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],
-["Explain and solve: Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],
-["Explain and solve: Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],
-["Explain and solve: Evaluate (cos π/6+i sin π/6)³.","By De Moivre's theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],
-["Explain and solve: Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]
-],
-"worked":[
-["Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],
-["Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],
-["Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],
-["Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],
-["Evaluate (cos π/6+i sin π/6)³.","By De Moivre's theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],
-["Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]
-],
-"formula":[
-"For z=a+bi, |z|=√(a²+b²).",
-"Conjugate: z̄=a−bi; zz̄=|z|².",
-"Polar form: z=r(cosθ+i sinθ).",
-"De Moivre: [r(cosθ+i sinθ)]ⁿ=rⁿ(cos nθ+i sin nθ)."
-]
+    title: "Two Dimensional Analytical Geometry – II",
+    volume: "Volume 1",
+    bookback: [
+        [
+            "Find the centre and radius of the circle x² + y² - 4x + 6y - 12 = 0.",
+            "Step 1: Compare the given equation with the general circle equation:\n\nx² + y² + 2gx + 2fy + c = 0.\n\nStep 2: Compare coefficients:\n\n2g = -4, so g = -2.\n\n2f = 6, so f = 3.\n\nc = -12.\n\nStep 3: Centre = (-g, -f).\n\nTherefore, centre = (2, -3).\n\nStep 4: Radius = √(g² + f² - c).\n\n= √[(-2)² + 3² - (-12)].\n\n= √(4 + 9 + 12) = √25 = 5.\n\nFinal Answer: Centre = (2, -3), radius = 5."
+        ],
+        [
+            "Find the equation of a circle with centre at the origin and radius 4.",
+            "Step 1: The standard equation of a circle with centre at the origin is:\n\nx² + y² = r².\n\nStep 2: Given radius r = 4.\n\nStep 3: Substitute:\n\nx² + y² = 4².\n\nFinal Answer: x² + y² = 16."
+        ],
+        [
+            "Find the focus of the parabola y² = 12x.",
+            "Step 1: Compare the equation with the standard form:\n\ny² = 4ax.\n\nStep 2: Compare coefficients:\n\n4a = 12.\n\nTherefore, a = 3.\n\nStep 3: The focus of y² = 4ax is (a, 0).\n\nFinal Answer: Focus = (3, 0)."
+        ],
+        [
+            "Find the vertices of the ellipse x²/25 + y²/9 = 1.",
+            "Step 1: Compare with the standard ellipse equation:\n\nx²/a² + y²/b² = 1.\n\nStep 2: Identify:\n\na² = 25, so a = 5.\n\nb² = 9, so b = 3.\n\nStep 3: Since a² > b², the major axis is along the x-axis.\n\nStep 4: The vertices are (±a, 0).\n\nFinal Answer: Vertices = (5, 0) and (-5, 0)."
+        ],
+        [
+            "Find the eccentricity of the ellipse x²/25 + y²/16 = 1.",
+            "Step 1: Compare with the standard ellipse equation.\n\nHere, a² = 25 and b² = 16.\n\nStep 2: For an ellipse:\n\ne² = 1 - b²/a².\n\nStep 3: Substitute:\n\ne² = 1 - 16/25 = 9/25.\n\nStep 4: Take the positive square root:\n\ne = 3/5.\n\nFinal Answer: Eccentricity = 3/5."
+        ],
+        [
+            "Find the asymptotes of the hyperbola x²/9 - y²/4 = 1.",
+            "Step 1: Compare with the standard hyperbola equation:\n\nx²/a² - y²/b² = 1.\n\nStep 2: Identify:\n\na² = 9, so a = 3.\n\nb² = 4, so b = 2.\n\nStep 3: For this hyperbola, the asymptotes are:\n\ny = ±(b/a)x.\n\nStep 4: Substitute a = 3 and b = 2.\n\nFinal Answer: y = (2/3)x and y = -(2/3)x."
+        ]
+    ],
+    important: [
+        [
+            "Find the equation of the circle whose centre is (2, -3) and radius is 5.",
+            "Step 1: Use the standard equation of a circle:\n\n(x - h)² + (y - k)² = r².\n\nHere, centre (h, k) = (2, -3) and radius r = 5.\n\nStep 2: Substitute the values:\n\n(x - 2)² + (y + 3)² = 25.\n\nStep 3: Expand:\n\nx² - 4x + 4 + y² + 6y + 9 = 25.\n\nStep 4: Bring all terms to the left:\n\nx² + y² - 4x + 6y + 13 - 25 = 0.\n\nFinal Answer: x² + y² - 4x + 6y - 12 = 0."
+        ],
+        [
+            "Find the equation of the parabola whose focus is (3, 0) and directrix is x = -3.",
+            "Step 1: The focus is (a, 0), so a = 3.\n\nStep 2: The standard equation of a parabola opening right is:\n\ny² = 4ax.\n\nStep 3: Substitute a = 3:\n\ny² = 4(3)x.\n\nFinal Answer: y² = 12x."
+        ],
+        [
+            "Find the length of the latus rectum of the parabola y² = 20x.",
+            "Step 1: Compare the equation with:\n\ny² = 4ax.\n\nStep 2: We get:\n\n4a = 20, so a = 5.\n\nStep 3: The length of the latus rectum of a parabola is 4a.\n\nStep 4: Substitute a = 5:\n\n4a = 4 × 5 = 20.\n\nFinal Answer: 20 units."
+        ],
+        [
+            "Find the foci of the ellipse x²/36 + y²/20 = 1.",
+            "Step 1: Compare with the standard ellipse equation.\n\nHere, a² = 36 and b² = 20.\n\nStep 2: Since a² > b², the major axis is along the x-axis.\n\nStep 3: For an ellipse:\n\nc² = a² - b².\n\nStep 4: Substitute:\n\nc² = 36 - 20 = 16.\n\nTherefore, c = 4.\n\nStep 5: The foci are (±c, 0).\n\nFinal Answer: Foci = (4, 0) and (-4, 0)."
+        ],
+        [
+            "Find the equation of the hyperbola with a = 4 and b = 3, whose transverse axis is along the x-axis.",
+            "Step 1: The standard equation of a hyperbola with transverse axis along the x-axis is:\n\nx²/a² - y²/b² = 1.\n\nStep 2: Given a = 4 and b = 3.\n\nTherefore, a² = 16 and b² = 9.\n\nStep 3: Substitute:\n\nx²/16 - y²/9 = 1.\n\nFinal Answer: x²/16 - y²/9 = 1."
+        ],
+        [
+            "Find the eccentricity of the hyperbola x²/16 - y²/9 = 1.",
+            "Step 1: Compare with the standard hyperbola equation.\n\nHere, a² = 16 and b² = 9.\n\nStep 2: For a hyperbola:\n\nc² = a² + b².\n\nStep 3: Substitute:\n\nc² = 16 + 9 = 25.\n\nTherefore, c = 5.\n\nStep 4: Eccentricity is e = c/a.\n\n= 5/4.\n\nFinal Answer: e = 5/4."
+        ]
+    ],
+    worked: [
+        [
+            "Find the equation of a circle passing through the points (0, 0), (4, 0) and (0, 6).",
+            "Step 1: Use the general equation of a circle:\n\nx² + y² + 2gx + 2fy + c = 0.\n\nStep 2: Substitute (0, 0):\n\n0 + 0 + 0 + 0 + c = 0.\n\nTherefore, c = 0.\n\nStep 3: Substitute (4, 0):\n\n16 + 8g = 0.\n\n8g = -16.\n\ng = -2.\n\nStep 4: Substitute (0, 6):\n\n36 + 12f = 0.\n\n12f = -36.\n\nf = -3.\n\nStep 5: Substitute g = -2, f = -3 and c = 0 into the general equation:\n\nx² + y² - 4x - 6y = 0.\n\nFinal Answer: x² + y² - 4x - 6y = 0."
+        ],
+        [
+            "Find the equation of the tangent to the circle x² + y² = 25 at the point (3, 4).",
+            "Step 1: The circle is:\n\nx² + y² = a².\n\nHere, a² = 25.\n\nStep 2: The standard tangent equation to x² + y² = a² at (x₁, y₁) is:\n\nxx₁ + yy₁ = a².\n\nStep 3: Substitute x₁ = 3, y₁ = 4 and a² = 25:\n\n3x + 4y = 25.\n\nFinal Answer: 3x + 4y = 25."
+        ],
+        [
+            "Find the equation of the parabola with vertex at the origin, axis along the positive x-axis and passing through (2, 4).",
+            "Step 1: Since the parabola opens along the positive x-axis, its equation is:\n\ny² = 4ax.\n\nStep 2: The point (2, 4) lies on the parabola.\n\nSubstitute x = 2 and y = 4:\n\n4² = 4a(2).\n\n16 = 8a.\n\nStep 3: Solve for a:\n\na = 2.\n\nStep 4: Substitute a = 2 into the equation:\n\ny² = 4(2)x.\n\nFinal Answer: y² = 8x."
+        ],
+        [
+            "Find the length of the major and minor axes of the ellipse x²/49 + y²/25 = 1.",
+            "Step 1: Compare with the standard ellipse equation:\n\nx²/a² + y²/b² = 1.\n\nStep 2: Identify:\n\na² = 49, so a = 7.\n\nb² = 25, so b = 5.\n\nStep 3: The length of the major axis is 2a:\n\n2 × 7 = 14.\n\nStep 4: The length of the minor axis is 2b:\n\n2 × 5 = 10.\n\nFinal Answer: Major axis = 14 units; Minor axis = 10 units."
+        ],
+        [
+            "Find the equation of the hyperbola whose foci are (±5, 0) and whose vertices are (±4, 0).",
+            "Step 1: The vertices are (±a, 0), so a = 4.\n\nThe foci are (±c, 0), so c = 5.\n\nStep 2: For a hyperbola:\n\nc² = a² + b².\n\nStep 3: Substitute:\n\n25 = 16 + b².\n\nTherefore, b² = 9.\n\nStep 4: Since the transverse axis is along the x-axis, use:\n\nx²/a² - y²/b² = 1.\n\nStep 5: Substitute a² = 16 and b² = 9.\n\nFinal Answer: x²/16 - y²/9 = 1."
+        ],
+        [
+            "Find the equation of the ellipse whose major axis is along the x-axis, with vertices (±5, 0) and foci (±4, 0).",
+            "Step 1: From the vertices, a = 5.\n\nTherefore, a² = 25.\n\nStep 2: From the foci, c = 4.\n\nTherefore, c² = 16.\n\nStep 3: For an ellipse:\n\nc² = a² - b².\n\nRearrange:\n\nb² = a² - c².\n\nStep 4: Substitute:\n\nb² = 25 - 16 = 9.\n\nStep 5: Since the major axis is along the x-axis, the equation is:\n\nx²/a² + y²/b² = 1.\n\nStep 6: Substitute the values:\n\nFinal Answer: x²/25 + y²/9 = 1."
+        ]
+    ],
+    formula: [
+        "Circle with centre (h, k) and radius r: (x - h)² + (y - k)² = r². Use when the centre and radius are given.",
+        "General circle equation: x² + y² + 2gx + 2fy + c = 0.",
+        "Centre of the general circle: (-g, -f).",
+        "Radius of the general circle: √(g² + f² - c).",
+        "Parabola opening right: y² = 4ax. Vertex is (0, 0), focus is (a, 0), directrix is x = -a.",
+        "Parabola opening upward: x² = 4ay. Vertex is (0, 0), focus is (0, a), directrix is y = -a.",
+        "Length of the latus rectum of a parabola: 4a.",
+        "Ellipse with major axis along x-axis: x²/a² + y²/b² = 1, where a > b.",
+        "Ellipse relation: c² = a² - b². Foci are (±c, 0) when the major axis is horizontal.",
+        "Eccentricity of an ellipse: e = c/a, where 0 < e < 1.",
+        "Length of major axis of an ellipse: 2a. Length of minor axis: 2b.",
+        "Hyperbola with transverse axis along x-axis: x²/a² - y²/b² = 1.",
+        "Hyperbola relation: c² = a² + b².",
+        "Eccentricity of a hyperbola: e = c/a, where e > 1.",
+        "Asymptotes of x²/a² - y²/b² = 1: y = ±(b/a)x."
+    ]
 },
 {
-"title":"Theory of Equations","volume":1,
-"bookback":[
-["For x²−5x+6=0, find the sum and product.","Sum=5; product=6."],
-["State the quadratic formula.","x=(−b±√(b²−4ac))/(2a)."],
-["Find the sum and product of roots of 2x²−7x+3=0.","Answer: Sum=7/2; product=3/2."],
-["Solve x²−5x+6=0.","Answer: x=2 or x=3."],
-["Form a quadratic equation whose roots are 4 and −1.","Answer: x²−3x−4=0."],
-["Solve x³−6x²+11x−6=0.","Answer: roots are 1, 2 and 3."]
-],
-"important":[
-["Explain and solve: Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],
-["Explain and solve: Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],
-["Explain and solve: Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],
-["Explain and solve: Solve x³−6x²+11x−6=0.","Factor: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],
-["Explain and solve: Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],
-["Explain and solve: If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]
-],
-"worked":[
-["Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],
-["Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],
-["Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],
-["Solve x³−6x²+11x−6=0.","Factor: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],
-["Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],
-["If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]
-],
-"formula":[
-"For ax²+bx+c=0: α+β=−b/a; αβ=c/a.",
-"Quadratic formula: x=(−b±√(b²−4ac))/(2a).",
-"Discriminant Δ=b²−4ac determines the nature of roots.",
-"For a monic cubic x³+ax²+bx+c=0, sum of roots=−a."
-]
+    title: "Applications of Vector Algebra",
+    volume: "Volume 1",
+    bookback: [
+        [
+            "Find the magnitude of the vector a = 3i + 4j.",
+            "Step 1: The magnitude of a vector a = ai + bj is:\n\n|a| = √(a² + b²).\n\nStep 2: Here, a = 3 and b = 4.\n\nStep 3: Substitute:\n\n|a| = √(3² + 4²).\n\n= √(9 + 16) = √25.\n\nFinal Answer: |a| = 5."
+        ],
+        [
+            "Find the unit vector in the direction of 2i + 2j + j.",
+            "Step 1: First simplify the vector:\n\na = 2i + 3j.\n\nStep 2: Find its magnitude:\n\n|a| = √(2² + 3²) = √13.\n\nStep 3: Unit vector = a / |a|.\n\nStep 4: Substitute:\n\nUnit vector = (2i + 3j)/√13.\n\nFinal Answer: (2i + 3j)/√13."
+        ],
+        [
+            "Find the dot product of a = 2i + 3j and b = 4i - j.",
+            "Step 1: Use the dot product formula:\n\na · b = a₁b₁ + a₂b₂.\n\nStep 2: Identify the components:\n\na = (2, 3), b = (4, -1).\n\nStep 3: Multiply corresponding components and add:\n\na · b = (2 × 4) + (3 × -1).\n\n= 8 - 3.\n\nFinal Answer: 5."
+        ],
+        [
+            "Find the angle between two vectors a = i and b = i + j.",
+            "Step 1: Use the dot product formula:\n\na · b = |a||b|cos θ.\n\nStep 2: Calculate the dot product:\n\na · b = 1 × 1 + 0 × 1 = 1.\n\nStep 3: Find magnitudes:\n\n|a| = 1.\n\n|b| = √(1² + 1²) = √2.\n\nStep 4: Substitute:\n\n1 = 1 × √2 × cos θ.\n\ncos θ = 1/√2.\n\nStep 5: Therefore:\n\nθ = 45°.\n\nFinal Answer: 45° or π/4 radians."
+        ],
+        [
+            "Find the cross product of i and j.",
+            "Step 1: Recall the standard unit-vector cross products:\n\ni × j = k.\n\nStep 2: Therefore, the cross product points in the positive k direction.\n\nFinal Answer: i × j = k."
+        ],
+        [
+            "Find the area of the parallelogram formed by vectors a = 2i and b = 3j.",
+            "Step 1: Area of a parallelogram formed by two vectors is:\n\nArea = |a × b|.\n\nStep 2: Calculate the cross product:\n\na × b = (2i) × (3j).\n\n= 6(i × j).\n\n= 6k.\n\nStep 3: Find its magnitude:\n\n|6k| = 6.\n\nFinal Answer: 6 square units."
+        ]
+    ],
+    important: [
+        [
+            "Find the angle between a = 2i + j and b = i + 2j.",
+            "Step 1: Use the dot product formula:\n\na · b = |a||b|cos θ.\n\nStep 2: Calculate the dot product:\n\na · b = (2 × 1) + (1 × 2) = 4.\n\nStep 3: Find the magnitudes:\n\n|a| = √(2² + 1²) = √5.\n\n|b| = √(1² + 2²) = √5.\n\nStep 4: Substitute:\n\n4 = √5 × √5 × cos θ.\n\n4 = 5cos θ.\n\nTherefore, cos θ = 4/5.\n\nFinal Answer: θ = cos⁻¹(4/5)."
+        ],
+        [
+            "Find the cross product of a = i + 2j + 3k and b = 2i - j + k.",
+            "Step 1: Write the cross product as a determinant:\n\na × b = | i   j   k |\n             | 1   2   3 |\n             | 2  -1   1 |.\n\nStep 2: Expand along the first row:\n\na × b = i(2 × 1 - 3 × -1) - j(1 × 1 - 3 × 2) + k(1 × -1 - 2 × 2).\n\nStep 3: Simplify each component:\n\n= i(2 + 3) - j(1 - 6) + k(-1 - 4).\n\n= 5i + 5j - 5k.\n\nFinal Answer: 5i + 5j - 5k."
+        ],
+        [
+            "Find the scalar projection of a = 3i + 4j on b = i.",
+            "Step 1: Scalar projection of a on b is:\n\n(a · b) / |b|.\n\nStep 2: Calculate the dot product:\n\na · b = (3 × 1) + (4 × 0) = 3.\n\nStep 3: Find the magnitude of b:\n\n|b| = 1.\n\nStep 4: Divide:\n\nScalar projection = 3/1.\n\nFinal Answer: 3."
+        ],
+        [
+            "Find the area of the triangle formed by a = i + 2j and b = 3i + j.",
+            "Step 1: The area of a triangle formed by two vectors is:\n\nArea = 1/2 |a × b|.\n\nStep 2: Treat the vectors as three-dimensional vectors with zero k-components:\n\na = (1, 2, 0), b = (3, 1, 0).\n\nStep 3: Their cross product is:\n\na × b = (1 × 1 - 2 × 3)k.\n\n= (1 - 6)k = -5k.\n\nStep 4: Find the magnitude:\n\n|-5k| = 5.\n\nStep 5: Calculate the area:\n\nArea = 1/2 × 5.\n\nFinal Answer: 5/2 square units."
+        ],
+        [
+            "Show that the vectors a = 2i + 3j and b = 4i + 6j are parallel.",
+            "Step 1: Write the vectors in component form:\n\na = (2, 3), b = (4, 6).\n\nStep 2: Compare their components:\n\n4/2 = 2 and 6/3 = 2.\n\nStep 3: Therefore:\n\nb = 2a.\n\nStep 4: Since one vector is a scalar multiple of the other, they are parallel.\n\nFinal Answer: The vectors are parallel."
+        ],
+        [
+            "Find the value of λ if a = i + 2j + 3k and b = 2i + λj + 6k are parallel.",
+            "Step 1: For two parallel vectors, their corresponding components must be proportional.\n\nStep 2: Compare the first and third components:\n\n2/1 = 6/3 = 2.\n\nStep 3: Therefore, the scale factor is 2.\n\nStep 4: Compare the j-components:\n\nλ/2 = 2.\n\nStep 5: Multiply by 2:\n\nλ = 4.\n\nFinal Answer: λ = 4."
+        ]
+    ],
+    worked: [
+        [
+            "Find the unit vector along the vector a = 2i - 3j + 6k.",
+            "Step 1: The unit vector along a vector is found by dividing the vector by its magnitude.\n\nUnit vector = a / |a|.\n\nStep 2: Calculate the magnitude:\n\n|a| = √(2² + (-3)² + 6²).\n\n= √(4 + 9 + 36).\n\n= √49 = 7.\n\nStep 3: Divide every component by 7:\n\nUnit vector = (2i - 3j + 6k)/7.\n\nFinal Answer: (2/7)i - (3/7)j + (6/7)k."
+        ],
+        [
+            "Find the angle between a = i + j + k and b = 2i - j + 2k.",
+            "Step 1: Use the formula:\n\na · b = |a||b|cos θ.\n\nStep 2: Calculate the dot product:\n\na · b = (1 × 2) + (1 × -1) + (1 × 2).\n\n= 2 - 1 + 2 = 3.\n\nStep 3: Calculate the magnitudes:\n\n|a| = √(1² + 1² + 1²) = √3.\n\n|b| = √(2² + (-1)² + 2²) = √9 = 3.\n\nStep 4: Substitute into the formula:\n\n3 = √3 × 3 × cos θ.\n\nDivide both sides by 3√3:\n\ncos θ = 1/√3.\n\nFinal Answer: θ = cos⁻¹(1/√3)."
+        ],
+        [
+            "Find the area of the parallelogram whose adjacent sides are a = i + 2j + 3k and b = 2i - j + k.",
+            "Step 1: The area of a parallelogram is the magnitude of the cross product:\n\nArea = |a × b|.\n\nStep 2: Write the determinant:\n\na × b = | i   j   k |\n             | 1   2   3 |\n             | 2  -1   1 |.\n\nStep 3: Expand:\n\na × b = i(2 + 3) - j(1 - 6) + k(-1 - 4).\n\n= 5i + 5j - 5k.\n\nStep 4: Find the magnitude:\n\n|a × b| = √(5² + 5² + (-5)²).\n\n= √(25 + 25 + 25).\n\n= √75 = 5√3.\n\nFinal Answer: 5√3 square units."
+        ],
+        [
+            "Find the value of λ if the vectors a = i + λj + 2k and b = 2i + 3j + 4k are perpendicular.",
+            "Step 1: Two vectors are perpendicular when their dot product is zero.\n\nTherefore:\n\na · b = 0.\n\nStep 2: Calculate the dot product:\n\n(1 × 2) + (λ × 3) + (2 × 4) = 0.\n\nStep 3: Simplify:\n\n2 + 3λ + 8 = 0.\n\n3λ + 10 = 0.\n\nStep 4: Solve for λ:\n\n3λ = -10.\n\nFinal Answer: λ = -10/3."
+        ],
+        [
+            "Find the scalar projection of a = 2i + 3j + 6k on b = i + 2j + 2k.",
+            "Step 1: Scalar projection of a on b is:\n\n(a · b)/|b|.\n\nStep 2: Calculate the dot product:\n\na · b = (2 × 1) + (3 × 2) + (6 × 2).\n\n= 2 + 6 + 12 = 20.\n\nStep 3: Find the magnitude of b:\n\n|b| = √(1² + 2² + 2²).\n\n= √(1 + 4 + 4) = 3.\n\nStep 4: Divide:\n\nScalar projection = 20/3.\n\nFinal Answer: 20/3."
+        ],
+        [
+            "Find the area of the triangle with vertices A(1, 0, 0), B(0, 1, 0) and C(0, 0, 1).",
+            "Step 1: Form two sides of the triangle from point A:\n\nAB = B - A = (-1, 1, 0).\n\nAC = C - A = (-1, 0, 1).\n\nStep 2: The area of a triangle is:\n\nArea = 1/2 |AB × AC|.\n\nStep 3: Calculate the cross product:\n\nAB × AC = | i   j   k |\n                 | -1  1   0 |\n                 | -1  0   1 |.\n\n= i(1 × 1 - 0 × 0) - j((-1 × 1) - 0 × -1) + k((-1 × 0) - 1 × -1).\n\n= i - j(-1) + k.\n\n= i + j + k.\n\nStep 4: Find the magnitude:\n\n|AB × AC| = √(1² + 1² + 1²) = √3.\n\nStep 5: Calculate the area:\n\nArea = √3/2.\n\nFinal Answer: √3/2 square units."
+        ]
+    ],
+    formula: [
+        "Magnitude of a = ai + bj + ck: |a| = √(a² + b² + c²). Use to find the length of a vector.",
+        "Unit vector along a: â = a/|a|. It has magnitude 1 and points in the same direction as a.",
+        "Dot product: a · b = a₁b₁ + a₂b₂ + a₃b₃. The result is a scalar.",
+        "Angle between vectors: cos θ = (a · b)/(|a||b|). Use when the angle between two non-zero vectors is required.",
+        "Perpendicular vectors: a · b = 0. Their dot product is zero.",
+        "Parallel vectors: a = λb for some scalar λ. Corresponding components are proportional.",
+        "Cross product magnitude: |a × b| = |a||b|sin θ. The result is a vector perpendicular to both original vectors.",
+        "Standard cross products: i × j = k, j × k = i, k × i = j. Reversing the order changes the sign.",
+        "Area of a parallelogram: |a × b|. Use the magnitude of the cross product.",
+        "Area of a triangle: (1/2)|a × b|. Use when two sides of the triangle are represented by vectors.",
+        "Scalar projection of a on b: (a · b)/|b|. This gives the signed component of a in the direction of b.",
+        "Vector projection of a on b: [(a · b)/|b|²]b. This gives the vector component of a along b."
+    ]
 },
 {
-"title":"Inverse Trigonometric Functions","volume":1,
-"bookback":[
-["Evaluate tan⁻¹(1).","tan(π/4)=1, so the answer is π/4."],
-["Evaluate sin⁻¹(1/2).","The principal value is π/6."],
-["Evaluate sin⁻¹(1/2).","Answer: π/6."],
-["Evaluate cos⁻¹(−1/2).","Answer: 2π/3."],
-["Evaluate tan⁻¹(1)+tan⁻¹(1).","Answer: π/2."],
-["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Answer: π/2."]
-],
-"important":[
-["Explain and solve: Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],
-["Explain and solve: Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],
-["Explain and solve: Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],
-["Explain and solve: Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],
-["Explain and solve: Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],
-["Explain and solve: Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]
-],
-"worked":[
-["Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],
-["Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],
-["Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],
-["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],
-["Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],
-["Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]
-],
-"formula":[
-"sin⁻¹x+cos⁻¹x=π/2 for −1≤x≤1.",
-"Range of sin⁻¹x: [−π/2,π/2].",
-"Range of cos⁻¹x: [0,π].",
-"Range of tan⁻¹x: (−π/2,π/2)."
-]
+    title: "Applications of Differential Calculus",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "Differentiate y = x³ - 5x² + 4x + 7.",
+            "Step 1: Differentiate each term separately using the power rule:\n\nd/dx(xⁿ) = nxⁿ⁻¹.\n\nStep 2: Differentiate:\n\ndy/dx = 3x² - 10x + 4 + 0.\n\nThe derivative of a constant is zero.\n\nFinal Answer: dy/dx = 3x² - 10x + 4."
+        ],
+        [
+            "Find the derivative of y = sin x + cos x.",
+            "Step 1: Recall the standard derivatives:\n\nd/dx(sin x) = cos x.\n\nd/dx(cos x) = -sin x.\n\nStep 2: Differentiate both terms:\n\ndy/dx = cos x - sin x.\n\nFinal Answer: cos x - sin x."
+        ],
+        [
+            "Differentiate y = eˣ + ln x.",
+            "Step 1: Recall:\n\nd/dx(eˣ) = eˣ.\n\nd/dx(ln x) = 1/x.\n\nStep 2: Differentiate term by term:\n\ndy/dx = eˣ + 1/x.\n\nFinal Answer: eˣ + 1/x."
+        ],
+        [
+            "Find the derivative of y = (2x + 3)⁵.",
+            "Step 1: Apply the chain rule. If y = u⁵, then dy/dx = 5u⁴ × du/dx.\n\nStep 2: Let u = 2x + 3.\n\nThen du/dx = 2.\n\nStep 3: Substitute:\n\ndy/dx = 5(2x + 3)⁴ × 2.\n\nFinal Answer: 10(2x + 3)⁴."
+        ],
+        [
+            "Find the slope of the curve y = x² + 3x at x = 2.",
+            "Step 1: The slope of a curve is given by dy/dx.\n\nStep 2: Differentiate:\n\ndy/dx = 2x + 3.\n\nStep 3: Substitute x = 2:\n\nSlope = 2(2) + 3 = 4 + 3.\n\nFinal Answer: Slope = 7."
+        ],
+        [
+            "Find the stationary points of y = x² - 6x + 5.",
+            "Step 1: Stationary points occur where the first derivative is zero.\n\nStep 2: Differentiate:\n\ndy/dx = 2x - 6.\n\nStep 3: Put dy/dx = 0:\n\n2x - 6 = 0.\n\n2x = 6, so x = 3.\n\nStep 4: Find y:\n\ny = 3² - 6(3) + 5 = 9 - 18 + 5 = -4.\n\nFinal Answer: Stationary point = (3, -4)."
+        ]
+    ],
+    important: [
+        [
+            "Find the intervals in which f(x) = x² - 4x + 3 is increasing or decreasing.",
+            "Step 1: Differentiate the function:\n\nf'(x) = 2x - 4.\n\nStep 2: Find where the derivative is zero:\n\n2x - 4 = 0, so x = 2.\n\nStep 3: Check the sign of f'(x).\n\nFor x < 2, choose x = 0:\n\nf'(0) = -4, which is negative. Therefore, the function is decreasing.\n\nFor x > 2, choose x = 3:\n\nf'(3) = 2, which is positive. Therefore, the function is increasing.\n\nFinal Answer: Decreasing on (-∞, 2) and increasing on (2, ∞)."
+        ],
+        [
+            "Find the local maximum or minimum of f(x) = x² - 8x + 12.",
+            "Step 1: Differentiate:\n\nf'(x) = 2x - 8.\n\nStep 2: Set the first derivative equal to zero:\n\n2x - 8 = 0, so x = 4.\n\nStep 3: Find the second derivative:\n\nf''(x) = 2.\n\nStep 4: Since f''(4) = 2 > 0, the function has a local minimum at x = 4.\n\nStep 5: Find the minimum value:\n\nf(4) = 16 - 32 + 12 = -4.\n\nFinal Answer: Local minimum = -4 at x = 4."
+        ],
+        [
+            "Find the equation of the tangent to y = x² at the point (2, 4).",
+            "Step 1: Differentiate the curve:\n\ndy/dx = 2x.\n\nStep 2: Find the slope at x = 2:\n\nm = 2(2) = 4.\n\nStep 3: Use the point-slope form:\n\ny - y₁ = m(x - x₁).\n\nStep 4: Substitute (x₁, y₁) = (2, 4) and m = 4:\n\ny - 4 = 4(x - 2).\n\nStep 5: Simplify:\n\ny - 4 = 4x - 8.\n\nFinal Answer: y = 4x - 4."
+        ],
+        [
+            "Find the equation of the normal to y = x² at the point (1, 1).",
+            "Step 1: Differentiate:\n\ndy/dx = 2x.\n\nStep 2: Find the tangent slope at x = 1:\n\nmₜ = 2(1) = 2.\n\nStep 3: The normal is perpendicular to the tangent.\n\nTherefore, its slope is:\n\nmₙ = -1/2.\n\nStep 4: Use the point-slope equation:\n\ny - 1 = (-1/2)(x - 1).\n\nStep 5: Multiply by 2:\n\n2y - 2 = -x + 1.\n\nFinal Answer: x + 2y - 3 = 0."
+        ],
+        [
+            "Find the maximum and minimum values of f(x) = x³ - 3x² + 2.",
+            "Step 1: Differentiate:\n\nf'(x) = 3x² - 6x.\n\nStep 2: Factorise:\n\nf'(x) = 3x(x - 2).\n\nStep 3: Set f'(x) = 0:\n\nx = 0 or x = 2.\n\nStep 4: Find the second derivative:\n\nf''(x) = 6x - 6.\n\nAt x = 0:\n\nf''(0) = -6 < 0, so there is a local maximum.\n\nf(0) = 2.\n\nAt x = 2:\n\nf''(2) = 6 > 0, so there is a local minimum.\n\nf(2) = 8 - 12 + 2 = -2.\n\nFinal Answer: Local maximum = 2 at x = 0; local minimum = -2 at x = 2."
+        ],
+        [
+            "A rectangle has perimeter 40 cm. Find its maximum possible area.",
+            "Step 1: Let the length be x cm and breadth be y cm.\n\nGiven perimeter:\n\n2(x + y) = 40.\n\nTherefore:\n\nx + y = 20, so y = 20 - x.\n\nStep 2: Area is:\n\nA = xy.\n\nSubstitute y:\n\nA = x(20 - x) = 20x - x².\n\nStep 3: Differentiate:\n\ndA/dx = 20 - 2x.\n\nStep 4: Set the derivative to zero:\n\n20 - 2x = 0, so x = 10.\n\nThen y = 20 - 10 = 10.\n\nStep 5: Check the second derivative:\n\nd²A/dx² = -2 < 0.\n\nTherefore, the area is maximum.\n\nStep 6: Calculate the area:\n\nA = 10 × 10 = 100 cm².\n\nFinal Answer: Maximum area = 100 cm²."
+        ]
+    ],
+    worked: [
+        [
+            "Find the absolute maximum and minimum of f(x) = x² - 4x + 1 on [0, 5].",
+            "Step 1: For an absolute maximum or minimum on a closed interval, check stationary points and both endpoints.\n\nStep 2: Differentiate:\n\nf'(x) = 2x - 4.\n\nStep 3: Find stationary points:\n\n2x - 4 = 0, so x = 2.\n\nSince 2 lies in [0, 5], include it.\n\nStep 4: Evaluate the function at x = 0:\n\nf(0) = 1.\n\nStep 5: Evaluate at x = 2:\n\nf(2) = 4 - 8 + 1 = -3.\n\nStep 6: Evaluate at x = 5:\n\nf(5) = 25 - 20 + 1 = 6.\n\nStep 7: Compare the three values: 1, -3 and 6.\n\nFinal Answer: Absolute minimum = -3 at x = 2; absolute maximum = 6 at x = 5."
+        ],
+        [
+            "Find the points on the curve y = x³ - 3x where the tangent is horizontal.",
+            "Step 1: A horizontal tangent has slope zero.\n\nTherefore, set dy/dx = 0.\n\nStep 2: Differentiate:\n\ndy/dx = 3x² - 3.\n\nStep 3: Set equal to zero:\n\n3x² - 3 = 0.\n\n3x² = 3, so x² = 1.\n\nTherefore, x = 1 or x = -1.\n\nStep 4: Find the corresponding y-values.\n\nAt x = 1:\n\ny = 1³ - 3(1) = -2.\n\nAt x = -1:\n\ny = (-1)³ - 3(-1) = -1 + 3 = 2.\n\nFinal Answer: The points are (1, -2) and (-1, 2)."
+        ],
+        [
+            "A particle moves along a straight line with displacement s(t) = t³ - 6t² + 9t. Find its velocity and acceleration at t = 2.",
+            "Step 1: Velocity is the first derivative of displacement:\n\nv(t) = ds/dt.\n\nStep 2: Differentiate:\n\nv(t) = 3t² - 12t + 9.\n\nStep 3: Substitute t = 2:\n\nv(2) = 3(4) - 12(2) + 9.\n\n= 12 - 24 + 9 = -3.\n\nStep 4: Acceleration is the derivative of velocity:\n\na(t) = dv/dt = 6t - 12.\n\nStep 5: Substitute t = 2:\n\na(2) = 12 - 12 = 0.\n\nFinal Answer: Velocity = -3 units/s; acceleration = 0 units/s²."
+        ],
+        [
+            "Find the dimensions of a rectangle of maximum area if its perimeter is 60 cm.",
+            "Step 1: Let the length be x and breadth be y.\n\nPerimeter = 60:\n\n2(x + y) = 60.\n\nTherefore, x + y = 30 and y = 30 - x.\n\nStep 2: Area:\n\nA = xy = x(30 - x).\n\nA = 30x - x².\n\nStep 3: Differentiate:\n\ndA/dx = 30 - 2x.\n\nStep 4: Set equal to zero:\n\n30 - 2x = 0.\n\nx = 15.\n\nThen y = 30 - 15 = 15.\n\nStep 5: Verify maximum:\n\nd²A/dx² = -2 < 0.\n\nSo the area is maximum.\n\nFinal Answer: Length = 15 cm and breadth = 15 cm."
+        ],
+        [
+            "Find the intervals of concavity of f(x) = x³ - 6x² + 9x + 1.",
+            "Step 1: Concavity is determined using the second derivative.\n\nStep 2: Find the first derivative:\n\nf'(x) = 3x² - 12x + 9.\n\nStep 3: Differentiate again:\n\nf''(x) = 6x - 12.\n\nStep 4: Find where the second derivative is zero:\n\n6x - 12 = 0, so x = 2.\n\nStep 5: Check signs.\n\nFor x < 2, choose x = 0:\n\nf''(0) = -12, which is negative. The curve is concave downward.\n\nFor x > 2, choose x = 3:\n\nf''(3) = 6, which is positive. The curve is concave upward.\n\nFinal Answer: Concave downward on (-∞, 2); concave upward on (2, ∞)."
+        ],
+        [
+            "Find the point of inflection of y = x³ - 3x² + 2.",
+            "Step 1: A possible point of inflection occurs where the second derivative is zero and changes sign.\n\nStep 2: Differentiate:\n\ny' = 3x² - 6x.\n\nStep 3: Differentiate again:\n\ny'' = 6x - 6.\n\nStep 4: Set the second derivative to zero:\n\n6x - 6 = 0, so x = 1.\n\nStep 5: Find y at x = 1:\n\ny = 1 - 3 + 2 = 0.\n\nStep 6: The second derivative changes sign at x = 1, so this is an inflection point.\n\nFinal Answer: Point of inflection = (1, 0)."
+        ]
+    ],
+    formula: [
+        "Power rule: d(xⁿ)/dx = nxⁿ⁻¹. Use for differentiating powers of x.",
+        "Product rule: d(uv)/dx = u(dv/dx) + v(du/dx). Use when two functions are multiplied.",
+        "Quotient rule: d(u/v)/dx = [v(du/dx) - u(dv/dx)]/v². Use when one function is divided by another.",
+        "Chain rule: dy/dx = (dy/du)(du/dx). Use for composite functions.",
+        "d(sin x)/dx = cos x and d(cos x)/dx = -sin x.",
+        "d(tan x)/dx = sec²x and d(cot x)/dx = -cosec²x.",
+        "d(eˣ)/dx = eˣ and d(ln x)/dx = 1/x for x > 0.",
+        "Slope of a curve: m = dy/dx. Evaluate the derivative at the required point.",
+        "Tangent at (x₁, y₁): y - y₁ = m(x - x₁), where m is the derivative at x₁.",
+        "Normal slope: mₙ = -1/mₜ, when the tangent slope is non-zero.",
+        "Stationary points: solve f'(x) = 0. These are candidates for local maxima or minima.",
+        "Second derivative test: f''(a) > 0 indicates a local minimum; f''(a) < 0 indicates a local maximum.",
+        "Concavity: f''(x) > 0 means concave upward; f''(x) < 0 means concave downward.",
+        "Velocity: v = ds/dt. Acceleration: a = dv/dt = d²s/dt²."
+    ]
 },
 {
-"title":"Two Dimensional Analytical Geometry – II","volume":1,
-"bookback":[
-["Find the radius of (x−2)²+(y+1)²=16.","r²=16, so r=4."],
-["For y²=8x, find a.","4a=8, so a=2."],
-["Find the centre and radius of x²+y²−4x+6y−12=0.","Answer: centre (2,−3), radius 5."],
-["Find the focus of the parabola y²=12x.","Answer: focus (3,0)."],
-["Find the foci and eccentricity of x²/25+y²/9=1.","Answer: foci (±4,0), eccentricity c/a=4/5."],
-["Find the equation of a circle with centre (1,−2) and radius 3.","Answer: (x−1)²+(y+2)²=9."]
-],
-"important":[
-["Explain and solve: Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],
-["Explain and solve: Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],
-["Explain and solve: Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],
-["Explain and solve: Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],
-["Explain and solve: Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],
-["Explain and solve: Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]
-],
-"worked":[
-["Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],
-["Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],
-["Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],
-["Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],
-["Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],
-["Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]
-],
-"formula":[
-"Circle: (x−h)²+(y−k)²=r².",
-"Parabola: y²=4ax or x²=4ay.",
-"Ellipse: c²=a²−b²; e=c/a.",
-"Hyperbola: c²=a²+b²; e=c/a."
-]
+    title: "Differentials and Partial Derivatives",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "Find dy if y = x² + 3x.",
+            "Step 1: Differentiate y with respect to x:\n\ndy/dx = 2x + 3.\n\nStep 2: The differential is dy = (dy/dx)dx.\n\nStep 3: Substitute:\n\ndy = (2x + 3)dx.\n\nFinal Answer: dy = (2x + 3)dx."
+        ],
+        [
+            "Find the partial derivative of z = x² + y² with respect to x.",
+            "Step 1: When differentiating partially with respect to x, treat y as a constant.\n\nStep 2: Differentiate each term:\n\n∂(x²)/∂x = 2x.\n\n∂(y²)/∂x = 0, because y is treated as constant.\n\nFinal Answer: ∂z/∂x = 2x."
+        ],
+        [
+            "Find ∂z/∂y if z = 3x²y + 2y³.",
+            "Step 1: Differentiate with respect to y and treat x as a constant.\n\nStep 2: Differentiate the first term:\n\n∂(3x²y)/∂y = 3x².\n\nStep 3: Differentiate the second term:\n\n∂(2y³)/∂y = 6y².\n\nFinal Answer: ∂z/∂y = 3x² + 6y²."
+        ],
+        [
+            "Find the total differential of z = x² + xy + y².",
+            "Step 1: The total differential is:\n\ndz = (∂z/∂x)dx + (∂z/∂y)dy.\n\nStep 2: Find the partial derivatives:\n\n∂z/∂x = 2x + y.\n\n∂z/∂y = x + 2y.\n\nStep 3: Substitute:\n\ndz = (2x + y)dx + (x + 2y)dy.\n\nFinal Answer: dz = (2x + y)dx + (x + 2y)dy."
+        ],
+        [
+            "Find ∂²z/∂x² if z = x³ + xy².",
+            "Step 1: First differentiate with respect to x:\n\n∂z/∂x = 3x² + y².\n\nStep 2: Differentiate again with respect to x. Treat y as constant:\n\n∂²z/∂x² = 6x.\n\nFinal Answer: 6x."
+        ],
+        [
+            "Find ∂²z/∂x∂y if z = x²y + xy².",
+            "Step 1: First differentiate with respect to y:\n\n∂z/∂y = x² + 2xy.\n\nStep 2: Differentiate this result with respect to x:\n\n∂²z/∂x∂y = 2x + 2y.\n\nFinal Answer: 2x + 2y."
+        ]
+    ],
+    important: [
+        [
+            "Find the first-order partial derivatives of z = x²y³ + 4xy.",
+            "Step 1: Differentiate with respect to x, treating y as constant:\n\n∂z/∂x = 2xy³ + 4y.\n\nStep 2: Differentiate with respect to y, treating x as constant:\n\n∂z/∂y = 3x²y² + 4x.\n\nFinal Answer: ∂z/∂x = 2xy³ + 4y; ∂z/∂y = 3x²y² + 4x."
+        ],
+        [
+            "Verify Euler's theorem for z = x² + y².",
+            "Step 1: The function is homogeneous of degree 2 because every term has total degree 2.\n\nStep 2: Euler's theorem states:\n\nx(∂z/∂x) + y(∂z/∂y) = nz, where n is the degree.\n\nStep 3: Calculate partial derivatives:\n\n∂z/∂x = 2x; ∂z/∂y = 2y.\n\nStep 4: Substitute into the left-hand side:\n\nx(2x) + y(2y) = 2x² + 2y².\n\nStep 5: Since z = x² + y²:\n\n2x² + 2y² = 2z.\n\nThis equals nz with n = 2.\n\nHence Euler's theorem is verified."
+        ],
+        [
+            "Find the second-order partial derivatives of z = x²y + xy².",
+            "Step 1: First-order partial derivatives:\n\n∂z/∂x = 2xy + y².\n\n∂z/∂y = x² + 2xy.\n\nStep 2: Differentiate ∂z/∂x again with respect to x:\n\n∂²z/∂x² = 2y.\n\nStep 3: Differentiate ∂z/∂y again with respect to y:\n\n∂²z/∂y² = 2x.\n\nStep 4: Find the mixed partial derivative:\n\n∂²z/∂x∂y = 2x + 2y.\n\nFinal Answer: zₓₓ = 2y, zᵧᵧ = 2x and zₓᵧ = 2x + 2y."
+        ],
+        [
+            "Find the total differential of z = x³ + 3xy² at (1, 2), when dx = 0.1 and dy = 0.2.",
+            "Step 1: Total differential:\n\ndz = zₓ dx + zᵧ dy.\n\nStep 2: Find partial derivatives:\n\nzₓ = 3x² + 3y².\n\nzᵧ = 6xy.\n\nStep 3: Evaluate at (1, 2):\n\nzₓ = 3(1)² + 3(2)² = 3 + 12 = 15.\n\nzᵧ = 6(1)(2) = 12.\n\nStep 4: Substitute dx = 0.1 and dy = 0.2:\n\ndz = 15(0.1) + 12(0.2).\n\n= 1.5 + 2.4.\n\nFinal Answer: dz = 3.9."
+        ],
+        [
+            "Show that the mixed partial derivatives of z = x³y² are equal.",
+            "Step 1: First find the partial derivative with respect to x:\n\nzₓ = 3x²y².\n\nStep 2: Differentiate with respect to y:\n\nzₓᵧ = 6x²y.\n\nStep 3: Now differentiate first with respect to y:\n\nzᵧ = 2x³y.\n\nStep 4: Differentiate this with respect to x:\n\nzᵧₓ = 6x²y.\n\nStep 5: Compare:\n\nzₓᵧ = zᵧₓ = 6x²y.\n\nHence proved."
+        ],
+        [
+            "Determine whether f(x, y) = x² + 2xy + y² is homogeneous and find its degree.",
+            "Step 1: A function is homogeneous if every term has the same total degree.\n\nStep 2: Examine each term:\n\nx² has degree 2.\n\n2xy has degree 1 + 1 = 2.\n\ny² has degree 2.\n\nStep 3: All terms have degree 2.\n\nFinal Answer: The function is homogeneous of degree 2."
+        ]
+    ],
+    worked: [
+        [
+            "Verify Euler's theorem for z = x³ + 3x²y + 2y³.",
+            "Step 1: Check the degree of each term:\n\nx³ has degree 3.\n\n3x²y has degree 3.\n\n2y³ has degree 3.\n\nTherefore, z is homogeneous of degree n = 3.\n\nStep 2: Find the partial derivative with respect to x:\n\nzₓ = 3x² + 6xy.\n\nStep 3: Find the partial derivative with respect to y:\n\nzᵧ = 3x² + 6y².\n\nStep 4: Calculate the left-hand side of Euler's theorem:\n\nxzₓ + yzᵧ\n\n= x(3x² + 6xy) + y(3x² + 6y²).\n\n= 3x³ + 6x²y + 3x²y + 6y³.\n\n= 3x³ + 9x²y + 6y³.\n\nStep 5: Calculate the right-hand side:\n\n3z = 3(x³ + 3x²y + 2y³).\n\n= 3x³ + 9x²y + 6y³.\n\nBoth sides are equal.\n\nHence Euler's theorem is verified."
+        ],
+        [
+            "Find the maximum and minimum values of z = xy subject to x² + y² = 50.",
+            "Step 1: From the constraint:\n\nx² + y² = 50.\n\nUse the identity:\n\n(x - y)² ≥ 0.\n\nTherefore:\n\nx² - 2xy + y² ≥ 0.\n\nStep 2: Rearrange:\n\nx² + y² ≥ 2xy.\n\n50 ≥ 2xy.\n\nSo xy ≤ 25.\n\nStep 3: Similarly, using (x + y)² ≥ 0:\n\nx² + 2xy + y² ≥ 0.\n\n50 + 2xy ≥ 0.\n\nTherefore, xy ≥ -25.\n\nStep 4: Both limits are attainable.\n\nFor x = y = 5, xy = 25 and x² + y² = 50.\n\nFor x = 5 and y = -5, xy = -25 and x² + y² = 50.\n\nFinal Answer: Maximum value = 25; minimum value = -25."
+        ],
+        [
+            "Find the stationary points of z = x² + y² - 4x - 6y + 13.",
+            "Step 1: A stationary point occurs when both first-order partial derivatives are zero.\n\nStep 2: Differentiate with respect to x:\n\nzₓ = 2x - 4.\n\nSet zₓ = 0:\n\n2x - 4 = 0, so x = 2.\n\nStep 3: Differentiate with respect to y:\n\nzᵧ = 2y - 6.\n\nSet zᵧ = 0:\n\n2y - 6 = 0, so y = 3.\n\nStep 4: Find the value of z at (2, 3):\n\nz = 2² + 3² - 4(2) - 6(3) + 13.\n\n= 4 + 9 - 8 - 18 + 13 = 0.\n\nStep 5: The second derivatives are zₓₓ = 2, zᵧᵧ = 2 and zₓᵧ = 0. The Hessian determinant is 2 × 2 - 0² = 4 > 0, and zₓₓ > 0, so this is a minimum.\n\nFinal Answer: Minimum at (2, 3), with z = 0."
+        ],
+        [
+            "Find the total differential of z = x²y + xy² at (2, 1), when dx = 0.1 and dy = 0.05.",
+            "Step 1: Use the total differential formula:\n\ndz = zₓ dx + zᵧ dy.\n\nStep 2: Find the partial derivatives:\n\nzₓ = 2xy + y².\n\nzᵧ = x² + 2xy.\n\nStep 3: Evaluate at x = 2 and y = 1:\n\nzₓ = 2(2)(1) + 1² = 5.\n\nzᵧ = 2² + 2(2)(1) = 8.\n\nStep 4: Substitute the given changes:\n\ndz = 5(0.1) + 8(0.05).\n\n= 0.5 + 0.4.\n\nFinal Answer: dz = 0.9."
+        ],
+        [
+            "Find the second-order partial derivatives of z = x²y³ + 2xy.",
+            "Step 1: First-order partial derivatives:\n\nzₓ = 2xy³ + 2y.\n\nzᵧ = 3x²y² + 2x.\n\nStep 2: Differentiate zₓ with respect to x:\n\nzₓₓ = 2y³.\n\nStep 3: Differentiate zᵧ with respect to y:\n\nzᵧᵧ = 6x²y.\n\nStep 4: Differentiate zₓ with respect to y:\n\nzₓᵧ = 6xy² + 2.\n\nStep 5: Differentiate zᵧ with respect to x:\n\nzᵧₓ = 6xy² + 2.\n\nFinal Answer: zₓₓ = 2y³, zᵧᵧ = 6x²y and zₓᵧ = zᵧₓ = 6xy² + 2."
+        ],
+        [
+            "Use differentials to estimate the change in z = x² + y² when (x, y) changes from (3, 4) to (3.02, 3.97).",
+            "Step 1: Identify the small changes:\n\ndx = 3.02 - 3 = 0.02.\n\ndy = 3.97 - 4 = -0.03.\n\nStep 2: Find partial derivatives:\n\nzₓ = 2x and zᵧ = 2y.\n\nStep 3: Evaluate at (3, 4):\n\nzₓ = 6 and zᵧ = 8.\n\nStep 4: Use the differential formula:\n\ndz = zₓ dx + zᵧ dy.\n\n= 6(0.02) + 8(-0.03).\n\n= 0.12 - 0.24.\n\nFinal Answer: Estimated change dz = -0.12."
+        ]
+    ],
+    formula: [
+        "Differential of y: dy = (dy/dx)dx. It estimates the change in y for a small change dx in x.",
+        "Partial derivative with respect to x: differentiate in x while treating all other variables as constants.",
+        "Partial derivative with respect to y: differentiate in y while treating all other variables as constants.",
+        "Total differential: dz = (∂z/∂x)dx + (∂z/∂y)dy. Use when both x and y change.",
+        "Second partial derivative with respect to x: ∂²z/∂x². Differentiate zₓ again with respect to x.",
+        "Second partial derivative with respect to y: ∂²z/∂y². Differentiate zᵧ again with respect to y.",
+        "Mixed partial derivative: ∂²z/∂x∂y. Differentiate once with respect to each variable.",
+        "Euler's theorem for a homogeneous function of degree n: xzₓ + yzᵧ = nz.",
+        "A function is homogeneous of degree n if f(tx, ty) = tⁿf(x, y).",
+        "For a stationary point of z = f(x, y), solve zₓ = 0 and zᵧ = 0 together.",
+        "Hessian determinant: D = zₓₓzᵧᵧ - (zₓᵧ)². It helps classify stationary points.",
+        "If D > 0 and zₓₓ > 0, there is a local minimum; if D > 0 and zₓₓ < 0, there is a local maximum.",
+        "If D < 0, the stationary point is a saddle point. If D = 0, this test is inconclusive."
+    ]
 },
 {
-"title":"Applications of Vector Algebra","volume":1,
-"bookback":[
-["Find (i+2j)·(3i−j).","3−2=1."],
-["Find |5i+12j|.","√(25+144)=13."],
-["Find the dot product of a=2i+3j and b=i−4j.","Answer: −10."],
-["Find the magnitude of 3i+4j+12k.","Answer: 13."],
-["Find the angle between i+j and i−j.","Answer: 90°."],
-["Find the cross product of i and 2j.","Since i×j=k, the answer is 2k."]
-],
-"important":[
-["Explain and solve: Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],
-["Explain and solve: Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],
-["Explain and solve: Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],
-["Explain and solve: Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],
-["Explain and solve: Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],
-["Explain and solve: Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]
-],
-"worked":[
-["Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],
-["Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],
-["Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],
-["Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],
-["Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],
-["Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]
-],
-"formula":[
-"a·b=|a||b|cosθ.",
-"|a×b|=|a||b|sinθ.",
-"Parallelogram area=|a×b|; triangle area=½|a×b|.",
-"Projection of a on b: (a·b)/|b|."
-]
+    title: "Applications of Integration",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "Evaluate ∫ x² dx.",
+            "Step 1: Use the power rule for integration:\n\n∫xⁿ dx = xⁿ⁺¹/(n + 1) + C, for n ≠ -1.\n\nStep 2: Here n = 2.\n\n∫x² dx = x³/3 + C.\n\nFinal Answer: x³/3 + C."
+        ],
+        [
+            "Evaluate ∫(3x² + 2x) dx.",
+            "Step 1: Integrate each term separately:\n\n∫(3x² + 2x)dx = 3∫x²dx + 2∫x dx.\n\nStep 2: Apply the power rule:\n\n= 3(x³/3) + 2(x²/2) + C.\n\nStep 3: Simplify:\n\nFinal Answer: x³ + x² + C."
+        ],
+        [
+            "Evaluate ∫ cos x dx.",
+            "Step 1: Recall that the derivative of sin x is cos x.\n\nTherefore, the antiderivative of cos x is sin x.\n\nFinal Answer: sin x + C."
+        ],
+        [
+            "Evaluate ∫ eˣ dx.",
+            "Step 1: Recall that the derivative of eˣ is eˣ.\n\nTherefore, integrating eˣ gives the same function.\n\nFinal Answer: eˣ + C."
+        ],
+        [
+            "Evaluate ∫ from 0 to 2 of 2x dx.",
+            "Step 1: Find the antiderivative:\n\n∫2x dx = x².\n\nStep 2: Apply the limits:\n\n[x²]₀² = 2² - 0².\n\n= 4 - 0.\n\nFinal Answer: 4."
+        ],
+        [
+            "Find the area under y = x from x = 0 to x = 3.",
+            "Step 1: Area under a non-negative curve is:\n\nA = ∫₀³ y dx.\n\nStep 2: Substitute y = x:\n\nA = ∫₀³ x dx.\n\nStep 3: Integrate:\n\nA = [x²/2]₀³.\n\nStep 4: Apply the limits:\n\nA = 9/2 - 0.\n\nFinal Answer: 9/2 square units."
+        ]
+    ],
+    important: [
+        [
+            "Evaluate ∫ x eˣ dx using integration by parts.",
+            "Step 1: Use the formula:\n\n∫u dv = uv - ∫v du.\n\nStep 2: Choose u = x and dv = eˣ dx.\n\nThen du = dx and v = eˣ.\n\nStep 3: Substitute:\n\n∫xeˣ dx = xeˣ - ∫eˣ dx.\n\nStep 4: Integrate the remaining term:\n\n= xeˣ - eˣ + C.\n\nFinal Answer: eˣ(x - 1) + C."
+        ],
+        [
+            "Evaluate ∫ 1/(x² + 4) dx.",
+            "Step 1: Recall the standard formula:\n\n∫ dx/(x² + a²) = (1/a)tan⁻¹(x/a) + C.\n\nStep 2: Compare the denominator:\n\nx² + 4 = x² + 2².\n\nTherefore, a = 2.\n\nStep 3: Substitute:\n\nFinal Answer: (1/2)tan⁻¹(x/2) + C."
+        ],
+        [
+            "Evaluate ∫ from 0 to π/2 of sin x dx.",
+            "Step 1: Find the antiderivative:\n\n∫sin x dx = -cos x.\n\nStep 2: Apply the limits:\n\n[-cos x]₀^(π/2).\n\nStep 3: Substitute the upper limit:\n\n-cos(π/2) = 0.\n\nStep 4: Substitute the lower limit and subtract:\n\n-[-cos(0)] = -[-1] = 1.\n\nFinal Answer: 1."
+        ],
+        [
+            "Find the area enclosed by y = x and y = x² between x = 0 and x = 1.",
+            "Step 1: Determine which curve is above the other.\n\nFor 0 < x < 1, x is greater than x².\n\nStep 2: Area between two curves is:\n\nA = ∫₀¹ (upper curve - lower curve)dx.\n\nStep 3: Substitute:\n\nA = ∫₀¹ (x - x²)dx.\n\nStep 4: Integrate:\n\nA = [x²/2 - x³/3]₀¹.\n\nStep 5: Apply the limits:\n\nA = 1/2 - 1/3 = 1/6.\n\nFinal Answer: 1/6 square units."
+        ],
+        [
+            "Evaluate ∫ x/(x² + 1) dx.",
+            "Step 1: Use substitution because the derivative of the denominator is related to the numerator.\n\nLet u = x² + 1.\n\nStep 2: Differentiate:\n\ndu = 2x dx.\n\nTherefore, x dx = du/2.\n\nStep 3: Substitute:\n\n∫x/(x² + 1)dx = (1/2)∫du/u.\n\nStep 4: Integrate:\n\n= (1/2)ln|u| + C.\n\nStep 5: Substitute u = x² + 1:\n\nFinal Answer: (1/2)ln(x² + 1) + C."
+        ],
+        [
+            "Find the area enclosed by the parabola y = 4x - x² and the x-axis.",
+            "Step 1: Find where the curve meets the x-axis by setting y = 0:\n\n4x - x² = 0.\n\nx(4 - x) = 0.\n\nTherefore, x = 0 or x = 4.\n\nStep 2: Between 0 and 4, the curve is above the x-axis.\n\nStep 3: Area:\n\nA = ∫₀⁴ (4x - x²)dx.\n\nStep 4: Integrate:\n\nA = [2x² - x³/3]₀⁴.\n\nStep 5: Apply the limits:\n\nA = 2(16) - 64/3.\n\n= 32 - 64/3 = 96/3 - 64/3.\n\nFinal Answer: 32/3 square units."
+        ]
+    ],
+    worked: [
+        [
+            "Evaluate ∫ x² ln x dx using integration by parts.",
+            "Step 1: Use integration by parts:\n\n∫u dv = uv - ∫v du.\n\nStep 2: Choose u = ln x and dv = x² dx. This choice makes du simple.\n\nThen du = (1/x)dx and v = x³/3.\n\nStep 3: Substitute:\n\n∫x² ln x dx = (x³/3)ln x - ∫(x³/3)(1/x)dx.\n\nStep 4: Simplify the remaining integral:\n\n= (x³/3)ln x - (1/3)∫x² dx.\n\nStep 5: Integrate:\n\n= (x³/3)ln x - x³/9 + C.\n\nFinal Answer: (x³/3)ln x - x³/9 + C."
+        ],
+        [
+            "Find the area enclosed between y = 2x and y = x².",
+            "Step 1: Find the intersection points:\n\n2x = x².\n\nx(x - 2) = 0.\n\nTherefore, x = 0 or x = 2.\n\nStep 2: Determine the upper curve. Between 0 and 2, 2x is above x².\n\nStep 3: Set up the area integral:\n\nA = ∫₀² (2x - x²)dx.\n\nStep 4: Integrate:\n\nA = [x² - x³/3]₀².\n\nStep 5: Apply the limits:\n\nA = (4 - 8/3) - 0.\n\n= 12/3 - 8/3.\n\nFinal Answer: 4/3 square units."
+        ],
+        [
+            "Find the area under the curve y = 1 - x² above the x-axis.",
+            "Step 1: Find the x-intercepts:\n\n1 - x² = 0.\n\nx² = 1, so x = -1 and x = 1.\n\nStep 2: The curve is above the x-axis between -1 and 1.\n\nStep 3: Set up the area:\n\nA = ∫₋₁¹ (1 - x²)dx.\n\nStep 4: Integrate:\n\nA = [x - x³/3]₋₁¹.\n\nStep 5: Substitute the upper limit:\n\n1 - 1/3 = 2/3.\n\nStep 6: Substitute the lower limit:\n\n-1 - (-1)³/3 = -1 + 1/3 = -2/3.\n\nStep 7: Subtract:\n\nA = 2/3 - (-2/3) = 4/3.\n\nFinal Answer: 4/3 square units."
+        ],
+        [
+            "Find the area enclosed by y = x² and y = 4.",
+            "Step 1: Find the points of intersection:\n\nx² = 4.\n\nTherefore, x = -2 and x = 2.\n\nStep 2: Between these points, y = 4 is above y = x².\n\nStep 3: Set up the area integral:\n\nA = ∫₋₂² (4 - x²)dx.\n\nStep 4: Integrate:\n\nA = [4x - x³/3]₋₂².\n\nStep 5: Substitute x = 2:\n\n8 - 8/3 = 16/3.\n\nStep 6: Substitute x = -2:\n\n-8 - (-8/3) = -16/3.\n\nStep 7: Subtract:\n\nA = 16/3 - (-16/3) = 32/3.\n\nFinal Answer: 32/3 square units."
+        ],
+        [
+            "Evaluate ∫ from 0 to 1 of x/(x² + 1) dx.",
+            "Step 1: Let u = x² + 1.\n\nThen du = 2x dx, so x dx = du/2.\n\nStep 2: Change the limits.\n\nWhen x = 0, u = 1.\n\nWhen x = 1, u = 2.\n\nStep 3: Substitute:\n\n∫₀¹ x/(x² + 1)dx = (1/2)∫₁² du/u.\n\nStep 4: Integrate:\n\n= (1/2)[ln u]₁².\n\nStep 5: Apply the limits:\n\n= (1/2)(ln 2 - ln 1).\n\nSince ln 1 = 0:\n\nFinal Answer: (1/2)ln 2."
+        ],
+        [
+            "Find the area enclosed by the curves y = x² and y = 2x + 3.",
+            "Step 1: Find the points of intersection:\n\nx² = 2x + 3.\n\nx² - 2x - 3 = 0.\n\n(x - 3)(x + 1) = 0.\n\nTherefore, x = 3 or x = -1.\n\nStep 2: Determine the upper curve. At x = 0:\n\nx² = 0 and 2x + 3 = 3.\n\nSo y = 2x + 3 is above y = x² between the intersection points.\n\nStep 3: Set up the area:\n\nA = ∫₋₁³ [(2x + 3) - x²]dx.\n\nStep 4: Integrate:\n\nA = [x² + 3x - x³/3]₋₁³.\n\nStep 5: Substitute x = 3:\n\n9 + 9 - 9 = 9.\n\nStep 6: Substitute x = -1:\n\n1 - 3 + 1/3 = -5/3.\n\nStep 7: Subtract:\n\nA = 9 - (-5/3) = 27/3 + 5/3.\n\nFinal Answer: 32/3 square units."
+        ]
+    ],
+    formula: [
+        "Power rule: ∫xⁿ dx = xⁿ⁺¹/(n + 1) + C, for n ≠ -1.",
+        "Logarithmic integral: ∫(1/x)dx = ln|x| + C.",
+        "Exponential integral: ∫eˣ dx = eˣ + C.",
+        "Trigonometric integrals: ∫sin x dx = -cos x + C; ∫cos x dx = sin x + C.",
+        "Integration by parts: ∫u dv = uv - ∫v du. Useful for products such as x eˣ and x ln x.",
+        "Substitution: If u = g(x), then ∫f(g(x))g'(x)dx = ∫f(u)du. Use when an expression and its derivative appear together.",
+        "Definite integral: ∫ₐᵇ f(x)dx = F(b) - F(a), where F'(x) = f(x).",
+        "Area under a non-negative curve: A = ∫ₐᵇ y dx.",
+        "Area between two curves: A = ∫ₐᵇ (upper curve - lower curve)dx.",
+        "Area between a curve and the x-axis: use the absolute area; split the interval wherever the curve crosses the axis if necessary.",
+        "∫ₐᵇ f(x)dx = -∫ᵦₐ f(x)dx. Reversing the limits changes the sign.",
+        "If f is even: ∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx.",
+        "If f is odd: ∫₋ₐᵃ f(x)dx = 0."
+    ]
 },
 {
-"title":"Applications of Differential Calculus","volume":2,
-"bookback":[
-["Differentiate 5x⁴.","Using power rule: 20x³."],
-["Find the stationary x-value of x²−8x+3.","Derivative 2x−8=0 gives x=4."],
-["Differentiate y=x³−4x²+2x.","Answer: 3x²−8x+2."],
-["Find the stationary point of f(x)=x²−6x+5.","Answer: stationary point (3,−4)."],
-["Find the local minimum of f(x)=x²−4x+1.","Answer: minimum value −3 at x=2."],
-["Differentiate y=(2x+1)(x²−3).","Answer: 6x²+2x−6."]
-],
-"important":[
-["Explain and solve: Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],
-["Explain and solve: Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],
-["Explain and solve: Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],
-["Explain and solve: Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],
-["Explain and solve: Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],
-["Explain and solve: Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]
-],
-"worked":[
-["Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],
-["Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],
-["Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],
-["Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],
-["Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],
-["Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]
-],
-"formula":[
-"d(xⁿ)/dx=nxⁿ⁻¹.",
-"(uv)′=u′v+uv′; (u/v)′=(u′v−uv′)/v².",
-"At a stationary point f′(x)=0.",
-"f″>0 indicates a local minimum; f″<0 indicates a local maximum."
-]
+    title: "Ordinary Differential Equations",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "Find the order and degree of the differential equation d²y/dx² + 5(dy/dx)³ + y = 0.",
+            "Step 1: The order is the highest order derivative present in the equation.\n\nHere, the highest derivative is d²y/dx².\n\nTherefore, Order = 2.\n\nStep 2: The degree is the power of the highest order derivative, provided the equation is polynomial in its derivatives.\n\nThe highest derivative d²y/dx² has power 1.\n\nFinal Answer: Order = 2; Degree = 1."
+        ],
+        [
+            "Find the order and degree of (dy/dx)² + y = 4.",
+            "Step 1: The highest derivative present is dy/dx.\n\nTherefore, the order is 1.\n\nStep 2: The highest derivative is squared.\n\nTherefore, its power is 2.\n\nFinal Answer: Order = 1; Degree = 2."
+        ],
+        [
+            "Solve dy/dx = 3x².",
+            "Step 1: Rewrite the equation using differentials:\n\ndy = 3x² dx.\n\nStep 2: Integrate both sides:\n\n∫dy = ∫3x² dx.\n\nStep 3: Apply the power rule:\n\ny = 3(x³/3) + C.\n\nStep 4: Simplify:\n\ny = x³ + C.\n\nFinal Answer: y = x³ + C."
+        ],
+        [
+            "Solve dy/dx = 2x + 4.",
+            "Step 1: Separate the differentials:\n\ndy = (2x + 4)dx.\n\nStep 2: Integrate both sides:\n\ny = ∫(2x + 4)dx.\n\nStep 3: Integrate each term:\n\ny = 2(x²/2) + 4x + C.\n\nStep 4: Simplify:\n\nFinal Answer: y = x² + 4x + C."
+        ],
+        [
+            "Verify whether y = eˣ is a solution of dy/dx = y.",
+            "Step 1: Given function:\n\ny = eˣ.\n\nStep 2: Differentiate:\n\ndy/dx = eˣ.\n\nStep 3: Compare the derivative with y:\n\ndy/dx = y.\n\nThe given differential equation is satisfied.\n\nFinal Answer: Yes, y = eˣ is a solution."
+        ],
+        [
+            "Find the general solution of dy/dx = 4y.",
+            "Step 1: Separate the variables:\n\ndy/y = 4dx.\n\nStep 2: Integrate both sides:\n\n∫(1/y)dy = ∫4dx.\n\nStep 3: Integrate:\n\nln|y| = 4x + C.\n\nStep 4: Take the exponential on both sides:\n\ny = Ae⁴ˣ, where A is an arbitrary constant.\n\nFinal Answer: y = Ae⁴ˣ."
+        ]
+    ],
+    important: [
+        [
+            "Solve the differential equation dy/dx = x/y.",
+            "Step 1: Separate the variables by multiplying both sides by y dx:\n\ny dy = x dx.\n\nStep 2: Integrate both sides:\n\n∫y dy = ∫x dx.\n\nStep 3: Apply the power rule:\n\ny²/2 = x²/2 + C.\n\nStep 4: Multiply by 2 and absorb the constant into a new constant K:\n\ny² = x² + K.\n\nFinal Answer: y² - x² = C."
+        ],
+        [
+            "Solve dy/dx = (1 + y²)/(1 + x²).",
+            "Step 1: Separate the variables:\n\ndy/(1 + y²) = dx/(1 + x²).\n\nStep 2: Integrate both sides:\n\n∫dy/(1 + y²) = ∫dx/(1 + x²).\n\nStep 3: Use the standard integral:\n\n∫du/(1 + u²) = tan⁻¹u + C.\n\nTherefore:\n\ntan⁻¹y = tan⁻¹x + C.\n\nFinal Answer: tan⁻¹y - tan⁻¹x = C."
+        ],
+        [
+            "Solve dy/dx + y = 0.",
+            "Step 1: Rearrange:\n\ndy/dx = -y.\n\nStep 2: Separate the variables:\n\ndy/y = -dx.\n\nStep 3: Integrate:\n\nln|y| = -x + C.\n\nStep 4: Take the exponential:\n\ny = Ae⁻ˣ.\n\nFinal Answer: y = Ae⁻ˣ."
+        ],
+        [
+            "Find the integrating factor of dy/dx + 3y = x.",
+            "Step 1: Compare with the standard linear differential equation:\n\ndy/dx + P(x)y = Q(x).\n\nStep 2: Identify the coefficient:\n\nP(x) = 3.\n\nStep 3: The integrating factor is:\n\nIF = e^(∫P(x)dx).\n\nStep 4: Substitute P(x) = 3:\n\nIF = e^(∫3dx).\n\n= e³ˣ.\n\nFinal Answer: Integrating factor = e³ˣ."
+        ],
+        [
+            "Find the order and degree of d³y/dx³ + (d²y/dx²)² + dy/dx = 0.",
+            "Step 1: Identify the highest derivative:\n\nd³y/dx³.\n\nIts order is 3.\n\nStep 2: The highest derivative appears with power 1.\n\nThe squared derivative is a second-order derivative, not the highest-order derivative.\n\nFinal Answer: Order = 3; Degree = 1."
+        ],
+        [
+            "Solve dy/dx + 2y = 6.",
+            "Step 1: This is a first-order linear differential equation:\n\ndy/dx + Py = Q.\n\nHere P = 2 and Q = 6.\n\nStep 2: Find the integrating factor:\n\nIF = e^(∫2dx) = e²ˣ.\n\nStep 3: Multiply the entire equation by e²ˣ:\n\ne²ˣ(dy/dx) + 2e²ˣy = 6e²ˣ.\n\nThe left side becomes:\n\nd/dx(ye²ˣ) = 6e²ˣ.\n\nStep 4: Integrate:\n\nye²ˣ = ∫6e²ˣdx.\n\n= 3e²ˣ + C.\n\nStep 5: Divide by e²ˣ:\n\ny = 3 + Ce⁻²ˣ.\n\nFinal Answer: y = 3 + Ce⁻²ˣ."
+        ]
+    ],
+    worked: [
+        [
+            "Solve dy/dx = 2xy.",
+            "Step 1: Separate the variables. Move y to the left and dx to the right:\n\ndy/y = 2x dx.\n\nStep 2: Integrate both sides:\n\n∫(1/y)dy = ∫2x dx.\n\nStep 3: Evaluate the integrals:\n\nln|y| = x² + C.\n\nStep 4: Remove the logarithm by taking the exponential:\n\n|y| = e^(x² + C).\n\nThe constant factor can be written as an arbitrary constant A.\n\nFinal Answer: y = Aeˣ²."
+        ],
+        [
+            "Solve dy/dx = (x + 1)/(y + 2).",
+            "Step 1: Separate the variables:\n\n(y + 2)dy = (x + 1)dx.\n\nStep 2: Integrate both sides:\n\n∫(y + 2)dy = ∫(x + 1)dx.\n\nStep 3: Integrate term by term:\n\ny²/2 + 2y = x²/2 + x + C.\n\nStep 4: Multiply by 2 and absorb the constant:\n\ny² + 4y = x² + 2x + C.\n\nFinal Answer: y² + 4y - x² - 2x = C."
+        ],
+        [
+            "Solve dy/dx + y = eˣ.",
+            "Step 1: Compare with the linear form:\n\ndy/dx + Py = Q.\n\nHere P = 1 and Q = eˣ.\n\nStep 2: Find the integrating factor:\n\nIF = e^(∫1dx) = eˣ.\n\nStep 3: Multiply the equation by eˣ:\n\neˣ(dy/dx) + eˣy = e²ˣ.\n\nThe left side is the derivative of yeˣ:\n\nd/dx(yeˣ) = e²ˣ.\n\nStep 4: Integrate:\n\ny eˣ = ∫e²ˣ dx.\n\n= e²ˣ/2 + C.\n\nStep 5: Divide by eˣ:\n\ny = eˣ/2 + Ce⁻ˣ.\n\nFinal Answer: y = (1/2)eˣ + Ce⁻ˣ."
+        ],
+        [
+            "Solve dy/dx + y/x = x², where x is positive.",
+            "Step 1: Compare with the linear equation:\n\ndy/dx + Py = Q.\n\nHere P = 1/x and Q = x².\n\nStep 2: Find the integrating factor:\n\nIF = e^(∫1/x dx).\n\nSince x is positive:\n\nIF = e^(ln x) = x.\n\nStep 3: Multiply the equation by x:\n\nx(dy/dx) + y = x³.\n\nThe left side is d(xy)/dx:\n\nd(xy)/dx = x³.\n\nStep 4: Integrate:\n\nxy = ∫x³dx = x⁴/4 + C.\n\nStep 5: Divide by x:\n\ny = x³/4 + C/x.\n\nFinal Answer: y = x³/4 + C/x."
+        ],
+        [
+            "Solve dy/dx = y tan x.",
+            "Step 1: Separate the variables:\n\ndy/y = tan x dx.\n\nStep 2: Integrate both sides:\n\n∫dy/y = ∫tan x dx.\n\nStep 3: Use the standard integral:\n\n∫tan x dx = -ln|cos x| + C.\n\nTherefore:\n\nln|y| = -ln|cos x| + C.\n\nStep 4: Combine logarithms:\n\nln|y| = ln|sec x| + C.\n\nStep 5: Take exponentials and absorb the constant:\n\ny = A sec x.\n\nFinal Answer: y = A sec x."
+        ],
+        [
+            "Solve dy/dx + 2y = 4eˣ, given y = 1 when x = 0.",
+            "Step 1: Compare with the linear form:\n\ndy/dx + Py = Q.\n\nHere P = 2 and Q = 4eˣ.\n\nStep 2: Find the integrating factor:\n\nIF = e^(∫2dx) = e²ˣ.\n\nStep 3: Multiply the equation by e²ˣ:\n\ne²ˣ(dy/dx) + 2e²ˣy = 4e³ˣ.\n\nThe left side becomes:\n\nd/dx(ye²ˣ) = 4e³ˣ.\n\nStep 4: Integrate:\n\nye²ˣ = ∫4e³ˣdx.\n\n= (4/3)e³ˣ + C.\n\nStep 5: Divide by e²ˣ:\n\ny = (4/3)eˣ + Ce⁻²ˣ.\n\nStep 6: Use the initial condition y = 1 at x = 0:\n\n1 = (4/3)(1) + C(1).\n\nC = 1 - 4/3 = -1/3.\n\nFinal Answer: y = (4/3)eˣ - (1/3)e⁻²ˣ."
+        ]
+    ],
+    formula: [
+        "Order: the order of the highest derivative appearing in the differential equation.",
+        "Degree: the power of the highest-order derivative, when the equation is polynomial in its derivatives.",
+        "Variable separable form: dy/dx = f(x)g(y). Rearrange to dy/g(y) = f(x)dx before integrating.",
+        "Basic integration: ∫xⁿdx = xⁿ⁺¹/(n + 1) + C, for n ≠ -1.",
+        "Logarithmic integral: ∫dy/y = ln|y| + C.",
+        "First-order linear equation: dy/dx + P(x)y = Q(x).",
+        "Integrating factor: IF = e^(∫P(x)dx).",
+        "Solution using integrating factor: y(IF) = ∫Q(IF)dx + C.",
+        "For dy/dx = ky, the general solution is y = Ceᵏˣ.",
+        "For dy/dx = f(x), integrate both sides to obtain y = ∫f(x)dx + C.",
+        "An arbitrary constant C appears after indefinite integration. Use a given initial condition to determine its value."
+    ]
 },
 {
-"title":"Differentials and Partial Derivatives","volume":2,
-"bookback":[
-["For z=x²y, find ∂z/∂x.","Treat y constant: 2xy."],
-["For z=xy+y², find ∂z/∂y.","Treat x constant: x+2y."],
-["If z=x²y+3y, find ∂z/∂x.","Answer: ∂z/∂x=2xy."],
-["If z=x²+xy+y², find ∂z/∂y.","Answer: ∂z/∂y=x+2y."],
-["Find the total differential of z=x²y+y².","Answer: dz=2xy dx+(x²+2y)dy."],
-["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to y keeping x fixed: fy=3x+4y."]
-],
-"important":[
-["Explain and solve: If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],
-["Explain and solve: If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],
-["Explain and solve: Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],
-["Explain and solve: Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],
-["Explain and solve: Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],
-["Explain and solve: Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]
-],
-"worked":[
-["If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],
-["If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],
-["Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],
-["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],
-["Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],
-["Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]
-],
-"formula":[
-"For z=f(x,y), fx=∂z/∂x and fy=∂z/∂y.",
-"Total differential: dz=fx dx+fy dy.",
-"Linear approximation: L=f(a,b)+fx(a,b)(x−a)+fy(a,b)(y−b).",
-"For mixed partials, differentiate successively with respect to the indicated variables."
-]
+    title: "Probability Distributions",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "A fair coin is tossed once. Find the probability of getting a head.",
+            "Step 1: The possible outcomes are Head and Tail.\n\nTotal outcomes = 2.\n\nStep 2: Favourable outcomes for getting a head = 1.\n\nStep 3: Use the probability formula:\n\nP(A) = Favourable outcomes / Total outcomes.\n\n= 1/2.\n\nFinal Answer: P(Head) = 1/2."
+        ],
+        [
+            "A fair die is rolled once. Find the probability of getting a number greater than 4.",
+            "Step 1: The sample space is:\n\nS = {1, 2, 3, 4, 5, 6}.\n\nTotal outcomes = 6.\n\nStep 2: Numbers greater than 4 are {5, 6}.\n\nFavourable outcomes = 2.\n\nStep 3: Probability = 2/6.\n\nFinal Answer: 1/3."
+        ],
+        [
+            "A random variable X takes the values 0 and 1 with probabilities 0.3 and 0.7. Find E(X).",
+            "Step 1: The expected value is:\n\nE(X) = ΣxP(X = x).\n\nStep 2: Substitute the values:\n\nE(X) = 0(0.3) + 1(0.7).\n\nStep 3: Simplify:\n\nE(X) = 0 + 0.7.\n\nFinal Answer: E(X) = 0.7."
+        ],
+        [
+            "Find the mean of a binomial distribution with n = 10 and p = 0.4.",
+            "Step 1: The mean of a binomial distribution is:\n\nMean = np.\n\nStep 2: Substitute n = 10 and p = 0.4:\n\nMean = 10 × 0.4.\n\nFinal Answer: Mean = 4."
+        ],
+        [
+            "Find the variance of a binomial distribution with n = 5 and p = 0.2.",
+            "Step 1: The variance of a binomial distribution is:\n\nVariance = npq, where q = 1 - p.\n\nStep 2: Find q:\n\nq = 1 - 0.2 = 0.8.\n\nStep 3: Substitute:\n\nVariance = 5 × 0.2 × 0.8.\n\nFinal Answer: Variance = 0.8."
+        ],
+        [
+            "If P(A) = 0.35, find P(A complement).",
+            "Step 1: The probability of the complement of an event is:\n\nP(A') = 1 - P(A).\n\nStep 2: Substitute P(A) = 0.35:\n\nP(A') = 1 - 0.35.\n\nFinal Answer: P(A') = 0.65."
+        ]
+    ],
+    important: [
+        [
+            "A fair die is rolled. Find the probability of getting a prime number.",
+            "Step 1: Write the sample space:\n\nS = {1, 2, 3, 4, 5, 6}.\n\nStep 2: Identify the prime numbers in the sample space:\n\nA = {2, 3, 5}.\n\nThere are 3 favourable outcomes.\n\nStep 3: Total possible outcomes = 6.\n\nStep 4: Calculate probability:\n\nP(A) = 3/6.\n\nFinal Answer: 1/2."
+        ],
+        [
+            "A random variable X has the following distribution: X = 0, 1, 2 with probabilities 0.2, 0.5, 0.3. Find its mean.",
+            "Step 1: Use the expectation formula:\n\nE(X) = ΣxP(X = x).\n\nStep 2: Substitute the values:\n\nE(X) = 0(0.2) + 1(0.5) + 2(0.3).\n\nStep 3: Multiply:\n\n= 0 + 0.5 + 0.6.\n\nFinal Answer: Mean = 1.1."
+        ],
+        [
+            "Find the variance of the distribution X = 0, 1, 2 with probabilities 0.2, 0.5, 0.3.",
+            "Step 1: First calculate the mean:\n\nE(X) = 0(0.2) + 1(0.5) + 2(0.3) = 1.1.\n\nStep 2: Calculate E(X²):\n\nE(X²) = 0²(0.2) + 1²(0.5) + 2²(0.3).\n\n= 0 + 0.5 + 1.2 = 1.7.\n\nStep 3: Use the variance formula:\n\nVar(X) = E(X²) - [E(X)]².\n\n= 1.7 - (1.1)².\n\n= 1.7 - 1.21.\n\nFinal Answer: Variance = 0.49."
+        ],
+        [
+            "For a binomial distribution with n = 4 and p = 0.5, find P(X = 2).",
+            "Step 1: Use the binomial probability formula:\n\nP(X = r) = ⁿCᵣ pʳqⁿ⁻ʳ.\n\nHere n = 4, r = 2, p = 0.5 and q = 1 - p = 0.5.\n\nStep 2: Substitute:\n\nP(X = 2) = ⁴C₂(0.5)²(0.5)².\n\nStep 3: Calculate the combination:\n\n⁴C₂ = 4!/(2!2!) = 6.\n\nStep 4: Simplify:\n\nP(X = 2) = 6 × 1/4 × 1/4 = 6/16.\n\nFinal Answer: 3/8."
+        ],
+        [
+            "A binomial distribution has n = 8 and p = 0.25. Find its mean and variance.",
+            "Step 1: Find q:\n\nq = 1 - p = 1 - 0.25 = 0.75.\n\nStep 2: Mean of a binomial distribution:\n\nMean = np = 8 × 0.25 = 2.\n\nStep 3: Variance:\n\nVariance = npq.\n\n= 8 × 0.25 × 0.75.\n\n= 2 × 0.75.\n\nFinal Answer: Mean = 2; Variance = 1.5."
+        ],
+        [
+            "A random variable has P(X = 0) = 0.4 and P(X = 1) = 0.6. Find E(X²).",
+            "Step 1: Use the formula:\n\nE(X²) = Σx²P(X = x).\n\nStep 2: Substitute:\n\nE(X²) = 0²(0.4) + 1²(0.6).\n\nStep 3: Simplify:\n\n= 0 + 0.6.\n\nFinal Answer: E(X²) = 0.6."
+        ]
+    ],
+    worked: [
+        [
+            "A bag contains 5 red balls and 3 blue balls. One ball is selected at random. Find the probability that it is blue.",
+            "Step 1: Find the total number of balls:\n\nTotal = 5 + 3 = 8.\n\nStep 2: Count the favourable outcomes.\n\nThere are 3 blue balls.\n\nStep 3: Apply the probability formula:\n\nP(Blue) = Number of blue balls / Total number of balls.\n\n= 3/8.\n\nFinal Answer: 3/8."
+        ],
+        [
+            "A fair coin is tossed three times. Find the probability of getting exactly two heads.",
+            "Step 1: Each toss has two possible outcomes. For three tosses, total outcomes = 2³ = 8.\n\nStep 2: List the outcomes:\n\nHHH, HHT, HTH, HTT, THH, THT, TTH, TTT.\n\nStep 3: Exactly two heads occur in:\n\nHHT, HTH and THH.\n\nFavourable outcomes = 3.\n\nStep 4: Calculate probability:\n\nP(exactly two heads) = 3/8.\n\nFinal Answer: 3/8."
+        ],
+        [
+            "A random variable X takes values 1, 2 and 3 with probabilities 0.2, 0.5 and 0.3. Find its mean and variance.",
+            "Step 1: Calculate the mean:\n\nE(X) = ΣxP(X = x).\n\n= 1(0.2) + 2(0.5) + 3(0.3).\n\n= 0.2 + 1 + 0.9 = 2.1.\n\nStep 2: Calculate E(X²):\n\nE(X²) = 1²(0.2) + 2²(0.5) + 3²(0.3).\n\n= 0.2 + 2 + 2.7 = 4.9.\n\nStep 3: Calculate variance:\n\nVar(X) = E(X²) - [E(X)]².\n\n= 4.9 - (2.1)².\n\n= 4.9 - 4.41.\n\nFinal Answer: Mean = 2.1; Variance = 0.49."
+        ],
+        [
+            "A machine produces items, and each item has a probability of 0.2 of being defective. If 5 items are selected independently, find the probability that exactly one is defective.",
+            "Step 1: Recognise this as a binomial distribution because there are a fixed number of independent trials, each with the same probability of a defective item.\n\nHere n = 5, p = 0.2 and q = 1 - p = 0.8.\n\nStep 2: We need exactly one defective item, so r = 1.\n\nStep 3: Apply the binomial formula:\n\nP(X = r) = ⁿCᵣpʳqⁿ⁻ʳ.\n\nP(X = 1) = ⁵C₁(0.2)¹(0.8)⁴.\n\nStep 4: Calculate:\n\n⁵C₁ = 5 and (0.8)⁴ = 0.4096.\n\nP(X = 1) = 5 × 0.2 × 0.4096.\n\n= 1 × 0.4096.\n\nFinal Answer: 0.4096."
+        ],
+        [
+            "A binomial random variable has n = 6 and p = 1/3. Find the probability of exactly two successes.",
+            "Step 1: Identify the values:\n\nn = 6, r = 2, p = 1/3.\n\nq = 1 - p = 2/3.\n\nStep 2: Apply the binomial formula:\n\nP(X = 2) = ⁶C₂(1/3)²(2/3)⁴.\n\nStep 3: Calculate the combination:\n\n⁶C₂ = 6!/(2!4!) = 15.\n\nStep 4: Calculate the powers:\n\n(1/3)² = 1/9 and (2/3)⁴ = 16/81.\n\nStep 5: Multiply:\n\nP(X = 2) = 15 × 1/9 × 16/81.\n\n= 240/729.\n\nDivide numerator and denominator by 3:\n\nFinal Answer: 80/243."
+        ],
+        [
+            "A random variable X has values 0, 1, 2 and 3 with probabilities 0.1, 0.2, 0.4 and 0.3. Find E(X) and Var(X).",
+            "Step 1: Find the expected value:\n\nE(X) = ΣxP(X = x).\n\n= 0(0.1) + 1(0.2) + 2(0.4) + 3(0.3).\n\n= 0 + 0.2 + 0.8 + 0.9.\n\nE(X) = 1.9.\n\nStep 2: Find E(X²):\n\nE(X²) = 0²(0.1) + 1²(0.2) + 2²(0.4) + 3²(0.3).\n\n= 0 + 0.2 + 1.6 + 2.7.\n\nE(X²) = 4.5.\n\nStep 3: Find the variance:\n\nVar(X) = E(X²) - [E(X)]².\n\n= 4.5 - (1.9)².\n\n= 4.5 - 3.61.\n\nFinal Answer: E(X) = 1.9; Var(X) = 0.89."
+        ]
+    ],
+    formula: [
+        "Probability of an event: P(A) = Number of favourable outcomes / Total number of equally likely outcomes.",
+        "Complement rule: P(A') = 1 - P(A).",
+        "Addition rule: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
+        "For mutually exclusive events: P(A ∩ B) = 0.",
+        "Expected value: E(X) = ΣxP(X = x). Multiply each value by its probability and add.",
+        "Second moment: E(X²) = Σx²P(X = x).",
+        "Variance: Var(X) = E(X²) - [E(X)]².",
+        "Standard deviation: σ = √Var(X).",
+        "Binomial probability: P(X = r) = ⁿCᵣpʳqⁿ⁻ʳ, where q = 1 - p.",
+        "Binomial mean: μ = np.",
+        "Binomial variance: σ² = npq.",
+        "Binomial standard deviation: σ = √(npq).",
+        "For a valid probability distribution, every probability must be between 0 and 1, and all probabilities must add up to 1."
+    ]
 },
 {
-"title":"Applications of Integration","volume":2,
-"bookback":[
-["Evaluate ∫4x³ dx.","Answer: x⁴+C."],
-["Evaluate ∫₀¹2x dx.","[x²]₀¹=1."],
-["Evaluate ∫(3x²−4x+2) dx.","Answer: x³−2x²+2x+C."],
-["Evaluate ∫₀² 3x² dx.","Answer: 8."],
-["Find the area under y=x from x=0 to x=3.","Answer: 9/2 square units."],
-["Evaluate ∫(2x+1)⁵ dx.","Answer: (2x+1)⁶/12+C."]
-],
-"important":[
-["Explain and solve: Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],
-["Explain and solve: Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],
-["Explain and solve: Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],
-["Explain and solve: Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],
-["Explain and solve: Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],
-["Explain and solve: Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]
-],
-"worked":[
-["Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],
-["Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],
-["Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],
-["Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],
-["Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],
-["Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]
-],
-"formula":[
-"∫xⁿdx=xⁿ⁺¹/(n+1)+C, n≠−1.",
-"∫ₐᵇf(x)dx=F(b)−F(a), where F′=f.",
-"Area under y=f(x)≥0 from a to b is ∫ₐᵇf(x)dx.",
-"Substitution: if u=g(x), then ∫f(g(x))g′(x)dx=∫f(u)du."
-]
-},
-{
-"title":"Ordinary Differential Equations","volume":2,
-"bookback":[
-["Find the order of y‴+y′=0.","The highest derivative is third order, so order=3."],
-["Solve dy/dx=2x.","Integrate: y=x²+C."],
-["Solve dy/dx=3x².","Answer: y=x³+C."],
-["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","Answer: order 2, degree 3."],
-["Solve dy/dx=2xy by separation of variables.","Answer: y=Ae^(x²)."],
-["Solve dy/dx=4x³−2x.","Answer: y=x⁴−x²+C."]
-],
-"important":[
-["Explain and solve: Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],
-["Explain and solve: Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],
-["Explain and solve: Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],
-["Explain and solve: Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],
-["Explain and solve: Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],
-["Explain and solve: Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]
-],
-"worked":[
-["Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],
-["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],
-["Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],
-["Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],
-["Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],
-["Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]
-],
-"formula":[
-"Order is the highest derivative order present.",
-"Degree is the power of the highest-order derivative when polynomial in derivatives.",
-"If dy/dx=f(x), then y=∫f(x)dx+C.",
-"Separate variables before integrating when dy/dx=g(x)h(y)."
-]
-},
-{
-"title":"Probability Distributions","volume":2,
-"bookback":[
-["For a fair coin, find P(head).","There is one head among two equally likely outcomes: 1/2."],
-["For n=3,p=1/2, find the binomial mean.","Mean=np=3/2."],
-["A fair die is rolled. Find the probability of getting an even number.","P(even)=3/6=1/2."],
-["For X=0,1 with probabilities 0.4,0.6, find E(X).","Answer: 0.6."],
-["For a binomial distribution with n=4,p=1/2, find P(X=2).","Answer: 3/8."],
-["Find the variance when X=0 and X=1 each have probability 1/2.","Answer: 1/4."]
-],
-"important":[
-["Explain and solve: A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],
-["Explain and solve: For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],
-["Explain and solve: For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],
-["Explain and solve: Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],
-["Explain and solve: A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],
-["Explain and solve: A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]
-],
-"worked":[
-["A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],
-["For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],
-["For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],
-["Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],
-["A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],
-["A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]
-],
-"formula":[
-"E(X)=ΣxP(X=x).",
-"Var(X)=E(X²)−[E(X)]².",
-"Binomial: P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.",
-"For binomial distribution: mean=np; variance=np(1−p)."
-]
-},
-{
-"title":"Discrete Mathematics","volume":2,
-"bookback":[
-["If A={1,2,3}, B={3,4}, find A∪B.","Union collects all distinct elements: {1,2,3,4}."],
-["When is p∧q true?","Only when both p and q are true."],
-["Write the negation of “It is raining”.","Answer: “It is not raining”."],
-["If A={1,2,3} and B={3,4}, find A∩B.","Answer: {3}."],
-["Construct the truth values of p∧q for TT, TF, FT, FF.","Therefore the values are T, F, F, F."],
-["If A={a,b,c} and B={b,c,d}, find union and intersection.","Answer: A∪B={a,b,c,d}; A∩B={b,c}."]
-],
-"important":[
-["Explain and solve: Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],
-["Explain and solve: If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],
-["Explain and solve: Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],
-["Explain and solve: If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],
-["Explain and solve: Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],
-["Explain and solve: If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]
-],
-"worked":[
-["Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],
-["If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],
-["Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],
-["If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],
-["Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],
-["If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]
-],
-"formula":[
-"p∧q is true only when both p and q are true.",
-"p∨q is false only when both p and q are false.",
-"p→q is equivalent to ¬p∨q.",
-"n(A∪B)=n(A)+n(B)−n(A∩B)."
-]
+    title: "Discrete Mathematics",
+    volume: "Volume 2",
+    bookback: [
+        [
+            "If A = {1, 2, 3} and B = {3, 4, 5}, find A ∪ B.",
+            "Step 1: The union of two sets contains every element that belongs to either set.\n\nStep 2: List the elements of both sets:\n\nA = {1, 2, 3}\n\nB = {3, 4, 5}\n\nStep 3: Combine the elements and remove duplicates.\n\nFinal Answer: A ∪ B = {1, 2, 3, 4, 5}."
+        ],
+        [
+            "If A = {2, 4, 6, 8} and B = {4, 8, 10}, find A ∩ B.",
+            "Step 1: The intersection contains only the elements common to both sets.\n\nStep 2: Compare the two sets:\n\nA = {2, 4, 6, 8}\n\nB = {4, 8, 10}\n\nStep 3: The common elements are 4 and 8.\n\nFinal Answer: A ∩ B = {4, 8}."
+        ],
+        [
+            "Write the negation of the statement: 'The number 8 is odd.'",
+            "Step 1: Negation means changing a statement to its opposite truth claim.\n\nStep 2: The original statement says that 8 is odd.\n\nStep 3: Its negation says that 8 is not odd.\n\nFinal Answer: 'The number 8 is not odd.'"
+        ],
+        [
+            "When is the conjunction p ∧ q true?",
+            "Step 1: The symbol ∧ represents logical AND.\n\nStep 2: For an AND statement to be true, both component statements must be true.\n\nStep 3: If either statement is false, the conjunction is false.\n\nFinal Answer: p ∧ q is true only when both p and q are true."
+        ],
+        [
+            "Find the power set of A = {a, b}.",
+            "Step 1: A power set contains every possible subset of a set, including the empty set and the original set.\n\nStep 2: List the subsets:\n\n- Empty subset: ∅\n- Subset containing a: {a}\n- Subset containing b: {b}\n- Original set: {a, b}\n\nFinal Answer: P(A) = {∅, {a}, {b}, {a, b}}."
+        ],
+        [
+            "If n(A) = 12, n(B) = 9 and n(A ∩ B) = 4, find n(A ∪ B).",
+            "Step 1: Use the formula:\n\nn(A ∪ B) = n(A) + n(B) - n(A ∩ B).\n\nStep 2: Substitute the given values:\n\n= 12 + 9 - 4.\n\nStep 3: Simplify:\n\n= 21 - 4.\n\nFinal Answer: n(A ∪ B) = 17."
+        ]
+    ],
+    important: [
+        [
+            "Construct the truth table for p ∨ q.",
+            "Step 1: The symbol ∨ represents logical OR.\n\nStep 2: List all possible combinations of truth values for p and q:\n\np = T, q = T.\n\np = T, q = F.\n\np = F, q = T.\n\np = F, q = F.\n\nStep 3: OR is true if at least one statement is true.\n\nTherefore:\n\nT ∨ T = T.\n\nT ∨ F = T.\n\nF ∨ T = T.\n\nF ∨ F = F.\n\nFinal Answer: Truth values are T, T, T, F."
+        ],
+        [
+            "Show that p → q is logically equivalent to ¬p ∨ q.",
+            "Step 1: An implication p → q is false only when p is true and q is false.\n\nStep 2: Examine ¬p ∨ q.\n\nThis expression is also false only when ¬p is false and q is false.\n\nStep 3: If ¬p is false, p must be true. Therefore, this is exactly the same condition: p is true and q is false.\n\nStep 4: Both expressions have identical truth values for every possible combination of p and q.\n\nFinal Answer: p → q ≡ ¬p ∨ q."
+        ],
+        [
+            "If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, find A - B and B - A.",
+            "Step 1: A - B means the elements that belong to A but not to B.\n\nA = {1, 2, 3, 4}\n\nThe elements 3 and 4 are also in B, so remove them.\n\nTherefore, A - B = {1, 2}.\n\nStep 2: B - A means the elements that belong to B but not to A.\n\nB = {3, 4, 5, 6}\n\nRemove 3 and 4 because they are in A.\n\nTherefore, B - A = {5, 6}.\n\nFinal Answer: A - B = {1, 2}; B - A = {5, 6}."
+        ],
+        [
+            "Find the number of subsets of a set containing 5 elements.",
+            "Step 1: A set with n elements has 2ⁿ subsets.\n\nStep 2: Here n = 5.\n\nStep 3: Substitute:\n\nNumber of subsets = 2⁵.\n\n= 2 × 2 × 2 × 2 × 2.\n\nFinal Answer: 32 subsets."
+        ],
+        [
+            "Find the converse, inverse and contrapositive of: 'If a number is divisible by 4, then it is even.'",
+            "Step 1: Let p = 'The number is divisible by 4'.\n\nLet q = 'The number is even'.\n\nThe original statement is p → q.\n\nStep 2: Converse: q → p.\n\nIf a number is even, then it is divisible by 4.\n\nStep 3: Inverse: ¬p → ¬q.\n\nIf a number is not divisible by 4, then it is not even.\n\nStep 4: Contrapositive: ¬q → ¬p.\n\nIf a number is not even, then it is not divisible by 4.\n\nFinal Answer: The converse, inverse and contrapositive are as stated above."
+        ],
+        [
+            "If A and B are disjoint sets, what is A ∩ B?",
+            "Step 1: Disjoint sets have no elements in common.\n\nStep 2: The intersection contains only the elements common to both sets.\n\nStep 3: Since there are no common elements, the intersection is empty.\n\nFinal Answer: A ∩ B = ∅."
+        ]
+    ],
+    worked: [
+        [
+            "In a class of 40 students, 25 study Mathematics, 18 study Physics and 10 study both. Find how many study at least one of the two subjects.",
+            "Step 1: Let A be the set of students studying Mathematics and B the set studying Physics.\n\nGiven:\n\nn(A) = 25.\n\nn(B) = 18.\n\nn(A ∩ B) = 10.\n\nStep 2: 'At least one' means the union of the two sets.\n\nUse the inclusion-exclusion formula:\n\nn(A ∪ B) = n(A) + n(B) - n(A ∩ B).\n\nStep 3: Substitute:\n\n= 25 + 18 - 10.\n\n= 43 - 10.\n\nFinal Answer: 33 students study at least one of the two subjects."
+        ],
+        [
+            "Construct the truth table for the implication p → q.",
+            "Step 1: List all possible truth-value combinations:\n\np = T, q = T.\n\np = T, q = F.\n\np = F, q = T.\n\np = F, q = F.\n\nStep 2: Remember the rule for implication:\n\np → q is false only when p is true and q is false.\n\nStep 3: Evaluate each combination:\n\nT → T = T.\n\nT → F = F.\n\nF → T = T.\n\nF → F = T.\n\nFinal Answer: The truth values are T, F, T, T."
+        ],
+        [
+            "Find the power set of A = {1, 2, 3}.",
+            "Step 1: A power set contains all possible subsets.\n\nStep 2: Start with the empty set:\n\n∅.\n\nStep 3: List subsets containing one element:\n\n{1}, {2}, {3}.\n\nStep 4: List subsets containing two elements:\n\n{1, 2}, {1, 3}, {2, 3}.\n\nStep 5: Include the full set:\n\n{1, 2, 3}.\n\nStep 6: Count the subsets. There are 8.\n\nFinal Answer:\n\nP(A) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}."
+        ],
+        [
+            "In a survey of 60 people, 35 like tea, 30 like coffee and 15 like both. Find how many like neither tea nor coffee.",
+            "Step 1: Let T be the set of people who like tea and C the set of people who like coffee.\n\nGiven:\n\nn(T) = 35.\n\nn(C) = 30.\n\nn(T ∩ C) = 15.\n\nTotal people = 60.\n\nStep 2: Find the number who like at least one:\n\nn(T ∪ C) = n(T) + n(C) - n(T ∩ C).\n\n= 35 + 30 - 15.\n\n= 50.\n\nStep 3: People who like neither:\n\n= Total - n(T ∪ C).\n\n= 60 - 50.\n\nFinal Answer: 10 people like neither tea nor coffee."
+        ],
+        [
+            "Show using a truth table that ¬(p ∧ q) is equivalent to ¬p ∨ ¬q.",
+            "Step 1: List all possible values of p and q.\n\nStep 2: Evaluate p ∧ q and then negate the result.\n\nWhen p = T and q = T, p ∧ q = T, so ¬(p ∧ q) = F.\n\nWhen p = T and q = F, p ∧ q = F, so ¬(p ∧ q) = T.\n\nWhen p = F and q = T, p ∧ q = F, so ¬(p ∧ q) = T.\n\nWhen p = F and q = F, p ∧ q = F, so ¬(p ∧ q) = T.\n\nStep 3: Evaluate ¬p ∨ ¬q:\n\nF ∨ F = F.\n\nF ∨ T = T.\n\nT ∨ F = T.\n\nT ∨ T = T.\n\nStep 4: Compare the results:\n\nBoth expressions have the truth values F, T, T, T.\n\nFinal Answer: ¬(p ∧ q) ≡ ¬p ∨ ¬q. This is De Morgan's law."
+        ],
+        [
+            "A set A has 4 elements and a set B has 3 elements. Find the number of elements in A × B.",
+            "Step 1: The Cartesian product A × B contains ordered pairs (a, b), where a belongs to A and b belongs to B.\n\nStep 2: Each of the 4 elements of A can be paired with each of the 3 elements of B.\n\nStep 3: Therefore, the total number of ordered pairs is:\n\nn(A × B) = n(A) × n(B).\n\n= 4 × 3.\n\nFinal Answer: 12 ordered pairs."
+        ]
+    ],
+    formula: [
+        "Union: A ∪ B contains all elements belonging to A or B or both.",
+        "Intersection: A ∩ B contains only elements common to A and B.",
+        "Difference: A - B contains elements in A that are not in B.",
+        "Complement: A' contains all elements in the universal set that are not in A.",
+        "Power set: P(A) is the set of all subsets of A.",
+        "Number of subsets: If a set has n elements, its power set has 2ⁿ elements.",
+        "Cartesian product: A × B = {(a, b) : a ∈ A and b ∈ B}.",
+        "Number of ordered pairs: n(A × B) = n(A)n(B).",
+        "Union counting formula: n(A ∪ B) = n(A) + n(B) - n(A ∩ B).",
+        "Conjunction: p ∧ q is true only when both p and q are true.",
+        "Disjunction: p ∨ q is false only when both p and q are false.",
+        "Negation: ¬p reverses the truth value of p.",
+        "Implication: p → q is false only when p is true and q is false.",
+        "Logical equivalence: p ≡ q means both statements have identical truth values in every case.",
+        "De Morgan's laws: ¬(p ∧ q) ≡ ¬p ∨ ¬q; ¬(p ∨ q) ≡ ¬p ∧ ¬q.",
+        "Contrapositive: The contrapositive of p → q is ¬q → ¬p. It is logically equivalent to the original implication."
+    ]
 }
 ];
 
 const sel = document.getElementById('chapterSelect');
 const panel = document.getElementById('panel');
 const content = document.getElementById('content');
-
 let current = 0;
 let section = 'bookback';
 
+// Add all 12 chapters to the chapter selector.
 chapters.forEach((chapter, index) => {
-  const option = document.createElement('option');
-  option.value = index;
-  option.textContent = `Chapter ${index + 1} – ${chapter.title}`;
-  sel.appendChild(option);
+    const option = document.createElement('option');
+    option.value = index;
+    option.textContent = `Chapter ${index + 1} – ${chapter.title}`;
+    sel.appendChild(option);
 });
 
+// Read saved bookmarks safely.
 function bookmarks() {
-  try {
-    return JSON.parse(localStorage.getItem('starLightMathBookmarks') || '[]');
-  } catch (error) {
-    return [];
-  }
+    try {
+        const saved = JSON.parse(localStorage.getItem('starLightMathBookmarks') || '[]');
+        return Array.isArray(saved) ? saved : [];
+    } catch (error) {
+        return [];
+    }
 }
 
+// Update the bookmark button.
 function updateBookmark() {
-  document.getElementById('bookmark').textContent =
-    bookmarks().includes(current + 1)
-      ? '★ Bookmarked'
-      : '☆ Bookmark Chapter';
+    document.getElementById('bookmark').textContent =
+        bookmarks().includes(current + 1) ? '★ Bookmarked' : '☆ Bookmark Chapter';
 }
 
+// Select a chapter and update its information.
 function chooseChapter(number) {
-  current = Number(number);
-  const chapter = chapters[current];
+    current = Number(number);
 
-  sel.value = current;
-  document.getElementById('welcome').textContent =
-    `Welcome to Chapter ${current + 1}!`;
+    if (!Number.isInteger(current) || current < 0 || current >= chapters.length) {
+        current = 0;
+    }
 
-  document.getElementById('intro').textContent =
-    `You are viewing Chapter ${current + 1} from Mathematics Volume ${chapter.volume}. Explore the learning resources for this chapter.`;
+    const chapter = chapters[current];
 
-  updateBookmark();
+    sel.value = current;
 
-  if (!panel.hidden) {
-    showSection(section);
-  }
+    document.getElementById('welcome').textContent =
+        `Welcome to Chapter ${current + 1}!`;
+
+    document.getElementById('intro').textContent =
+        `You are viewing Chapter ${current + 1} from Mathematics ${chapter.volume}. Explore the learning resources for this chapter.`;
+
+    updateBookmark();
+
+    if (!panel.hidden) {
+        showSection(section);
+    }
 }
 
+// Display the selected learning section.
 function showSection(selectedSection) {
-  section = selectedSection;
+    section = selectedSection;
 
-  document.querySelectorAll('.card').forEach((button) => {
-    button.classList.toggle(
-      'active',
-      button.dataset.section === selectedSection
-    );
-  });
-
-  panel.hidden = false;
-
-  const titles = {
-    bookback: '📘 Book-back Practice',
-    important: '⭐ Important Questions',
-    worked: '✏️ Worked Examples',
-    formula: '📐 Formula Sheet'
-  };
-
-  document.getElementById('panelTitle').textContent =
-    titles[selectedSection];
-
-  document.getElementById('panelSub').textContent =
-    `Chapter ${current + 1}: ${chapters[current].title}`;
-
-  content.replaceChildren();
-
-  const items = chapters[current][selectedSection];
-
-  if (selectedSection === 'bookback') {
-    const note = document.createElement('p');
-    note.className = 'note';
-    note.textContent =
-      'These are original Star Light practice questions aligned with the chapter topics. They are not presented as verbatim official textbook questions.';
-    content.appendChild(note);
-  }
-
-  if (selectedSection === 'formula') {
-    items.forEach((formulaText) => {
-      const formulaCard = document.createElement('div');
-      formulaCard.className = 'formula';
-      formulaCard.textContent = formulaText;
-      content.appendChild(formulaCard);
-    });
-  } else {
-    items.forEach((question, index) => {
-      const box = document.createElement('article');
-      box.className = 'question';
-
-      const meta = document.createElement('div');
-      meta.className = 'meta';
-
-      const label =
-        selectedSection === 'worked'
-          ? 'WORKED EXAMPLE '
-          : selectedSection === 'important'
-            ? 'IMPORTANT QUESTION '
-            : 'PRACTICE QUESTION ';
-
-      meta.textContent = label + (index + 1);
-
-      const heading = document.createElement('h3');
-      heading.textContent = question[0];
-
-      const button = document.createElement('button');
-      button.className = 'action';
-      button.textContent = 'Show Answer & Step-by-Step Solution';
-      button.setAttribute('aria-expanded', 'false');
-
-      const answer = document.createElement('div');
-      answer.className = 'answer';
-      answer.hidden = true;
-      answer.textContent = question[1];
-
-      button.addEventListener('click', () => {
-        answer.hidden = !answer.hidden;
-
-        button.textContent = answer.hidden
-          ? 'Show Answer & Step-by-Step Solution'
-          : 'Hide Solution';
-
-        button.setAttribute(
-          'aria-expanded',
-          String(!answer.hidden)
+    document.querySelectorAll('.card').forEach((button) => {
+        button.classList.toggle(
+            'active',
+            button.dataset.section === selectedSection
         );
-      });
-
-      box.append(meta, heading, button, answer);
-      content.appendChild(box);
     });
-  }
 
-  panel.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+    panel.hidden = false;
+
+    const titles = {
+        bookback: '📘 Book-back Practice',
+        important: '⭐ Important Questions',
+        worked: '✏️ Worked Examples',
+        formula: '📐 Formula Sheet'
+    };
+
+    document.getElementById('panelTitle').textContent =
+        titles[selectedSection];
+
+    document.getElementById('panelSub').textContent =
+        `Chapter ${current + 1}: ${chapters[current].title}`;
+
+    content.replaceChildren();
+
+    const items = chapters[current][selectedSection];
+
+    // Clarify that practice questions are original learning material.
+    if (selectedSection === 'bookback') {
+        const note = document.createElement('p');
+        note.className = 'note';
+        note.textContent =
+            'These are original Star Light practice questions aligned with the chapter topics. They are not presented as verbatim official textbook questions.';
+        content.appendChild(note);
+    }
+
+    // Display the formula sheet.
+    if (selectedSection === 'formula') {
+        items.forEach((formulaText) => {
+            const formulaCard = document.createElement('div');
+            formulaCard.className = 'formula';
+            formulaCard.textContent = formulaText;
+            content.appendChild(formulaCard);
+        });
+    } else {
+        // Display questions with expandable detailed solutions.
+        items.forEach((question, index) => {
+            const box = document.createElement('article');
+            box.className = 'question';
+
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+
+            const label =
+                selectedSection === 'worked'
+                    ? 'WORKED EXAMPLE '
+                    : selectedSection === 'important'
+                        ? 'IMPORTANT QUESTION '
+                        : 'PRACTICE QUESTION ';
+
+            meta.textContent = label + (index + 1);
+
+            const heading = document.createElement('h3');
+            heading.textContent = question[0];
+
+            const button = document.createElement('button');
+            button.className = 'action';
+            button.textContent = 'Show Answer & Step-by-Step Solution';
+            button.setAttribute('aria-expanded', 'false');
+
+            const answer = document.createElement('div');
+            answer.className = 'answer';
+            answer.hidden = true;
+            answer.textContent = question[1];
+
+            button.addEventListener('click', () => {
+                answer.hidden = !answer.hidden;
+
+                button.textContent = answer.hidden
+                    ? 'Show Answer & Step-by-Step Solution'
+                    : 'Hide Solution';
+
+                button.setAttribute(
+                    'aria-expanded',
+                    String(!answer.hidden)
+                );
+            });
+
+            box.append(meta, heading, button, answer);
+            content.appendChild(box);
+        });
+    }
+
+    panel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
 
+// Connect the four learning cards to their sections.
 document.querySelectorAll('.card').forEach((button) => {
-  button.addEventListener('click', () => {
-    showSection(button.dataset.section);
-  });
+    button.addEventListener('click', () => {
+        showSection(button.dataset.section);
+    });
 });
 
+// Change chapters when the selector changes.
 sel.addEventListener('change', (event) => {
-  chooseChapter(event.target.value);
+    chooseChapter(event.target.value);
 });
 
+// Save or remove the current chapter bookmark.
 document.getElementById('bookmark').addEventListener('click', () => {
-  let saved = bookmarks();
+    let saved = bookmarks();
 
-  saved = saved.includes(current + 1)
-    ? saved.filter((chapterNumber) => chapterNumber !== current + 1)
-    : [...saved, current + 1];
+    if (saved.includes(current + 1)) {
+        saved = saved.filter((chapterNumber) => chapterNumber !== current + 1);
+    } else {
+        saved.push(current + 1);
+    }
 
-  localStorage.setItem(
-    'starLightMathBookmarks',
-    JSON.stringify(saved)
-  );
+    try {
+        localStorage.setItem(
+            'starLightMathBookmarks',
+            JSON.stringify(saved)
+        );
+    } catch (error) {
+        // The page remains usable even if browser storage is unavailable.
+    }
 
-  updateBookmark();
+    updateBookmark();
 });
 
+// Open the chapter specified in the URL.
+// Example: math-chapter.html?chapter=10
 const requestedChapter = Number(
-  new URLSearchParams(location.search).get('chapter') || 1
+    new URLSearchParams(window.location.search).get('chapter') || 1
 );
 
 chooseChapter(
-  Number.isInteger(requestedChapter) &&
-  requestedChapter >= 1 &&
-  requestedChapter <= 12
-    ? requestedChapter - 1
-    : 0
+    Number.isInteger(requestedChapter) &&
+    requestedChapter >= 1 &&
+    requestedChapter <= 12
+        ? requestedChapter - 1
+        : 0
 );
 </script>
 </body>
