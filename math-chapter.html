@@ -7,47 +7,176 @@
   <link rel="stylesheet" href="style.css?v=4">
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; color: #263b63; line-height: 1.6; background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5); }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #263b63;
+      line-height: 1.6;
+      background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
+    }
     a { color: inherit; text-decoration: none; }
-    .header, main { max-width: 1150px; margin: auto; padding: 22px 24px; }
-    .header { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
-    .brand { font-size: 23px; font-weight: 800; color: #18356b; }
-    nav { display: flex; gap: 22px; font-weight: bold; color: #18356b; }
+    .header, main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 22px 24px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      color: #18356b;
+    }
+    nav {
+      display: flex;
+      gap: 22px;
+      font-weight: bold;
+      color: #18356b;
+    }
     main { margin: 10px auto 50px; }
-    .top { display: flex; justify-content: space-between; align-items: center; margin: 8px 0 28px; gap: 14px; }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0 28px;
+      gap: 14px;
+    }
     .back { font-weight: bold; color: #18356b; }
     button, select { font: inherit; cursor: pointer; }
-    .bookmark { border: 1px solid #b9b0ee; background: white; border-radius: 28px; padding: 10px 18px; font-weight: bold; color: #18356b; }
-    .hero, .card, .panel, .tip { background: white; border-radius: 20px; box-shadow: 0 10px 28px #455b8610; }
-    .hero { padding: 28px; margin-bottom: 38px; min-height: 245px; }
-    .hero h1 { margin: 0 0 14px; color: #18356b; font-size: 28px; }
-    .hero p { color: #536783; font-size: 17px; margin: 0 0 26px; }
+    .bookmark {
+      border: 1px solid #b9b0ee;
+      background: white;
+      border-radius: 28px;
+      padding: 10px 18px;
+      font-weight: bold;
+      color: #18356b;
+    }
+    .hero, .card, .panel, .tip {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px #455b8610;
+    }
+    .hero {
+      padding: 28px;
+      margin-bottom: 38px;
+      min-height: 245px;
+    }
+    .hero h1 {
+      margin: 0 0 14px;
+      color: #18356b;
+      font-size: 28px;
+    }
+    .hero p {
+      color: #536783;
+      font-size: 17px;
+      margin: 0 0 26px;
+    }
     .selectwrap { text-align: center; }
-    select { width: min(520px, 100%); padding: 12px; border: 1px solid #c7cbe0; border-radius: 8px; color: #263b63; background: #fff; }
+    select {
+      width: min(520px, 100%);
+      padding: 12px;
+      border: 1px solid #c7cbe0;
+      border-radius: 8px;
+      color: #263b63;
+      background: #fff;
+    }
     h2, h3 { color: #18356b; }
-    .sectiontitle { text-align: center; font-size: 28px; margin: 0 0 26px; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    .card { padding: 24px; text-align: left; border: 2px solid transparent; min-height: 145px; color: #263b63; }
-    .card:hover, .card.active { border-color: #a99be9; transform: translateY(-2px); }
+    .sectiontitle {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 26px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 24px;
+      text-align: left;
+      border: 2px solid transparent;
+      min-height: 145px;
+      color: #263b63;
+    }
+    .card:hover, .card.active {
+      border-color: #a99be9;
+      transform: translateY(-2px);
+    }
     .card h3 { font-size: 21px; margin: 0 0 12px; }
     .card p { margin: 0; color: #536783; }
-    .tip { margin: 28px 0; padding: 18px 20px; border-left: 5px solid #9788df; background: #f8f5ff; }
-    .panel { padding: 25px; margin-top: 25px; scroll-margin-top: 18px; }
-    .panelhead { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .tip {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border-left: 5px solid #9788df;
+      background: #f8f5ff;
+    }
+    .panel {
+      padding: 25px;
+      margin-top: 25px;
+      scroll-margin-top: 18px;
+    }
+    .panelhead {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
     .panelhead h2 { margin: 0; }
     .note { font-size: 13px; color: #6b7890; }
-    .question, .formula { border: 1px solid #e1e5f0; border-radius: 13px; padding: 20px; margin: 16px 0; background: #fff; }
+    .question, .formula {
+      border: 1px solid #e1e5f0;
+      border-radius: 13px;
+      padding: 20px;
+      margin: 16px 0;
+      background: #fff;
+    }
     .question h3 { font-size: 18px; line-height: 1.5; }
-    .meta { font-size: 13px; color: #7669b2; font-weight: bold; }
-    .answer { background: #f5f3ff; border-radius: 10px; padding: 16px; margin-top: 12px; white-space: pre-line; }
+    .meta {
+      font-size: 13px;
+      color: #7669b2;
+      font-weight: bold;
+    }
+    .answer {
+      background: #f5f3ff;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+      white-space: pre-line;
+    }
     .answer[hidden], .panel[hidden] { display: none; }
-    .action { border: 0; background: #263f7a; color: white; border-radius: 8px; padding: 10px 16px; font-weight: bold; margin-top: 8px; }
-    .formula { background: #f8f7ff; border-left: 4px solid #9b8be4; }
-    .footer { text-align: center; padding: 23px; background: #1d376e; color: white; }
+    .action {
+      border: 0;
+      background: #263f7a;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .formula {
+      background: #f8f7ff;
+      border-left: 4px solid #9b8be4;
+    }
+    .footer {
+      text-align: center;
+      padding: 23px;
+      background: #1d376e;
+      color: white;
+    }
     @media (max-width: 700px) {
-      .header { align-items: flex-start; flex-direction: column; }
+      .header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
       .grid { grid-template-columns: 1fr; }
-      .top { align-items: flex-start; flex-direction: column; }
+      .top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
       .hero { padding: 22px; }
     }
   </style>
@@ -82,21 +211,27 @@
         <h3>📘 Book-back Practice</h3>
         <p>Practise six chapter-based questions with answers.</p>
       </button>
+
       <button class="card" data-section="important">
         <h3>⭐ Important Questions</h3>
         <p>Revise six selected questions with worked solutions.</p>
       </button>
+
       <button class="card" data-section="worked">
         <h3>✏️ Worked Examples</h3>
         <p>Study six detailed, step-by-step worked examples.</p>
       </button>
+
       <button class="card" data-section="formula">
         <h3>📐 Formula Sheet</h3>
         <p>Review important formulas and mathematical results.</p>
       </button>
     </section>
 
-    <div class="tip"><b>Learning tip:</b> Start with the worked examples. Then practise the questions to strengthen your understanding.</div>
+    <div class="tip">
+      <b>Learning tip:</b>
+      Start with the worked examples. Then practise the questions to strengthen your understanding.
+    </div>
 
     <section class="panel" id="panel" hidden>
       <div class="panelhead">
@@ -110,137 +245,586 @@
   <footer class="footer">Star Light | Your Learning Companion</footer>
 
   <script>
-    const chapters = [{"title":"Applications of Matrices and Determinants","volume":1,"bookback":[["Evaluate det([[4,1],[2,3]]).","4×3−1×2=10."],["Find the inverse of [[1,2],[3,5]].","det=5−6=−1; adjoint=[[5,−2],[−3,1]]. Divide by −1: inverse=[[-5,2],[3,−1]]."],["Find the determinant of [[3,2],[5,4]].","Answer: 2."],["Find the inverse of A=[[2,1],[1,1]].","Answer: A⁻¹=[[1,−1],[−1,2]]."],["Solve 2x+y=7 and x−y=2 using elimination.","Answer: (x,y)=(3,1)."],["Find the adjoint of [[2,3],[1,4]].","Answer: adj(A)=[[4,−3],[−1,2]]."]],"important":[["Explain and solve: Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],["Explain and solve: Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],["Explain and solve: Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],["Explain and solve: Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],["Explain and solve: Use Cramer’s rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],["Explain and solve: Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]],"worked":[["Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],["Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],["Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],["Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],["Use Cramer’s rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],["Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]],"formula":["det([[a,b],[c,d]])=ad−bc.","A⁻¹=adj(A)/det(A), when det(A)≠0.","For AX=B, X=A⁻¹B when A is invertible.","Cramer’s rule: xᵢ=Dᵢ/D when D≠0."]},{"title":"Complex Numbers","volume":1,"bookback":[["Find |3+4i|.","√(9+16)=5."],["Simplify (2+i)+(4−3i).","Add real and imaginary parts: 6−2i."],["Find the modulus and conjugate of z=5−12i.","Answer: |z|=13 and z̄=5+12i."],["Simplify (3+2i)(1−i).","Answer: 5−i."],["Express 1+√3 i in polar form.","Answer: 2(cos π/3+i sin π/3)."],["Find the square roots of −16.","Answer: ±4i."]],"important":[["Explain and solve: Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],["Explain and solve: Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],["Explain and solve: Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],["Explain and solve: Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],["Explain and solve: Evaluate (cos π/6+i sin π/6)³.","By De Moivre’s theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],["Explain and solve: Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]],"worked":[["Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],["Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],["Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],["Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],["Evaluate (cos π/6+i sin π/6)³.","By De Moivre’s theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],["Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]],"formula":["For z=a+bi, |z|=√(a²+b²).","Conjugate: z̄=a−bi; zz̄=|z|².","Polar form: z=r(cosθ+i sinθ).","De Moivre: [r(cosθ+i sinθ)]ⁿ=rⁿ(cos nθ+i sin nθ)."]},{"title":"Theory of Equations","volume":1,"bookback":[["For x²−5x+6=0, find the sum and product.","Sum=5; product=6."],["State the quadratic formula.","x=(−b±√(b²−4ac))/(2a)."],["Find the sum and product of roots of 2x²−7x+3=0.","Answer: Sum=7/2; product=3/2."],["Solve x²−5x+6=0.","Answer: x=2 or x=3."],["Form a quadratic equation whose roots are 4 and −1.","Answer: x²−3x−4=0."],["Solve x³−6x²+11x−6=0.","Answer: roots are 1, 2 and 3."]],"important":[["Explain and solve: Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],["Explain and solve: Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],["Explain and solve: Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],["Explain and solve: Solve x³−6x²+11x−6=0.","Factor by grouping: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],["Explain and solve: Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],["Explain and solve: If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]],"worked":[["Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],["Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],["Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],["Solve x³−6x²+11x−6=0.","Factor by grouping: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],["Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],["If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]],"formula":["For ax²+bx+c=0: α+β=−b/a; αβ=c/a.","Quadratic formula: x=(−b±√(b²−4ac))/(2a).","Discriminant Δ=b²−4ac determines the nature of roots.","For a monic cubic x³+ax²+bx+c=0, sum of roots=−a."]},{"title":"Inverse Trigonometric Functions","volume":1,"bookback":[["Evaluate tan⁻¹(1).","tan(π/4)=1, so the answer is π/4."],["Evaluate sin⁻¹(1/2).","The principal value is π/6."],["Evaluate sin⁻¹(1/2).","Answer: π/6."],["Evaluate cos⁻¹(−1/2).","Answer: 2π/3."],["Evaluate tan⁻¹(1)+tan⁻¹(1).","Answer: π/2."],["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Answer: π/2."]],"important":[["Explain and solve: Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],["Explain and solve: Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],["Explain and solve: Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],["Explain and solve: Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],["Explain and solve: Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],["Explain and solve: Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]],"worked":[["Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],["Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],["Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],["Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],["Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]],"formula":["sin⁻¹x+cos⁻¹x=π/2 for −1≤x≤1.","Range of sin⁻¹x: [−π/2,π/2].","Range of cos⁻¹x: [0,π].","Range of tan⁻¹x: (−π/2,π/2)."]},{"title":"Two Dimensional Analytical Geometry – II","volume":1,"bookback":[["Find the radius of (x−2)²+(y+1)²=16.","r²=16, so r=4."],["For y²=8x, find a.","4a=8, so a=2."],["Find the centre and radius of x²+y²−4x+6y−12=0.","Answer: centre (2,−3), radius 5."],["Find the focus of the parabola y²=12x.","Answer: focus (3,0)."],["Find the foci and eccentricity of x²/25+y²/9=1.","Answer: foci (±4,0), eccentricity c/a=4/5."],["Find the equation of a circle with centre (1,−2) and radius 3.","Answer: (x−1)²+(y+2)²=9."]],"important":[["Explain and solve: Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],["Explain and solve: Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],["Explain and solve: Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],["Explain and solve: Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],["Explain and solve: Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],["Explain and solve: Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]],"worked":[["Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],["Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],["Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],["Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],["Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],["Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]],"formula":["Circle: (x−h)²+(y−k)²=r².","Parabola: y²=4ax or x²=4ay.","Ellipse: c²=a²−b²; e=c/a.","Hyperbola: c²=a²+b²; e=c/a."]},{"title":"Applications of Vector Algebra","volume":1,"bookback":[["Find (i+2j)·(3i−j).","3−2=1."],["Find |5i+12j|.","√(25+144)=13."],["Find the dot product of a=2i+3j and b=i−4j.","Answer: −10."],["Find the magnitude of 3i+4j+12k.","Answer: 13."],["Find the angle between i+j and i−j.","Answer: 90°."],["Find the cross product of i and 2j.","Since i×j=k, the answer is 2k."]],"important":[["Explain and solve: Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],["Explain and solve: Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],["Explain and solve: Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],["Explain and solve: Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],["Explain and solve: Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],["Explain and solve: Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]],"worked":[["Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],["Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],["Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],["Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],["Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],["Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]],"formula":["a·b=|a||b|cosθ.","|a×b|=|a||b|sinθ.","Parallelogram area=|a×b|; triangle area=½|a×b|.","Projection of a on b: (a·b)/|b|."]},{"title":"Applications of Differential Calculus","volume":2,"bookback":[["Differentiate 5x⁴.","Using power rule: 20x³."],["Find the stationary x-value of x²−8x+3.","Derivative 2x−8=0 gives x=4."],["Differentiate y=x³−4x²+2x.","Answer: 3x²−8x+2."],["Find the stationary point of f(x)=x²−6x+5.","Answer: stationary point (3,−4)."],["Find the local minimum of f(x)=x²−4x+1.","Answer: minimum value −3 at x=2."],["Differentiate y=(2x+1)(x²−3).","Answer: 6x²+2x−6."]],"important":[["Explain and solve: Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],["Explain and solve: Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],["Explain and solve: Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],["Explain and solve: Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],["Explain and solve: Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],["Explain and solve: Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]],"worked":[["Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],["Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],["Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],["Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],["Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],["Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]],"formula":["d(xⁿ)/dx=nxⁿ⁻¹.","(uv)′=u′v+uv′; (u/v)′=(u′v−uv′)/v².","At a stationary point f′(x)=0.","f″>0 indicates a local minimum; f″<0 indicates a local maximum."]},{"title":"Differentials and Partial Derivatives","volume":2,"bookback":[["For z=x²y, find ∂z/∂x.","Treat y constant: 2xy."],["For z=xy+y², find ∂z/∂y.","Treat x constant: x+2y."],["If z=x²y+3y, find ∂z/∂x.","Answer: ∂z/∂x=2xy."],["If z=x²+xy+y², find ∂z/∂y.","Answer: ∂z/∂y=x+2y."],["Find the total differential of z=x²y+y².","Answer: dz=2xy dx+(x²+2y)dy."],["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to y keeping x fixed: fy=3x+4y."]],"important":[["Explain and solve: If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],["Explain and solve: If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],["Explain and solve: Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],["Explain and solve: Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],["Explain and solve: Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],["Explain and solve: Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]],"worked":[["If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],["If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],["Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],["Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],["Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]],"formula":["For z=f(x,y), fx=∂z/∂x and fy=∂z/∂y.","Total differential: dz=fx dx+fy dy.","Linear approximation: L=f(a,b)+fx(a,b)(x−a)+fy(a,b)(y−b).","For mixed partials, differentiate successively with respect to the indicated variables."]},{"title":"Applications of Integration","volume":2,"bookback":[["Evaluate ∫4x³ dx.","Answer: x⁴+C."],["Evaluate ∫₀¹2x dx.","[x²]₀¹=1."],["Evaluate ∫(3x²−4x+2) dx.","Answer: x³−2x²+2x+C."],["Evaluate ∫₀² 3x² dx.","Answer: 8."],["Find the area under y=x from x=0 to x=3.","Answer: 9/2 square units."],["Evaluate ∫(2x+1)⁵ dx.","Answer: (2x+1)⁶/12+C."]],"important":[["Explain and solve: Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],["Explain and solve: Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],["Explain and solve: Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],["Explain and solve: Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],["Explain and solve: Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],["Explain and solve: Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]],"worked":[["Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],["Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],["Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],["Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],["Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],["Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]],"formula":["∫xⁿdx=xⁿ⁺¹/(n+1)+C, n≠−1.","∫ₐᵇf(x)dx=F(b)−F(a), where F′=f.","Area under y=f(x)≥0 from a to b is ∫ₐᵇf(x)dx.","Substitution: if u=g(x), then ∫f(g(x))g′(x)dx=∫f(u)du."]},{"title":"Ordinary Differential Equations","volume":2,"bookback":[["Find the order of y‴+y′=0.","The highest derivative is third order, so order=3."],["Solve dy/dx=2x.","Integrate: y=x²+C."],["Solve dy/dx=3x².","Answer: y=x³+C."],["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","Answer: order 2, degree 3."],["Solve dy/dx=2xy by separation of variables.","Answer: y=Ae^(x²)."],["Solve dy/dx=4x³−2x.","Answer: y=x⁴−x²+C."]],"important":[["Explain and solve: Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],["Explain and solve: Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],["Explain and solve: Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],["Explain and solve: Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],["Explain and solve: Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],["Explain and solve: Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]],"worked":[["Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],["Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],["Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],["Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],["Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]],"formula":["Order is the highest derivative order present.","Degree is the power of the highest-order derivative when polynomial in derivatives.","If dy/dx=f(x), then y=∫f(x)dx+C.","Separate variables before integrating when dy/dx=g(x)h(y)."]},{"title":"Probability Distributions","volume":2,"bookback":[["For a fair coin, find P(head).","There is one head among two equally likely outcomes: 1/2."],["For n=3,p=1/2, find the binomial mean.","Mean=np=3/2."],["A fair die is rolled. Find the probability of getting an even number.","P(even)=3/6=1/2."],["For X=0,1 with probabilities 0.4,0.6, find E(X).","Answer: 0.6."],["For a binomial distribution with n=4,p=1/2, find P(X=2).","Answer: 3/8."],["Find the variance when X=0 and X=1 each have probability 1/2.","Answer: 1/4."]],"important":[["Explain and solve: A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],["Explain and solve: For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],["Explain and solve: For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],["Explain and solve: Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],["Explain and solve: A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],["Explain and solve: A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]],"worked":[["A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],["For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],["For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],["Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],["A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],["A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]],"formula":["E(X)=ΣxP(X=x).","Var(X)=E(X²)−[E(X)]².","Binomial: P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.","For binomial distribution: mean=np; variance=np(1−p)."]},{"title":"Discrete Mathematics","volume":2,"bookback":[["If A={1,2,3}, B={3,4}, find A∪B.","Union collects all distinct elements: {1,2,3,4}."],["When is p∧q true?","Only when both p and q are true."],["Write the negation of “It is raining”.","Answer: “It is not raining”."],["If A={1,2,3} and B={3,4}, find A∩B.","Answer: {3}."],["Construct the truth values of p∧q for TT, TF, FT, FF.","Therefore the values are T, F, F, F."],["If A={a,b,c} and B={b,c,d}, find union and intersection.","Answer: A∪B={a,b,c,d}; A∩B={b,c}."]],"important":[["Explain and solve: Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],["Explain and solve: If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],["Explain and solve: Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],["Explain and solve: If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],["Explain and solve: Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],["Explain and solve: If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]],"worked":[["Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],["If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],["Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],["If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],["Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],["If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]],"formula":["p∧q is true only when both p and q are true.","p∨q is false only when both p and q are false.","p→q is equivalent to ¬p∨q.","n(A∪B)=n(A)+n(B)−n(A∩B)."]}];
+    const chapters = [
+{
+"title":"Applications of Matrices and Determinants","volume":1,
+"bookback":[
+["Evaluate det([[4,1],[2,3]]).","4×3−1×2=10."],
+["Find the inverse of [[1,2],[3,5]].","det=5−6=−1; adjoint=[[5,−2],[−3,1]]. Divide by −1: inverse=[[-5,2],[3,−1]]."],
+["Find the determinant of [[3,2],[5,4]].","Answer: 2."],
+["Find the inverse of A=[[2,1],[1,1]].","Answer: A⁻¹=[[1,−1],[−1,2]]."],
+["Solve 2x+y=7 and x−y=2 using elimination.","Answer: (x,y)=(3,1)."],
+["Find the adjoint of [[2,3],[1,4]].","Answer: adj(A)=[[4,−3],[−1,2]]."]
+],
+"important":[
+["Explain and solve: Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],
+["Explain and solve: Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],
+["Explain and solve: Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],
+["Explain and solve: Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],
+["Explain and solve: Use Cramer's rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],
+["Explain and solve: Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]
+],
+"worked":[
+["Find the determinant of [[3,2],[5,4]].","For a 2×2 matrix [[a,b],[c,d]], det(A)=ad−bc.\n=3(4)−2(5)=12−10=2.\nAnswer: 2."],
+["Find the inverse of A=[[2,1],[1,1]].","Step 1: det(A)=2(1)−1(1)=1.\nStep 2: adj(A)=[[1,−1],[−1,2]].\nStep 3: A⁻¹=adj(A)/det(A).\nAnswer: A⁻¹=[[1,−1],[−1,2]]."],
+["Solve 2x+y=7 and x−y=2 using elimination.","Add the equations: 3x=9, so x=3.\nSubstitute in x−y=2: 3−y=2, so y=1.\nAnswer: (x,y)=(3,1)."],
+["Find the adjoint of [[2,3],[1,4]].","For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]].\nSubstitute a=2,b=3,c=1,d=4.\nAnswer: adj(A)=[[4,−3],[−1,2]]."],
+["Use Cramer's rule to solve x+y=5 and 2x−y=4.","D=|1 1; 2 −1|=−3.\nDx=|5 1; 4 −1|=−9, so x=Dx/D=3.\nDy=|1 5; 2 4|=−6, so y=Dy/D=2.\nAnswer: x=3, y=2."],
+["Check whether 2x+4y=6 and x+2y=3 are consistent.","The second equation multiplied by 2 gives 2x+4y=6, which is exactly the first equation.\nThus both equations represent the same line and have infinitely many solutions.\nAnswer: Consistent and dependent."]
+],
+"formula":[
+"det([[a,b],[c,d]])=ad−bc.",
+"A⁻¹=adj(A)/det(A), when det(A)≠0.",
+"For AX=B, X=A⁻¹B when A is invertible.",
+"Cramer's rule: xᵢ=Dᵢ/D when D≠0."
+]
+},
+{
+"title":"Complex Numbers","volume":1,
+"bookback":[
+["Find |3+4i|.","√(9+16)=5."],
+["Simplify (2+i)+(4−3i).","Add real and imaginary parts: 6−2i."],
+["Find the modulus and conjugate of z=5−12i.","Answer: |z|=13 and z̄=5+12i."],
+["Simplify (3+2i)(1−i).","Answer: 5−i."],
+["Express 1+√3 i in polar form.","Answer: 2(cos π/3+i sin π/3)."],
+["Find the square roots of −16.","Answer: ±4i."]
+],
+"important":[
+["Explain and solve: Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],
+["Explain and solve: Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],
+["Explain and solve: Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],
+["Explain and solve: Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],
+["Explain and solve: Evaluate (cos π/6+i sin π/6)³.","By De Moivre's theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],
+["Explain and solve: Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]
+],
+"worked":[
+["Find the modulus and conjugate of z=5−12i.","For z=a+bi, |z|=√(a²+b²).\nHere |z|=√(25+144)=13.\nChange the sign of the imaginary part for the conjugate.\nAnswer: |z|=13 and z̄=5+12i."],
+["Simplify (3+2i)(1−i).","Expand: 3−3i+2i−2i².\nSince i²=−1, this becomes 3−i+2=5−i.\nAnswer: 5−i."],
+["Express 1+√3 i in polar form.","r=√(1²+(√3)²)=2.\n tan θ=√3/1=√3; in the first quadrant θ=π/3.\nAnswer: 2(cos π/3+i sin π/3)."],
+["Find the square roots of −16.","Let w²=−16. Since (4i)²=16i²=−16, one root is 4i.\nThe other root is its negative.\nAnswer: ±4i."],
+["Evaluate (cos π/6+i sin π/6)³.","By De Moivre's theorem, the cube is cos(3π/6)+i sin(3π/6).\n=cos(π/2)+i sin(π/2)=0+i.\nAnswer: i."],
+["Solve z²−6z+13=0.","Using the quadratic formula, z=[6±√(36−52)]/2.\n= [6±√(−16)]/2=[6±4i]/2.\nAnswer: z=3±2i."]
+],
+"formula":[
+"For z=a+bi, |z|=√(a²+b²).",
+"Conjugate: z̄=a−bi; zz̄=|z|².",
+"Polar form: z=r(cosθ+i sinθ).",
+"De Moivre: [r(cosθ+i sinθ)]ⁿ=rⁿ(cos nθ+i sin nθ)."
+]
+},
+{
+"title":"Theory of Equations","volume":1,
+"bookback":[
+["For x²−5x+6=0, find the sum and product.","Sum=5; product=6."],
+["State the quadratic formula.","x=(−b±√(b²−4ac))/(2a)."],
+["Find the sum and product of roots of 2x²−7x+3=0.","Answer: Sum=7/2; product=3/2."],
+["Solve x²−5x+6=0.","Answer: x=2 or x=3."],
+["Form a quadratic equation whose roots are 4 and −1.","Answer: x²−3x−4=0."],
+["Solve x³−6x²+11x−6=0.","Answer: roots are 1, 2 and 3."]
+],
+"important":[
+["Explain and solve: Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],
+["Explain and solve: Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],
+["Explain and solve: Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],
+["Explain and solve: Solve x³−6x²+11x−6=0.","Factor: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],
+["Explain and solve: Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],
+["Explain and solve: If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]
+],
+"worked":[
+["Find the sum and product of roots of 2x²−7x+3=0.","For ax²+bx+c=0, sum=−b/a and product=c/a.\nHere a=2,b=−7,c=3.\nAnswer: Sum=7/2; product=3/2."],
+["Solve x²−5x+6=0.","Factor: x²−5x+6=(x−2)(x−3).\nSet each factor to zero.\nAnswer: x=2 or x=3."],
+["Form a quadratic equation whose roots are 4 and −1.","Sum of roots=4+(−1)=3; product=−4.\nEquation: x²−(sum)x+product=0.\nAnswer: x²−3x−4=0."],
+["Solve x³−6x²+11x−6=0.","Factor: (x−1)(x−2)(x−3)=0.\nTherefore each factor can be zero.\nAnswer: roots are 1, 2 and 3."],
+["Find the nature of roots of 3x²+2x+5=0.","Discriminant Δ=b²−4ac=2²−4(3)(5)=4−60=−56.\nSince Δ<0, there are no real roots; roots are distinct complex conjugates."],
+["If α,β are roots of x²−4x+1=0, find α²+β².","α+β=4 and αβ=1.\nα²+β²=(α+β)²−2αβ=16−2=14.\nAnswer: 14."]
+],
+"formula":[
+"For ax²+bx+c=0: α+β=−b/a; αβ=c/a.",
+"Quadratic formula: x=(−b±√(b²−4ac))/(2a).",
+"Discriminant Δ=b²−4ac determines the nature of roots.",
+"For a monic cubic x³+ax²+bx+c=0, sum of roots=−a."
+]
+},
+{
+"title":"Inverse Trigonometric Functions","volume":1,
+"bookback":[
+["Evaluate tan⁻¹(1).","tan(π/4)=1, so the answer is π/4."],
+["Evaluate sin⁻¹(1/2).","The principal value is π/6."],
+["Evaluate sin⁻¹(1/2).","Answer: π/6."],
+["Evaluate cos⁻¹(−1/2).","Answer: 2π/3."],
+["Evaluate tan⁻¹(1)+tan⁻¹(1).","Answer: π/2."],
+["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Answer: π/2."]
+],
+"important":[
+["Explain and solve: Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],
+["Explain and solve: Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],
+["Explain and solve: Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],
+["Explain and solve: Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],
+["Explain and solve: Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],
+["Explain and solve: Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]
+],
+"worked":[
+["Evaluate sin⁻¹(1/2).","We need the principal angle whose sine is 1/2.\nsin(π/6)=1/2 and π/6 lies in [−π/2,π/2].\nAnswer: π/6."],
+["Evaluate cos⁻¹(−1/2).","The principal range of cos⁻¹ is [0,π].\ncos(2π/3)=−1/2.\nAnswer: 2π/3."],
+["Evaluate tan⁻¹(1)+tan⁻¹(1).","tan⁻¹(1)=π/4.\nTherefore the sum is π/4+π/4.\nAnswer: π/2."],
+["Simplify sin⁻¹x+cos⁻¹x for x∈[−1,1].","Let θ=sin⁻¹x. Then sin θ=x and θ is in the principal sine range.\nThe complementary angle has cosine x, so cos⁻¹x=π/2−θ.\nAnswer: π/2."],
+["Evaluate tan⁻¹(√3).","The principal range of tan⁻¹ is (−π/2,π/2).\ntan(π/3)=√3.\nAnswer: π/3."],
+["Evaluate sin(2 cos⁻¹(3/5)).","Let θ=cos⁻¹(3/5), so cosθ=3/5. In the principal range, sinθ=4/5.\nsin2θ=2sinθcosθ=2(4/5)(3/5).\nAnswer: 24/25."]
+],
+"formula":[
+"sin⁻¹x+cos⁻¹x=π/2 for −1≤x≤1.",
+"Range of sin⁻¹x: [−π/2,π/2].",
+"Range of cos⁻¹x: [0,π].",
+"Range of tan⁻¹x: (−π/2,π/2)."
+]
+},
+{
+"title":"Two Dimensional Analytical Geometry – II","volume":1,
+"bookback":[
+["Find the radius of (x−2)²+(y+1)²=16.","r²=16, so r=4."],
+["For y²=8x, find a.","4a=8, so a=2."],
+["Find the centre and radius of x²+y²−4x+6y−12=0.","Answer: centre (2,−3), radius 5."],
+["Find the focus of the parabola y²=12x.","Answer: focus (3,0)."],
+["Find the foci and eccentricity of x²/25+y²/9=1.","Answer: foci (±4,0), eccentricity c/a=4/5."],
+["Find the equation of a circle with centre (1,−2) and radius 3.","Answer: (x−1)²+(y+2)²=9."]
+],
+"important":[
+["Explain and solve: Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],
+["Explain and solve: Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],
+["Explain and solve: Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],
+["Explain and solve: Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],
+["Explain and solve: Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],
+["Explain and solve: Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]
+],
+"worked":[
+["Find the centre and radius of x²+y²−4x+6y−12=0.","Group and complete squares: (x²−4x)+(y²+6y)=12.\n(x−2)²−4+(y+3)²−9=12.\nSo (x−2)²+(y+3)²=25.\nAnswer: centre (2,−3), radius 5."],
+["Find the focus of the parabola y²=12x.","Compare with y²=4ax.\n4a=12, so a=3.\nAnswer: focus (3,0)."],
+["Find the foci and eccentricity of x²/25+y²/9=1.","For this ellipse, a²=25 and b²=9.\nc²=a²−b²=25−9=16, so c=4.\nAnswer: foci (±4,0), eccentricity c/a=4/5."],
+["Find the equation of a circle with centre (1,−2) and radius 3.","Use (x−h)²+(y−k)²=r².\nSubstitute h=1,k=−2,r=3.\nAnswer: (x−1)²+(y+2)²=9."],
+["Find the vertices of the ellipse x²/16+y²/9=1.","The major axis is along x because 16>9.\na=4 and b=3.\nAnswer: vertices (±4,0); co-vertices (0,±3)."],
+["Identify the hyperbola x²/9−y²/16=1 and find its foci.","Here a²=9,b²=16; transverse axis is along x.\nc²=a²+b²=25, so c=5.\nAnswer: foci (±5,0), eccentricity 5/3."]
+],
+"formula":[
+"Circle: (x−h)²+(y−k)²=r².",
+"Parabola: y²=4ax or x²=4ay.",
+"Ellipse: c²=a²−b²; e=c/a.",
+"Hyperbola: c²=a²+b²; e=c/a."
+]
+},
+{
+"title":"Applications of Vector Algebra","volume":1,
+"bookback":[
+["Find (i+2j)·(3i−j).","3−2=1."],
+["Find |5i+12j|.","√(25+144)=13."],
+["Find the dot product of a=2i+3j and b=i−4j.","Answer: −10."],
+["Find the magnitude of 3i+4j+12k.","Answer: 13."],
+["Find the angle between i+j and i−j.","Answer: 90°."],
+["Find the cross product of i and 2j.","Since i×j=k, the answer is 2k."]
+],
+"important":[
+["Explain and solve: Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],
+["Explain and solve: Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],
+["Explain and solve: Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],
+["Explain and solve: Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],
+["Explain and solve: Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],
+["Explain and solve: Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]
+],
+"worked":[
+["Find the dot product of a=2i+3j and b=i−4j.","a·b=(2)(1)+(3)(−4)=2−12.\nAnswer: −10."],
+["Find the magnitude of 3i+4j+12k.","Magnitude=√(3²+4²+12²)=√169.\nAnswer: 13."],
+["Find the angle between i+j and i−j.","Dot product=(1)(1)+(1)(−1)=0.\nBoth vectors are non-zero, so they are perpendicular.\nAnswer: 90°."],
+["Find the cross product of i and 2j.","i×2j=2(i×j).\nSince i×j=k, the answer is 2k."],
+["Find the area of the parallelogram formed by a=2i and b=3j.","Area=|a×b|.\n(2i)×(3j)=6k, whose magnitude is 6.\nAnswer: 6 square units."],
+["Find the scalar projection of a=3i+4j on b=i.","Scalar projection=(a·b)/|b|.\na·b=3 and |b|=1.\nAnswer: 3."]
+],
+"formula":[
+"a·b=|a||b|cosθ.",
+"|a×b|=|a||b|sinθ.",
+"Parallelogram area=|a×b|; triangle area=½|a×b|.",
+"Projection of a on b: (a·b)/|b|."
+]
+},
+{
+"title":"Applications of Differential Calculus","volume":2,
+"bookback":[
+["Differentiate 5x⁴.","Using power rule: 20x³."],
+["Find the stationary x-value of x²−8x+3.","Derivative 2x−8=0 gives x=4."],
+["Differentiate y=x³−4x²+2x.","Answer: 3x²−8x+2."],
+["Find the stationary point of f(x)=x²−6x+5.","Answer: stationary point (3,−4)."],
+["Find the local minimum of f(x)=x²−4x+1.","Answer: minimum value −3 at x=2."],
+["Differentiate y=(2x+1)(x²−3).","Answer: 6x²+2x−6."]
+],
+"important":[
+["Explain and solve: Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],
+["Explain and solve: Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],
+["Explain and solve: Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],
+["Explain and solve: Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],
+["Explain and solve: Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],
+["Explain and solve: Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]
+],
+"worked":[
+["Differentiate y=x³−4x²+2x.","Apply the power rule term by term.\ndy/dx=3x²−8x+2.\nAnswer: 3x²−8x+2."],
+["Find the stationary point of f(x)=x²−6x+5.","f′(x)=2x−6. Set f′=0: x=3.\nf(3)=9−18+5=−4.\nAnswer: stationary point (3,−4)."],
+["Find the local minimum of f(x)=x²−4x+1.","f′=2x−4=0 gives x=2.\nf″=2>0, so it is a local minimum.\nf(2)=4−8+1=−3.\nAnswer: minimum value −3 at x=2."],
+["Differentiate y=(2x+1)(x²−3).","Use product rule: y′=2(x²−3)+(2x+1)(2x).\nExpand: 2x²−6+4x²+2x.\nAnswer: 6x²+2x−6."],
+["Find the equation of the tangent to y=x² at x=2.","dy/dx=2x, so slope at x=2 is 4.\nPoint on curve: (2,4).\nUsing y−y₁=m(x−x₁): y−4=4(x−2).\nAnswer: y=4x−4."],
+["Find the intervals where f(x)=x³−3x is increasing.","f′=3x²−3=3(x−1)(x+1).\nf′>0 when x<−1 or x>1.\nAnswer: increasing on (−∞,−1) and (1,∞)."]
+],
+"formula":[
+"d(xⁿ)/dx=nxⁿ⁻¹.",
+"(uv)′=u′v+uv′; (u/v)′=(u′v−uv′)/v².",
+"At a stationary point f′(x)=0.",
+"f″>0 indicates a local minimum; f″<0 indicates a local maximum."
+]
+},
+{
+"title":"Differentials and Partial Derivatives","volume":2,
+"bookback":[
+["For z=x²y, find ∂z/∂x.","Treat y constant: 2xy."],
+["For z=xy+y², find ∂z/∂y.","Treat x constant: x+2y."],
+["If z=x²y+3y, find ∂z/∂x.","Answer: ∂z/∂x=2xy."],
+["If z=x²+xy+y², find ∂z/∂y.","Answer: ∂z/∂y=x+2y."],
+["Find the total differential of z=x²y+y².","Answer: dz=2xy dx+(x²+2y)dy."],
+["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to y keeping x fixed: fy=3x+4y."]
+],
+"important":[
+["Explain and solve: If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],
+["Explain and solve: If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],
+["Explain and solve: Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],
+["Explain and solve: Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],
+["Explain and solve: Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],
+["Explain and solve: Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]
+],
+"worked":[
+["If z=x²y+3y, find ∂z/∂x.","Treat y as a constant.\nDifferentiate x²y to get 2xy; derivative of 3y with respect to x is 0.\nAnswer: ∂z/∂x=2xy."],
+["If z=x²+xy+y², find ∂z/∂y.","Treat x as a constant.\nDerivative of x² is 0, of xy is x, and of y² is 2y.\nAnswer: ∂z/∂y=x+2y."],
+["Find the total differential of z=x²y+y².","First, zx=2xy and zy=x²+2y.\nUse dz=zx dx+zy dy.\nAnswer: dz=2xy dx+(x²+2y)dy."],
+["Find fx and fy for f(x,y)=x²+3xy+2y².","Differentiate with respect to x keeping y fixed: fx=2x+3y.\nDifferentiate with respect to y keeping x fixed: fy=3x+4y."],
+["Find the linear approximation of f(x,y)=x²+y² near (1,2).","At (1,2), f=5, fx=2x=2, fy=2y=4.\nL(x,y)=5+2(x−1)+4(y−2).\nAnswer: L=2x+4y−5."],
+["Evaluate fxy for f=x²y³.","First differentiate with respect to x: fx=2xy³.\nThen differentiate with respect to y: fxy=6xy².\nAnswer: 6xy²."]
+],
+"formula":[
+"For z=f(x,y), fx=∂z/∂x and fy=∂z/∂y.",
+"Total differential: dz=fx dx+fy dy.",
+"Linear approximation: L=f(a,b)+fx(a,b)(x−a)+fy(a,b)(y−b).",
+"For mixed partials, differentiate successively with respect to the indicated variables."
+]
+},
+{
+"title":"Applications of Integration","volume":2,
+"bookback":[
+["Evaluate ∫4x³ dx.","Answer: x⁴+C."],
+["Evaluate ∫₀¹2x dx.","[x²]₀¹=1."],
+["Evaluate ∫(3x²−4x+2) dx.","Answer: x³−2x²+2x+C."],
+["Evaluate ∫₀² 3x² dx.","Answer: 8."],
+["Find the area under y=x from x=0 to x=3.","Answer: 9/2 square units."],
+["Evaluate ∫(2x+1)⁵ dx.","Answer: (2x+1)⁶/12+C."]
+],
+"important":[
+["Explain and solve: Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],
+["Explain and solve: Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],
+["Explain and solve: Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],
+["Explain and solve: Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],
+["Explain and solve: Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],
+["Explain and solve: Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]
+],
+"worked":[
+["Evaluate ∫(3x²−4x+2) dx.","Integrate each term separately.\n∫3x²dx=x³; ∫−4x dx=−2x²; ∫2dx=2x.\nAnswer: x³−2x²+2x+C."],
+["Evaluate ∫₀² 3x² dx.","Antiderivative of 3x² is x³.\nApply limits: [x³]₀²=8−0.\nAnswer: 8."],
+["Find the area under y=x from x=0 to x=3.","Area=∫₀³x dx=[x²/2]₀³.\n=9/2−0.\nAnswer: 9/2 square units."],
+["Evaluate ∫(2x+1)⁵ dx.","Let u=2x+1, so du=2dx and dx=du/2.\nIntegral=(1/2)∫u⁵du=u⁶/12+C.\nAnswer: (2x+1)⁶/12+C."],
+["Evaluate ∫₀¹(2x+1) dx.","Antiderivative is x²+x.\nAt 1: 1+1=2; at 0: 0.\nAnswer: 2."],
+["Find the area enclosed by y=4−x² and the x-axis.","The curve meets the x-axis when 4−x²=0, so x=±2.\nArea=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².\n= (8−8/3)−(−8+8/3)=32/3.\nAnswer: 32/3 square units."]
+],
+"formula":[
+"∫xⁿdx=xⁿ⁺¹/(n+1)+C, n≠−1.",
+"∫ₐᵇf(x)dx=F(b)−F(a), where F′=f.",
+"Area under y=f(x)≥0 from a to b is ∫ₐᵇf(x)dx.",
+"Substitution: if u=g(x), then ∫f(g(x))g′(x)dx=∫f(u)du."
+]
+},
+{
+"title":"Ordinary Differential Equations","volume":2,
+"bookback":[
+["Find the order of y‴+y′=0.","The highest derivative is third order, so order=3."],
+["Solve dy/dx=2x.","Integrate: y=x²+C."],
+["Solve dy/dx=3x².","Answer: y=x³+C."],
+["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","Answer: order 2, degree 3."],
+["Solve dy/dx=2xy by separation of variables.","Answer: y=Ae^(x²)."],
+["Solve dy/dx=4x³−2x.","Answer: y=x⁴−x²+C."]
+],
+"important":[
+["Explain and solve: Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],
+["Explain and solve: Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],
+["Explain and solve: Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],
+["Explain and solve: Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],
+["Explain and solve: Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],
+["Explain and solve: Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]
+],
+"worked":[
+["Solve dy/dx=3x².","Integrate both sides with respect to x.\ny=∫3x²dx.\nAnswer: y=x³+C."],
+["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.","The highest derivative is the second derivative, so order=2.\nIts power is 3 and the equation is polynomial in derivatives.\nAnswer: order 2, degree 3."],
+["Solve dy/dx=2xy by separation of variables.","Separate: dy/y=2x dx.\nIntegrate: ln|y|=x²+C.\nExponentiate and absorb the sign into a constant.\nAnswer: y=Ae^(x²)."],
+["Solve dy/dx=4x³−2x.","Integrate term by term: y=∫(4x³−2x)dx.\n= x⁴−x²+C.\nAnswer: y=x⁴−x²+C."],
+["Solve dy/dx=y.","Separate variables: dy/y=dx.\nIntegrate: ln|y|=x+C.\nExponentiate.\nAnswer: y=Aeˣ."],
+["Solve dy/dx=x/y.","Separate: y dy=x dx.\nIntegrate: y²/2=x²/2+C.\nMultiply by 2 and absorb constants.\nAnswer: y²=x²+C."]
+],
+"formula":[
+"Order is the highest derivative order present.",
+"Degree is the power of the highest-order derivative when polynomial in derivatives.",
+"If dy/dx=f(x), then y=∫f(x)dx+C.",
+"Separate variables before integrating when dy/dx=g(x)h(y)."
+]
+},
+{
+"title":"Probability Distributions","volume":2,
+"bookback":[
+["For a fair coin, find P(head).","There is one head among two equally likely outcomes: 1/2."],
+["For n=3,p=1/2, find the binomial mean.","Mean=np=3/2."],
+["A fair die is rolled. Find the probability of getting an even number.","P(even)=3/6=1/2."],
+["For X=0,1 with probabilities 0.4,0.6, find E(X).","Answer: 0.6."],
+["For a binomial distribution with n=4,p=1/2, find P(X=2).","Answer: 3/8."],
+["Find the variance when X=0 and X=1 each have probability 1/2.","Answer: 1/4."]
+],
+"important":[
+["Explain and solve: A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],
+["Explain and solve: For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],
+["Explain and solve: For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],
+["Explain and solve: Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],
+["Explain and solve: A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],
+["Explain and solve: A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]
+],
+"worked":[
+["A fair die is rolled. Find the probability of getting an even number.","Even outcomes are 2,4,6: three favourable outcomes.\nTotal outcomes=6.\nP(even)=3/6=1/2."],
+["For X=0,1 with probabilities 0.4,0.6, find E(X).","E(X)=ΣxP(X=x).\n=0(0.4)+1(0.6).\nAnswer: 0.6."],
+["For a binomial distribution with n=4,p=1/2, find P(X=2).","P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.\nP(X=2)=⁴C₂(1/2)²(1/2)²=6/16.\nAnswer: 3/8."],
+["Find the variance when X=0 and X=1 each have probability 1/2.","E(X)=0(1/2)+1(1/2)=1/2.\nE(X²)=0+(1/2)=1/2.\nVariance=E(X²)−[E(X)]²=1/2−1/4.\nAnswer: 1/4."],
+["A binomial distribution has n=5,p=0.2. Find its mean and variance.","Mean=np=5(0.2)=1.\nVariance=np(1−p)=5(0.2)(0.8)=0.8.\nAnswer: mean 1, variance 0.8."],
+["A random variable has values 1,2,3 with probabilities 0.2,0.5,0.3. Find its expectation.","E(X)=1(0.2)+2(0.5)+3(0.3).\n=0.2+1+0.9.\nAnswer: 2.1."]
+],
+"formula":[
+"E(X)=ΣxP(X=x).",
+"Var(X)=E(X²)−[E(X)]².",
+"Binomial: P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ.",
+"For binomial distribution: mean=np; variance=np(1−p)."
+]
+},
+{
+"title":"Discrete Mathematics","volume":2,
+"bookback":[
+["If A={1,2,3}, B={3,4}, find A∪B.","Union collects all distinct elements: {1,2,3,4}."],
+["When is p∧q true?","Only when both p and q are true."],
+["Write the negation of “It is raining”.","Answer: “It is not raining”."],
+["If A={1,2,3} and B={3,4}, find A∩B.","Answer: {3}."],
+["Construct the truth values of p∧q for TT, TF, FT, FF.","Therefore the values are T, F, F, F."],
+["If A={a,b,c} and B={b,c,d}, find union and intersection.","Answer: A∪B={a,b,c,d}; A∩B={b,c}."]
+],
+"important":[
+["Explain and solve: Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],
+["Explain and solve: If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],
+["Explain and solve: Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],
+["Explain and solve: If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],
+["Explain and solve: Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],
+["Explain and solve: If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]
+],
+"worked":[
+["Write the negation of “It is raining”.","The negation changes the statement to its opposite.\nAnswer: “It is not raining”."],
+["If A={1,2,3} and B={3,4}, find A∩B.","Intersection contains elements common to both sets.\nThe only common element is 3.\nAnswer: {3}."],
+["Construct the truth values of p∧q for TT, TF, FT, FF.","Conjunction is true only when both statements are true.\nTherefore the values are T, F, F, F."],
+["If A={a,b,c} and B={b,c,d}, find union and intersection.","Union contains every distinct element: {a,b,c,d}.\nIntersection contains common elements: {b,c}.\nAnswer: A∪B={a,b,c,d}; A∩B={b,c}."],
+["Show that p→q is equivalent to ¬p∨q.","An implication is false only when p is true and q is false.\nThe expression ¬p∨q is also false only in that same case.\nHence their truth columns match, so they are logically equivalent."],
+["If n(A)=20, n(B)=15 and n(A∩B)=5, find n(A∪B).","Use n(A∪B)=n(A)+n(B)−n(A∩B).\n=20+15−5.\nAnswer: 30."]
+],
+"formula":[
+"p∧q is true only when both p and q are true.",
+"p∨q is false only when both p and q are false.",
+"p→q is equivalent to ¬p∨q.",
+"n(A∪B)=n(A)+n(B)−n(A∩B)."
+]
+}
+];
 
-    const sel = document.getElementById('chapterSelect');
-    const panel = document.getElementById('panel');
-    const content = document.getElementById('content');
-    let current = 0;
-    let section = 'bookback';
+const sel = document.getElementById('chapterSelect');
+const panel = document.getElementById('panel');
+const content = document.getElementById('content');
 
-    chapters.forEach((chapter, index) => {
-      const option = document.createElement('option');
-      option.value = index;
-      option.textContent = `Chapter ${index + 1} – ${chapter.title}`;
-      sel.appendChild(option);
+let current = 0;
+let section = 'bookback';
+
+chapters.forEach((chapter, index) => {
+  const option = document.createElement('option');
+  option.value = index;
+  option.textContent = `Chapter ${index + 1} – ${chapter.title}`;
+  sel.appendChild(option);
+});
+
+function bookmarks() {
+  try {
+    return JSON.parse(localStorage.getItem('starLightMathBookmarks') || '[]');
+  } catch (error) {
+    return [];
+  }
+}
+
+function updateBookmark() {
+  document.getElementById('bookmark').textContent =
+    bookmarks().includes(current + 1)
+      ? '★ Bookmarked'
+      : '☆ Bookmark Chapter';
+}
+
+function chooseChapter(number) {
+  current = Number(number);
+  const chapter = chapters[current];
+
+  sel.value = current;
+  document.getElementById('welcome').textContent =
+    `Welcome to Chapter ${current + 1}!`;
+
+  document.getElementById('intro').textContent =
+    `You are viewing Chapter ${current + 1} from Mathematics Volume ${chapter.volume}. Explore the learning resources for this chapter.`;
+
+  updateBookmark();
+
+  if (!panel.hidden) {
+    showSection(section);
+  }
+}
+
+function showSection(selectedSection) {
+  section = selectedSection;
+
+  document.querySelectorAll('.card').forEach((button) => {
+    button.classList.toggle(
+      'active',
+      button.dataset.section === selectedSection
+    );
+  });
+
+  panel.hidden = false;
+
+  const titles = {
+    bookback: '📘 Book-back Practice',
+    important: '⭐ Important Questions',
+    worked: '✏️ Worked Examples',
+    formula: '📐 Formula Sheet'
+  };
+
+  document.getElementById('panelTitle').textContent =
+    titles[selectedSection];
+
+  document.getElementById('panelSub').textContent =
+    `Chapter ${current + 1}: ${chapters[current].title}`;
+
+  content.replaceChildren();
+
+  const items = chapters[current][selectedSection];
+
+  if (selectedSection === 'bookback') {
+    const note = document.createElement('p');
+    note.className = 'note';
+    note.textContent =
+      'These are original Star Light practice questions aligned with the chapter topics. They are not presented as verbatim official textbook questions.';
+    content.appendChild(note);
+  }
+
+  if (selectedSection === 'formula') {
+    items.forEach((formulaText) => {
+      const formulaCard = document.createElement('div');
+      formulaCard.className = 'formula';
+      formulaCard.textContent = formulaText;
+      content.appendChild(formulaCard);
     });
+  } else {
+    items.forEach((question, index) => {
+      const box = document.createElement('article');
+      box.className = 'question';
 
-    function bookmarks() {
-      try {
-        return JSON.parse(localStorage.getItem('starLightMathBookmarks') || '[]');
-      } catch (error) {
-        return [];
-      }
-    }
+      const meta = document.createElement('div');
+      meta.className = 'meta';
 
-    function updateBookmark() {
-      document.getElementById('bookmark').textContent =
-        bookmarks().includes(current + 1) ? '★ Bookmarked' : '☆ Bookmark Chapter';
-    }
+      const label =
+        selectedSection === 'worked'
+          ? 'WORKED EXAMPLE '
+          : selectedSection === 'important'
+            ? 'IMPORTANT QUESTION '
+            : 'PRACTICE QUESTION ';
 
-    function chooseChapter(number) {
-      current = Number(number);
-      const chapter = chapters[current];
-      sel.value = current;
-      document.getElementById('welcome').textContent = `Welcome to Chapter ${current + 1}!`;
-      document.getElementById('intro').textContent =
-        `You are viewing Chapter ${current + 1} from Mathematics Volume ${chapter.volume}. Explore the learning resources for this chapter.`;
-      updateBookmark();
-      if (!panel.hidden) showSection(section);
-    }
+      meta.textContent = label + (index + 1);
 
-    function showSection(selectedSection) {
-      section = selectedSection;
-      document.querySelectorAll('.card').forEach((button) => {
-        button.classList.toggle('active', button.dataset.section === selectedSection);
+      const heading = document.createElement('h3');
+      heading.textContent = question[0];
+
+      const button = document.createElement('button');
+      button.className = 'action';
+      button.textContent = 'Show Answer & Step-by-Step Solution';
+      button.setAttribute('aria-expanded', 'false');
+
+      const answer = document.createElement('div');
+      answer.className = 'answer';
+      answer.hidden = true;
+      answer.textContent = question[1];
+
+      button.addEventListener('click', () => {
+        answer.hidden = !answer.hidden;
+
+        button.textContent = answer.hidden
+          ? 'Show Answer & Step-by-Step Solution'
+          : 'Hide Solution';
+
+        button.setAttribute(
+          'aria-expanded',
+          String(!answer.hidden)
+        );
       });
 
-      panel.hidden = false;
-      const titles = {
-        bookback: '📘 Book-back Practice',
-        important: '⭐ Important Questions',
-        worked: '✏️ Worked Examples',
-        formula: '📐 Formula Sheet'
-      };
-      document.getElementById('panelTitle').textContent = titles[selectedSection];
-      document.getElementById('panelSub').textContent =
-        `Chapter ${current + 1}: ${chapters[current].title}`;
-      content.replaceChildren();
-
-      const items = chapters[current][selectedSection];
-      if (selectedSection === 'bookback') {
-        const note = document.createElement('p');
-        note.className = 'note';
-        note.textContent = 'These are original Star Light practice questions aligned with the chapter topics. They are not presented as verbatim official textbook questions.';
-        content.appendChild(note);
-      }
-
-      if (selectedSection === 'formula') {
-        items.forEach((formulaText) => {
-          const formulaCard = document.createElement('div');
-          formulaCard.className = 'formula';
-          formulaCard.textContent = formulaText;
-          content.appendChild(formulaCard);
-        });
-      } else {
-        items.forEach((question, index) => {
-          const box = document.createElement('article');
-          box.className = 'question';
-
-          const meta = document.createElement('div');
-          meta.className = 'meta';
-          const label = selectedSection === 'worked' ? 'WORKED EXAMPLE ' :
-            selectedSection === 'important' ? 'IMPORTANT QUESTION ' : 'PRACTICE QUESTION ';
-          meta.textContent = label + (index + 1);
-
-          const heading = document.createElement('h3');
-          heading.textContent = question[0];
-
-          const button = document.createElement('button');
-          button.className = 'action';
-          button.textContent = 'Show Answer & Step-by-Step Solution';
-          button.setAttribute('aria-expanded', 'false');
-
-          const answer = document.createElement('div');
-          answer.className = 'answer';
-          answer.hidden = true;
-          answer.textContent = question[1];
-
-          button.addEventListener('click', () => {
-            answer.hidden = !answer.hidden;
-            button.textContent = answer.hidden ?
-              'Show Answer & Step-by-Step Solution' : 'Hide Solution';
-            button.setAttribute('aria-expanded', String(!answer.hidden));
-          });
-
-          box.append(meta, heading, button, answer);
-          content.appendChild(box);
-        });
-      }
-      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    document.querySelectorAll('.card').forEach((button) => {
-      button.addEventListener('click', () => showSection(button.dataset.section));
+      box.append(meta, heading, button, answer);
+      content.appendChild(box);
     });
+  }
 
-    sel.addEventListener('change', (event) => chooseChapter(event.target.value));
+  panel.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
 
-    document.getElementById('bookmark').addEventListener('click', () => {
-      let saved = bookmarks();
-      saved = saved.includes(current + 1) ?
-        saved.filter((chapterNumber) => chapterNumber !== current + 1) :
-        [...saved, current + 1];
-      localStorage.setItem('starLightMathBookmarks', JSON.stringify(saved));
-      updateBookmark();
-    });
+document.querySelectorAll('.card').forEach((button) => {
+  button.addEventListener('click', () => {
+    showSection(button.dataset.section);
+  });
+});
 
-    const requestedChapter = Number(new URLSearchParams(location.search).get('chapter') || 1);
-    chooseChapter(
-      Number.isInteger(requestedChapter) && requestedChapter >= 1 && requestedChapter <= 12
-        ? requestedChapter - 1
-        : 0
-    );
-  </script>
+sel.addEventListener('change', (event) => {
+  chooseChapter(event.target.value);
+});
+
+document.getElementById('bookmark').addEventListener('click', () => {
+  let saved = bookmarks();
+
+  saved = saved.includes(current + 1)
+    ? saved.filter((chapterNumber) => chapterNumber !== current + 1)
+    : [...saved, current + 1];
+
+  localStorage.setItem(
+    'starLightMathBookmarks',
+    JSON.stringify(saved)
+  );
+
+  updateBookmark();
+});
+
+const requestedChapter = Number(
+  new URLSearchParams(location.search).get('chapter') || 1
+);
+
+chooseChapter(
+  Number.isInteger(requestedChapter) &&
+  requestedChapter >= 1 &&
+  requestedChapter <= 12
+    ? requestedChapter - 1
+    : 0
+);
+</script>
 </body>
 </html>
