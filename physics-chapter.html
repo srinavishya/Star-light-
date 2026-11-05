@@ -7,239 +7,137 @@
 <title>Star Light | Class 12 Physics</title>
 
 <style>
-  {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+        .math-hero {
+            text-align: center;
+            padding: 48px 20px 35px;
+            background: linear-gradient(
+                110deg,
+                rgba(190, 225, 255, 0.55),
+                rgba(231, 222, 255, 0.48),
+                rgba(255, 204, 239, 0.55)
+            );
+        }
 
-    background: linear-gradient(
-        115deg,
-        #d9efff 0%,
-        #e8e8ff 35%,
-        #f4dfff 65%,
-        #ffdff2 100%
-    );
+        .math-hero h1 {
+            color: #0c2053;
+            font-size: 43px;
+            margin-bottom: 10px;
+        }
 
-    color: #10265f;
-    min-height: 100vh;
-    line-height: 1.5;
-}
+        .math-hero p {
+            color: #34466f;
+            font-size: 19px;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #263445;
-    line-height: 1.7;
-}
+        .math-container {
+            max-width: 1250px;
+            margin: 35px auto 55px;
+            padding: 0 25px;
+        }
 
-header {
-    background: linear-gradient(120deg, #172b4d, #315b91);
-    color: white;
-    padding: 22px 7%;
-}
+        .volume-heading {
+            color: #10265f;
+            font-size: 29px;
+            margin: 35px 0 20px;
+            text-align: center;
+        }
 
-header h2 {
-    margin: 0;
-}
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 18px 50px;
-}
+        .chapter-card {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(120, 153, 226, 0.3);
+            border-radius: 20px;
+            padding: 24px 20px;
+            min-height: 175px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(34, 55, 110, 0.06);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 22px;
-}
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 22px rgba(34, 55, 110, 0.13);
+        }
 
-.back, .bookmark {
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
+        .chapter-number {
+            color: #6b65b5;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
 
-.back {
-    background: #e5edf8;
-    color: #24456f;
-}
+        .chapter-card h3 {
+            color: #10265f;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
 
-.bookmark {
-    background: #fff0c2;
-    color: #765300;
-}
+        .chapter-link {
+            display: inline-block;
+            align-self: flex-start;
+            background: #071c56;
+            color: white;
+            text-decoration: none;
+            padding: 9px 19px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
 
-.hero {
-    text-align: center;
-    background: linear-gradient(135deg, #e5f0ff, #ffffff);
-    padding: 35px 20px;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 18px rgba(30,60,100,.08);
-}
+        .chapter-link:hover {
+            background: #354f99;
+        }
 
-.hero h1 {
-    color: #193b68;
-    margin: 0 0 10px;
-}
+        .volume-divider {
+            height: 2px;
+            border: none;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #a9a4e8,
+                transparent
+            );
+            margin: 45px 0;
+        }
 
-.selectwrap {
-    margin-top: 22px;
-}
+        @media (max-width: 900px) {
+            .chapter-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
-select {
-    width: min(100%, 520px);
-    padding: 12px;
-    border: 1px solid #b8c9df;
-    border-radius: 8px;
-    font-size: 15px;
-    background: white;
-}
+        @media (max-width: 600px) {
+            .math-hero h1 {
+                font-size: 32px;
+            }
 
-.sectiontitle {
-    color: #193b68;
-    text-align: center;
-    margin: 30px 0 18px;
-}
+            .math-hero p {
+                font-size: 16px;
+            }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
+            .math-container {
+                padding: 0 16px;
+            }
 
-.card {
-    border: 1px solid #dce6f2;
-    background: white;
-    border-radius: 13px;
-    padding: 22px;
-    text-align: left;
-    cursor: pointer;
-    transition: .2s;
-    color: #263445;
-}
+            .chapter-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
 
-.card:hover, .card.active {
-    border-color: #477bb8;
-    background: #edf5ff;
-    transform: translateY(-3px);
-}
-
-.card h3 {
-    color: #244d7c;
-    margin-top: 0;
-}
-
-.card p {
-    margin-bottom: 0;
-}
-
-.tip {
-    margin-top: 25px;
-    padding: 17px;
-    background: #fff7df;
-    border-left: 5px solid #e4b747;
-    border-radius: 8px;
-}
-
-.panel {
-    margin-top: 35px;
-    padding: 24px;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(30,60,100,.08);
-}
-
-.panelhead {
-    border-bottom: 2px solid #e2ebf6;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-}
-
-.panelhead h2 {
-    color: #193b68;
-    margin: 0;
-}
-
-.note {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.question {
-    border: 1px solid #dce6f2;
-    border-radius: 10px;
-    padding: 18px;
-    margin: 18px 0;
-}
-
-.meta {
-    color: #477bb8;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.question h3 {
-    color: #263f60;
-    margin: 8px 0 14px;
-}
-
-.action {
-    background: #244d7c;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 11px 15px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.action:hover {
-    background: #17385f;
-}
-
-.answer {
-    white-space: pre-line;
-    background: #f2f7fd;
-    border-left: 4px solid #477bb8;
-    border-radius: 7px;
-    padding: 17px;
-    margin-top: 15px;
-}
-
-.formula {
-    background: #f2f7fd;
-    border-left: 4px solid #477bb8;
-    padding: 14px;
-    border-radius: 7px;
-    margin: 12px 0;
-}
-
-.footer {
-    text-align: center;
-    padding: 22px;
-    background: #172b4d;
-    color: white;
-}
-
-@media(max-width:600px) {
-    .panel {
-        padding: 15px;
-    }
-
-    .hero {
-        padding: 25px 12px;
-    }
-}
+            .volume-heading {
+                font-size: 25px;
+            }
+        }
 </style>
 </head>
 
