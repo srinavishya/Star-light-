@@ -1,43 +1,1615 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mathematics Chapter Learning | Star Light</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#263b63;line-height:1.6;background:linear-gradient(110deg,#dceaff,#eee3ff 52%,#f9ddf5)}
-a{color:inherit;text-decoration:none}.header,main{max-width:1150px;margin:auto;padding:22px 24px}.header{display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-size:23px;font-weight:800;color:#18356b}nav{display:flex;gap:22px;font-weight:bold;color:#18356b}
-main{margin:10px auto 50px}.top{display:flex;justify-content:space-between;align-items:center;margin:8px 0 28px;gap:14px}.back{font-weight:bold;color:#18356b}
-button,select{font:inherit;cursor:pointer}.bookmark{border:1px solid #b9b0ee;background:white;border-radius:28px;padding:10px 18px;font-weight:bold;color:#18356b}
-.hero,.card,.panel,.tip{background:white;border-radius:20px;box-shadow:0 10px 28px #455b8610}.hero{padding:28px;margin-bottom:38px;min-height:245px}.hero h1{margin:0 0 14px;color:#18356b;font-size:28px}.hero p{color:#536783;font-size:17px;margin:0 0 26px}.selectwrap{text-align:center}select{width:min(440px,100%);padding:10px;border:1px solid #c7cbe0;border-radius:8px;color:#263b63;background:#fff}
-h2,h3{color:#18356b}.sectiontitle{text-align:center;font-size:28px;margin:0 0 26px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{padding:24px;text-align:left;border:2px solid transparent;min-height:145px;color:#263b63}.card:hover,.card.active{border-color:#a99be9;transform:translateY(-2px)}.card h3{font-size:21px;margin:0 0 12px}.card p{margin:0;color:#536783}.tip{margin:28px 0;padding:18px 20px;border-left:5px solid #9788df;background:#f8f5ff}
-.panel{padding:25px;margin-top:25px;scroll-margin-top:18px}.panelhead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.panelhead h2{margin:0}.note{font-size:13px;color:#6b7890}.question,.formula{border:1px solid #e1e5f0;border-radius:13px;padding:17px;margin:13px 0}.meta{font-size:13px;color:#7669b2;font-weight:bold}.answer{background:#f5f3ff;border-radius:10px;padding:13px;margin-top:12px}.answer[hidden],.panel[hidden]{display:none}.action{border:0;background:#263f7a;color:white;border-radius:8px;padding:9px 14px;font-weight:bold;margin-top:8px}.formula{background:#f8f7ff;border-left:4px solid #9b8be4}.footer{text-align:center;padding:23px;background:#1d376e;color:white}
-@media(max-width:700px){.header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.hero{padding:22px}}
-</style></head><body>
-<header class="header"><a class="brand" href="index.html">✦ Star Light</a><nav><a href="index.html">Home</a><a href="mathematics.html">Subjects</a><a href="about.html">About</a></nav></header>
-<main><div class="top"><a class="back" href="mathematics.html">← Back to Mathematics</a><button class="bookmark" id="bookmark">☆ Bookmark Chapter</button></div>
-<section class="hero"><h1 id="welcome">Welcome to this chapter!</h1><p id="intro">Explore the learning resources for this chapter.</p><div class="selectwrap"><select id="chapterSelect" aria-label="Choose chapter"></select></div></section>
-<h2 class="sectiontitle">Explore Your Learning</h2>
-<section class="grid">
-<button class="card" data-section="bookback"><h3>📘 Book-back Practice</h3><p>Practise chapter-based questions with answers and explanations.</p></button>
-<button class="card" data-section="important"><h3>⭐ Important Questions</h3><p>Revise selected questions organised by marks and question type.</p></button>
-<button class="card" data-section="worked"><h3>✏️ Worked Examples</h3><p>Study solved examples with clear, step-by-step explanations.</p></button>
-<button class="card" data-section="formula"><h3>📐 Formula Sheet</h3><p>Review important formulas and mathematical results used in this chapter.</p></button>
-</section><div class="tip"><b>Learning tip:</b> Start with the worked examples. Then practise the questions to strengthen your understanding.</div>
-<section class="panel" id="panel" hidden><div class="panelhead"><h2 id="panelTitle"></h2><span class="note" id="panelSub"></span></div><div id="content"></div></section></main>
-<footer class="footer">Star Light | Your Learning Companion</footer>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263b63;
+    line-height: 1.7;
+    background: linear-gradient(110deg,#dceaff,#eee3ff 52%,#f9ddf5);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header, main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand {
+    font-size: 23px;
+    font-weight: 800;
+    color: #18356b;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    font-weight: bold;
+    color: #18356b;
+}
+
+main {
+    margin: 10px auto 50px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 28px;
+    gap: 14px;
+}
+
+.back {
+    font-weight: bold;
+    color: #18356b;
+}
+
+button, select {
+    font: inherit;
+    cursor: pointer;
+}
+
+.bookmark {
+    border: 1px solid #b9b0ee;
+    background: white;
+    border-radius: 28px;
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #18356b;
+}
+
+.hero, .card, .panel, .tip {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 28px #455b8610;
+}
+
+.hero {
+    padding: 28px;
+    margin-bottom: 38px;
+    min-height: 245px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #18356b;
+    font-size: 28px;
+}
+
+.hero p {
+    color: #536783;
+    font-size: 17px;
+    margin: 0 0 26px;
+}
+
+.selectwrap {
+    text-align: center;
+}
+
+select {
+    width: min(440px,100%);
+    padding: 10px;
+    border: 1px solid #c7cbe0;
+    border-radius: 8px;
+    color: #263b63;
+    background: white;
+}
+
+h2, h3 {
+    color: #18356b;
+}
+
+.sectiontitle {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 26px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 24px;
+    text-align: left;
+    border: 2px solid transparent;
+    min-height: 145px;
+    color: #263b63;
+}
+
+.card:hover, .card.active {
+    border-color: #a99be9;
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    font-size: 21px;
+    margin: 0 0 12px;
+}
+
+.card p {
+    margin: 0;
+    color: #536783;
+}
+
+.tip {
+    margin: 28px 0;
+    padding: 18px 20px;
+    border-left: 5px solid #9788df;
+    background: #f8f5ff;
+}
+
+.panel {
+    padding: 25px;
+    margin-top: 25px;
+    scroll-margin-top: 18px;
+}
+
+.panelhead {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.panelhead h2 {
+    margin: 0;
+}
+
+.note {
+    font-size: 14px;
+    color: #6b7890;
+}
+
+.question, .formula {
+    border: 1px solid #e1e5f0;
+    border-radius: 13px;
+    padding: 22px;
+    margin: 18px 0;
+    background: white;
+}
+
+.meta {
+    font-size: 13px;
+    color: #7669b2;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.question h3 {
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 12px 0 18px;
+}
+
+.action {
+    border: 0;
+    background: #263f7a;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.action:hover {
+    background: #172d60;
+}
+
+.answer {
+    background: #f5f3ff;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 18px;
+}
+
+.answer[hidden], .panel[hidden] {
+    display: none;
+}
+
+.answer p {
+    margin: 9px 0;
+    white-space: pre-wrap;
+}
+
+.answer .step-heading {
+    font-weight: bold;
+    color: #263f7a;
+    margin-top: 20px;
+}
+
+.answer .final-answer {
+    font-weight: bold;
+    color: #176b45;
+    background: #eaf8f0;
+    padding: 13px;
+    border-radius: 8px;
+    margin-top: 18px;
+}
+
+.formula {
+    background: #f8f7ff;
+    border-left: 4px solid #9b8be4;
+}
+
+.formula h3 {
+    margin-top: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 23px;
+    background: #1d376e;
+    color: white;
+}
+
+@media(max-width:700px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 22px;
+    }
+
+    .question {
+        padding: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <a class="brand" href="index.html">✦ Star Light</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="mathematics.html">Subjects</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="top">
+        <a class="back" href="mathematics.html">← Back to Mathematics</a>
+        <button class="bookmark" id="bookmark">☆ Bookmark Chapter</button>
+    </div>
+
+    <section class="hero">
+        <h1 id="welcome">Welcome to this chapter!</h1>
+        <p id="intro">Explore the learning resources for this chapter.</p>
+
+        <div class="selectwrap">
+            <select id="chapterSelect" aria-label="Choose chapter"></select>
+        </div>
+    </section>
+
+    <h2 class="sectiontitle">Explore Your Learning</h2>
+
+    <section class="grid">
+
+        <button class="card" data-section="bookback">
+            <h3>📘 Book-back Practice</h3>
+            <p>Practise chapter-based questions with answers and detailed explanations.</p>
+        </button>
+
+        <button class="card" data-section="important">
+            <h3>⭐ Important Questions</h3>
+            <p>Revise important questions with complete solutions.</p>
+        </button>
+
+        <button class="card" data-section="worked">
+            <h3>✏️ Worked Examples</h3>
+            <p>Learn how to solve problems through detailed explanations.</p>
+        </button>
+
+        <button class="card" data-section="formula">
+            <h3>📐 Formula Sheet</h3>
+            <p>Review important formulas and mathematical results.</p>
+        </button>
+
+    </section>
+
+    <div class="tip">
+        <b>Learning tip:</b>
+        Start with the worked examples. Understand each step before trying the practice questions yourself.
+    </div>
+
+    <section class="panel" id="panel" hidden>
+
+        <div class="panelhead">
+            <h2 id="panelTitle"></h2>
+            <span class="note" id="panelSub"></span>
+        </div>
+
+        <div id="content"></div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    Star Light | Your Learning Companion
+</footer>
+
 <script>
-const chapters=[{"title": "Applications of Matrices and Determinants", "volume": 1, "bookback": [["Find det([[2,3],[1,4]]).", "Δ=2×4−3×1=5."], ["Find the inverse of [[2,1],[1,1]].", "Δ=1 and adj(A)=[[1,−1],[−1,2]], so A⁻¹=[[1,−1],[−1,2]]."]], "important": [["Solve 2x+y=5 and x−y=1.", "Adding the equations gives 3x=6, so x=2; then y=1."], ["Find the adjoint of [[1,2],[3,4]].", "For [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]], so [[4,−2],[−3,1]]."]], "worked": [["Worked example: Find A⁻¹ for A=[[2,1],[1,1]].", "Δ=2−1=1. adj(A)=[[1,−1],[−1,2]], hence A⁻¹=[[1,−1],[−1,2]]."]], "formula": ["det([[a,b],[c,d]])=ad−bc.", "A⁻¹=adj(A)/det(A), when det(A)≠0.", "For AX=B, X=A⁻¹B, if A is invertible."]}, {"title": "Complex Numbers", "volume": 1, "bookback": [["If z=3+4i, find its conjugate and modulus.", "Conjugate=3−4i; modulus=√(9+16)=5."], ["Simplify (2+i)+(4−3i).", "(2+4)+(1−3)i=6−2i."]], "important": [["Find the square roots of −9.", "The square roots are ±3i."], ["Express 1+i in polar form.", "r=√2 and θ=π/4, so √2(cosπ/4+i sinπ/4)."]], "worked": [["Worked example: Write 1+i in polar form.", "r=√(1²+1²)=√2; its argument is π/4. Thus z=√2(cosπ/4+i sinπ/4)."]], "formula": ["For z=a+bi, |z|=√(a²+b²).", "Conjugate: z̄=a−bi; zz̄=|z|².", "De Moivre: [r(cosθ+i sinθ)]ⁿ=rⁿ(cos nθ+i sin nθ)."]}, {"title": "Theory of Equations", "volume": 1, "bookback": [["For x²−5x+6=0, find the sum and product of roots.", "For x²−5x+6=0, sum=5 and product=6."], ["Form a quadratic equation with roots 2 and −4.", "Sum=−2, product=−8; equation x²+2x−8=0."]], "important": [["Solve x³−6x²+11x−6=0.", "Roots are 1, 2 and 3, since (x−1)(x−2)(x−3)=0."], ["For ax²+bx+c=0, state the quadratic formula.", "x=(−b±√(b²−4ac))/(2a)."]], "worked": [["Worked example: Form a quadratic with roots 2 and −4.", "x²−(2−4)x+(2)(−4)=0, hence x²+2x−8=0."]], "formula": ["For ax²+bx+c=0: α+β=−b/a; αβ=c/a.", "x=(−b±√(b²−4ac))/(2a).", "For x³+ax²+bx+c=0, sum of roots=−a and product=−c."]}, {"title": "Inverse Trigonometric Functions", "volume": 1, "bookback": [["Evaluate sin⁻¹(1/2).", "π/6, because sin(π/6)=1/2 and it is in the principal range."], ["Evaluate tan⁻¹(1).", "π/4, because tan(π/4)=1."]], "important": [["Simplify sin⁻¹x+cos⁻¹x.", "The identity is π/2 for −1≤x≤1."], ["Evaluate cos⁻¹(−1/2).", "2π/3, because cos(2π/3)=−1/2 and 2π/3 is in [0,π]."]], "worked": [["Worked example: Evaluate cos⁻¹(−1/2).", "The principal range is [0,π]. Since cos(2π/3)=−1/2, the value is 2π/3."]], "formula": ["sin⁻¹x+cos⁻¹x=π/2, for −1≤x≤1.", "Range of sin⁻¹x: [−π/2,π/2].", "Range of cos⁻¹x: [0,π]."]}, {"title": "Two Dimensional Analytical Geometry – II", "volume": 1, "bookback": [["Find the centre and radius of x²+y²−4x+6y−12=0.", "(x−2)²+(y+3)²=25; centre (2,−3), radius 5."], ["Identify the conic y²=8x.", "It is a parabola opening right; 4a=8, so a=2."]], "important": [["Find the foci and eccentricity of x²/25+y²/9=1.", "c²=25−9=16, c=4; foci (±4,0), e=4/5."], ["Find the circle with centre (1,−2) and radius 3.", "(x−1)²+(y+2)²=9."]], "worked": [["Worked example: Find the circle with centre (1,−2) and radius 3.", "Use (x−h)²+(y−k)²=r². The equation is (x−1)²+(y+2)²=9."]], "formula": ["Circle: (x−h)²+(y−k)²=r².", "Parabola: y²=4ax or x²=4ay.", "Ellipse: c²=a²−b²; e=c/a. Hyperbola: c²=a²+b²; e=c/a."]}, {"title": "Applications of Vector Algebra", "volume": 1, "bookback": [["Find (2i+3j)·(i−4j).", "2×1+3×(−4)=−10."], ["Find the magnitude of 3i+4j+12k.", "Magnitude=√(9+16+144)=13."]], "important": [["Find the angle between i+j and i−j.", "Dot product is 1−1=0, so the vectors are perpendicular; angle=90°."], ["Find the area of the parallelogram formed by i and 2j.", "|i×2j|=|2k|=2 square units."]], "worked": [["Worked example: Find the angle between i+j and i−j.", "Their dot product is (1)(1)+(1)(−1)=0. Non-zero perpendicular vectors meet at 90°."]], "formula": ["a·b=|a||b|cosθ.", "|a×b|=|a||b|sinθ.", "Parallelogram area=|a×b|; triangle area=½|a×b|."]}, {"title": "Applications of Differential Calculus", "volume": 2, "bookback": [["Differentiate y=x³−4x²+2x.", "dy/dx=3x²−8x+2."], ["Find the stationary point of f(x)=x²−6x+5.", "f′=2x−6=0 gives x=3; f(3)=−4."]], "important": [["Find the local minimum of f(x)=x²−4x+1.", "f′=2x−4=0 gives x=2. Since f″=2>0, minimum value is −3."], ["Differentiate (2x+1)(x²−3).", "Product rule gives 2(x²−3)+(2x+1)(2x)=6x²+2x−6."]], "worked": [["Worked example: Differentiate y=(2x+1)(x²−3).", "Using the product rule, y′=2(x²−3)+(2x+1)(2x)=6x²+2x−6."]], "formula": ["d(xⁿ)/dx=nxⁿ⁻¹.", "(uv)′=u′v+uv′; (u/v)′=(u′v−uv′)/v².", "At a stationary point f′(x)=0; f″>0 indicates a local minimum and f″<0 a local maximum."]}, {"title": "Differentials and Partial Derivatives", "volume": 2, "bookback": [["If z=x²y+3y, find ∂z/∂x.", "Treat y as constant: ∂z/∂x=2xy."], ["If z=x²+xy+y², find ∂z/∂y.", "Treat x as constant: ∂z/∂y=x+2y."]], "important": [["Find the total differential of z=x²y+y².", "zx=2xy and zy=x²+2y; hence dz=2xy dx+(x²+2y)dy."], ["For f(x,y)=x²+3xy, find fx and fy.", "fx=2x+3y and fy=3x."]], "worked": [["Worked example: Find fx and fy for f(x,y)=x²+3xy.", "Differentiate with respect to x keeping y fixed: fx=2x+3y. With respect to y keeping x fixed: fy=3x."]], "formula": ["For z=f(x,y), fx=∂z/∂x and fy=∂z/∂y.", "Total differential: dz=fx dx+fy dy.", "When differentiating partially, treat the other variable as a constant."]}, {"title": "Applications of Integration", "volume": 2, "bookback": [["Evaluate ∫₀² 3x² dx.", "[x³]₀²=8."], ["Find the area under y=x from x=0 to x=3.", "∫₀³x dx=[x²/2]₀³=9/2 square units."]], "important": [["Evaluate ∫₀¹(2x+1)dx.", "[x²+x]₀¹=2."], ["Find ∫(4x³−2x)dx.", "x⁴−x²+C."]], "worked": [["Worked example: Evaluate ∫(4x³−2x)dx.", "Integrate term by term: 4(x⁴/4)−2(x²/2)+C=x⁴−x²+C."]], "formula": ["∫xⁿdx=xⁿ⁺¹/(n+1)+C, n≠−1.", "∫ₐᵇf(x)dx=F(b)−F(a), where F′=f.", "Area under a non-negative curve y=f(x) from a to b is ∫ₐᵇf(x)dx."]}, {"title": "Ordinary Differential Equations", "volume": 2, "bookback": [["Find the order and degree of (d²y/dx²)³+(dy/dx)²=0.", "Order=2; degree=3."], ["Solve dy/dx=3x².", "Integrating gives y=x³+C."]], "important": [["Solve dy/dx=2xy by separating variables.", "dy/y=2x dx; ln|y|=x²+C, so y=Ae^(x²)."], ["Solve dy/dx=4x³−2x.", "Integrating gives y=x⁴−x²+C."]], "worked": [["Worked example: Solve dy/dx=3x².", "Integrate both sides with respect to x: y=∫3x²dx=x³+C."]], "formula": ["Order is the highest derivative order present.", "Degree is the power of the highest-order derivative when polynomial in derivatives.", "If dy/dx=f(x), then y=∫f(x)dx+C."]}, {"title": "Probability Distributions", "volume": 2, "bookback": [["A fair coin is tossed once. Find the probability of a head.", "P(head)=1/2."], ["X takes values 0 and 1 with probabilities 0.4 and 0.6. Find E(X).", "E(X)=0(0.4)+1(0.6)=0.6."]], "important": [["For a binomial distribution n=4, p=1/2, find P(X=2).", "P(X=2)=⁴C₂(1/2)⁴=6/16=3/8."], ["Find the variance when X=0 and X=1 each have probability 1/2.", "Mean=0.5, E(X²)=0.5; variance=0.5−0.25=0.25."]], "worked": [["Worked example: Find E(X) for X=0,1 with probabilities 0.4,0.6.", "E(X)=ΣxP(x)=0(0.4)+1(0.6)=0.6."]], "formula": ["E(X)=ΣxP(X=x).", "Var(X)=E(X²)−[E(X)]².", "Binomial: P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ; mean=np; variance=np(1−p)."]}, {"title": "Discrete Mathematics", "volume": 2, "bookback": [["Write the negation of 'It is raining'.", "The negation is: It is not raining."], ["If A={1,2,3} and B={3,4}, find A∩B.", "The only common element is 3, so A∩B={3}."]], "important": [["Give the truth values of p∧q for TT, TF, FT, FF.", "Truth values are T,F,F,F."], ["If A={a,b,c} and B={b,c,d}, find A∪B and A∩B.", "A∪B={a,b,c,d}; A∩B={b,c}."]], "worked": [["Worked example: If A={a,b,c} and B={b,c,d}, find union and intersection.", "Union contains all distinct elements: {a,b,c,d}. Intersection contains common elements: {b,c}."]], "formula": ["p∧q is true only when both p and q are true.", "p∨q is false only when both p and q are false.", "n(A∪B)=n(A)+n(B)−n(A∩B)."]}];
-const sel=document.getElementById('chapterSelect'),panel=document.getElementById('panel'),content=document.getElementById('content');
-let current=0,section='bookback';
-chapters.forEach((c,i)=>{let o=document.createElement('option');o.value=i;o.textContent=`Chapter ${i+1} – ${c.title}`;sel.appendChild(o)});
-function bookmarks(){try{return JSON.parse(localStorage.getItem('starLightMathBookmarks')||'[]')}catch(e){return []}}
-function updateBookmark(){document.getElementById('bookmark').textContent=bookmarks().includes(current+1)?'★ Bookmarked':'☆ Bookmark Chapter'}
-function chooseChapter(n){current=Number(n);let c=chapters[current];sel.value=current;document.getElementById('welcome').textContent=`Welcome to Chapter ${current+1}!`;document.getElementById('intro').textContent=`You are viewing Chapter ${current+1} from Mathematics Volume ${c.volume}. Explore the learning resources for this chapter.`;updateBookmark();if(!panel.hidden)showSection(section)}
-function showSection(s){section=s;document.querySelectorAll('.card').forEach(b=>b.classList.toggle('active',b.dataset.section===s));panel.hidden=false;document.getElementById('panelTitle').textContent=({bookback:'📘 Book-back Practice',important:'⭐ Important Questions',worked:'✏️ Worked Examples',formula:'📐 Formula Sheet'})[s];document.getElementById('panelSub').textContent=`Chapter ${current+1}: ${chapters[current].title}`;content.replaceChildren();let items=chapters[current][s];
-if(s==='bookback'){let p=document.createElement('p');p.className='note';p.textContent='These are original Star Light practice questions aligned with the chapter topics, not copied official textbook questions.';content.appendChild(p)}
-if(s==='formula'){items.forEach(t=>{let d=document.createElement('div');d.className='formula';d.textContent=t;content.appendChild(d)})}
-else{items.forEach((q,i)=>{let box=document.createElement('article');box.className='question';let m=document.createElement('div');m.className='meta';m.textContent=`Practice question ${i+1}`;let h=document.createElement('h3');h.textContent=q[0];let b=document.createElement('button');b.className='action';b.textContent='Show Answer & Explanation';b.setAttribute('aria-expanded','false');let a=document.createElement('div');a.className='answer';a.hidden=true;a.textContent=q[1];b.addEventListener('click',()=>{a.hidden=!a.hidden;b.textContent=a.hidden?'Show Answer & Explanation':'Hide Answer & Explanation';b.setAttribute('aria-expanded',String(!a.hidden))});box.append(m,h,b,a);content.appendChild(box)})}
-panel.scrollIntoView({behavior:'smooth',block:'start'})}
-document.querySelectorAll('.card').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.section)));
-sel.addEventListener('change',e=>chooseChapter(e.target.value));
-document.getElementById('bookmark').addEventListener('click',()=>{let a=bookmarks();a=a.includes(current+1)?a.filter(x=>x!==current+1):[...a,current+1];localStorage.setItem('starLightMathBookmarks',JSON.stringify(a));updateBookmark()});
-let requested=Number(new URLSearchParams(location.search).get('chapter')||1);chooseChapter(Number.isInteger(requested)&&requested>=1&&requested<=12?requested-1:0);
-</script></body></html>
+
+/* =====================================================
+   STAR LIGHT MATHEMATICS
+   BATCH 1: CHAPTERS 1, 2 AND 3
+===================================================== */
+
+const chapters = [
+
+/* CHAPTER 1: APPLICATIONS OF MATRICES AND DETERMINANTS */
+
+{
+title: "Applications of Matrices and Determinants",
+volume: 1,
+
+bookback: [
+
+["Find the determinant of A = [[3,2],[1,4]].", [
+"Concept: For a 2 × 2 matrix, the determinant is calculated using ad − bc.",
+"Step 1: Write the determinant formula.",
+"|A| = ad − bc.",
+"Step 2: Identify the values.",
+"a = 3, b = 2, c = 1, d = 4.",
+"Step 3: Substitute the values.",
+"|A| = (3 × 4) − (2 × 1).",
+"Step 4: Perform the multiplication.",
+"|A| = 12 − 2 = 10.",
+"Final answer: |A| = 10."
+]],
+
+["Find the inverse of A = [[2,1],[1,1]].", [
+"Concept: The inverse of a square matrix is calculated using A⁻¹ = adj(A)/|A|, provided its determinant is non-zero.",
+"Step 1: Identify the elements.",
+"a = 2, b = 1, c = 1, d = 1.",
+"Step 2: Calculate the determinant.",
+"|A| = ad − bc.",
+"= (2 × 1) − (1 × 1).",
+"= 2 − 1 = 1.",
+"Step 3: Find the adjoint.",
+"For a 2 × 2 matrix, adj(A) = [[d,−b],[−c,a]].",
+"Therefore, adj(A) = [[1,−1],[−1,2]].",
+"Step 4: Apply the inverse formula.",
+"A⁻¹ = (1/1)[[1,−1],[−1,2]].",
+"Final answer: A⁻¹ = [[1,−1],[−1,2]]."
+]],
+
+["Find the rank of the matrix [[1,2],[2,4]].", [
+"Concept: Rank is the maximum number of linearly independent rows or columns.",
+"Step 1: Calculate the determinant.",
+"|A| = (1 × 4) − (2 × 2) = 0.",
+"Step 2: Since the determinant is zero, the rank is less than 2.",
+"Step 3: Observe that the second row is twice the first row.",
+"Therefore, there is only one linearly independent row.",
+"Final answer: Rank(A) = 1."
+]],
+
+["Solve the equations 2x + y = 7 and x + y = 5.", [
+"Concept: We can solve simultaneous linear equations using elimination.",
+"Step 1: Write the equations.",
+"2x + y = 7 ...(1).",
+"x + y = 5 ...(2).",
+"Step 2: Subtract equation (2) from equation (1).",
+"(2x + y) − (x + y) = 7 − 5.",
+"x = 2.",
+"Step 3: Substitute x = 2 into equation (2).",
+"2 + y = 5.",
+"Step 4: Solve for y.",
+"y = 5 − 2 = 3.",
+"Final answer: x = 2 and y = 3."
+]],
+
+["Find the adjoint of A = [[3,2],[5,4]].", [
+"Concept: The adjoint of a 2 × 2 matrix is obtained by interchanging the diagonal elements and changing the signs of the other elements.",
+"Step 1: Write the given matrix.",
+"A = [[3,2],[5,4]].",
+"Step 2: Interchange the diagonal elements 3 and 4.",
+"Step 3: Change the signs of 2 and 5.",
+"Step 4: Write the resulting matrix.",
+"adj(A) = [[4,−2],[−5,3]].",
+"Final answer: adj(A) = [[4,−2],[−5,3]]."
+]],
+
+["Using Cramer's rule, solve x + y = 5 and 2x − y = 1.", [
+"Concept: Cramer's rule uses determinants to solve simultaneous linear equations.",
+"Step 1: Write the coefficient determinant.",
+"D = |1  1; 2  −1|.",
+"D = (1 × −1) − (1 × 2) = −3.",
+"Step 2: Calculate Dx by replacing the x-column with the constants.",
+"Dx = |5  1; 1  −1|.",
+"Dx = (5 × −1) − (1 × 1) = −6.",
+"Step 3: Calculate Dy by replacing the y-column with the constants.",
+"Dy = |1  5; 2  1|.",
+"Dy = (1 × 1) − (5 × 2) = −9.",
+"Step 4: Apply Cramer's rule.",
+"x = Dx/D = (−6)/(−3) = 2.",
+"y = Dy/D = (−9)/(−3) = 3.",
+"Final answer: x = 2 and y = 3."
+]]
+
+],
+
+important: [
+
+["Find the inverse of [[4,3],[2,1]].", [
+"Step 1: Calculate the determinant.",
+"|A| = (4 × 1) − (3 × 2) = −2.",
+"Step 2: Find the adjoint.",
+"adj(A) = [[1,−3],[−2,4]].",
+"Step 3: Divide the adjoint by the determinant.",
+"A⁻¹ = (1/−2)[[1,−3],[−2,4]].",
+"Step 4: Simplify each element.",
+"A⁻¹ = [[−1/2,3/2],[1,−2]].",
+"Final answer: A⁻¹ = [[−1/2,3/2],[1,−2]]."
+]],
+
+["Solve 3x + 2y = 12 and x + y = 5 using elimination.", [
+"Step 1: Write both equations.",
+"3x + 2y = 12 ...(1).",
+"x + y = 5 ...(2).",
+"Step 2: Multiply equation (2) by 2.",
+"2x + 2y = 10 ...(3).",
+"Step 3: Subtract equation (3) from equation (1).",
+"x = 2.",
+"Step 4: Substitute x = 2 into equation (2).",
+"2 + y = 5.",
+"y = 3.",
+"Final answer: x = 2, y = 3."
+]],
+
+["Find the determinant of [[2,1,3],[1,0,2],[4,1,5]].", [
+"Step 1: Expand the determinant along the first row.",
+"D = 2(0×5 − 2×1) − 1(1×5 − 2×4) + 3(1×1 − 0×4).",
+"Step 2: Simplify the first term.",
+"2(0 − 2) = −4.",
+"Step 3: Simplify the second term.",
+"−(5 − 8) = 3.",
+"Step 4: Simplify the third term.",
+"3(1 − 0) = 3.",
+"Step 5: Add the terms.",
+"D = −4 + 3 + 3 = 2.",
+"Final answer: Determinant = 2."
+]],
+
+["Solve 2x + y = 8 and x − y = 1 using the inverse matrix method.", [
+"Step 1: Express the equations in matrix form.",
+"AX = B, where A = [[2,1],[1,−1]] and B = [[8],[1]].",
+"Step 2: Calculate the determinant of A.",
+"|A| = (2 × −1) − (1 × 1) = −3.",
+"Step 3: Find the adjoint.",
+"adj(A) = [[−1,−1],[−1,2]].",
+"Step 4: Calculate the inverse.",
+"A⁻¹ = (1/−3)[[−1,−1],[−1,2]].",
+"Step 5: Use X = A⁻¹B.",
+"x = (1/−3)[(−1×8)+(−1×1)] = 3.",
+"y = (1/−3)[(−1×8)+(2×1)] = 2.",
+"Final answer: x = 3 and y = 2."
+]],
+
+["Determine whether [[1,2],[2,4]] is singular or non-singular.", [
+"Step 1: Recall that a matrix is singular if its determinant is zero.",
+"Step 2: Calculate its determinant.",
+"|A| = (1 × 4) − (2 × 2).",
+"|A| = 4 − 4 = 0.",
+"Step 3: Apply the definition.",
+"Since the determinant is zero, the matrix is singular.",
+"Final answer: The matrix is singular and has no inverse."
+]],
+
+["Find the values of k for which [[k,2],[3,6]] is singular.", [
+"Step 1: A matrix is singular when its determinant is zero.",
+"Step 2: Calculate the determinant.",
+"|A| = (k × 6) − (2 × 3).",
+"Step 3: Simplify.",
+"6k − 6 = 0.",
+"Step 4: Solve for k.",
+"6k = 6.",
+"k = 1.",
+"Final answer: k = 1."
+]]
+
+],
+
+worked: [
+
+["Find the inverse of A = [[3,2],[1,1]].", [
+"Concept: The inverse of a matrix is a matrix which, when multiplied by the original matrix, gives the identity matrix.",
+"Step 1: Write the inverse formula.",
+"A⁻¹ = adj(A)/|A|.",
+"Step 2: Identify the elements.",
+"a = 3, b = 2, c = 1, d = 1.",
+"Step 3: Find the determinant.",
+"|A| = ad − bc.",
+"= (3 × 1) − (2 × 1).",
+"= 3 − 2 = 1.",
+"Step 4: Find the adjoint.",
+"Interchange 3 and 1, and change the signs of 2 and 1.",
+"adj(A) = [[1,−2],[−1,3]].",
+"Step 5: Substitute into the formula.",
+"A⁻¹ = (1/1)[[1,−2],[−1,3]].",
+"Step 6: Write the final matrix.",
+"A⁻¹ = [[1,−2],[−1,3]].",
+"Step 7: Verify the result.",
+"AA⁻¹ = [[3,2],[1,1]][[1,−2],[−1,3]].",
+"= [[3−2,−6+6],[1−1,−2+3]].",
+"= [[1,0],[0,1]].",
+"Since the product is the identity matrix, the inverse is correct.",
+"Final answer: A⁻¹ = [[1,−2],[−1,3]]."
+]],
+
+["Solve x + 2y = 7 and 2x + y = 8 using Cramer's rule.", [
+"Concept: Cramer's rule solves a system of linear equations using determinants.",
+"Step 1: Write the coefficient determinant.",
+"D = |1  2; 2  1|.",
+"D = (1×1) − (2×2) = −3.",
+"Step 2: Find Dx.",
+"Replace the first column by the constants 7 and 8.",
+"Dx = |7  2; 8  1|.",
+"Dx = (7×1) − (2×8) = 7−16 = −9.",
+"Step 3: Find Dy.",
+"Replace the second column by the constants.",
+"Dy = |1  7; 2  8|.",
+"Dy = (1×8) − (7×2) = 8−14 = −6.",
+"Step 4: Calculate x.",
+"x = Dx/D = (−9)/(−3) = 3.",
+"Step 5: Calculate y.",
+"y = Dy/D = (−6)/(−3) = 2.",
+"Step 6: Verify in the first equation.",
+"3 + 2(2) = 3+4 = 7.",
+"Verify in the second equation.",
+"2(3)+2 = 8.",
+"Both equations are satisfied.",
+"Final answer: x = 3, y = 2."
+]],
+
+["Find the rank of [[1,2,3],[2,4,6],[1,1,1]].", [
+"Concept: Rank is the number of non-zero rows in row-echelon form.",
+"Step 1: Write the matrix.",
+"A = [[1,2,3],[2,4,6],[1,1,1]].",
+"Step 2: Apply R2 → R2 − 2R1.",
+"Second row becomes [0,0,0].",
+"Step 3: Apply R3 → R3 − R1.",
+"Third row becomes [0,−1,−2].",
+"Step 4: Write the resulting matrix.",
+"[[1,2,3],[0,0,0],[0,−1,−2]].",
+"Step 5: Count the non-zero rows.",
+"There are two non-zero rows.",
+"Final answer: Rank(A) = 2."
+]],
+
+["Find the adjoint and inverse of [[2,3],[1,2]].", [
+"Step 1: Identify the elements.",
+"a = 2, b = 3, c = 1, d = 2.",
+"Step 2: Calculate the determinant.",
+"|A| = (2×2) − (3×1) = 4−3 = 1.",
+"Step 3: Find the adjoint.",
+"adj(A) = [[2,−3],[−1,2]].",
+"Step 4: Use the inverse formula.",
+"A⁻¹ = adj(A)/|A|.",
+"Step 5: Substitute.",
+"A⁻¹ = [[2,−3],[−1,2]]/1.",
+"Step 6: Verify by multiplication.",
+"AA⁻¹ = [[2,3],[1,2]][[2,−3],[−1,2]].",
+"= [[4−3,−6+6],[2−2,−3+4]].",
+"= [[1,0],[0,1]].",
+"Final answer: adj(A) = [[2,−3],[−1,2]] and A⁻¹ = [[2,−3],[−1,2]]."
+]],
+
+["Solve 2x + 3y = 13 and 3x + 2y = 12 using elimination.", [
+"Step 1: Write the equations.",
+"2x + 3y = 13 ...(1).",
+"3x + 2y = 12 ...(2).",
+"Step 2: Make the coefficients of x equal.",
+"Multiply equation (1) by 3.",
+"6x + 9y = 39 ...(3).",
+"Multiply equation (2) by 2.",
+"6x + 4y = 24 ...(4).",
+"Step 3: Subtract equation (4) from equation (3).",
+"5y = 15.",
+"Step 4: Find y.",
+"y = 15/5 = 3.",
+"Step 5: Substitute y = 3 into equation (1).",
+"2x + 3(3) = 13.",
+"2x + 9 = 13.",
+"2x = 4, so x = 2.",
+"Final answer: x = 2, y = 3."
+]],
+
+["Find k if the determinant of [[k,2],[3,k]] is 7.", [
+"Step 1: Write the determinant condition.",
+"|A| = 7.",
+"Step 2: Calculate the determinant.",
+"k×k − 2×3 = 7.",
+"Step 3: Simplify.",
+"k² − 6 = 7.",
+"Step 4: Rearrange.",
+"k² = 13.",
+"Step 5: Take square roots.",
+"k = ±√13.",
+"Final answer: k = √13 or k = −√13."
+]]
+
+],
+
+formula: [
+"Determinant of a 2 × 2 matrix: |A| = ad − bc.",
+"Inverse: A⁻¹ = adj(A)/|A|, provided |A| ≠ 0.",
+"Adjoint: adj([[a,b],[c,d]]) = [[d,−b],[−c,a]].",
+"Cramer's rule: x = Dx/D and y = Dy/D, provided D ≠ 0.",
+"Matrix equation: AX = B gives X = A⁻¹B when A is invertible.",
+"Singular matrix: |A| = 0. Non-singular matrix: |A| ≠ 0.",
+"Rank: Number of non-zero rows in row-echelon form."
+]
+},
+
+/* CHAPTER 2: COMPLEX NUMBERS */
+
+{
+title: "Complex Numbers",
+volume: 1,
+
+bookback: [
+
+["Simplify (3 + 2i) + (4 − 5i).", [
+"Step 1: Group the real parts and imaginary parts.",
+"(3 + 4) + (2i − 5i).",
+"Step 2: Add the real parts.",
+"3 + 4 = 7.",
+"Step 3: Add the imaginary parts.",
+"2i − 5i = −3i.",
+"Final answer: 7 − 3i."
+]],
+
+["Find the conjugate of z = 5 − 3i.", [
+"Concept: The conjugate is obtained by changing the sign of the imaginary part.",
+"Step 1: Write the given number.",
+"z = 5 − 3i.",
+"Step 2: Change the sign of the imaginary part.",
+"−3i becomes +3i.",
+"Final answer: z̄ = 5 + 3i."
+]],
+
+["Find the modulus of z = 3 + 4i.", [
+"Step 1: Recall the modulus formula.",
+"|z| = √(a² + b²).",
+"Step 2: Identify a and b.",
+"a = 3 and b = 4.",
+"Step 3: Substitute.",
+"|z| = √(3² + 4²).",
+"= √(9 + 16).",
+"= √25 = 5.",
+"Final answer: |z| = 5."
+]],
+
+["Simplify (2 + i)(3 − 2i).", [
+"Step 1: Multiply using the distributive property.",
+"= 2(3) + 2(−2i) + i(3) + i(−2i).",
+"Step 2: Multiply each term.",
+"= 6 − 4i + 3i − 2i².",
+"Step 3: Recall that i² = −1.",
+"−2i² = −2(−1) = 2.",
+"Step 4: Combine like terms.",
+"= 6 + 2 − 4i + 3i.",
+"Final answer: 8 − i."
+]],
+
+["Find i² + i³ + i⁴.", [
+"Step 1: Recall the powers of i.",
+"i² = −1, i³ = −i and i⁴ = 1.",
+"Step 2: Substitute.",
+"= −1 − i + 1.",
+"Step 3: Simplify.",
+"−1 + 1 = 0.",
+"Final answer: −i."
+]],
+
+["Express z = 1 + i in polar form.", [
+"Step 1: Recall the polar form.",
+"z = r(cos θ + i sin θ).",
+"Step 2: Calculate the modulus.",
+"r = √(1² + 1²) = √2.",
+"Step 3: Find the argument.",
+"tan θ = imaginary part / real part = 1/1 = 1.",
+"Therefore θ = π/4, because the point is in the first quadrant.",
+"Step 4: Substitute into the polar form.",
+"Final answer: z = √2(cos π/4 + i sin π/4)."
+]]
+
+],
+
+important: [
+
+["Simplify (4 + 3i) − (2 − 5i).", [
+"Step 1: Remove the brackets carefully.",
+"= 4 + 3i − 2 + 5i.",
+"Step 2: Group real and imaginary parts.",
+"= (4−2) + (3i+5i).",
+"Step 3: Simplify.",
+"Final answer: 2 + 8i."
+]],
+
+["Find the product of (2 + 3i) and (2 − 3i).", [
+"Step 1: Multiply the two conjugates.",
+"= (2+3i)(2−3i).",
+"Step 2: Use (a+b)(a−b) = a²−b².",
+"= 2² − (3i)².",
+"Step 3: Simplify.",
+"= 4 − 9i².",
+"Step 4: Use i² = −1.",
+"= 4 + 9 = 13.",
+"Final answer: 13."
+]],
+
+["Find the reciprocal of 2 + i.", [
+"Step 1: Write the reciprocal.",
+"1/(2+i).",
+"Step 2: Multiply numerator and denominator by the conjugate 2−i.",
+"= (2−i)/[(2+i)(2−i)].",
+"Step 3: Simplify the denominator.",
+"= (2−i)/(4−i²).",
+"= (2−i)/5.",
+"Final answer: 2/5 − i/5."
+]],
+
+["Find the modulus and argument of z = −1 + √3 i.", [
+"Step 1: Identify the real and imaginary parts.",
+"a = −1, b = √3.",
+"Step 2: Calculate the modulus.",
+"r = √[(-1)² + (√3)²].",
+"= √(1+3) = 2.",
+"Step 3: Calculate the reference angle.",
+"tan α = √3/1 = √3.",
+"Reference angle = π/3.",
+"Step 4: Identify the quadrant.",
+"The real part is negative and the imaginary part is positive, so the number lies in the second quadrant.",
+"Step 5: Calculate the argument.",
+"θ = π − π/3 = 2π/3.",
+"Final answer: Modulus = 2 and argument = 2π/3."
+]],
+
+["Find the square roots of −16.", [
+"Step 1: Let the square root be z.",
+"z² = −16.",
+"Step 2: Recall that i² = −1.",
+"(4i)² = 16i² = −16.",
+"Step 3: Check the negative root.",
+"(−4i)² = 16i² = −16.",
+"Final answer: The square roots are 4i and −4i."
+]],
+
+["Using De Moivre's theorem, find (cos θ + i sin θ)³.", [
+"Step 1: Recall De Moivre's theorem.",
+"(cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ).",
+"Step 2: Identify n = 3.",
+"Step 3: Substitute n = 3.",
+"Final answer: cos 3θ + i sin 3θ."
+]]
+
+],
+
+worked: [
+
+["Convert z = −1 + i into polar form.", [
+"Concept: Polar form represents a complex number using its modulus and argument.",
+"Step 1: Write the general form.",
+"z = r(cos θ + i sin θ).",
+"Step 2: Identify the real and imaginary parts.",
+"a = −1 and b = 1.",
+"Step 3: Find the modulus.",
+"r = √(a²+b²).",
+"= √[(-1)²+1²].",
+"= √2.",
+"Step 4: Find the argument.",
+"The reference angle is π/4.",
+"Step 5: Identify the quadrant.",
+"The real part is negative and imaginary part is positive. Therefore, the point lies in the second quadrant.",
+"Step 6: Calculate the argument.",
+"θ = π − π/4 = 3π/4.",
+"Step 7: Write the polar form.",
+"z = √2(cos 3π/4 + i sin 3π/4).",
+"Final answer: √2(cos 3π/4 + i sin 3π/4)."
+]],
+
+["Divide (3 + 2i) by (1 − i).", [
+"Concept: To divide complex numbers, multiply numerator and denominator by the conjugate of the denominator.",
+"Step 1: Write the fraction.",
+"(3+2i)/(1−i).",
+"Step 2: Find the conjugate of the denominator.",
+"Conjugate of 1−i is 1+i.",
+"Step 3: Multiply numerator and denominator by 1+i.",
+"= [(3+2i)(1+i)]/[(1−i)(1+i)].",
+"Step 4: Expand the numerator.",
+"= 3 + 3i + 2i + 2i².",
+"Step 5: Use i² = −1.",
+"= 3 + 5i − 2 = 1 + 5i.",
+"Step 6: Simplify the denominator.",
+"= 1 − i² = 1 − (−1) = 2.",
+"Step 7: Divide.",
+"= (1+5i)/2.",
+"Final answer: 1/2 + (5/2)i."
+]],
+
+["Find the cube of 1 + i using polar form.", [
+"Concept: De Moivre's theorem helps calculate powers of complex numbers in polar form.",
+"Step 1: Write z = 1+i.",
+"Step 2: Calculate the modulus.",
+"r = √(1²+1²) = √2.",
+"Step 3: Find the argument.",
+"θ = π/4.",
+"Step 4: Write the polar form.",
+"z = √2(cos π/4 + i sin π/4).",
+"Step 5: Apply De Moivre's theorem.",
+"z³ = (√2)³[cos(3π/4)+i sin(3π/4)].",
+"Step 6: Simplify the modulus.",
+"(√2)³ = 2√2.",
+"Step 7: Use exact trigonometric values.",
+"cos 3π/4 = −√2/2.",
+"sin 3π/4 = √2/2.",
+"Step 8: Substitute.",
+"z³ = 2√2(−√2/2 + i√2/2).",
+"= −2 + 2i.",
+"Final answer: (1+i)³ = −2 + 2i."
+]],
+
+["Find the square roots of 3 + 4i.", [
+"Concept: Assume the square root has the form x+iy.",
+"Step 1: Let the square root be x+iy.",
+"(x+iy)² = 3+4i.",
+"Step 2: Expand the left-hand side.",
+"x² + 2xyi + y²i² = 3+4i.",
+"Step 3: Use i² = −1.",
+"(x²−y²)+2xyi = 3+4i.",
+"Step 4: Compare real parts.",
+"x²−y² = 3 ...(1).",
+"Step 5: Compare imaginary parts.",
+"2xy = 4, so xy = 2 ...(2).",
+"Step 6: Use the modulus.",
+"|3+4i| = √(9+16) = 5.",
+"Therefore x²+y² = 5.",
+"Step 7: Add the equations.",
+"(x²−y²)+(x²+y²)=3+5.",
+"2x² = 8, so x² = 4.",
+"x = ±2.",
+"Step 8: Use xy = 2.",
+"If x = 2, y = 1.",
+"If x = −2, y = −1.",
+"Final answer: The square roots are 2+i and −2−i."
+]],
+
+["Find the cube roots of 8 using polar form.", [
+"Concept: The cube roots of a complex number are found by considering three different arguments.",
+"Step 1: Write 8 in polar form.",
+"8 = 8(cos 0 + i sin 0).",
+"Step 2: Identify the modulus and argument.",
+"r = 8 and θ = 0.",
+"Step 3: Apply the cube-root formula.",
+"wₖ = 2[cos(2kπ/3) + i sin(2kπ/3)].",
+"Step 4: Put k = 0.",
+"w₀ = 2(cos 0 + i sin 0) = 2.",
+"Step 5: Put k = 1.",
+"w₁ = 2(cos 2π/3 + i sin 2π/3).",
+"= −1 + √3 i.",
+"Step 6: Put k = 2.",
+"w₂ = 2(cos 4π/3 + i sin 4π/3).",
+"= −1 − √3 i.",
+"Final answer: 2, −1+√3i, −1−√3i."
+]],
+
+["Express 2 − 2√3 i in polar form.", [
+"Step 1: Identify the real and imaginary parts.",
+"a = 2 and b = −2√3.",
+"Step 2: Find the modulus.",
+"r = √(a²+b²).",
+"= √[2²+(−2√3)²].",
+"= √(4+12) = 4.",
+"Step 3: Find the reference angle.",
+"tan α = |b/a| = 2√3/2 = √3.",
+"Therefore α = π/3.",
+"Step 4: Identify the quadrant.",
+"The real part is positive and imaginary part is negative. The point is in the fourth quadrant.",
+"Step 5: Find the argument.",
+"θ = 2π − π/3 = 5π/3.",
+"Step 6: Write the polar form.",
+"z = 4(cos 5π/3 + i sin 5π/3).",
+"Final answer: 4(cos 5π/3 + i sin 5π/3)."
+]]
+
+],
+
+formula: [
+"For z = a + bi, the conjugate is z̄ = a − bi.",
+"Modulus: |z| = √(a²+b²).",
+"z × z̄ = |z|².",
+"i² = −1, i³ = −i, i⁴ = 1.",
+"Polar form: z = r(cos θ + i sin θ).",
+"r = √(a²+b²).",
+"De Moivre's theorem: [r(cos θ+i sin θ)]ⁿ = rⁿ(cos nθ+i sin nθ).",
+"Reciprocal: 1/(a+bi) = (a−bi)/(a²+b²), when a²+b² ≠ 0."
+]
+},
+
+/* CHAPTER 3: THEORY OF EQUATIONS */
+
+{
+title: "Theory of Equations",
+volume: 1,
+
+bookback: [
+
+["Find the sum and product of the roots of x² − 5x + 6 = 0.", [
+"Concept: For ax²+bx+c=0, the sum of roots is −b/a and product is c/a.",
+"Step 1: Identify the coefficients.",
+"a = 1, b = −5, c = 6.",
+"Step 2: Calculate the sum.",
+"α+β = −b/a = −(−5)/1 = 5.",
+"Step 3: Calculate the product.",
+"αβ = c/a = 6/1 = 6.",
+"Final answer: Sum = 5 and product = 6."
+]],
+
+["Form a quadratic equation whose roots are 2 and 3.", [
+"Step 1: Recall the quadratic equation in terms of roots.",
+"x² − (sum of roots)x + product of roots = 0.",
+"Step 2: Calculate the sum.",
+"2+3 = 5.",
+"Step 3: Calculate the product.",
+"2×3 = 6.",
+"Step 4: Substitute.",
+"x² − 5x + 6 = 0.",
+"Final answer: x² − 5x + 6 = 0."
+]],
+
+["Solve x² − 7x + 12 = 0 by factorisation.", [
+"Step 1: Find two numbers whose product is 12 and sum is 7.",
+"The numbers are 3 and 4.",
+"Step 2: Split the middle term.",
+"x² − 3x − 4x + 12 = 0.",
+"Step 3: Group the terms.",
+"x(x−3) − 4(x−3) = 0.",
+"Step 4: Take the common factor.",
+"(x−3)(x−4) = 0.",
+"Step 5: Equate each factor to zero.",
+"x−3 = 0 or x−4 = 0.",
+"Final answer: x = 3 or x = 4."
+]],
+
+["Find the discriminant of 2x² − 4x + 5 = 0.", [
+"Step 1: Recall the discriminant formula.",
+"D = b² − 4ac.",
+"Step 2: Identify the coefficients.",
+"a = 2, b = −4, c = 5.",
+"Step 3: Substitute.",
+"D = (−4)² − 4(2)(5).",
+"Step 4: Simplify.",
+"D = 16 − 40 = −24.",
+"Final answer: Discriminant = −24."
+]],
+
+["Solve x² + 2x − 8 = 0.", [
+"Step 1: Find two numbers whose product is −8 and sum is 2.",
+"The numbers are 4 and −2.",
+"Step 2: Factorise.",
+"(x+4)(x−2) = 0.",
+"Step 3: Equate each factor to zero.",
+"x+4 = 0 or x−2 = 0.",
+"Step 4: Solve.",
+"x = −4 or x = 2.",
+"Final answer: x = −4, 2."
+]],
+
+["Find the quadratic equation whose roots have sum 4 and product 3.", [
+"Step 1: Recall the equation formed from its roots.",
+"x² − (sum)x + product = 0.",
+"Step 2: Substitute the given sum.",
+"x² − 4x + product = 0.",
+"Step 3: Substitute the product.",
+"x² − 4x + 3 = 0.",
+"Final answer: x² − 4x + 3 = 0."
+]]
+
+],
+
+important: [
+
+["Solve x² − 9 = 0.", [
+"Step 1: Recognise the difference of two squares.",
+"x² − 9 = x² − 3².",
+"Step 2: Factorise.",
+"(x−3)(x+3) = 0.",
+"Step 3: Equate each factor to zero.",
+"x = 3 or x = −3.",
+"Final answer: x = ±3."
+]],
+
+["Find the nature of roots of 3x² − 2x + 1 = 0.", [
+"Step 1: Calculate the discriminant.",
+"D = b² − 4ac.",
+"Step 2: Identify the coefficients.",
+"a = 3, b = −2, c = 1.",
+"Step 3: Substitute.",
+"D = (−2)² − 4(3)(1).",
+"= 4 − 12 = −8.",
+"Step 4: Interpret the discriminant.",
+"Since D is negative, the equation has two non-real complex conjugate roots.",
+"Final answer: Two distinct non-real complex roots."
+]],
+
+["Solve x² − 6x + 8 = 0 using the quadratic formula.", [
+"Step 1: Write the quadratic formula.",
+"x = [−b ± √(b²−4ac)]/(2a).",
+"Step 2: Identify the coefficients.",
+"a = 1, b = −6, c = 8.",
+"Step 3: Calculate the discriminant.",
+"D = 36 − 32 = 4.",
+"Step 4: Substitute.",
+"x = [6 ± √4]/2.",
+"Step 5: Simplify.",
+"x = (6±2)/2.",
+"Step 6: Find both roots.",
+"x = 8/2 = 4.",
+"x = 4/2 = 2.",
+"Final answer: x = 4 or x = 2."
+]],
+
+["Form a quadratic equation whose roots are −2 and 5.", [
+"Step 1: Calculate the sum.",
+"−2+5 = 3.",
+"Step 2: Calculate the product.",
+"(−2)(5) = −10.",
+"Step 3: Use the root equation.",
+"x² − (sum)x + product = 0.",
+"Step 4: Substitute.",
+"x² − 3x − 10 = 0.",
+"Final answer: x² − 3x − 10 = 0."
+]],
+
+["If α and β are roots of x² − 4x + 1 = 0, find α² + β².", [
+"Step 1: Use the sum and product of roots.",
+"α+β = 4 and αβ = 1.",
+"Step 2: Recall the identity.",
+"α²+β² = (α+β)² − 2αβ.",
+"Step 3: Substitute.",
+"= 4² − 2(1).",
+"= 16 − 2 = 14.",
+"Final answer: α²+β² = 14."
+]],
+
+["Solve x³ − 6x² + 11x − 6 = 0.", [
+"Step 1: Try simple integer roots using factors of 6.",
+"Test x = 1.",
+"1 − 6 + 11 − 6 = 0, so x = 1 is a root.",
+"Step 2: Divide the polynomial by (x−1).",
+"The quotient is x² − 5x + 6.",
+"Step 3: Factorise the quotient.",
+"x² − 5x + 6 = (x−2)(x−3).",
+"Step 4: Write the complete factorisation.",
+"(x−1)(x−2)(x−3) = 0.",
+"Step 5: Equate each factor to zero.",
+"x = 1, x = 2 or x = 3.",
+"Final answer: The roots are 1, 2 and 3."
+]]
+
+],
+
+worked: [
+
+["Form a quadratic equation whose roots are 3 and −2.", [
+"Concept: A quadratic equation can be formed when the sum and product of its roots are known.",
+"Step 1: Let the roots be α = 3 and β = −2.",
+"Step 2: Calculate the sum of roots.",
+"α+β = 3+(−2) = 1.",
+"Step 3: Calculate the product.",
+"αβ = 3×(−2) = −6.",
+"Step 4: Recall the equation formula.",
+"x² − (α+β)x + αβ = 0.",
+"Step 5: Substitute the sum and product.",
+"x² − (1)x + (−6) = 0.",
+"Step 6: Simplify.",
+"x² − x − 6 = 0.",
+"Step 7: Verify by factorisation.",
+"(x−3)(x+2) = x²−x−6.",
+"The factors give roots 3 and −2.",
+"Final answer: x² − x − 6 = 0."
+]],
+
+["Find the roots of 2x² − 7x + 3 = 0 using the quadratic formula.", [
+"Concept: The quadratic formula can solve any quadratic equation with a non-zero coefficient of x².",
+"Step 1: Write the formula.",
+"x = [−b ± √(b²−4ac)]/(2a).",
+"Step 2: Identify the coefficients.",
+"a = 2, b = −7, c = 3.",
+"Step 3: Calculate the discriminant.",
+"D = b²−4ac.",
+"= (−7)²−4(2)(3).",
+"= 49−24 = 25.",
+"Step 4: Substitute into the formula.",
+"x = [−(−7) ± √25]/(2×2).",
+"x = (7±5)/4.",
+"Step 5: Calculate the first root.",
+"x = (7+5)/4 = 12/4 = 3.",
+"Step 6: Calculate the second root.",
+"x = (7−5)/4 = 2/4 = 1/2.",
+"Step 7: Verify using the factorised equation.",
+"2x²−7x+3 = (2x−1)(x−3).",
+"Final answer: x = 3 or x = 1/2."
+]],
+
+["If α and β are roots of x² − 5x + 2 = 0, find 1/α + 1/β.", [
+"Concept: Use the sum and product of roots instead of finding each root separately.",
+"Step 1: Recall the sum and product formulas.",
+"α+β = −b/a and αβ = c/a.",
+"Step 2: Identify the coefficients.",
+"a = 1, b = −5, c = 2.",
+"Step 3: Calculate the sum.",
+"α+β = 5.",
+"Step 4: Calculate the product.",
+"αβ = 2.",
+"Step 5: Combine the fractions.",
+"1/α + 1/β = (β+α)/(αβ).",
+"Step 6: Substitute.",
+"= (α+β)/(αβ) = 5/2.",
+"Final answer: 5/2."
+]],
+
+["Form the quadratic equation whose roots are the reciprocals of the roots of 2x² − 5x + 3 = 0.", [
+"Concept: If the original roots are α and β, the new roots are 1/α and 1/β.",
+"Step 1: Calculate the original sum.",
+"α+β = −b/a = 5/2.",
+"Step 2: Calculate the original product.",
+"αβ = c/a = 3/2.",
+"Step 3: Calculate the sum of reciprocal roots.",
+"1/α + 1/β = (α+β)/(αβ).",
+"= (5/2)/(3/2) = 5/3.",
+"Step 4: Calculate their product.",
+"(1/α)(1/β) = 1/(αβ) = 2/3.",
+"Step 5: Form the new quadratic equation.",
+"x² − (5/3)x + 2/3 = 0.",
+"Step 6: Multiply throughout by 3.",
+"3x² − 5x + 2 = 0.",
+"Final answer: 3x² − 5x + 2 = 0."
+]],
+
+["If α and β are roots of x² − 3x + 1 = 0, form an equation whose roots are α+1 and β+1.", [
+"Step 1: Calculate the original sum.",
+"α+β = 3.",
+"Step 2: Calculate the original product.",
+"αβ = 1.",
+"Step 3: Let the new roots be α+1 and β+1.",
+"Step 4: Calculate their sum.",
+"(α+1)+(β+1) = α+β+2 = 3+2 = 5.",
+"Step 5: Calculate their product.",
+"(α+1)(β+1) = αβ+α+β+1.",
+"= 1+3+1 = 5.",
+"Step 6: Form the equation.",
+"x² − 5x + 5 = 0.",
+"Final answer: x² − 5x + 5 = 0."
+]],
+
+["Find the nature of the roots of x² − 4x + 4 = 0 and solve it.", [
+"Concept: The discriminant tells us whether the roots are distinct, equal or non-real.",
+"Step 1: Identify the coefficients.",
+"a = 1, b = −4, c = 4.",
+"Step 2: Calculate the discriminant.",
+"D = b²−4ac.",
+"= (−4)²−4(1)(4).",
+"= 16−16 = 0.",
+"Step 3: Interpret the result.",
+"When D = 0, the equation has two equal real roots.",
+"Step 4: Apply the quadratic formula.",
+"x = [4±√0]/2.",
+"x = 4/2 = 2.",
+"Step 5: State the roots.",
+"Both roots are equal to 2.",
+"Final answer: Equal real roots, x = 2 and x = 2."
+]]
+
+],
+
+formula: [
+"For ax²+bx+c=0, sum of roots = −b/a.",
+"For ax²+bx+c=0, product of roots = c/a.",
+"Quadratic formula: x = [−b ± √(b²−4ac)]/(2a).",
+"Discriminant: D = b²−4ac.",
+"D > 0: Two distinct real roots.",
+"D = 0: Two equal real roots.",
+"D < 0: Two non-real complex conjugate roots.",
+"Equation from roots α and β: x²−(α+β)x+αβ = 0.",
+"For x³+ax²+bx+c=0, sum of roots = −a and product = −c."
+]
+}
+
+];
+
+
+/* =====================================================
+   PAGE ELEMENTS
+===================================================== */
+
+const sel = document.getElementById("chapterSelect");
+const panel = document.getElementById("panel");
+const content = document.getElementById("content");
+
+let current = 0;
+let section = "bookback";
+
+
+/* =====================================================
+   POPULATE CHAPTER SELECTOR
+===================================================== */
+
+chapters.forEach((chapter, index) => {
+
+    const option = document.createElement("option");
+
+    option.value = index;
+
+    option.textContent =
+        `Chapter ${index + 1} – ${chapter.title}`;
+
+    sel.appendChild(option);
+
+});
+
+
+/* =====================================================
+   BOOKMARK FUNCTIONS
+===================================================== */
+
+function bookmarks() {
+
+    try {
+        return JSON.parse(
+            localStorage.getItem("starLightMathBookmarks") || "[]"
+        );
+    } catch (error) {
+        return [];
+    }
+
+}
+
+function updateBookmark() {
+
+    const saved = bookmarks();
+
+    document.getElementById("bookmark").textContent =
+        saved.includes(current + 1)
+        ? "★ Bookmarked"
+        : "☆ Bookmark Chapter";
+
+}
+
+
+/* =====================================================
+   CHANGE CHAPTER
+===================================================== */
+
+function chooseChapter(number) {
+
+    current = Number(number);
+
+    const chapter = chapters[current];
+
+    sel.value = current;
+
+    document.getElementById("welcome").textContent =
+        `Welcome to Chapter ${current + 1}!`;
+
+    document.getElementById("intro").textContent =
+        `You are viewing Chapter ${current + 1} from Mathematics Volume ${chapter.volume}. Explore the learning resources for this chapter.`;
+
+    updateBookmark();
+
+    if (!panel.hidden) {
+        showSection(section);
+    }
+
+}
+
+
+/* =====================================================
+   DISPLAY QUESTIONS AND DETAILED SOLUTIONS
+===================================================== */
+
+function showSection(selectedSection) {
+
+    section = selectedSection;
+
+    document.querySelectorAll(".card").forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.section === selectedSection
+        );
+
+    });
+
+    panel.hidden = false;
+
+    const titles = {
+
+        bookback: "📘 Book-back Practice",
+
+        important: "⭐ Important Questions",
+
+        worked: "✏️ Worked Examples",
+
+        formula: "📐 Formula Sheet"
+
+    };
+
+    document.getElementById("panelTitle").textContent =
+        titles[selectedSection];
+
+    document.getElementById("panelSub").textContent =
+        `Chapter ${current + 1}: ${chapters[current].title}`;
+
+    content.replaceChildren();
+
+    const items = chapters[current][selectedSection];
+
+
+    /* BOOK-BACK NOTE */
+
+    if (selectedSection === "bookback") {
+
+        const note = document.createElement("p");
+
+        note.className = "note";
+
+        note.textContent =
+            "These are original Star Light practice questions aligned with the chapter topics. They are not presented as verbatim textbook questions.";
+
+        content.appendChild(note);
+
+    }
+
+
+    /* FORMULA SHEET */
+
+    if (selectedSection === "formula") {
+
+        items.forEach((formula, index) => {
+
+            const box = document.createElement("div");
+
+            box.className = "formula";
+
+            const heading = document.createElement("h3");
+
+            heading.textContent = `Formula ${index + 1}`;
+
+            const explanation = document.createElement("p");
+
+            explanation.textContent = formula;
+
+            box.append(heading, explanation);
+
+            content.appendChild(box);
+
+        });
+
+    }
+
+
+    /* QUESTIONS AND SOLUTIONS */
+
+    else {
+
+        items.forEach((question, index) => {
+
+            const box = document.createElement("article");
+
+            box.className = "question";
+
+
+            const meta = document.createElement("div");
+
+            meta.className = "meta";
+
+            meta.textContent =
+                `${selectedSection === "worked" ? "WORKED EXAMPLE" : "QUESTION"} ${index + 1}`;
+
+
+            const heading = document.createElement("h3");
+
+            heading.textContent = question[0];
+
+
+            const button = document.createElement("button");
+
+            button.className = "action";
+
+            button.textContent =
+                "Show Answer & Step-by-Step Solution";
+
+            button.setAttribute("aria-expanded", "false");
+
+
+            const answer = document.createElement("div");
+
+            answer.className = "answer";
+
+            answer.hidden = true;
+
+
+            const steps = question[1];
+
+
+            steps.forEach(step => {
+
+                const paragraph = document.createElement("p");
+
+                paragraph.textContent = step;
+
+
+                if (
+                    step.startsWith("Step ") ||
+                    step.startsWith("Concept:")
+                ) {
+
+                    paragraph.classList.add("step-heading");
+
+                }
+
+
+                if (step.startsWith("Final answer:")) {
+
+                    paragraph.classList.add("final-answer");
+
+                }
+
+                answer.appendChild(paragraph);
+
+            });
+
+
+            button.addEventListener("click", () => {
+
+                answer.hidden = !answer.hidden;
+
+                button.textContent = answer.hidden
+                    ? "Show Answer & Step-by-Step Solution"
+                    : "Hide Solution";
+
+                button.setAttribute(
+                    "aria-expanded",
+                    String(!answer.hidden)
+                );
+
+            });
+
+
+            box.append(meta, heading, button, answer);
+
+            content.appendChild(box);
+
+        });
+
+    }
+
+
+    panel.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+/* =====================================================
+   LEARNING SECTION BUTTONS
+===================================================== */
+
+document.querySelectorAll(".card").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        showSection(button.dataset.section);
+
+    });
+
+});
+
+
+/* =====================================================
+   CHAPTER SELECTOR
+===================================================== */
+
+sel.addEventListener("change", event => {
+
+    chooseChapter(event.target.value);
+
+});
+
+
+/* =====================================================
+   BOOKMARK BUTTON
+===================================================== */
+
+document.getElementById("bookmark").addEventListener("click", () => {
+
+    let saved = bookmarks();
+
+    if (saved.includes(current + 1)) {
+
+        saved = saved.filter(number => number !== current + 1);
+
+    } else {
+
+        saved.push(current + 1);
+
+    }
+
+    localStorage.setItem(
+        "starLightMathBookmarks",
+        JSON.stringify(saved)
+    );
+
+    updateBookmark();
+
+});
+
+
+/* =====================================================
+   INITIAL CHAPTER
+===================================================== */
+
+const requestedChapter = Number(
+    new URLSearchParams(location.search).get("chapter") || 1
+);
+
+chooseChapter(
+    Number.isInteger(requestedChapter) &&
+    requestedChapter >= 1 &&
+    requestedChapter <= chapters.length
+        ? requestedChapter - 1
+        : 0
+);
+
+</script>
+
+</body>
+</html>
