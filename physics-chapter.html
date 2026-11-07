@@ -5,12 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Light | Class 12 Physics</title>
+
 <link rel="stylesheet" href="style.css?v=5">
 
 <style>
-/* PHYSICS PAGE - STAR LIGHT THEME */
+/* =========================================
+   STAR LIGHT - PHYSICS CHAPTER PAGE
+========================================= */
 
-/* Main content */
 main {
     max-width: 1450px;
     margin: 0 auto;
@@ -42,9 +44,9 @@ main {
 }
 
 .back {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255,255,255,0.7);
     color: #10265f;
-    border: 1px solid rgba(120, 153, 226, 0.25);
+    border: 1px solid rgba(120,153,226,0.25);
 }
 
 .bookmark {
@@ -52,15 +54,15 @@ main {
     color: #765300;
 }
 
-/* Chapter selection panel */
+/* Chapter welcome section */
 .physics-hero {
     text-align: center;
     padding: 42px 25px;
     margin-bottom: 35px;
-    background: rgba(255, 255, 255, 0.68);
-    border: 1px solid rgba(120, 153, 226, 0.25);
+    background: rgba(255,255,255,0.68);
+    border: 1px solid rgba(120,153,226,0.25);
     border-radius: 22px;
-    box-shadow: 0 5px 18px rgba(34, 55, 110, 0.07);
+    box-shadow: 0 5px 18px rgba(34,55,110,0.07);
 }
 
 .physics-hero h1 {
@@ -83,7 +85,7 @@ main {
 .selectwrap select {
     width: min(100%, 600px);
     padding: 13px 16px;
-    border: 1px solid rgba(120, 153, 226, 0.45);
+    border: 1px solid rgba(120,153,226,0.45);
     border-radius: 12px;
     background: white;
     color: #10265f;
@@ -91,7 +93,7 @@ main {
     font-size: 16px;
 }
 
-/* Learning section heading */
+/* Learning section */
 .sectiontitle {
     color: #10265f;
     font-size: 30px;
@@ -100,10 +102,10 @@ main {
     margin: 35px 0 22px;
 }
 
-/* Learning cards */
+/* Four learning cards - 2 by 2 layout */
 .physics-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -111,10 +113,10 @@ main {
     min-height: 155px;
     padding: 24px 20px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(120, 153, 226, 0.3);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(120,153,226,0.3);
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(34, 55, 110, 0.06);
+    box-shadow: 0 5px 15px rgba(34,55,110,0.06);
     color: #10265f;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -123,10 +125,10 @@ main {
 
 .physics-card:hover,
 .physics-card.active {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255,255,255,0.95);
     border-color: #a9a4e8;
     transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(34, 55, 110, 0.13);
+    box-shadow: 0 10px 22px rgba(34,55,110,0.13);
 }
 
 .physics-card h3 {
@@ -158,14 +160,14 @@ main {
 .panel {
     margin-top: 38px;
     padding: 28px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(120, 153, 226, 0.3);
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(120,153,226,0.3);
     border-radius: 20px;
-    box-shadow: 0 5px 18px rgba(34, 55, 110, 0.07);
+    box-shadow: 0 5px 18px rgba(34,55,110,0.07);
 }
 
 .panelhead {
-    border-bottom: 2px solid rgba(120, 153, 226, 0.25);
+    border-bottom: 2px solid rgba(120,153,226,0.25);
     padding-bottom: 16px;
     margin-bottom: 22px;
 }
@@ -184,12 +186,12 @@ main {
 
 /* Individual question cards */
 .question-card {
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(120, 153, 226, 0.28);
+    background: rgba(255,255,255,0.85);
+    border: 1px solid rgba(120,153,226,0.28);
     border-radius: 17px;
     padding: 24px;
     margin: 18px 0;
-    box-shadow: 0 4px 12px rgba(34, 55, 110, 0.05);
+    box-shadow: 0 4px 12px rgba(34,55,110,0.05);
 }
 
 .question-card h3 {
@@ -206,7 +208,7 @@ main {
     margin-bottom: 16px;
 }
 
-/* Show answer buttons */
+/* Show answer button */
 .answer-button {
     background: #071c56;
     color: white;
@@ -225,13 +227,13 @@ main {
     transform: translateY(-2px);
 }
 
-/* Detailed answers */
+/* Answer content */
 .answer-content {
     white-space: pre-line;
     margin-top: 20px;
     padding: 22px;
     background: #f1f5ff;
-    border: 1px solid rgba(120, 153, 226, 0.25);
+    border: 1px solid rgba(120,153,226,0.25);
     border-radius: 14px;
     color: #34466f;
     font-size: 16px;
@@ -257,7 +259,7 @@ main {
     line-height: 1.8;
 }
 
-/* Footer uses the shared Star Light theme */
+/* Footer */
 .footer {
     background: #071c56;
     color: white;
@@ -267,7 +269,7 @@ main {
 }
 
 /* Tablet */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .physics-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -321,6 +323,7 @@ main {
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <nav class="navbar">
 
@@ -328,8 +331,11 @@ main {
             <svg class="brand-logo" viewBox="0 0 100 75"
                  xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 53 C25 75 72 65 91 22"
-                      fill="none" stroke="#c66be8"
-                      stroke-width="6" stroke-linecap="round"/>
+                      fill="none"
+                      stroke="#c66be8"
+                      stroke-width="6"
+                      stroke-linecap="round"/>
+
                 <path d="M48 5 L56 24 L77 25 L61 39
                          L66 59 L48 48 L30 59 L35 39
                          L19 25 L40 24 Z"
@@ -348,64 +354,92 @@ main {
     </nav>
 </header>
 
+<!-- MAIN CONTENT -->
 <main>
 
     <div class="top">
-        <a class="back" href="index.html">← Back to Home</a>
-        <button class="bookmark" id="bookmark">☆ Bookmark Chapter</button>
+        <a class="back" href="physics.html">← Back to Physics</a>
+
+        <button class="bookmark" id="bookmark">
+            ☆ Bookmark Chapter
+        </button>
     </div>
 
+    <!-- CHAPTER INTRODUCTION -->
     <section class="physics-hero">
+
         <h1 id="welcome">Welcome to Physics!</h1>
-        <p id="intro">Learn concepts, practise questions and understand every solution step by step.</p>
+
+        <p id="intro">
+            Learn concepts, practise questions and understand every
+            solution step by step.
+        </p>
 
         <div class="selectwrap">
-            <select id="chapterSelect" aria-label="Choose Physics unit"></select>
+            <select id="chapterSelect" aria-label="Choose Physics unit">
+            </select>
         </div>
+
     </section>
 
+    <!-- LEARNING OPTIONS -->
     <h2 class="sectiontitle">Explore Your Learning</h2>
 
     <section class="physics-grid">
 
         <button class="physics-card" data-section="bookback">
             <h3>📘 Book-back Practice</h3>
-            <p>Practise textbook-based questions with answers and detailed explanations.</p>
+            <p>
+                Practise textbook-based questions with answers
+                and detailed explanations.
+            </p>
         </button>
 
         <button class="physics-card" data-section="important">
             <h3>⭐ Important Questions</h3>
-            <p>Revise important concepts and exam-oriented questions.</p>
+            <p>
+                Revise important concepts and exam-oriented questions.
+            </p>
         </button>
 
         <button class="physics-card" data-section="worked">
             <h3>✏️ Worked Examples</h3>
-            <p>Understand numerical problems through detailed solutions.</p>
+            <p>
+                Understand numerical problems through detailed solutions.
+            </p>
         </button>
 
         <button class="physics-card" data-section="formula">
             <h3>📐 Formula Sheet</h3>
-            <p>Quickly revise the important formulas in each unit.</p>
+            <p>
+                Quickly revise the important formulas in each unit.
+            </p>
         </button>
 
     </section>
 
+    <!-- LEARNING TIP -->
     <div class="tip">
         <b>Learning tip:</b>
-        Start with the worked examples. Understand the formula and each calculation before trying the practice questions.
+        Start with the worked examples. Understand the formula and
+        each calculation before trying the practice questions.
     </div>
 
+    <!-- QUESTIONS AND ANSWERS PANEL -->
     <section class="panel" id="panel" hidden>
+
         <div class="panelhead">
             <h2 id="panelTitle"></h2>
             <span class="note" id="panelSub"></span>
         </div>
 
         <div id="content"></div>
+
     </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
     Star Light | Your Learning Companion
 </footer>
@@ -414,163 +448,109 @@ main {
 
 /* =====================================================
    STAR LIGHT PHYSICS
-   PART 1: VOLUME 1 - UNITS 1, 2 AND 3
+   PART 2: UNIT 1 - ELECTROSTATICS
 ===================================================== */
 
 const chapters = [
-
-/* =====================================================
-   UNIT 1 - ELECTROSTATICS
-===================================================== */
 
 {
     title: "Electrostatics",
     volume: 1,
 
     bookback: [
-
         [
             "State the basic properties of electric charges.",
             `1. There are two types of electric charges: positive and negative.
 2. Like charges repel each other.
 3. Unlike charges attract each other.
-4. Charge is conserved: the total charge of an isolated system remains constant.
-5. Charge is quantised: charge exists in integral multiples of elementary charge.
+4. Charge is conserved.
+5. Charge is quantised.
 
 Formula:
 q = ne
 
-Here n is an integer and e = 1.6 × 10⁻¹⁹ C.
-
-Final answer:
-The important properties are additivity, conservation and quantisation of charge.`
+Here, n is an integer and e = 1.6 × 10⁻¹⁹ C.`
         ],
-
         [
             "State Coulomb's inverse square law.",
-            `Step 1: Consider two point charges q₁ and q₂ separated by distance r.
+            `Coulomb's law states that the force between two point charges is directly proportional to the product of their charges and inversely proportional to the square of the distance between them.
 
-Step 2: The electrostatic force is directly proportional to the product of the magnitudes of the charges.
-
-F ∝ |q₁q₂|
-
-Step 3: The force is inversely proportional to the square of the separation.
-
-F ∝ 1/r²
-
-Step 4: Combining both relations:
-
-F = k|q₁q₂|/r²
-
-In vacuum:
-
-k = 1/(4πε₀)
-
-Final answer:
-F = |q₁q₂|/(4πε₀r²)
+Formula:
+F = (1/4πε₀)|q₁q₂|/r²
 
 The force acts along the line joining the two charges.`
         ],
-
         [
             "Define electric field intensity.",
             `Electric field intensity is the force experienced by a unit positive test charge placed at a point.
 
-Step 1: Let F be the force on a test charge.
-
-Step 2: Let q₀ be the test charge.
-
-Step 3: Divide force by the test charge.
-
+Formula:
 E = F/q₀
 
-SI unit: N C⁻¹ or V m⁻¹.
-
-Final answer:
-Electric field intensity is force per unit positive test charge.`
+SI unit: N/C or V/m.`
         ],
-
         [
             "Define electric dipole and electric dipole moment.",
             `An electric dipole consists of two equal and opposite charges separated by a small distance.
 
-Let the charges be +q and -q.
-
-Let their separation be 2a.
-
-Electric dipole moment:
+If the charges are +q and -q and their separation is 2a:
 
 p = q × 2a
 
-Direction:
-From the negative charge towards the positive charge.
+Direction: From the negative charge towards the positive charge.
 
 SI unit: C m.`
         ],
-
         [
             "Define electrostatic potential.",
-            `Electrostatic potential at a point is the work done by an external force in bringing a unit positive test charge from infinity to that point.
+            `Electrostatic potential at a point is the work done in bringing a unit positive test charge from infinity to that point.
 
-Let W be the work done and q be the charge.
-
+Formula:
 V = W/q
 
 SI unit: Volt (V).
 
 1 V = 1 J/C.`
         ],
-
         [
             "Define capacitance and state its SI unit.",
             `Capacitance is the ability of a conductor to store electric charge.
 
-Let Q be the charge stored and V be the potential difference.
-
+Formula:
 C = Q/V
 
-SI unit: Farad (F).
-
-One farad is the capacitance of a conductor that stores one coulomb of charge when its potential is one volt.`
+SI unit: Farad (F).`
         ]
-
     ],
 
     important: [
-
         [
             "Explain the principle of superposition of electric forces.",
-            `Step 1: Consider a test charge q₀ acted upon by several charges.
+            `The total electrostatic force acting on a charge due to several other charges is the vector sum of the individual forces.
 
-Step 2: Each charge produces an individual force independently.
+Step 1: Calculate the force due to each charge separately.
 
-Step 3: Calculate each force using Coulomb's law.
+Step 2: Find the direction of each force.
 
-Step 4: Add the forces using vector addition.
+Step 3: Add all forces using vector addition.
 
-Fnet = F₁ + F₂ + F₃ + ...
-
-Final answer:
-The total electrostatic force on a charge due to several other charges is the vector sum of the individual forces.`
+Formula:
+Fnet = F₁ + F₂ + F₃ + ...`
         ],
-
         [
             "Explain electric field lines and their properties.",
             `Electric field lines are imaginary curves used to represent an electric field.
 
 Properties:
+1. They originate from positive charges.
+2. They terminate on negative charges or extend to infinity.
+3. The tangent gives the direction of the electric field.
+4. Two field lines never intersect.
+5. Closely spaced lines indicate a stronger field.
+6. Electrostatic field lines do not form closed loops.
 
-1. They originate from positive charges and terminate on negative charges, or extend to infinity.
-2. The tangent at any point gives the direction of the electric field.
-3. Two electric field lines never intersect.
-4. Closely spaced field lines indicate a stronger field.
-5. Electrostatic field lines do not form closed loops.
-
-Why do they never intersect?
-
-If two field lines intersected, there would be two different directions of the electric field at the same point. This is impossible because the electric field has a unique direction at a point.`
+Field lines never intersect because the electric field has only one direction at a particular point.`
         ],
-
         [
             "Derive the expression for electric field due to a point charge.",
             `Step 1: Consider a point charge Q.
@@ -581,66 +561,55 @@ Step 3: By Coulomb's law:
 
 F = (1/4πε₀)|Qq₀|/r²
 
-Step 4: Electric field is force per unit test charge.
+Step 4: Electric field is force per unit charge.
 
 E = F/q₀
 
 Step 5: Substitute:
 
-E = (1/4πε₀)|Qq₀|/(r²q₀)
-
-Step 6: Cancel q₀.
-
 E = (1/4πε₀)|Q|/r²
 
-Final answer:
+Final expression:
 
 E = |Q|/(4πε₀r²)
 
-Direction:
-Outward for positive charge and inward for negative charge.`
+Direction is outward for a positive charge and inward for a negative charge.`
         ],
-
         [
             "Explain the relation between electric field and electric potential.",
             `The electric field is related to the rate of change of electric potential.
 
-General vector relation:
+General relation:
 
 E = -∇V
 
-For one-dimensional motion along x:
+For one-dimensional motion:
 
 Ex = -dV/dx
 
-The negative sign indicates that electric potential decreases in the direction of the electric field.
-
-Final answer:
-Electric field points in the direction of decreasing electric potential.`
+The negative sign indicates that electric potential decreases in the direction of the electric field.`
         ],
-
         [
             "Explain the properties of conductors in electrostatic equilibrium.",
-            `1. The electric field inside the conducting material is zero.
+            `1. The electric field inside a conductor is zero.
 2. The conductor has the same electric potential throughout.
 3. Excess charge resides on its surface.
-4. The electric field just outside the surface is perpendicular to the surface.
+4. The electric field just outside the surface is perpendicular to it.
 5. There is no tangential electric field at the surface.
 
-These properties describe a conductor when its free charges are no longer moving under electrostatic forces.`
+These properties apply when the free charges are in electrostatic equilibrium.`
         ],
-
         [
             "Derive the capacitance of a parallel plate capacitor.",
-            `Step 1: Consider two parallel conducting plates of area A separated by distance d.
+            `Step 1: Consider two parallel plates of area A separated by distance d.
 
-Step 2: Let the charges on the plates be +Q and -Q.
+Step 2: Let the charges be +Q and -Q.
 
 Surface charge density:
 
 σ = Q/A
 
-Step 3: Electric field between the plates, neglecting edge effects:
+Step 3: Electric field between the plates:
 
 E = σ/ε₀
 
@@ -648,11 +617,9 @@ Step 4: Potential difference:
 
 V = Ed
 
-Substitute E:
-
 V = Qd/(Aε₀)
 
-Step 5: Capacitance is:
+Step 5: Capacitance:
 
 C = Q/V
 
@@ -660,23 +627,17 @@ Step 6: Substitute:
 
 C = Q/[Qd/(Aε₀)]
 
-Step 7: Simplify:
-
-C = ε₀A/d
-
 Final answer:
 
 C = ε₀A/d
 
-With a dielectric of relative permittivity K:
+With a dielectric:
 
 C = Kε₀A/d`
         ]
-
     ],
 
     worked: [
-
         [
             "Calculate the force between two charges +2 μC and +3 μC separated by 0.3 m.",
             `Given:
@@ -686,37 +647,22 @@ q₂ = 3 × 10⁻⁶ C
 r = 0.3 m
 k = 9 × 10⁹ N m² C⁻²
 
-Step 1: Formula
+Formula:
 
 F = k|q₁q₂|/r²
 
-Step 2: Substitute
+Substitute:
 
 F = (9 × 10⁹ × 2 × 10⁻⁶ × 3 × 10⁻⁶)/(0.3)²
 
-Step 3: Multiply the charges
-
-2 × 10⁻⁶ × 3 × 10⁻⁶ = 6 × 10⁻¹²
-
-Step 4: Calculate numerator
-
-9 × 10⁹ × 6 × 10⁻¹² = 0.054
-
-Step 5: Calculate denominator
-
-0.3² = 0.09
-
-Step 6: Divide
-
 F = 0.054/0.09
+
+Final answer:
 
 F = 0.6 N
 
-Final answer: 0.6 N.
-
 Both charges are positive, so the force is repulsive.`
         ],
-
         [
             "Find the electric field at a point 0.2 m away from a charge of +4 μC.",
             `Given:
@@ -725,35 +671,22 @@ Q = 4 × 10⁻⁶ C
 r = 0.2 m
 k = 9 × 10⁹ N m² C⁻²
 
-Step 1: Formula
+Formula:
 
 E = k|Q|/r²
 
-Step 2: Substitute
+Substitute:
 
 E = (9 × 10⁹ × 4 × 10⁻⁶)/(0.2)²
 
-Step 3: Square the distance
-
-0.2² = 0.04
-
-Step 4: Multiply
-
-9 × 10⁹ × 4 × 10⁻⁶ = 36 × 10³
-
-Step 5: Divide
-
 E = 36000/0.04
-
-E = 900000 N/C
 
 Final answer:
 
-E = 9 × 10⁵ N/C.
+E = 9 × 10⁵ N/C
 
 The field points away from the positive charge.`
         ],
-
         [
             "Calculate the electric potential at 0.5 m from a charge of +2 μC.",
             `Given:
@@ -762,29 +695,20 @@ Q = 2 × 10⁻⁶ C
 r = 0.5 m
 k = 9 × 10⁹ N m² C⁻²
 
-Step 1: Formula
+Formula:
 
 V = kQ/r
 
-Step 2: Substitute
+Substitute:
 
 V = (9 × 10⁹ × 2 × 10⁻⁶)/0.5
 
-Step 3: Multiply
-
-9 × 10⁹ × 2 × 10⁻⁶ = 18 × 10³
-
-Step 4: Divide
-
 V = 18000/0.5
-
-V = 36000 V
 
 Final answer:
 
 V = 3.6 × 10⁴ V.`
         ],
-
         [
             "A charge of 5 μC is moved through a potential difference of 12 V. Calculate the work done.",
             `Given:
@@ -792,15 +716,13 @@ V = 3.6 × 10⁴ V.`
 q = 5 × 10⁻⁶ C
 V = 12 V
 
-Step 1: Formula
+Formula:
 
 W = qV
 
-Step 2: Substitute
+Substitute:
 
 W = 5 × 10⁻⁶ × 12
-
-Step 3: Multiply
 
 W = 60 × 10⁻⁶ J
 
@@ -808,7 +730,6 @@ Final answer:
 
 W = 6 × 10⁻⁵ J.`
         ],
-
         [
             "A capacitor stores 40 μC at 20 V. Find its capacitance.",
             `Given:
@@ -816,23 +737,20 @@ W = 6 × 10⁻⁵ J.`
 Q = 40 × 10⁻⁶ C
 V = 20 V
 
-Step 1: Formula
+Formula:
 
 C = Q/V
 
-Step 2: Substitute
+Substitute:
 
 C = (40 × 10⁻⁶)/20
 
-Step 3: Divide
+Final answer:
 
 C = 2 × 10⁻⁶ F
 
-Final answer:
-
 C = 2 μF.`
         ],
-
         [
             "Two capacitors of 3 μF and 6 μF are connected in series. Find the equivalent capacitance.",
             `Given:
@@ -840,52 +758,36 @@ C = 2 μF.`
 C₁ = 3 μF
 C₂ = 6 μF
 
-Step 1: Series formula
+Series formula:
 
 1/C = 1/C₁ + 1/C₂
 
-Step 2: Substitute
+Substitute:
 
 1/C = 1/3 + 1/6
-
-Step 3: Take common denominator
 
 1/C = 2/6 + 1/6
 
 1/C = 3/6 = 1/2
 
-Step 4: Take reciprocal
-
-C = 2 μF
-
 Final answer:
 
-Equivalent capacitance = 2 μF.`
+C = 2 μF.`
         ]
-
     ],
 
     formula: [
         "Quantisation of charge: q = ne",
         "Elementary charge: e = 1.6 × 10⁻¹⁹ C",
         "Coulomb's law: F = (1/4πε₀)|q₁q₂|/r²",
-        "Coulomb constant: k = 1/(4πε₀) = 9 × 10⁹ N m² C⁻²",
         "Electric field: E = F/q₀",
-        "Electric field due to point charge: E = (1/4πε₀)|Q|/r²",
         "Electric dipole moment: p = q × 2a",
-        "Electric potential: V = W/q",
-        "Potential due to point charge: V = (1/4πε₀)Q/r",
-        "Potential energy of two charges: U = (1/4πε₀)q₁q₂/r",
-        "Electric flux: ΦE = EA cos θ",
-        "Gauss's law: ∮E·dA = Qenclosed/ε₀",
-        "Capacitance: C = Q/V",
-        "Parallel plate capacitor: C = ε₀A/d",
-        "Capacitor with dielectric: C = Kε₀A/d",
-        "Capacitors in series: 1/Ceq = 1/C₁ + 1/C₂ + ...",
-        "Capacitors in parallel: Ceq = C₁ + C₂ + ...",
-        "Energy stored: U = ½CV² = ½QV = Q²/(2C)"
+        "Capacitance: C = Q/V"
     ]
 },
+
+
+</script>
 
 /* =====================================================
    UNIT 2 - CURRENT ELECTRICITY
@@ -896,233 +798,174 @@ Equivalent capacitance = 2 μF.`
     volume: 1,
 
     bookback: [
-
         [
-            "Define electric current and give its SI unit.",
+            "Define electric current.",
             `Electric current is the rate of flow of electric charge through a conductor.
 
-Step 1: Let Q be the charge flowing through a conductor.
-
-Step 2: Let t be the time taken.
-
-Step 3: Current is charge divided by time.
-
+Formula:
 I = Q/t
 
-For varying current:
-
-I = dQ/dt
-
-SI unit: Ampere (A).
-
-One ampere is one coulomb of charge flowing per second.`
+SI unit: Ampere (A).`
         ],
-
         [
             "State Ohm's law.",
             `Ohm's law states that the current flowing through a conductor is directly proportional to the potential difference across it, provided temperature and other physical conditions remain constant.
 
-V ∝ I
-
-Therefore:
-
 V = IR
 
-Here:
-V = potential difference
-I = current
-R = resistance
-
-SI unit of resistance: Ohm (Ω).`
+Here, V = potential difference, I = current and R = resistance.`
         ],
-
         [
-            "Define electrical resistance and resistivity.",
+            "Define electrical resistance.",
             `Resistance is the opposition offered by a conductor to the flow of electric current.
 
+Formula:
 R = V/I
 
-Resistivity is a property of the material that describes how strongly it opposes electric current.
+SI unit: Ohm (Ω).`
+        ],
+        [
+            "Define resistivity.",
+            `Resistivity is the resistance of a conductor of unit length and unit cross-sectional area.
 
-For a uniform conductor:
-
-R = ρL/A
-
-Therefore:
-
+Formula:
 ρ = RA/L
 
-SI unit of resistivity: Ω m.`
+SI unit: Ohm metre (Ω m).`
         ],
-
         [
-            "What is drift velocity?",
-            `Drift velocity is the average velocity acquired by free electrons in a conductor under the influence of an applied electric field.
+            "What is electromotive force (EMF)?",
+            `EMF is the energy supplied by a source per unit charge to drive charge around a complete circuit.
 
-When an electric field is applied, electrons acquire a small average velocity opposite to the direction of the electric field.
-
-Relation:
-
-I = neAvd
-
-Here:
-n = number of free electrons per unit volume
-e = charge of an electron
-A = cross-sectional area
-vd = drift velocity.`
-        ],
-
-        [
-            "Define electromotive force (EMF).",
-            `Electromotive force is the energy supplied by a source per unit charge in driving charge around a complete circuit.
-
+Formula:
 ε = W/Q
 
-SI unit: Volt (V).
-
-EMF is not actually a force; it is energy supplied per unit charge.`
+SI unit: Volt (V).`
         ],
-
-        [
-            "What is the internal resistance of a cell?",
-            `Internal resistance is the resistance offered to the flow of current inside a cell by its electrolyte and electrodes.
-
-When current I flows through a cell:
-
-V = ε - Ir
-
-Here:
-V = terminal potential difference
-ε = EMF
-r = internal resistance
-
-When no current flows, terminal voltage equals EMF.`
-        ]
-
-    ],
-
-    important: [
-
-        [
-            "Derive the relation between current and drift velocity.",
-            `Step 1: Consider a conductor of cross-sectional area A.
-
-Step 2: Let n be the number of free electrons per unit volume.
-
-Step 3: Let vd be the drift velocity.
-
-Step 4: In time t, electrons travel a distance:
-
-l = vd t
-
-Step 5: Volume of the conductor crossed:
-
-Volume = A × vd t
-
-Step 6: Number of electrons in this volume:
-
-N = nAvd t
-
-Step 7: Total charge:
-
-Q = Ne
-
-Q = nAvdte
-
-Step 8: Current is charge per unit time.
-
-I = Q/t
-
-Therefore:
-
-I = neAvd
-
-Final answer:
-
-I = neAvd.`
-        ],
-
-        [
-            "Explain the combination of resistors in series and parallel.",
-            `SERIES CONNECTION
-
-1. Resistors are connected one after another.
-2. The same current flows through each resistor.
-3. Total potential difference is the sum of individual potential differences.
-
-Equivalent resistance:
-
-R = R₁ + R₂ + R₃ + ...
-
-PARALLEL CONNECTION
-
-1. Both ends of every resistor are connected to the same two points.
-2. The potential difference across each resistor is the same.
-3. Total current is the sum of branch currents.
-
-Equivalent resistance:
-
-1/R = 1/R₁ + 1/R₂ + 1/R₃ + ...
-
-For two resistors in parallel:
-
-R = R₁R₂/(R₁ + R₂).`
-        ],
-
         [
             "State Kirchhoff's laws.",
-            `Kirchhoff's First Law (Junction Law):
-
-The algebraic sum of currents meeting at a junction is zero.
+            `Kirchhoff's First Law (Junction Rule):
+The algebraic sum of currents at a junction is zero.
 
 ΣI = 0
 
-This law is based on conservation of electric charge.
-
-Kirchhoff's Second Law (Loop Law):
-
+Kirchhoff's Second Law (Loop Rule):
 The algebraic sum of potential differences around any closed loop is zero.
 
-ΣV = 0
+ΣV = 0`
+        ]
+    ],
 
-This law is based on conservation of energy.`
-        ],
-
+    important: [
         [
-            "Explain the principle of a potentiometer.",
-            `A potentiometer works on the principle that the potential drop across a uniform wire carrying a steady current is directly proportional to its length.
+            "Explain the microscopic form of Ohm's law.",
+            `The microscopic form of Ohm's law relates current density to the electric field.
 
-V ∝ l
+J = σE
+
+Here:
+J = current density
+σ = electrical conductivity
+E = electric field
+
+Since resistivity ρ = 1/σ:
+
+E = ρJ
+
+This shows that current density is directly proportional to the electric field.`
+        ],
+        [
+            "Derive the expression for resistance of a conductor.",
+            `Resistance is directly proportional to the length of the conductor.
+
+R ∝ L
+
+Resistance is inversely proportional to its cross-sectional area.
+
+R ∝ 1/A
+
+Combining both:
+
+R ∝ L/A
+
+Introducing resistivity ρ:
+
+R = ρL/A
+
+This is the expression for the resistance of a uniform conductor.`
+        ],
+        [
+            "Explain resistors connected in series.",
+            `In a series combination, resistors are connected one after another.
+
+The same current flows through every resistor.
+
+The total potential difference is:
+
+V = V₁ + V₂ + V₃
+
+Using Ohm's law:
+
+IR = IR₁ + IR₂ + IR₃
 
 Therefore:
 
-V = kl
+R = R₁ + R₂ + R₃
 
-Here k is the potential gradient.
-
-A potentiometer is used to compare EMFs and determine the internal resistance of a cell.`
+The equivalent resistance is the sum of individual resistances.`
         ],
+        [
+            "Explain resistors connected in parallel.",
+            `In a parallel combination, all resistors are connected across the same two points.
 
+The potential difference across each resistor is the same.
+
+Total current:
+
+I = I₁ + I₂ + I₃
+
+Using Ohm's law:
+
+V/R = V/R₁ + V/R₂ + V/R₃
+
+Therefore:
+
+1/R = 1/R₁ + 1/R₂ + 1/R₃
+
+This gives the equivalent resistance.`
+        ],
         [
             "Explain the temperature dependence of resistance.",
-            `The resistance of most metallic conductors increases with an increase in temperature.
+            `The resistance of a conductor generally changes with temperature.
 
-For a moderate temperature range:
+For a small temperature change:
 
-Rt = R₀[1 + α(T - T₀)]
+Rₜ = R₀[1 + α(T - T₀)]
 
 Here:
-Rt = resistance at temperature T
-R₀ = resistance at reference temperature T₀
-α = temperature coefficient of resistance.
+R₀ = resistance at reference temperature
+Rₜ = resistance at temperature T
+α = temperature coefficient of resistance
 
-For metals, α is generally positive.`
+For most metallic conductors, resistance increases as temperature increases.`
+        ],
+        [
+            "Explain the principle of a Wheatstone bridge.",
+            `A Wheatstone bridge is used to determine an unknown resistance.
+
+At the balanced condition, no current flows through the galvanometer.
+
+The balance condition is:
+
+P/Q = R/S
+
+By knowing three resistances, the fourth resistance can be calculated.
+
+It works on the principle of a balanced bridge circuit.`
         ]
-
     ],
 
     worked: [
-
         [
             "A charge of 60 C flows through a conductor in 20 seconds. Find the current.",
             `Given:
@@ -1130,96 +973,77 @@ For metals, α is generally positive.`
 Q = 60 C
 t = 20 s
 
-Step 1: Formula
+Formula:
 
 I = Q/t
 
-Step 2: Substitute
+Substitute:
 
 I = 60/20
 
-Step 3: Divide
-
-I = 3 A
-
 Final answer:
 
-Current = 3 A.`
+I = 3 A.`
         ],
-
         [
-            "A resistor of 5 Ω is connected to a 10 V battery. Find the current.",
+            "A potential difference of 12 V is applied across a resistance of 4 Ω. Find the current.",
             `Given:
 
-R = 5 Ω
-V = 10 V
+V = 12 V
+R = 4 Ω
 
-Step 1: Ohm's law
-
-V = IR
-
-Step 2: Rearrange
+Formula:
 
 I = V/R
 
-Step 3: Substitute
+Substitute:
 
-I = 10/5
-
-Final answer:
-
-I = 2 A.`
-        ],
-
-        [
-            "Calculate the resistance of a wire of resistivity 2 × 10⁻⁶ Ω m, length 4 m and area 2 × 10⁻⁴ m².",
-            `Given:
-
-ρ = 2 × 10⁻⁶ Ω m
-L = 4 m
-A = 2 × 10⁻⁴ m²
-
-Step 1: Formula
-
-R = ρL/A
-
-Step 2: Substitute
-
-R = (2 × 10⁻⁶ × 4)/(2 × 10⁻⁴)
-
-Step 3: Multiply
-
-R = 8 × 10⁻⁶/(2 × 10⁻⁴)
-
-Step 4: Divide
-
-R = 4 × 10⁻² Ω
+I = 12/4
 
 Final answer:
 
-R = 0.04 Ω.`
+I = 3 A.`
         ],
-
         [
-            "Two resistors of 4 Ω and 6 Ω are connected in series. Find the equivalent resistance.",
+            "A wire has a resistance of 5 Ω and length 2 m. If its cross-sectional area is 2 × 10⁻⁶ m², calculate its resistivity.",
             `Given:
 
-R₁ = 4 Ω
-R₂ = 6 Ω
+R = 5 Ω
+L = 2 m
+A = 2 × 10⁻⁶ m²
 
-Step 1: Series formula
+Formula:
 
-R = R₁ + R₂
+ρ = RA/L
 
-Step 2: Substitute
+Substitute:
 
-R = 4 + 6
+ρ = (5 × 2 × 10⁻⁶)/2
+
+Final answer:
+
+ρ = 5 × 10⁻⁶ Ω m.`
+        ],
+        [
+            "Three resistors of 2 Ω, 3 Ω and 5 Ω are connected in series. Find the equivalent resistance.",
+            `Given:
+
+R₁ = 2 Ω
+R₂ = 3 Ω
+R₃ = 5 Ω
+
+Series formula:
+
+R = R₁ + R₂ + R₃
+
+Substitute:
+
+R = 2 + 3 + 5
 
 Final answer:
 
 R = 10 Ω.`
         ],
-
         [
             "Two resistors of 6 Ω and 3 Ω are connected in parallel. Find the equivalent resistance.",
             `Given:
@@ -1227,83 +1051,58 @@ R = 10 Ω.`
 R₁ = 6 Ω
 R₂ = 3 Ω
 
-Step 1: Parallel formula
+Parallel formula:
 
 1/R = 1/R₁ + 1/R₂
 
-Step 2: Substitute
+Substitute:
 
 1/R = 1/6 + 1/3
-
-Step 3: Take common denominator
 
 1/R = 1/6 + 2/6
 
 1/R = 3/6 = 1/2
 
-Step 4: Take reciprocal
-
-R = 2 Ω
-
 Final answer:
 
-Equivalent resistance = 2 Ω.`
+R = 2 Ω.`
         ],
-
         [
-            "A cell has EMF 12 V and internal resistance 1 Ω. If current is 2 A, find terminal voltage.",
+            "A current of 2 A flows through a resistor of 10 Ω. Calculate the power consumed.",
             `Given:
 
-ε = 12 V
-r = 1 Ω
 I = 2 A
+R = 10 Ω
 
-Step 1: Formula
+Formula:
 
-V = ε - Ir
+P = I²R
 
-Step 2: Substitute
+Substitute:
 
-V = 12 - (2 × 1)
+P = 2² × 10
 
-Step 3: Calculate
-
-V = 12 - 2
+P = 4 × 10
 
 Final answer:
 
-Terminal voltage = 10 V.`
+P = 40 W.`
         ]
-
     ],
 
     formula: [
         "Electric current: I = Q/t",
-        "Instantaneous current: I = dQ/dt",
         "Ohm's law: V = IR",
-        "Resistance: R = V/I",
+        "Resistance: R = ρL/A",
         "Resistivity: ρ = RA/L",
-        "Resistance of a wire: R = ρL/A",
-        "Drift velocity: I = neAvd",
-        "Current density: J = I/A",
-        "Current density relation: J = nevᵈ",
-        "Series resistors: R = R₁ + R₂ + ...",
-        "Parallel resistors: 1/R = 1/R₁ + 1/R₂ + ...",
-        "Two parallel resistors: R = R₁R₂/(R₁ + R₂)",
-        "Electric power: P = VI",
-        "Power in a resistor: P = I²R = V²/R",
-        "Electrical energy: W = VIt",
-        "Cell terminal voltage: V = ε - Ir",
-        "EMF: ε = W/Q",
-        "Temperature dependence: Rt = R₀[1 + α(T - T₀)]",
-        "Potentiometer: V = kl",
-        "Kirchhoff junction law: ΣI = 0",
-        "Kirchhoff loop law: ΣV = 0"
+        "Series combination: R = R₁ + R₂ + R₃",
+        "Electrical power: P = VI = I²R = V²/R"
     ]
 },
 
 /* =====================================================
-   UNIT 3 - MAGNETISM AND MAGNETIC EFFECTS OF ELECTRIC CURRENT
+   UNIT 3 - MAGNETISM AND MAGNETIC EFFECTS
+   OF ELECTRIC CURRENT
 ===================================================== */
 
 {
@@ -1311,242 +1110,187 @@ Terminal voltage = 10 V.`
     volume: 1,
 
     bookback: [
-
         [
             "Define magnetic field.",
             `A magnetic field is the region around a magnet or a current-carrying conductor where a magnetic force can be experienced.
 
-Magnetic field is a vector quantity.
-
-SI unit: Tesla (T).`
+SI unit of magnetic field: Tesla (T).`
         ],
-
         [
             "State Biot-Savart law.",
             `Biot-Savart law gives the magnetic field produced by a small current element.
 
-The magnitude of the magnetic field is directly proportional to:
+The magnetic field is directly proportional to the current and the length element, and inversely proportional to the square of the distance.
 
-1. Current I.
-2. Length element dl.
-3. Sine of the angle θ between dl and the position vector.
-
-It is inversely proportional to the square of the distance r.
-
-Expression:
-
-dB = (μ₀/4π) × (I dl sinθ/r²)
-
-The direction is determined using the right-hand rule.`
+dB = (μ₀/4π) × (I dl sin θ/r²).`
         ],
-
         [
             "State Ampere's circuital law.",
-            `Ampere's circuital law states that the line integral of the magnetic field around any closed path is equal to μ₀ times the total current enclosed by that path.
+            `Ampere's circuital law states that the line integral of the magnetic field around a closed path is equal to μ₀ times the total current enclosed.
 
-∮B·dl = μ₀Ienclosed
-
-Here:
-B = magnetic field
-dl = small length element
-μ₀ = permeability of free space
-Ienclosed = current enclosed by the loop.`
+∮ B · dl = μ₀Ienclosed`
         ],
+        [
+            "What is Lorentz force?",
+            `The Lorentz force is the force experienced by a charged particle moving in electric and magnetic fields.
 
+F = q(E + v × B)
+
+For a magnetic field alone:
+
+F = qvB sin θ.`
+        ],
         [
             "Define magnetic flux.",
             `Magnetic flux is the total magnetic field passing through a given surface.
 
-For a uniform magnetic field:
+Formula:
 
-ΦB = BA cosθ
-
-Here:
-B = magnetic field
-A = area
-θ = angle between the magnetic field and the normal to the surface.
+ΦB = BA cos θ
 
 SI unit: Weber (Wb).`
         ],
-
         [
-            "State Fleming's left-hand rule.",
-            `Stretch the thumb, forefinger and middle finger of the left hand so that they are mutually perpendicular.
+            "What is electromagnetic induction?",
+            `Electromagnetic induction is the phenomenon of producing an induced EMF in a conductor when the magnetic flux linked with it changes.
 
-Forefinger:
-Direction of magnetic field.
-
-Middle finger:
-Direction of current.
-
-Thumb:
-Direction of force or motion.
-
-This rule is used to determine the direction of force on a current-carrying conductor in a magnetic field.`
-        ],
-
-        [
-            "What is a solenoid?",
-            `A solenoid is a long cylindrical coil consisting of many closely wound turns of insulated wire.
-
-When current flows through it, a magnetic field is produced.
-
-For a long solenoid:
-
-B = μ₀nI
-
-Here:
-n = number of turns per unit length
-I = current.
-
-The magnetic field inside an ideal long solenoid is nearly uniform.`
+It is explained by Faraday's law of electromagnetic induction.`
         ]
-
     ],
 
     important: [
-
         [
-            "Derive the magnetic field at the centre of a circular current-carrying coil.",
-            `Step 1: Consider a circular coil of radius R carrying current I.
+            "Explain the magnetic field due to a straight current-carrying conductor.",
+            `The magnetic field around a long straight conductor forms concentric circles.
 
-Step 2: By Biot-Savart law:
+The magnitude of the magnetic field at a distance r is:
 
-dB = (μ₀/4π) × (I dl sinθ/R²)
+B = μ₀I/(2πr)
 
-Step 3: At the centre, each current element is perpendicular to the radius.
+The direction is determined using the right-hand thumb rule.
 
-Therefore:
-
-θ = 90°
-
-sin 90° = 1
-
-Step 4: Integrate around the complete circular coil.
-
-B = (μ₀I/4πR²) ∮dl
-
-Step 5: The total length around the circle is:
-
-∮dl = 2πR
-
-Step 6: Substitute:
-
-B = (μ₀I/4πR²) × 2πR
-
-Final answer:
+If the thumb points in the direction of current, the curled fingers indicate the direction of the magnetic field.`
+        ],
+        [
+            "Explain the magnetic field at the centre of a circular current loop.",
+            `For a circular loop of radius R carrying current I, the magnetic field at its centre is:
 
 B = μ₀I/(2R)
 
 For N turns:
 
-B = μ₀NI/(2R).`
-        ],
+B = μ₀NI/(2R)
 
+The direction is determined using the right-hand rule.`
+        ],
         [
             "Explain the force on a current-carrying conductor in a magnetic field.",
             `A current-carrying conductor placed in a magnetic field experiences a force.
 
-The magnitude is:
+Formula:
 
-F = BIL sinθ
+F = BIL sin θ
 
 Here:
 B = magnetic field
 I = current
 L = length of conductor
-θ = angle between the conductor and magnetic field.
+θ = angle between current and magnetic field
 
-Special cases:
-
-1. If θ = 90°, force is maximum.
-2. If θ = 0°, force is zero.
-
-The direction is determined by Fleming's left-hand rule.`
+The direction of force can be found using Fleming's left-hand rule.`
         ],
-
         [
-            "Explain the working principle of a moving coil galvanometer.",
-            `Principle:
-A current-carrying coil placed in a magnetic field experiences a torque.
+            "State and explain the principle of a moving coil galvanometer.",
+            `A moving coil galvanometer works on the principle that a current-carrying coil placed in a magnetic field experiences a torque.
 
-Step 1:
-A rectangular coil is placed between the poles of a magnet.
+The deflecting torque is:
 
-Step 2:
-When current flows, magnetic forces act on opposite sides of the coil.
+τ = NIAB
 
-Step 3:
-These forces produce a torque.
-
-Step 4:
-The coil rotates against the restoring torque of the suspension.
+The restoring torque is proportional to the angle of deflection.
 
 At equilibrium:
 
-NIBA = Cθ
-
-Here:
-N = number of turns
-I = current
-B = magnetic field
-A = area of coil
-C = torsional constant
-θ = deflection.
+NIAB = kθ
 
 Therefore:
 
-I = Cθ/(NBA)
+I = kθ/(NAB)
 
-The deflection is proportional to current.`
+The deflection is directly proportional to the current.`
         ],
-
         [
-            "Explain the magnetic field inside a long solenoid.",
-            `A long solenoid consists of many closely wound turns of wire.
+            "Explain the working principle of a cyclotron.",
+            `A cyclotron accelerates charged particles using a combination of a magnetic field and an alternating electric field.
 
-When current flows through it:
+The magnetic field makes the charged particles move in a circular path.
 
-1. Each turn produces a magnetic field.
-2. The fields inside the solenoid reinforce each other.
-3. The magnetic field outside is comparatively weak.
-4. The field inside is nearly uniform.
+The alternating electric field accelerates them whenever they cross the gap between the two hollow electrodes.
 
-Expression:
+The cyclotron frequency is:
 
-B = μ₀nI
+f = qB/(2πm)
 
-If a magnetic material of relative permeability μr is present:
-
-B = μ₀μr nI.`
+It is used to accelerate charged particles to high energies.`
         ],
-
         [
-            "Explain the force between two parallel current-carrying conductors.",
-            `Two parallel conductors carrying currents produce magnetic fields around them.
+            "State Faraday's laws of electromagnetic induction.",
+            `First law:
+Whenever the magnetic flux linked with a circuit changes, an EMF is induced in the circuit.
 
-Each conductor experiences a force due to the magnetic field produced by the other.
+Second law:
+The magnitude of induced EMF is proportional to the rate of change of magnetic flux linkage.
 
-Force per unit length:
+Formula:
 
-F/L = μ₀I₁I₂/(2πd)
+ε = -N(dΦB/dt)
 
-Here:
-I₁ and I₂ = currents
-d = distance between conductors.
-
-Direction:
-
-1. Currents in the same direction attract.
-2. Currents in opposite directions repel.`
+The negative sign represents Lenz's law.`
         ]
-
     ],
 
     worked: [
-
         [
-            "A straight conductor of length 0.5 m carries a current of 4 A perpendicular to a magnetic field of 0.2 T. Find the force.",
+            "Find the magnetic field at a distance of 0.1 m from a long straight wire carrying 5 A.",
+            `Given:
+
+I = 5 A
+r = 0.1 m
+μ₀ = 4π × 10⁻⁷ T m/A
+
+Formula:
+
+B = μ₀I/(2πr)
+
+Substitute:
+
+B = (4π × 10⁻⁷ × 5)/(2π × 0.1)
+
+Final answer:
+
+B = 1 × 10⁻⁵ T.`
+        ],
+        [
+            "Calculate the magnetic field at the centre of a circular coil of radius 0.1 m carrying 2 A.",
+            `Given:
+
+I = 2 A
+R = 0.1 m
+
+Formula:
+
+B = μ₀I/(2R)
+
+Substitute:
+
+B = (4π × 10⁻⁷ × 2)/(2 × 0.1)
+
+Final answer:
+
+B = 4π × 10⁻⁶ T.`
+        ],
+        [
+            "A wire of length 0.5 m carries a current of 4 A perpendicular to a magnetic field of 0.2 T. Find the force.",
             `Given:
 
 B = 0.2 T
@@ -1554,4014 +1298,1873 @@ I = 4 A
 L = 0.5 m
 θ = 90°
 
-Step 1: Formula
+Formula:
 
-F = BIL sinθ
+F = BIL sin θ
 
-Step 2: Substitute
+Substitute:
 
-F = 0.2 × 4 × 0.5 × sin90°
+F = 0.2 × 4 × 0.5 × sin 90°
 
-Step 3: Use sin90° = 1
-
-F = 0.2 × 4 × 0.5
-
-Step 4: Calculate
-
-F = 0.4 N
+F = 0.2 × 4 × 0.5 × 1
 
 Final answer:
 
-Force = 0.4 N.`
+F = 0.4 N.`
         ],
-
         [
-            "Find the magnetic field at the centre of a circular coil of radius 0.1 m carrying a current of 2 A.",
+            "A charge of 2 C moves at 3 m/s perpendicular to a magnetic field of 4 T. Find the magnetic force.",
             `Given:
 
-R = 0.1 m
-I = 2 A
-μ₀ = 4π × 10⁻⁷ T m A⁻¹
-
-Step 1: Formula
-
-B = μ₀I/(2R)
-
-Step 2: Substitute
-
-B = (4π × 10⁻⁷ × 2)/(2 × 0.1)
-
-Step 3: Simplify
-
-B = 8π × 10⁻⁷/0.2
-
-Step 4: Calculate
-
-B = 4π × 10⁻⁶ T
-
-Approximately:
-
-B = 1.26 × 10⁻⁵ T
-
-Final answer:
-
-B = 1.26 × 10⁻⁵ T.`
-        ],
-
-        [
-            "A long solenoid has 1000 turns per metre and carries a current of 2 A. Find the magnetic field inside it.",
-            `Given:
-
-n = 1000 turns/m
-I = 2 A
-μ₀ = 4π × 10⁻⁷ T m A⁻¹
-
-Step 1: Formula
-
-B = μ₀nI
-
-Step 2: Substitute
-
-B = 4π × 10⁻⁷ × 1000 × 2
-
-Step 3: Simplify
-
-B = 8π × 10⁻⁴ T
-
-Step 4: Calculate
-
-B ≈ 2.51 × 10⁻³ T
-
-Final answer:
-
-B = 2.51 × 10⁻³ T.`
-        ],
-
-        [
-            "A wire of length 0.2 m carries a current of 5 A perpendicular to a magnetic field of 0.4 T. Calculate the force.",
-            `Given:
-
-L = 0.2 m
-I = 5 A
-B = 0.4 T
+q = 2 C
+v = 3 m/s
+B = 4 T
 θ = 90°
 
-Step 1: Formula
-
-F = BIL sinθ
-
-Step 2: Substitute
-
-F = 0.4 × 5 × 0.2 × 1
-
-Step 3: Calculate
-
-F = 0.4 N
-
-Final answer:
-
-Force = 0.4 N.`
-        ],
-
-        [
-            "Two parallel wires carry currents of 2 A and 3 A in the same direction. They are separated by 0.1 m. Find the force per unit length.",
-            `Given:
-
-I₁ = 2 A
-I₂ = 3 A
-d = 0.1 m
-μ₀ = 4π × 10⁻⁷ T m A⁻¹
-
-Step 1: Formula
-
-F/L = μ₀I₁I₂/(2πd)
-
-Step 2: Substitute
-
-F/L = (4π × 10⁻⁷ × 2 × 3)/(2π × 0.1)
-
-Step 3: Simplify
-
-F/L = (24π × 10⁻⁷)/(0.2π)
-
-Step 4: Calculate
-
-F/L = 1.2 × 10⁻⁵ N/m
-
-Final answer:
-
-Force per unit length = 1.2 × 10⁻⁵ N/m.
-
-Since currents flow in the same direction, the wires attract.`
-        ],
-
-        [
-            "A magnetic flux of 0.02 Wb passes through an area of 0.5 m² perpendicular to the magnetic field. Find the magnetic field.",
-            `Given:
-
-ΦB = 0.02 Wb
-A = 0.5 m²
-θ = 0°
-
-Step 1: Formula
-
-ΦB = BA cosθ
-
-Step 2: Substitute
-
-0.02 = B × 0.5 × cos0°
-
-Step 3: Use cos0° = 1
-
-0.02 = 0.5B
-
-Step 4: Rearrange
-
-B = 0.02/0.5
-
-Final answer:
-
-B = 0.04 T.`
-        ]
-
-    ],
-
-    formula: [
-        "Magnetic force on a moving charge: F = qvB sinθ",
-        "Magnetic force on a current-carrying conductor: F = BIL sinθ",
-        "Biot-Savart law: dB = (μ₀/4π)(I dl sinθ/r²)",
-        "Magnetic field due to a long straight wire: B = μ₀I/(2πr)",
-        "Field at centre of a circular coil: B = μ₀NI/(2R)",
-        "Field inside a long solenoid: B = μ₀nI",
-        "Field inside a magnetic material: B = μ₀μr nI",
-        "Ampere's circuital law: ∮B·dl = μ₀Ienclosed",
-        "Magnetic flux: ΦB = BA cosθ",
-        "Force per unit length between parallel wires: F/L = μ₀I₁I₂/(2πd)",
-        "Torque on a current loop: τ = NIAB sinθ",
-        "Magnetic dipole moment of a coil: μ = NIA",
-        "Moving coil galvanometer: I = Cθ/(NBA)"
-    ]
-}
-,
-{
-    id: 4,
-    title: "Electromagnetic Induction and Alternating Current",
-    subtitle: "Unit 4 | Volume 1",
-
-    bookback: [
-        [
-            "What is meant by electromagnetic induction?",
-            `Electromagnetic induction is the phenomenon of producing an induced electromotive force (emf) in a coil whenever the magnetic flux linked with the coil changes.
-
-STEP 1: Consider a coil connected to a galvanometer.
-
-STEP 2: Move a magnet towards the coil. The galvanometer shows a deflection.
-
-STEP 3: Keep the magnet stationary. The galvanometer shows no deflection.
-
-STEP 4: Move the magnet away from the coil. The galvanometer deflects in the opposite direction.
-
-Conclusion:
-A change in magnetic flux produces an induced emf in the coil.
-
-This phenomenon is called electromagnetic induction.`
-        ],
-
-        [
-            "State Faraday's laws of electromagnetic induction.",
-            `Faraday's First Law:
-
-Whenever the magnetic flux linked with a closed circuit changes, an emf is induced in the circuit.
-
-Faraday's Second Law:
-
-The magnitude of the induced emf is directly proportional to the rate of change of magnetic flux linked with the circuit.
-
-Mathematically,
-
-ε = -N(dΦB/dt)
-
-Where:
-ε = Induced emf
-N = Number of turns in the coil
-ΦB = Magnetic flux
-t = Time
-
-The negative sign indicates the direction of induced emf according to Lenz's law.`
-        ],
-
-        [
-            "State Lenz's law.",
-            `Lenz's law states that the direction of induced current is such that it opposes the change in magnetic flux that produces it.
-
-Explanation:
-
-STEP 1: Bring the north pole of a magnet towards a coil.
-
-STEP 2: The magnetic flux through the coil increases.
-
-STEP 3: The induced current produces a magnetic field that opposes this increase.
-
-STEP 4: Therefore, the near face of the coil behaves like a north pole and repels the approaching magnet.
-
-Importance:
-
-Lenz's law follows the law of conservation of energy because external work is required to produce the change in magnetic flux.`
-        ],
-
-        [
-            "What are eddy currents? Mention their uses.",
-            `Eddy currents are circulating currents induced in the body of a conductor when the magnetic flux linked with it changes.
-
-They are also called Foucault currents.
-
-Uses:
-
-1. Electromagnetic braking.
-2. Induction furnaces.
-3. Damping in galvanometers.
-4. Speedometers.
-
-These currents are produced due to electromagnetic induction.`
-        ],
-
-        [
-            "What is self-induction?",
-            `Self-induction is the phenomenon in which a changing current in a coil induces an emf in the same coil.
-
-Explanation:
-
-When current through a coil changes, the magnetic field produced by the coil also changes.
-
-This changes the magnetic flux linked with the coil.
-
-As a result, an emf is induced in the same coil.
-
-The induced emf is called self-induced emf.
-
 Formula:
 
-ε = -L(di/dt)
+F = qvB sin θ
 
-Where:
-L = Self-inductance
-di/dt = Rate of change of current`
+Substitute:
+
+F = 2 × 3 × 4 × 1
+
+Final answer:
+
+F = 24 N.`
         ],
-
         [
-            "What is mutual induction?",
-            `Mutual induction is the phenomenon in which a changing current in one coil induces an emf in a nearby coil.
-
-Explanation:
-
-STEP 1: Consider two coils placed close to each other.
-
-STEP 2: Pass a changing current through the first coil.
-
-STEP 3: The magnetic field produced by the first coil changes.
-
-STEP 4: The changing magnetic flux linked with the second coil induces an emf in it.
-
-This phenomenon is called mutual induction.`
-        ],
-
-        [
-            "What is the principle of an AC generator?",
-            `An AC generator works on the principle of electromagnetic induction.
-
-When a coil is rotated in a uniform magnetic field, the magnetic flux linked with it changes continuously.
-
-Therefore, an alternating emf is induced in the coil.
-
-An AC generator converts mechanical energy into electrical energy.`
-        ],
-
-        [
-            "What is a transformer?",
-            `A transformer is a stationary device used to transfer AC electrical power from one circuit to another without changing its frequency.
-
-It works on the principle of mutual induction.
-
-Types:
-
-1. Step-up transformer:
-   Increases voltage and decreases current.
-
-2. Step-down transformer:
-   Decreases voltage and increases current.
-
-The transformer is used in electrical power transmission and distribution.`
-        ],
-
-        [
-            "Define RMS value of an alternating current.",
-            `The root mean square (RMS) value of an alternating current is the square root of the mean of the squares of all instantaneous current values over one complete cycle.
-
-For sinusoidal alternating current:
-
-Irms = I0/√2
-
-Where:
-Irms = RMS current
-I0 = Maximum current
-
-Similarly, for alternating voltage:
-
-Vrms = V0/√2`
-        ]
-    ],
-
-    important: [
-        [
-            "Explain how Lenz's law is in accordance with the law of conservation of energy.",
-            `Lenz's law states that the induced current opposes the change in magnetic flux that produces it.
-
-Explanation:
-
-STEP 1: Bring a magnet towards a conducting coil.
-
-STEP 2: The magnetic flux linked with the coil increases.
-
-STEP 3: An induced current flows in the coil.
-
-STEP 4: The magnetic field produced by the induced current opposes the approaching magnet.
-
-STEP 5: Therefore, an external force must do work to move the magnet towards the coil.
-
-The mechanical work done is converted into electrical energy.
-
-If the induced current helped the magnet's motion instead of opposing it, energy would be produced without external work.
-
-That would violate the law of conservation of energy.
-
-Hence, Lenz's law agrees with the law of conservation of energy.`
-        ],
-
-        [
-            "Obtain the expression for motional emf.",
-            `Consider a conducting rod of length l moving with velocity v perpendicular to a uniform magnetic field B.
-
-A charge q moving inside the rod experiences magnetic force:
-
-F = qvB
-
-The electric force due to charge separation is:
-
-F = qE
-
-At equilibrium:
-
-qE = qvB
-
-Cancel q:
-
-E = vB
-
-Potential difference across the rod is:
-
-ε = El
-
-Substitute E = vB:
-
-ε = Blv
-
-Therefore,
-
-Motional emf = Blv
-
-Where:
-B = Magnetic field
-l = Length of the rod
-v = Velocity of the rod
-
-This expression is valid when the rod moves perpendicular to the magnetic field and its length is perpendicular to the velocity.`
-        ],
-
-        [
-            "Explain the construction and working of a single-phase AC generator.",
-            `PRINCIPLE:
-
-An AC generator works on electromagnetic induction.
-
-CONSTRUCTION:
-
-1. Armature coil: A rectangular coil that rotates in a magnetic field.
-2. Field magnet: Produces a magnetic field.
-3. Slip rings: Connected to the two ends of the rotating coil.
-4. Carbon brushes: Maintain electrical contact with the external circuit.
-5. External circuit: Receives the generated alternating current.
-
-WORKING:
-
-STEP 1: The armature coil is rotated mechanically between the poles of a magnet.
-
-STEP 2: The magnetic flux linked with the coil changes continuously.
-
-STEP 3: According to Faraday's law, an emf is induced in the coil.
-
-STEP 4: During the first half rotation, current flows in one direction.
-
-STEP 5: During the next half rotation, the direction of current reverses.
-
-Therefore, alternating current is produced.
-
-Energy conversion:
-
-Mechanical energy → Electrical energy`
-        ],
-
-        [
-            "Explain the construction and working of a transformer.",
-            `PRINCIPLE:
-
-A transformer works on the principle of mutual induction.
-
-CONSTRUCTION:
-
-1. Primary winding: The coil connected to the AC input.
-2. Secondary winding: The coil connected to the output.
-3. Laminated soft iron core: Provides a path for magnetic flux.
-
-WORKING:
-
-STEP 1: Alternating current is supplied to the primary winding.
-
-STEP 2: It produces a continuously changing magnetic flux in the iron core.
-
-STEP 3: This changing flux links with the secondary winding.
-
-STEP 4: An emf is induced in the secondary winding due to mutual induction.
-
-Transformer equation:
-
-Vs/Vp = Ns/Np
-
-Where:
-Vs = Secondary voltage
-Vp = Primary voltage
-Ns = Number of secondary turns
-Np = Number of primary turns
-
-Step-up transformer:
-Ns > Np, so Vs > Vp.
-
-Step-down transformer:
-Ns < Np, so Vs < Vp.`
-        ],
-
-        [
-            "Explain resonance in a series RLC circuit.",
-            `A series RLC circuit contains a resistor R, an inductor L and a capacitor C connected in series.
-
-Resonance occurs when the frequency of the applied AC source equals the natural frequency of the circuit.
-
-At resonance:
-
-XL = XC
-
-Where:
-XL = Inductive reactance
-XC = Capacitive reactance
-
-The impedance becomes minimum:
-
-Z = R
-
-Therefore, the current reaches its maximum value.
-
-Resonant angular frequency:
-
-ω0 = 1/√LC
-
-Resonant frequency:
-
-f0 = 1/(2π√LC)
-
-The phenomenon is called electrical resonance.`
-        ]
-    ],
-
-    worked: [
-        [
-            "A coil has 200 turns. The magnetic flux changes from 0.04 Wb to 0.01 Wb in 0.1 second. Find the magnitude of induced emf.",
+            "A coil of 100 turns experiences a change in magnetic flux of 0.02 Wb in 0.1 seconds. Calculate the induced EMF.",
             `Given:
 
-Number of turns, N = 200
-
-Initial flux = 0.04 Wb
-
-Final flux = 0.01 Wb
-
+N = 100
+Change in flux = 0.02 Wb
 Time = 0.1 s
 
-STEP 1: Find the change in magnetic flux.
+Formula:
 
-ΔΦ = 0.04 - 0.01
+|ε| = N × (change in flux/time)
 
-ΔΦ = 0.03 Wb
+Substitute:
 
-STEP 2: Apply Faraday's law.
+|ε| = 100 × (0.02/0.1)
 
-|ε| = N × |ΔΦ/Δt|
+Final answer:
 
-STEP 3: Substitute the values.
-
-|ε| = 200 × (0.03/0.1)
-
-|ε| = 200 × 0.3
-
-<escape>|ε| = 60 V</escape>
-
-Final Answer: 60 V`
+|ε| = 20 V.`
         ],
-
         [
-            "A conductor of length 0.5 m moves at a velocity of 4 m/s perpendicular to a magnetic field of 2 T. Calculate the induced emf.",
+            "A galvanometer has a resistance of 50 Ω and carries a current of 0.02 A. Find the potential difference across it.",
             `Given:
 
-Length, l = 0.5 m
-
-Velocity, v = 4 m/s
-
-Magnetic field, B = 2 T
+R = 50 Ω
+I = 0.02 A
 
 Formula:
 
-ε = Blv
+V = IR
 
-STEP 1: Substitute the values.
+Substitute:
 
-ε = 2 × 0.5 × 4
+V = 0.02 × 50
 
-STEP 2: Multiply.
+Final answer:
 
-ε = 1 × 4
-
-Final Answer:
-
-ε = 4 V`
-        ],
-
-        [
-            "An inductor of inductance 2 H carries a current of 3 A. Find the energy stored in the inductor.",
-            `Given:
-
-Inductance, L = 2 H
-
-Current, I = 3 A
-
-Formula:
-
-U = 1/2 LI²
-
-STEP 1: Substitute the values.
-
-U = 1/2 × 2 × 3²
-
-STEP 2: Calculate the square.
-
-3² = 9
-
-U = 1 × 9
-
-Final Answer:
-
-U = 9 J`
-        ],
-
-        [
-            "A transformer has 500 turns in the primary coil and 1000 turns in the secondary coil. If the primary voltage is 120 V, calculate the secondary voltage.",
-            `Given:
-
-Primary turns, Np = 500
-
-Secondary turns, Ns = 1000
-
-Primary voltage, Vp = 120 V
-
-Formula:
-
-Vs/Vp = Ns/Np
-
-STEP 1: Rearrange the formula.
-
-Vs = Vp × Ns/Np
-
-STEP 2: Substitute the values.
-
-Vs = 120 × 1000/500
-
-STEP 3: Simplify.
-
-Vs = 120 × 2
-
-Final Answer:
-
-Vs = 240 V
-
-Since the secondary has more turns, this is a step-up transformer.`
-        ],
-
-        [
-            "An AC current has a maximum value of 10 A. Calculate its RMS value.",
-            `Given:
-
-Maximum current, I0 = 10 A
-
-Formula:
-
-Irms = I0/√2
-
-STEP 1: Substitute the value.
-
-Irms = 10/√2
-
-STEP 2: Use √2 = 1.414.
-
-Irms = 10/1.414
-
-Final Answer:
-
-Irms ≈ 7.07 A`
-        ],
-
-        [
-            "Calculate the resonant frequency of an LC circuit having L = 0.2 H and C = 50 μF.",
-            `Given:
-
-L = 0.2 H
-
-C = 50 μF
-
-Convert capacitance into farad:
-
-C = 50 × 10⁻⁶ F
-
-Formula:
-
-f0 = 1/(2π√LC)
-
-STEP 1: Substitute the values.
-
-f0 = 1/[2π√(0.2 × 50 × 10⁻⁶)]
-
-STEP 2: Multiply inside the square root.
-
-LC = 10 × 10⁻⁶
-
-LC = 10⁻⁵
-
-STEP 3: Calculate the square root.
-
-√LC ≈ 0.003162
-
-STEP 4: Calculate the frequency.
-
-f0 = 1/(2π × 0.003162)
-
-Final Answer:
-
-f0 ≈ 50.3 Hz`
+V = 1 V.`
         ]
     ],
 
     formula: [
-        "Magnetic flux: ΦB = BA cos θ",
-        "Faraday's law: ε = -N(dΦB/dt)",
-        "Average induced emf magnitude: |ε| = N|ΔΦB/Δt|",
-        "Motional emf: ε = Blv",
-        "Self-induced emf: ε = -L(di/dt)",
-        "Mutual induction: ε₂ = -M(di₁/dt)",
-        "Energy stored in an inductor: U = 1/2 LI²",
-        "Inductance of a long solenoid: L = μ₀N²A/l",
-        "Transformer equation: Vs/Vp = Ns/Np",
-        "Transformer efficiency: η = (Output power/Input power) × 100%",
-        "RMS current: Irms = I₀/√2",
-        "RMS voltage: Vrms = V₀/√2",
-        "Inductive reactance: XL = ωL",
-        "Capacitive reactance: XC = 1/(ωC)",
-        "Impedance: Z = √[R² + (XL - XC)²]",
-        "Resonant angular frequency: ω₀ = 1/√LC",
-        "Resonant frequency: f₀ = 1/(2π√LC)",
-        "Average power: P = Vrms Irms cos φ",
-        "Power factor: cos φ = R/Z",
-        "LC oscillation frequency: f = 1/(2π√LC)"
+        "Biot-Savart law: dB = (μ₀/4π)(I dl sin θ/r²)",
+        "Ampere's law: ∮ B · dl = μ₀I",
+        "Straight wire: B = μ₀I/(2πr)",
+        "Circular coil centre: B = μ₀NI/(2R)",
+        "Magnetic force: F = qvB sin θ",
+        "Force on conductor: F = BIL sin θ"
     ]
 },
 
+
+</script>
+
+/* =====================================================
+   UNIT 4 - ELECTROMAGNETIC INDUCTION AND AC
+===================================================== */
+
 {
-    id: 5,
-    title: "Electromagnetic Waves",
-    subtitle: "Unit 5 | Volume 1",
+    title: "Electromagnetic Induction and Alternating Current",
+    volume: 1,
 
     bookback: [
-        [
-            "What is displacement current?",
-            `Displacement current is the current associated with the time rate of change of electric flux.
+        ["What is electromagnetic induction?",
+         `Electromagnetic induction is the phenomenon of producing an induced EMF when the magnetic flux linked with a circuit changes.`],
+        ["State Faraday's first law.",
+         `Whenever the magnetic flux linked with a circuit changes, an EMF is induced in the circuit.`],
+        ["State Faraday's second law.",
+         `The magnitude of induced EMF is proportional to the rate of change of magnetic flux linkage.
 
-It was introduced by James Clerk Maxwell to modify Ampere's circuital law.
+ε = -N(dΦ/dt)`],
+        ["State Lenz's law.",
+         `The direction of induced current is such that it opposes the change in magnetic flux that produces it.`],
+        ["Define self-inductance.",
+         `Self-inductance is the property of a coil by which it opposes a change in current flowing through itself.
 
-Formula:
+ε = -L(dI/dt)
 
-Id = ε₀(dΦE/dt)
+SI unit: Henry (H).`],
+        ["What is alternating current?",
+         `Alternating current is an electric current whose magnitude and direction change periodically with time.
 
-Where:
-Id = Displacement current
-ε₀ = Permittivity of free space
-ΦE = Electric flux`
-        ],
-
-        [
-            "Why did Maxwell introduce displacement current?",
-            `Maxwell introduced displacement current to explain the magnetic field produced by a changing electric field.
-
-In a charging capacitor, conduction current flows through the connecting wires, but there is no conduction current through the space between the plates.
-
-However, the changing electric field between the plates produces a displacement current.
-
-This makes Ampere's circuital law consistent for a charging capacitor.`
-        ],
-
-        [
-            "Write down the properties of electromagnetic waves.",
-            `Properties of electromagnetic waves:
-
-1. They are transverse waves.
-2. They do not require a material medium for propagation.
-3. They travel at the speed of light in vacuum.
-4. Electric and magnetic fields oscillate perpendicular to each other.
-5. Both fields are perpendicular to the direction of propagation.
-6. Electric and magnetic fields are in the same phase.
-7. They carry energy and momentum.
-8. They can undergo reflection, refraction, interference and diffraction.`
-        ],
-
-        [
-            "Explain the source of electromagnetic waves.",
-            `Electromagnetic waves are produced by accelerated electric charges.
-
-Explanation:
-
-STEP 1: A stationary electric charge produces an electric field.
-
-STEP 2: A charge moving with uniform velocity produces a steady current and magnetic field.
-
-STEP 3: When a charge accelerates or oscillates, it produces time-varying electric and magnetic fields.
-
-STEP 4: These changing fields travel through space as electromagnetic waves.
-
-Examples of sources include oscillating electric charges and transmitting antennas.`
-        ],
-
-        [
-            "What is the electromagnetic spectrum?",
-            `The electromagnetic spectrum is the orderly distribution of electromagnetic waves according to their wavelength or frequency.
-
-The main regions are:
-
-1. Radio waves
-2. Microwaves
-3. Infrared rays
-4. Visible light
-5. Ultraviolet rays
-6. X-rays
-7. Gamma rays
-
-These waves have different wavelengths and frequencies, but they all belong to the electromagnetic family.`
-        ],
-
-        [
-            "What are microwaves? Mention their applications.",
-            `Microwaves are electromagnetic waves with frequencies approximately in the range of 10⁹ Hz to 10¹¹ Hz as described in the textbook section.
-
-Applications:
-
-1. Radar systems.
-2. Aircraft navigation.
-3. Measuring vehicle speed.
-4. Microwave ovens.
-5. Long-distance wireless communication through satellites.`
-        ],
-
-        [
-            "What are infrared rays? Mention their applications.",
-            `Infrared rays are electromagnetic waves with frequencies lower than visible light.
-
-Applications include:
-
-1. Remote-control devices.
-2. Thermal imaging.
-3. Night-vision equipment.
-4. Infrared photography.
-5. Studying heat radiation.`
-        ],
-
-        [
-            "What are X-rays? Mention their applications.",
-            `X-rays are electromagnetic waves with very short wavelengths and high frequencies.
-
-Applications:
-
-1. Medical imaging to examine bones.
-2. Detecting defects in materials.
-3. Security scanning.
-4. Scientific research.
-
-X-rays can pass through many materials, but their absorption depends on the material and its thickness.`
-        ]
+i = I₀ sin ωt`]
     ],
 
     important: [
-        [
-            "Explain Maxwell's correction to Ampere's circuital law.",
-            `Ampere's circuital law relates the magnetic field around a closed path to the current passing through the surface bounded by that path.
+        ["Explain the laws of electromagnetic induction.",
+         `Faraday's first law: A changing magnetic flux induces an EMF.
 
-However, when a capacitor is charging, conduction current flows through the connecting wire but not through the gap between the plates.
+Faraday's second law: The induced EMF is proportional to the rate of change of magnetic flux linkage.
 
-This creates a problem if we apply Ampere's law using different surfaces.
+ε = -N(dΦ/dt)
 
-Maxwell solved this problem by introducing displacement current.
+The negative sign represents Lenz's law.`],
+        ["Explain Lenz's law using the principle of conservation of energy.",
+         `Lenz's law states that induced current opposes the change in magnetic flux that produces it.
 
-Displacement current:
+If the induced current supported the original change, energy would be produced without any external work.
 
-Id = ε₀(dΦE/dt)
+Therefore, the induced current must oppose the change, following conservation of energy.`],
+        ["Explain self-induction.",
+         `When current through a coil changes, the magnetic flux linked with the same coil also changes.
 
-The modified Ampere-Maxwell law is:
+This produces an induced EMF in the coil itself.
 
-∮ B · dl = μ₀(Ic + Id)
+ε = -L(dI/dt)
 
-Where:
-Ic = Conduction current
-Id = Displacement current
-μ₀ = Permeability of free space
+L is called the coefficient of self-inductance.`],
+        ["Explain mutual induction.",
+         `When the current in one coil changes, the magnetic flux linked with a nearby coil changes.
 
-Importance:
+An EMF is induced in the second coil.
 
-Maxwell's correction explains the magnetic field associated with a changing electric field and supports the existence of electromagnetic waves.`
-        ],
+ε₂ = -M(dI₁/dt)
 
-        [
-            "Explain the electromagnetic spectrum and its uses.",
-            `The electromagnetic spectrum is the arrangement of electromagnetic waves based on wavelength or frequency.
+M is the mutual inductance between the two coils.`],
+        ["Explain the working principle of an AC generator.",
+         `An AC generator converts mechanical energy into electrical energy.
 
-Order from lower frequency to higher frequency:
+A coil rotates in a magnetic field. The magnetic flux linked with the coil changes continuously, producing an induced EMF.
 
-1. Radio waves:
-   Used in radio and television communication.
+The direction of the induced EMF changes every half rotation, producing alternating current.`],
+        ["Explain the working principle of a transformer.",
+         `A transformer works on the principle of mutual induction.
 
-2. Microwaves:
-   Used in radar, satellite communication and microwave ovens.
+An alternating current in the primary coil produces a changing magnetic flux in the core. This flux induces an EMF in the secondary coil.
 
-3. Infrared rays:
-   Used in remote controls and thermal imaging.
+For an ideal transformer:
 
-4. Visible light:
-   Helps human beings see objects.
+Vs/Vp = Ns/Np
 
-5. Ultraviolet rays:
-   Used in certain sterilisation and scientific applications.
-
-6. X-rays:
-   Used in medical imaging and material inspection.
-
-7. Gamma rays:
-   Used in medical and scientific applications.
-
-Important relationship:
-
-As frequency increases, wavelength decreases.
-
-c = fλ`
-        ],
-
-        [
-            "Show that the speed of electromagnetic waves in vacuum is equal to the speed of light.",
-            `Maxwell showed that the speed of electromagnetic waves in vacuum is:
-
-c = 1/√(μ₀ε₀)
-
-Where:
-μ₀ = Permeability of free space
-ε₀ = Permittivity of free space
-
-Substituting the values of these constants gives:
-
-c ≈ 3 × 10⁸ m/s
-
-This is equal to the speed of light in vacuum.
-
-Therefore, light is an electromagnetic wave.`
-        ],
-
-        [
-            "Explain the relationship between electric and magnetic field amplitudes in an electromagnetic wave.",
-            `In an electromagnetic wave travelling through vacuum, the electric field and magnetic field are perpendicular to each other and to the direction of propagation.
-
-Their amplitudes are related by:
-
-E₀/B₀ = c
-
-Therefore:
-
-E₀ = cB₀
-
-Where:
-E₀ = Amplitude of electric field
-B₀ = Amplitude of magnetic field
-c = Speed of light in vacuum
-
-This relationship shows that the electric and magnetic fields are connected in an electromagnetic wave.`
-        ]
+Here N represents the number of turns.`]
     ],
 
     worked: [
-        [
-            "An electromagnetic wave travels in vacuum with frequency 6 × 10⁸ Hz. Calculate its wavelength.",
-            `Given:
+        ["A coil of 100 turns experiences a flux change of 0.05 Wb in 0.1 s. Find the induced EMF.",
+         `Given:
 
-Frequency, f = 6 × 10⁸ Hz
+N = 100
+ΔΦ = 0.05 Wb
+Δt = 0.1 s
 
-Speed of light, c = 3 × 10⁸ m/s
+Formula:
+
+|ε| = N × ΔΦ/Δt
+
+Substitute:
+
+|ε| = 100 × 0.05/0.1
+
+Answer:
+
+|ε| = 50 V.`],
+        ["The current in a 2 H inductor changes at 3 A/s. Find the induced EMF.",
+         `Given:
+
+L = 2 H
+dI/dt = 3 A/s
 
 Formula:
 
-c = fλ
+|ε| = L(dI/dt)
 
-Rearrange:
+Substitute:
 
-λ = c/f
+|ε| = 2 × 3
 
-STEP 1: Substitute the values.
+Answer:
 
-λ = (3 × 10⁸)/(6 × 10⁸)
+|ε| = 6 V.`],
+        ["An AC source has a maximum voltage of 100 V. Find its RMS voltage.",
+         `Given:
 
-STEP 2: Simplify.
-
-λ = 3/6
-
-Final Answer:
-
-λ = 0.5 m`
-        ],
-
-        [
-            "The amplitude of the electric field of an electromagnetic wave is 300 N/C. Calculate the amplitude of its magnetic field.",
-            `Given:
-
-Electric field amplitude, E₀ = 300 N/C
-
-Speed of light, c = 3 × 10⁸ m/s
+V₀ = 100 V
 
 Formula:
+
+Vrms = V₀/√2
+
+Substitute:
+
+Vrms = 100/1.414
+
+Answer:
+
+Vrms ≈ 70.7 V.`],
+        ["An AC current has a maximum value of 10 A. Find its RMS value.",
+         `Given:
+
+I₀ = 10 A
+
+Formula:
+
+Irms = I₀/√2
+
+Substitute:
+
+Irms = 10/1.414
+
+Answer:
+
+Irms ≈ 7.07 A.`],
+        ["A transformer has 500 turns in its primary and 1000 turns in its secondary. If the primary voltage is 120 V, find the secondary voltage.",
+         `Given:
+
+Np = 500
+Ns = 1000
+Vp = 120 V
+
+Formula:
+
+Vs/Vp = Ns/Np
+
+Vs = 120 × 1000/500
+
+Answer:
+
+Vs = 240 V.`],
+        ["An AC circuit has a resistance of 20 Ω and an RMS current of 2 A. Find the average power consumed.",
+         `Given:
+
+R = 20 Ω
+Irms = 2 A
+
+Formula:
+
+P = Irms²R
+
+Substitute:
+
+P = 2² × 20
+
+Answer:
+
+P = 80 W.`]
+    ],
+
+    formula: [
+        "Faraday's law: ε = -N(dΦ/dt)",
+        "Self-induced EMF: ε = -L(dI/dt)",
+        "Mutual-induced EMF: ε₂ = -M(dI₁/dt)",
+        "RMS voltage: Vrms = V₀/√2",
+        "RMS current: Irms = I₀/√2",
+        "Transformer: Vs/Vp = Ns/Np"
+    ]
+},
+
+/* =====================================================
+   UNIT 5 - ELECTROMAGNETIC WAVES
+===================================================== */
+
+{
+    title: "Electromagnetic Waves",
+    volume: 1,
+
+    bookback: [
+        ["What are electromagnetic waves?",
+         `Electromagnetic waves are waves consisting of changing electric and magnetic fields that travel through space.`],
+        ["Can electromagnetic waves travel through vacuum?",
+         `Yes. Electromagnetic waves do not require a material medium and can travel through vacuum.`],
+        ["What is the speed of electromagnetic waves in vacuum?",
+         `The speed of electromagnetic waves in vacuum is approximately:
+
+c = 3 × 10⁸ m/s.`],
+        ["What is displacement current?",
+         `Displacement current is the current associated with a changing electric field.
+
+Id = ε₀(dΦE/dt)`],
+        ["What are transverse electromagnetic waves?",
+         `Electromagnetic waves are transverse because their electric and magnetic fields are perpendicular to each other and to the direction of propagation.`],
+        ["Name the different regions of the electromagnetic spectrum.",
+         `The electromagnetic spectrum includes:
+
+Radio waves, microwaves, infrared rays, visible light, ultraviolet rays, X-rays and gamma rays.`]
+    ],
+
+    important: [
+        ["Explain the important properties of electromagnetic waves.",
+         `1. They are transverse waves.
+2. They can travel through vacuum.
+3. Their electric and magnetic fields are perpendicular to each other.
+4. They carry energy and momentum.
+5. They travel at approximately 3 × 10⁸ m/s in vacuum.
+6. They are produced by accelerating electric charges.`],
+        ["Explain the electromagnetic spectrum.",
+         `The electromagnetic spectrum is the complete range of electromagnetic waves arranged according to frequency or wavelength.
+
+Order of increasing frequency:
+
+Radio waves → Microwaves → Infrared → Visible light → Ultraviolet → X-rays → Gamma rays.
+
+Frequency increases while wavelength decreases in this order.`],
+        ["Write the uses of radio waves and microwaves.",
+         `Radio waves are used in radio and television broadcasting and communication.
+
+Microwaves are used in radar systems, satellite communication and microwave ovens.`],
+        ["Write the uses of infrared and ultraviolet rays.",
+         `Infrared rays are used in remote controls, thermal imaging and night-vision equipment.
+
+Ultraviolet rays are used in sterilisation and detecting certain fluorescent materials.`],
+        ["Write the uses of X-rays and gamma rays.",
+         `X-rays are used in medical imaging and security scanning.
+
+Gamma rays are used in cancer treatment and sterilisation of medical equipment.`],
+        ["Explain the relation between the electric field and magnetic field in an electromagnetic wave.",
+         `In an electromagnetic wave, the electric field and magnetic field are mutually perpendicular.
+
+In vacuum:
 
 E₀/B₀ = c
 
-Rearrange:
+Here:
+E₀ = maximum electric field
+B₀ = maximum magnetic field
+c = speed of light.`]
+    ],
 
-B₀ = E₀/c
+    worked: [
+        ["Calculate the frequency of a wave having wavelength 3 m.",
+         `Given:
 
-STEP 1: Substitute the values.
-
-B₀ = 300/(3 × 10⁸)
-
-STEP 2: Simplify.
-
-B₀ = 100 × 10⁻⁸
-
-Final Answer:
-
-B₀ = 1 × 10⁻⁶ T`
-        ],
-
-        [
-            "An electromagnetic wave has a wavelength of 3 m. Calculate its frequency in vacuum.",
-            `Given:
-
-Wavelength, λ = 3 m
-
-Speed of light, c = 3 × 10⁸ m/s
+λ = 3 m
+c = 3 × 10⁸ m/s
 
 Formula:
 
 c = fλ
 
-Rearrange:
-
 f = c/λ
 
-STEP 1: Substitute the values.
+Substitute:
 
 f = (3 × 10⁸)/3
 
-STEP 2: Simplify.
+Answer:
 
-Final Answer:
+f = 1 × 10⁸ Hz.`],
+        ["Find the wavelength of an electromagnetic wave having frequency 6 × 10⁸ Hz.",
+         `Given:
 
-f = 1 × 10⁸ Hz`
-        ],
+f = 6 × 10⁸ Hz
+c = 3 × 10⁸ m/s
 
-        [
-            "If the relative permeability of a medium is 1 and its relative permittivity is 2.25, calculate the speed of the electromagnetic wave in that medium.",
-            `Given:
+Formula:
 
-Relative permeability, μr = 1
+λ = c/f
 
-Relative permittivity, εr = 2.25
+Substitute:
 
-Speed of light in vacuum:
+λ = (3 × 10⁸)/(6 × 10⁸)
+
+Answer:
+
+λ = 0.5 m.`],
+        ["An electromagnetic wave has an electric field of 300 V/m. Find the magnetic field amplitude.",
+         `Given:
+
+E₀ = 300 V/m
+c = 3 × 10⁸ m/s
+
+Formula:
+
+B₀ = E₀/c
+
+Substitute:
+
+B₀ = 300/(3 × 10⁸)
+
+Answer:
+
+B₀ = 1 × 10⁻⁶ T.`],
+        ["Find the frequency of a wave having wavelength 600 nm.",
+         `Given:
+
+λ = 600 nm = 600 × 10⁻⁹ m
 
 c = 3 × 10⁸ m/s
 
 Formula:
 
-v = c/√(μr εr)
+f = c/λ
 
-STEP 1: Substitute the values.
+Substitute:
 
-v = (3 × 10⁸)/√(1 × 2.25)
+f = (3 × 10⁸)/(600 × 10⁻⁹)
 
-STEP 2: Calculate the square root.
+Answer:
 
-√2.25 = 1.5
+f = 5 × 10¹⁴ Hz.`],
+        ["An electromagnetic wave has a frequency of 2 × 10¹⁰ Hz. Calculate its wavelength.",
+         `Given:
 
-STEP 3: Divide.
-
-v = (3 × 10⁸)/1.5
-
-Final Answer:
-
-v = 2 × 10⁸ m/s`
-        ],
-
-        [
-            "An electromagnetic wave has a frequency of 10¹⁰ Hz. Calculate its wavelength in vacuum.",
-            `Given:
-
-Frequency, f = 10¹⁰ Hz
-
-Speed of light, c = 3 × 10⁸ m/s
+f = 2 × 10¹⁰ Hz
+c = 3 × 10⁸ m/s
 
 Formula:
 
 λ = c/f
 
-STEP 1: Substitute the values.
+Substitute:
 
-λ = (3 × 10⁸)/(10¹⁰)
+λ = (3 × 10⁸)/(2 × 10¹⁰)
 
-STEP 2: Subtract the powers of ten.
+Answer:
 
-λ = 3 × 10⁻² m
+λ = 0.015 m.`],
+        ["Calculate the time period of an electromagnetic wave with frequency 5 × 10⁶ Hz.",
+         `Given:
 
-Final Answer:
+f = 5 × 10⁶ Hz
 
-λ = 0.03 m`
-        ]
+Formula:
+
+T = 1/f
+
+Substitute:
+
+T = 1/(5 × 10⁶)
+
+Answer:
+
+T = 2 × 10⁻⁷ s.`]
     ],
 
     formula: [
+        "Wave speed: c = fλ",
+        "Speed in vacuum: c = 3 × 10⁸ m/s",
+        "Time period: T = 1/f",
+        "Electric and magnetic fields: E₀/B₀ = c",
         "Displacement current: Id = ε₀(dΦE/dt)",
-        "Electric flux: ΦE = EA cos θ",
-        "Speed of electromagnetic wave in vacuum: c = 1/√(μ₀ε₀)",
-        "Speed in a medium: v = 1/√(με)",
-        "Speed in a medium using relative values: v = c/√(μrεr)",
-        "Wave equation: c = fλ",
-        "Electric and magnetic field relation: E₀/B₀ = c",
-        "Electric field amplitude: E₀ = cB₀",
-        "Magnetic field amplitude: B₀ = E₀/c",
-        "Refractive index: n = c/v",
-        "Electromagnetic wave number: k = 2π/λ",
         "Angular frequency: ω = 2πf"
     ]
 },
 
+/* =====================================================
+   UNIT 6 - RAY OPTICS
+===================================================== */
+
 {
-    id: 6,
     title: "Ray Optics",
-    subtitle: "Unit 6 | Volume 2",
+    volume: 2,
 
     bookback: [
-        [
-            "What is ray optics?",
-            `Ray optics is the branch of optics that studies light by representing it as rays travelling in straight lines.
+        ["State the laws of reflection.",
+         `1. The incident ray, reflected ray and normal lie in the same plane.
+2. The angle of incidence is equal to the angle of reflection.`],
+        ["State Snell's law.",
+         `For light passing between two media:
 
-A ray gives information about the direction of propagation of light.
+n₁ sin i = n₂ sin r
 
-It is used to explain:
+The ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant for a given pair of media.`],
+        ["Define refractive index.",
+         `Refractive index is the ratio of the speed of light in vacuum to its speed in a medium.
 
-1. Reflection.
-2. Refraction.
-3. Dispersion.
-4. Scattering.
-5. Image formation by mirrors and lenses.`
-        ],
+n = c/v`],
+        ["What is total internal reflection?",
+         `Total internal reflection is the phenomenon in which light travelling from a denser medium to a rarer medium is completely reflected back when the angle of incidence exceeds the critical angle.`],
+        ["Define power of a lens.",
+         `The power of a lens is the reciprocal of its focal length in metres.
 
-        [
-            "State the laws of reflection.",
-            `There are two laws of reflection.
+P = 1/f
 
-First law:
+SI unit: Dioptre (D).`],
+        ["What is a simple microscope?",
+         `A simple microscope is a convex lens of short focal length used to obtain a magnified virtual image of a small object.`]
+    ],
 
-The incident ray, reflected ray and normal at the point of incidence all lie in the same plane.
+    important: [
+        ["Explain refraction of light.",
+         `Refraction is the bending of light when it travels from one transparent medium to another because its speed changes.
 
-Second law:
+The frequency remains constant, while speed and wavelength change.
 
-The angle of incidence is equal to the angle of reflection.
+Snell's law:
 
-i = r
+n₁ sin i = n₂ sin r.`],
+        ["Explain total internal reflection and its conditions.",
+         `Total internal reflection occurs when light is completely reflected at the boundary instead of entering the second medium.
 
-Where:
-i = Angle of incidence
-r = Angle of reflection`
-        ],
+Conditions:
+1. Light must travel from an optically denser medium to a rarer medium.
+2. The angle of incidence must be greater than the critical angle.
 
-        [
-            "What is refraction of light?",
-            `Refraction is the bending of light when it travels from one transparent medium to another due to a change in its speed.
+Applications include optical fibres and reflecting prisms.`],
+        ["Derive the lens maker's formula.",
+         `For a thin lens in air, the lens maker's formula is:
 
-For example:
+1/f = (n - 1)(1/R₁ - 1/R₂)
 
-When light travels from air into glass, its speed decreases and the ray bends towards the normal.
+Here:
+f = focal length
+n = refractive index of lens material
+R₁ and R₂ = radii of curvature of the two surfaces.
 
-When light travels from glass into air, its speed increases and the ray bends away from the normal.
+The formula relates the focal length to the refractive index and surface curvatures.`],
+        ["Explain the working of an optical fibre.",
+         `An optical fibre consists of a central core surrounded by cladding.
 
-The bending depends on the refractive indices of the two media.`
-        ],
+Light travels through the core by repeated total internal reflection.
 
-        [
-            "Define refractive index.",
-            `The absolute refractive index of a medium is the ratio of the speed of light in vacuum to the speed of light in that medium.
+Optical fibres are used in communication, medical endoscopy and data transmission.`],
+        ["Explain the defects of vision and their correction.",
+         `Myopia: Distant objects appear blurred. It is corrected using a concave lens.
+
+Hypermetropia: Nearby objects appear blurred. It is corrected using a convex lens.
+
+Presbyopia: The eye's accommodation ability decreases with age. It may be corrected using suitable lenses.`],
+        ["Explain the working of a compound microscope.",
+         `A compound microscope uses two convex lenses: an objective and an eyepiece.
+
+The objective forms a magnified real image of the object.
+
+The eyepiece acts as a magnifying glass and produces a larger virtual image.`]
+    ],
+
+    worked: [
+        ["Find the refractive index of a medium if the speed of light in it is 2 × 10⁸ m/s.",
+         `Given:
+
+c = 3 × 10⁸ m/s
+v = 2 × 10⁸ m/s
 
 Formula:
 
 n = c/v
 
-Where:
-n = Refractive index
-c = Speed of light in vacuum
-v = Speed of light in the medium
+Substitute:
 
-The refractive index indicates how much the speed of light changes in a medium compared with vacuum.`
-        ],
+n = (3 × 10⁸)/(2 × 10⁸)
 
-        [
-            "What is total internal reflection?",
-            `Total internal reflection is the phenomenon in which light travelling from a denser medium to a rarer medium is completely reflected back into the denser medium when the angle of incidence is greater than the critical angle.
+Answer:
 
-Conditions:
+n = 1.5.`],
+        ["A lens has a focal length of 0.5 m. Find its power.",
+         `Given:
 
-1. Light must travel from an optically denser medium to an optically rarer medium.
+f = 0.5 m
 
-2. The angle of incidence must be greater than the critical angle.
+Formula:
 
-Applications:
+P = 1/f
 
-1. Optical fibres.
-2. Medical endoscopy.
-3. Reflecting prisms.`
-        ],
+Substitute:
 
-        [
-            "What is critical angle?",
-            `The critical angle is the angle of incidence in the denser medium for which the angle of refraction in the rarer medium becomes 90°.
+P = 1/0.5
 
-For a denser medium with refractive index n₁ and a rarer medium with refractive index n₂:
+Answer:
 
-sin C = n₂/n₁
+P = +2 D for a converging lens.`],
+        ["The refractive index of glass is 1.5. Find the critical angle for a glass-air boundary.",
+         `Given:
 
-For a medium-to-air boundary:
+n = 1.5
+
+Formula:
 
 sin C = 1/n
 
-Where C is the critical angle.`
-        ],
+Substitute:
 
-        [
-            "What is dispersion of light?",
-            `Dispersion is the phenomenon of splitting white light into its constituent colours when it passes through a prism.
+sin C = 1/1.5
 
-The seven colours are:
+C = sin⁻¹(0.667)
 
-Violet, Indigo, Blue, Green, Yellow, Orange and Red.
+Answer:
 
-This happens because different colours have different refractive indices in glass and therefore undergo different deviations.
+C ≈ 41.8°.`],
+        ["An object is placed 30 cm from a concave mirror of focal length 15 cm. Find the image distance using the mirror formula.",
+         `Using the Cartesian sign convention:
 
-Violet deviates more than red.`
-        ],
-
-        [
-            "What is scattering of light?",
-            `Scattering of light is the phenomenon in which light is redirected in different directions when it interacts with particles in a medium.
-
-Rayleigh scattering occurs when the scattering particles are much smaller than the wavelength of light.
-
-According to Rayleigh's law:
-
-I ∝ 1/λ⁴
-
-This explains why shorter wavelengths are scattered more strongly than longer wavelengths in the relevant conditions.`
-        ]
-    ],
-
-    important: [
-        [
-            "Explain the laws of refraction (Snell's law).",
-            `There are two laws of refraction.
-
-First law:
-
-The incident ray, refracted ray and normal at the point of incidence lie in the same plane.
-
-Second law:
-
-For a given pair of media, the ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant.
-
-sin i/sin r = constant
-
-This constant is the relative refractive index of the second medium with respect to the first medium.
-
-Snell's law:
-
-n₁ sin i = n₂ sin r
-
-Where:
-n₁ = Refractive index of the first medium
-n₂ = Refractive index of the second medium
-i = Angle of incidence
-r = Angle of refraction`
-        ],
-
-        [
-            "Derive the relation between refractive index and critical angle.",
-            `Consider light travelling from a denser medium of refractive index n₁ to a rarer medium of refractive index n₂.
-
-At the critical angle:
-
-Angle of incidence = C
-
-Angle of refraction = 90°
-
-Using Snell's law:
-
-n₁ sin C = n₂ sin 90°
-
-Since sin 90° = 1:
-
-n₁ sin C = n₂
-
-Rearranging:
-
-sin C = n₂/n₁
-
-For a denser medium to air:
-
-n₂ = 1
-
-Therefore:
-
-sin C = 1/n₁
-
-Hence:
-
-n₁ = 1/sin C`
-        ],
-
-        [
-            "Explain image formation by a spherical mirror and write the mirror formula.",
-            `A spherical mirror is a mirror whose reflecting surface forms part of a sphere.
-
-Types:
-
-1. Concave mirror:
-   Its reflecting surface curves inward.
-
-2. Convex mirror:
-   Its reflecting surface curves outward.
-
-Important terms:
-
-Pole (P): The centre point of the reflecting surface.
-
-Centre of curvature (C): The centre of the sphere of which the mirror is a part.
-
-Radius of curvature (R): Distance between P and C.
-
-Principal focus (F): The point where rays parallel to the principal axis meet or appear to diverge from after reflection.
-
-Focal length:
-
-f = R/2
+u = -30 cm
+f = -15 cm
 
 Mirror formula:
 
 1/f = 1/v + 1/u
 
-Where:
-f = Focal length
-v = Image distance
-u = Object distance
-
-The Cartesian sign convention must be followed while solving numerical problems.`
-        ],
-
-        [
-            "Explain the lens formula and magnification.",
-            `A lens is a transparent optical device bounded by two refracting surfaces, at least one of which is spherical.
-
-Types:
-
-1. Convex lens: Converges parallel rays of light.
-2. Concave lens: Diverges parallel rays of light.
-
-Lens formula:
-
-1/f = 1/v - 1/u
-
-Where:
-f = Focal length
-v = Image distance
-u = Object distance
-
-Linear magnification:
-
-m = v/u
-
-The sign and magnitude of magnification help identify the nature and size of the image.
-
-The Cartesian sign convention must be followed.`
-        ],
-
-        [
-            "Explain the deviation produced by a prism.",
-            `A prism is a transparent refracting medium bounded by two plane refracting surfaces inclined at an angle.
-
-When a ray of light passes through a prism, it undergoes refraction at both surfaces.
-
-The total deviation is:
-
-δ = i₁ + i₂ - A
-
-Where:
-δ = Angle of deviation
-i₁ = Angle of incidence
-i₂ = Angle of emergence
-A = Angle of the prism
-
-At minimum deviation:
-
-The path of the ray through the prism is symmetrical.
-
-The refractive index of the prism is:
-
-n = sin[(A + δm)/2] / sin(A/2)
-
-Where:
-δm = Angle of minimum deviation.`
-        ],
-
-        [
-            "Explain Rayleigh scattering and why the sky appears blue.",
-            `Rayleigh scattering is the scattering of light by particles whose size is much smaller than the wavelength of light.
-
-The intensity of Rayleigh-scattered light is:
-
-I ∝ 1/λ⁴
-
-This means shorter wavelengths are scattered more strongly than longer wavelengths.
-
-Why does the sky appear blue?
-
-STEP 1: Sunlight contains different colours.
-
-STEP 2: When sunlight enters the atmosphere, it interacts with small air molecules.
-
-STEP 3: Shorter wavelengths are scattered more strongly.
-
-STEP 4: Blue light is scattered throughout the sky and reaches our eyes from different directions.
-
-Therefore, the sky appears blue.
-
-The textbook also discusses non-Rayleigh scattering by larger suspended particles.`
-        ]
-    ],
-
-    worked: [
-        [
-            "The speed of light in a medium is 2 × 10⁸ m/s. Calculate its refractive index.",
-            `Given:
-
-Speed of light in vacuum, c = 3 × 10⁸ m/s
-
-Speed in the medium, v = 2 × 10⁸ m/s
-
-Formula:
-
-n = c/v
-
-STEP 1: Substitute the values.
-
-n = (3 × 10⁸)/(2 × 10⁸)
-
-STEP 2: Cancel the powers of ten.
-
-n = 3/2
-
-Final Answer:
-
-n = 1.5`
-        ],
-
-        [
-            "The refractive index of a medium is 1.5. Calculate its critical angle when the rarer medium is air.",
-            `Given:
-
-Refractive index, n = 1.5
-
-Formula:
-
-sin C = 1/n
-
-STEP 1: Substitute the value.
-
-sin C = 1/1.5
-
-STEP 2: Calculate.
-
-sin C = 0.6667
-
-STEP 3: Take inverse sine.
-
-C = sin⁻¹(0.6667)
-
-Final Answer:
-
-C ≈ 41.8°`
-        ],
-
-        [
-            "An object is placed 30 cm in front of a concave mirror of focal length 15 cm. Find the image distance using the Cartesian sign convention.",
-            `Given:
-
-Object distance, u = -30 cm
-
-Focal length, f = -15 cm
-
-We use the mirror formula:
-
-1/f = 1/v + 1/u
-
-STEP 1: Substitute the values.
-
-1/(-15) = 1/v + 1/(-30)
-
-STEP 2: Rearrange.
-
--1/15 = 1/v - 1/30
-
-STEP 3: Add 1/30 to both sides.
+1/-15 = 1/v + 1/-30
 
 1/v = -1/15 + 1/30
 
-STEP 4: Take the common denominator.
-
-1/v = -2/30 + 1/30
-
 1/v = -1/30
 
-Final Answer:
+Answer:
 
-v = -30 cm
+v = -30 cm.`],
+        ["A convex lens has focal length 20 cm. Find its power.",
+         `Given:
 
-The negative sign indicates that the image is formed in front of the mirror.`
-        ],
-
-        [
-            "An object is placed 30 cm in front of a convex lens of focal length 20 cm. Calculate the image distance.",
-            `Given:
-
-Object distance, u = -30 cm
-
-Focal length, f = +20 cm
-
-Lens formula:
-
-1/f = 1/v - 1/u
-
-STEP 1: Substitute the values.
-
-1/20 = 1/v - 1/(-30)
-
-STEP 2: Simplify.
-
-1/20 = 1/v + 1/30
-
-STEP 3: Rearrange.
-
-1/v = 1/20 - 1/30
-
-STEP 4: Take the common denominator.
-
-1/v = 3/60 - 2/60
-
-1/v = 1/60
-
-Final Answer:
-
-v = +60 cm
-
-The positive sign indicates that the image is formed on the other side of the lens.`
-        ],
-
-        [
-            "A prism has an angle of 60° and its angle of minimum deviation is 30°. Calculate its refractive index.",
-            `Given:
-
-Angle of prism, A = 60°
-
-Minimum deviation, δm = 30°
+f = 20 cm = 0.2 m
 
 Formula:
-
-n = sin[(A + δm)/2] / sin(A/2)
-
-STEP 1: Substitute the values.
-
-n = sin[(60° + 30°)/2] / sin(60°/2)
-
-STEP 2: Simplify the angles.
-
-n = sin 45° / sin 30°
-
-STEP 3: Substitute standard values.
-
-n = (1/√2)/(1/2)
-
-STEP 4: Simplify.
-
-n = 2/√2
-
-Final Answer:
-
-n = √2 ≈ 1.414`
-        ],
-
-        [
-            "A convex lens has a focal length of 25 cm. Calculate its power.",
-            `Given:
-
-Focal length, f = 25 cm
-
-STEP 1: Convert centimetres into metres.
-
-f = 25/100
-
-f = 0.25 m
-
-STEP 2: Use the power formula.
 
 P = 1/f
 
-STEP 3: Substitute the value.
+Substitute:
 
-P = 1/0.25
+P = 1/0.2
 
-Final Answer:
+Answer:
 
-P = +4 D
+P = +5 D.`],
+        ["A ray travels from air into glass with angle of incidence 30°. If the refractive index of glass is 1.5, find the angle of refraction.",
+         `Given:
 
-The positive sign indicates a converging convex lens.`
-        ]
+i = 30°
+n₁ = 1
+n₂ = 1.5
+
+Snell's law:
+
+n₁ sin i = n₂ sin r
+
+sin r = sin 30°/1.5
+
+sin r = 0.5/1.5
+
+Answer:
+
+r ≈ 19.5°.`]
     ],
 
     formula: [
-        "Law of reflection: i = r",
+        "Refractive index: n = c/v",
         "Snell's law: n₁ sin i = n₂ sin r",
-        "Absolute refractive index: n = c/v",
-        "Relative refractive index: n₂₁ = n₂/n₁",
-        "Critical angle: sin C = n₂/n₁",
-        "For a medium-to-air boundary: sin C = 1/n",
-        "Spherical mirror relation: f = R/2",
-        "Mirror formula: 1/f = 1/v + 1/u",
-        "Mirror magnification: m = -v/u",
-        "Lens formula: 1/f = 1/v - 1/u",
-        "Lens magnification: m = v/u",
-        "Power of a lens: P = 1/f (f in metres)",
-        "Combination of thin lenses: P = P₁ + P₂",
-        "Prism deviation: δ = i₁ + i₂ - A",
-        "Refractive index at minimum deviation: n = sin[(A + δm)/2]/sin(A/2)",
-        "Rayleigh scattering: I ∝ 1/λ⁴"
-    ]
-}
-,
-{
-    id: 7,
-    title: "Wave Optics",
-    subtitle: "Unit 7 | Volume 2",
-
-    bookback: [
-        [
-            "What is a wavefront?",
-            `A wavefront is an imaginary surface joining all the points of a medium that are vibrating in the same phase.
-
-Types of wavefronts:
-
-1. Spherical wavefront:
-   Produced by a point source of light.
-
-2. Cylindrical wavefront:
-   Produced by a linear source of light.
-
-3. Plane wavefront:
-   Produced when the source is very far away.
-
-A wavefront helps us understand the propagation of light.`
-        ],
-
-        [
-            "State Huygens' principle.",
-            `Huygens' principle states that every point on a wavefront acts as a source of secondary wavelets.
-
-These secondary wavelets spread out in the forward direction with the speed of light in that medium.
-
-The new wavefront is the forward envelope of these secondary wavelets.
-
-This principle is used to explain reflection and refraction of light.`
-        ],
-
-        [
-            "What is interference of light?",
-            `Interference is the phenomenon of redistribution of light energy due to the superposition of two coherent light waves.
-
-When two coherent waves overlap, they produce alternate bright and dark regions.
-
-Types:
-
-1. Constructive interference:
-   The waves reinforce each other and produce a bright fringe.
-
-2. Destructive interference:
-   The waves cancel each other and produce a dark fringe.
-
-Interference demonstrates the wave nature of light.`
-        ],
-
-        [
-            "What are coherent sources?",
-            `Two sources are said to be coherent if they emit light waves of the same frequency and maintain a constant phase difference.
-
-Coherent sources are necessary to obtain a stable interference pattern.
-
-In Young's double-slit experiment, the two slits act as coherent sources because they receive light from the same source.`
-        ],
-
-        [
-            "What is diffraction of light?",
-            `Diffraction is the bending or spreading of light waves around the edges of an obstacle or through a narrow opening.
-
-Diffraction becomes noticeable when the size of the opening or obstacle is comparable to the wavelength of light.
-
-It is another important evidence for the wave nature of light.`
-        ],
-
-        [
-            "What is polarization of light?",
-            `Polarization is the phenomenon of restricting the vibrations of the electric field of light to a particular direction perpendicular to the direction of propagation.
-
-Ordinary light is unpolarized because its electric field vibrations occur in many directions perpendicular to its propagation.
-
-Polarized light has vibrations restricted to a particular direction.
-
-Polarization proves that light is a transverse wave.`
-        ],
-
-        [
-            "State Malus' law.",
-            `Malus' law states that when plane-polarized light passes through an analyser, the intensity of transmitted light is proportional to the square of the cosine of the angle between the transmission axes of the polarizer and analyser.
-
-Formula:
-
-I = I₀ cos² θ
-
-Where:
-I = Transmitted intensity
-I₀ = Maximum intensity
-θ = Angle between the two axes`
-        ],
-
-        [
-            "What is Brewster's law?",
-            `Brewster's law states that when unpolarized light is incident at the polarizing angle, the reflected light is completely plane-polarized.
-
-The tangent of the polarizing angle is equal to the refractive index of the medium with respect to the surrounding medium.
-
-Formula:
-
-μ = tan iₚ
-
-Where:
-μ = Refractive index
-iₚ = Polarizing angle`
-        ]
-    ],
-
-    important: [
-        [
-            "Explain Young's double-slit experiment.",
-            `Young's double-slit experiment demonstrates the interference of light.
-
-EXPERIMENTAL SETUP:
-
-1. A monochromatic light source illuminates a narrow slit.
-2. Light from this slit falls on two closely spaced slits S₁ and S₂.
-3. These two slits act as coherent sources.
-4. A screen is placed at a distance D from the double slits.
-5. Alternate bright and dark fringes appear on the screen.
-
-WORKING:
-
-STEP 1:
-Light waves from S₁ and S₂ travel towards the screen.
-
-STEP 2:
-At different points on the screen, the waves travel different distances.
-
-STEP 3:
-If the path difference is an integral multiple of wavelength, constructive interference occurs.
-
-STEP 4:
-If the path difference is an odd multiple of half-wavelength, destructive interference occurs.
-
-Conditions:
-
-Bright fringe:
-δ = nλ
-
-Dark fringe:
-δ = (2n + 1)λ/2
-
-Fringe width:
-
-β = λD/d
-
-Where:
-β = Fringe width
-λ = Wavelength of light
-D = Distance between slit plane and screen
-d = Separation between the two slits
-
-The experiment establishes the wave nature of light.`
-        ],
-
-        [
-            "Derive the expression for fringe width in Young's double-slit experiment.",
-            `Consider two coherent slits separated by distance d.
-
-The screen is placed at a distance D from the slits.
-
-Let P be a point at a distance y from the central point O.
-
-For a distant screen:
-
-Path difference,
-
-δ = d sin θ
-
-For small angles:
-
-sin θ ≈ tan θ
-
-From the geometry:
-
-tan θ = y/D
-
-Therefore:
-
-δ = dy/D
-
-For a bright fringe:
-
-δ = nλ
-
-Substituting:
-
-dy/D = nλ
-
-Therefore:
-
-yₙ = nλD/d
-
-The distance between two successive bright fringes is:
-
-β = yₙ₊₁ - yₙ
-
-β = [(n+1)λD/d] - [nλD/d]
-
-Final expression:
-
-β = λD/d
-
-This is the expression for fringe width.`
-        ],
-
-        [
-            "Explain diffraction due to a single slit.",
-            `When light passes through a narrow slit, it spreads into the region beyond the slit.
-
-This phenomenon is called diffraction.
-
-For a single slit of width a:
-
-The condition for minima is:
-
-a sin θ = nλ
-
-Where:
-a = Width of slit
-θ = Angle of diffraction
-n = Order of minimum
-λ = Wavelength
-
-For the first minimum:
-
-a sin θ = λ
-
-The central maximum is wider and brighter than the secondary maxima.
-
-Diffraction is noticeable when the slit width is comparable to the wavelength of light.`
-        ],
-
-        [
-            "Explain the difference between interference and diffraction.",
-            `INTERFERENCE:
-
-1. It is caused by the superposition of waves from two or more coherent sources.
-2. Bright and dark fringes are produced.
-3. In Young's double-slit experiment, fringes are equally spaced under the usual approximation.
-
-DIFFRACTION:
-
-1. It is caused by the superposition of secondary wavelets from different parts of the same wavefront.
-2. The wave spreads around an obstacle or through an aperture.
-3. In single-slit diffraction, the central maximum is wider than the secondary maxima.
-
-Both phenomena demonstrate the wave nature of light.`
-        ],
-
-        [
-            "Explain polarization by reflection and Brewster's law.",
-            `When unpolarized light is incident on a transparent surface at a particular angle called the polarizing angle, the reflected light becomes completely plane-polarized.
-
-At this angle, the reflected and refracted rays are perpendicular to each other.
-
-Brewster's law:
-
-μ = tan iₚ
-
-Where:
-μ = Refractive index of the medium
-iₚ = Polarizing angle
-
-This law relates the polarizing angle to the refractive index of the medium.`
-        ],
-
-        [
-            "Explain the working of a simple microscope.",
-            `A simple microscope is a single convex lens of short focal length used to obtain a magnified virtual image of a small object.
-
-WORKING:
-
-1. The object is placed between the optical centre and the principal focus of the convex lens.
-2. The lens forms a virtual, erect and magnified image.
-3. The image is viewed by the eye.
-
-Magnifying power when the final image is at the least distance of distinct vision:
-
-M = 1 + D/f
-
-Where:
-D = Least distance of distinct vision
-f = Focal length of the lens
-
-When the final image is at infinity:
-
-M = D/f`
-        ]
-    ],
-
-    worked: [
-        [
-            "In Young's double-slit experiment, the wavelength is 600 nm, the distance between the slits is 0.3 mm and the screen is 1.5 m away. Calculate the fringe width.",
-            `Given:
-
-Wavelength, λ = 600 nm
-λ = 600 × 10⁻⁹ m
-
-Slit separation, d = 0.3 mm
-d = 0.3 × 10⁻³ m
-
-Screen distance, D = 1.5 m
-
-Formula:
-
-β = λD/d
-
-STEP 1: Substitute the values.
-
-β = (600 × 10⁻⁹ × 1.5)/(0.3 × 10⁻³)
-
-STEP 2: Multiply the numerator.
-
-β = 900 × 10⁻⁹/(0.3 × 10⁻³)
-
-STEP 3: Divide.
-
-β = 3 × 10⁻³ m
-
-STEP 4: Convert into millimetres.
-
-Final Answer:
-
-β = 3 mm`
-        ],
-
-        [
-            "In Young's double-slit experiment, the wavelength of light is 500 nm. The slit separation is 0.5 mm and the screen is 2 m away. Find the fringe width.",
-            `Given:
-
-λ = 500 × 10⁻⁹ m
-
-d = 0.5 × 10⁻³ m
-
-D = 2 m
-
-Formula:
-
-β = λD/d
-
-STEP 1: Substitute the values.
-
-β = (500 × 10⁻⁹ × 2)/(0.5 × 10⁻³)
-
-STEP 2: Simplify.
-
-β = 1000 × 10⁻⁹/(0.5 × 10⁻³)
-
-STEP 3: Divide.
-
-β = 2 × 10⁻³ m
-
-Final Answer:
-
-β = 2 mm`
-        ],
-
-        [
-            "The intensity of plane-polarized light is I₀. It passes through an analyser whose axis makes an angle of 60° with the polarizer. Find the transmitted intensity.",
-            `Given:
-
-Initial intensity = I₀
-
-Angle, θ = 60°
-
-Formula:
-
-I = I₀ cos² θ
-
-STEP 1: Substitute the angle.
-
-I = I₀ cos² 60°
-
-STEP 2: Use the standard value.
-
-cos 60° = 1/2
-
-STEP 3: Square the value.
-
-I = I₀ × (1/2)²
-
-Final Answer:
-
-I = I₀/4`
-        ],
-
-        [
-            "The polarizing angle of a transparent medium is 60°. Calculate its refractive index with respect to air.",
-            `Given:
-
-Polarizing angle, iₚ = 60°
-
-Formula:
-
-μ = tan iₚ
-
-STEP 1: Substitute the value.
-
-μ = tan 60°
-
-STEP 2: Use the standard value.
-
-tan 60° = √3
-
-Final Answer:
-
-μ = √3 ≈ 1.732`
-        ],
-
-        [
-            "In a single-slit diffraction experiment, the slit width is 2 × 10⁻⁶ m and the wavelength of light is 500 nm. Calculate the angle of the first minimum.",
-            `Given:
-
-Slit width, a = 2 × 10⁻⁶ m
-
-Wavelength, λ = 500 × 10⁻⁹ m
-
-For the first minimum:
-
-a sin θ = λ
-
-STEP 1: Rearrange.
-
-sin θ = λ/a
-
-STEP 2: Substitute the values.
-
-sin θ = (500 × 10⁻⁹)/(2 × 10⁻⁶)
-
-STEP 3: Simplify.
-
-sin θ = 0.25
-
-STEP 4: Take inverse sine.
-
-θ = sin⁻¹(0.25)
-
-Final Answer:
-
-θ ≈ 14.5°`
-        ]
-    ],
-
-    formula: [
-        "Path difference: δ = d sin θ",
-        "Phase difference: φ = (2π/λ)δ",
-        "Constructive interference: δ = nλ",
-        "Destructive interference: δ = (2n + 1)λ/2",
-        "Young's double-slit fringe width: β = λD/d",
-        "Position of nth bright fringe: yₙ = nλD/d",
-        "Position of nth dark fringe: yₙ = (2n - 1)λD/(2d)",
-        "Resultant intensity: I = 4I₀ cos²(φ/2)",
-        "Single-slit diffraction minima: a sin θ = nλ",
-        "Malus' law: I = I₀ cos² θ",
-        "Brewster's law: μ = tan iₚ",
-        "Simple microscope, final image at near point: M = 1 + D/f",
-        "Simple microscope, final image at infinity: M = D/f"
+        "Critical angle: sin C = 1/n",
+        "Lens power: P = 1/f",
+        "Lens maker's formula: 1/f = (n - 1)(1/R₁ - 1/R₂)",
+        "Thin lens formula: 1/f = 1/v - 1/u"
     ]
 },
 
+/* =====================================================
+   UNIT 7 - WAVE OPTICS
+===================================================== */
+
 {
-    id: 8,
-    title: "Dual Nature of Radiation and Matter",
-    subtitle: "Unit 8 | Volume 2",
+    title: "Wave Optics",
+    volume: 2,
 
     bookback: [
-        [
-            "What is electron emission?",
-            `Electron emission is the process of releasing electrons from the surface of a material.
-
-The minimum energy required for an electron to escape from a metal surface is called the work function.
-
-Types of electron emission:
-
-1. Thermionic emission:
-   Electrons are emitted by supplying thermal energy.
-
-2. Field emission:
-   Electrons are emitted due to a strong electric field.
-
-3. Photoelectric emission:
-   Electrons are emitted when light falls on a suitable metal surface.
-
-4. Secondary emission:
-   Electrons are emitted when fast-moving electrons strike a material.`
-        ],
-
-        [
-            "What is photoelectric effect?",
-            `The photoelectric effect is the phenomenon of emission of electrons from a metal surface when electromagnetic radiation of suitable frequency falls on it.
-
-The emitted electrons are called photoelectrons.
-
-The minimum frequency required for photoelectric emission is called the threshold frequency.
-
-The photoelectric effect demonstrates the particle nature of light.`
-        ],
-
-        [
-            "Define work function.",
-            `The work function is the minimum energy required to remove an electron from the surface of a metal.
-
-It is represented by φ.
-
-Formula:
-
-φ = hν₀
-
-Where:
-h = Planck's constant
-ν₀ = Threshold frequency
-
-The work function depends on the nature of the metal.`
-        ],
-
-        [
-            "What is threshold frequency?",
-            `Threshold frequency is the minimum frequency of incident radiation required to produce photoelectric emission from a particular metal surface.
-
-If the frequency of incident light is below the threshold frequency, photoelectric emission does not occur, however intense the light may be.
-
-It is represented by ν₀.`
-        ],
-
-        [
-            "Define stopping potential.",
-            `Stopping potential is the minimum negative or retarding potential applied to the collector that is just sufficient to stop the most energetic photoelectrons.
-
-At stopping potential, the photoelectric current becomes zero.
-
-The maximum kinetic energy is related to stopping potential by:
-
-Kmax = eV₀
-
-Where:
-e = Magnitude of electron charge
-V₀ = Stopping potential`
-        ],
-
-        [
-            "State de Broglie's hypothesis.",
-            `According to de Broglie's hypothesis, every moving material particle is associated with a wave.
-
-These waves are called matter waves or de Broglie waves.
-
-The wavelength associated with a moving particle is:
-
-λ = h/p
-
-Since momentum p = mv:
-
-λ = h/mv
-
-Where:
-h = Planck's constant
-m = Mass of the particle
-v = Velocity of the particle`
-        ],
-
-        [
-            "What is a photon? Write its characteristics.",
-            `A photon is an individual quantum or packet of electromagnetic radiation.
-
-Characteristics:
-
-1. A photon has zero rest mass.
-2. It travels at the speed of light in vacuum.
-3. Its energy is E = hν.
-4. Its momentum is p = h/λ.
-5. It carries energy and momentum.
-6. Its energy depends on frequency, not intensity.
-
-The photon concept helps explain the particle nature of light.`
-        ],
-
-        [
-            "What is the Davisson-Germer experiment?",
-            `The Davisson-Germer experiment experimentally confirmed the wave nature of electrons.
-
-In the experiment:
-
-1. Electrons are produced from a heated filament.
-2. They are accelerated through a potential difference.
-3. The electron beam is directed towards a nickel crystal.
-4. The scattered electrons are detected at different angles.
-5. A diffraction pattern is observed.
-
-This diffraction confirms that electrons behave as waves.
-
-The experiment supported de Broglie's hypothesis.`
-        ]
+        ["What is wavefront?",
+         `A wavefront is a surface joining all points of a wave that are in the same phase of vibration.`],
+        ["State Huygens' principle.",
+         `Every point on a wavefront acts as a source of secondary wavelets. The new wavefront is the forward envelope of these wavelets.`],
+        ["What is interference of light?",
+         `Interference is the redistribution of light intensity due to the superposition of two coherent light waves.`],
+        ["What are coherent sources?",
+         `Coherent sources are sources that emit waves of the same frequency and maintain a constant phase difference.`],
+        ["What is diffraction?",
+         `Diffraction is the bending or spreading of waves when they pass through a narrow opening or around an obstacle.`],
+        ["What is polarization?",
+         `Polarization is the phenomenon of restricting the vibrations of a transverse wave to a particular direction.`]
     ],
 
     important: [
-        [
-            "Explain Einstein's photoelectric equation.",
-            `Einstein explained the photoelectric effect using the photon theory of light.
+        ["Explain Young's double-slit experiment.",
+         `In Young's double-slit experiment, light from a single source illuminates two narrow, closely spaced slits.
 
-According to Einstein:
+The slits act as coherent sources.
 
-1. Light consists of photons.
-2. Each photon has energy hν.
-3. One photon transfers its energy to one electron.
-4. A part of the energy is used to overcome the work function.
-5. The remaining energy becomes the kinetic energy of the emitted electron.
+The waves overlap on a screen and produce alternate bright and dark fringes due to interference.
 
-By conservation of energy:
+Fringe width:
 
-Photon energy = Work function + Maximum kinetic energy
+β = λD/d.`],
+        ["State the conditions for constructive and destructive interference.",
+         `Constructive interference occurs when the path difference is:
 
-Therefore:
+Δx = nλ
 
-hν = φ + Kmax
+Destructive interference occurs when the path difference is:
 
-Since:
+Δx = (2n + 1)λ/2
 
-φ = hν₀
+Here n is an integer.`],
+        ["Explain diffraction of light.",
+         `Diffraction is the spreading of light when it passes through a narrow slit or around an obstacle.
 
-We get:
+It becomes noticeable when the size of the opening or obstacle is comparable to the wavelength of light.`],
+        ["Differentiate between interference and diffraction.",
+         `Interference:
+It is produced by the superposition of waves from two or more coherent sources.
 
-Kmax = hν - hν₀
+Diffraction:
+It is produced by the superposition of secondary wavelets from different parts of the same wavefront.
 
-Also:
+Interference fringes are usually equally spaced in Young's experiment, while diffraction patterns have a wider central maximum.`],
+        ["Explain polarization and its importance.",
+         `Polarization demonstrates the transverse nature of light.
 
-Kmax = 1/2 mvmax²
+It is used in Polaroid sunglasses, photography, LCD displays and the study of optical materials.`],
+        ["State Brewster's law.",
+         `Brewster's law states that the tangent of the polarizing angle is equal to the refractive index of the medium relative to the surrounding medium.
 
-This is Einstein's photoelectric equation.
+n = tan iB
 
-It explains why photoelectric emission depends on the frequency of incident light.`
-        ],
-
-        [
-            "State the laws of photoelectric emission.",
-            `The important laws of photoelectric emission are:
-
-1. For a given metal, photoelectric emission occurs only when the frequency of incident light is greater than or equal to its threshold frequency.
-
-2. The photoelectric current is directly proportional to the intensity of incident light when the frequency is above the threshold frequency.
-
-3. The maximum kinetic energy of photoelectrons depends on the frequency of incident light and is independent of its intensity.
-
-4. The maximum kinetic energy increases linearly with the frequency of incident light above the threshold frequency.
-
-5. Photoelectric emission takes place practically instantaneously when suitable light falls on the metal surface.`
-        ],
-
-        [
-            "Derive the de Broglie wavelength of an electron accelerated through a potential difference V.",
-            `Consider an electron of mass m and charge e accelerated through a potential difference V.
-
-The electrical energy gained by the electron is:
-
-eV
-
-This energy becomes the kinetic energy of the electron.
-
-Therefore:
-
-1/2 mv² = eV
-
-Multiply both sides by 2:
-
-mv² = 2eV
-
-Taking square root:
-
-v = √(2eV/m)
-
-According to de Broglie's equation:
-
-λ = h/mv
-
-Substitute the value of v:
-
-λ = h/[m√(2eV/m)]
-
-Simplifying:
-
-λ = h/√(2meV)
-
-Therefore:
-
-λ = h/√(2meV)
-
-For an electron, the commonly used expression is:
-
-λ = 12.27/√V Å
-
-Where V is the accelerating potential in volts.`
-        ],
-
-        [
-            "Explain the principle and working of an electron microscope.",
-            `PRINCIPLE:
-
-An electron microscope uses the wave nature of electrons to obtain highly magnified images.
-
-WORKING:
-
-1. An electron gun produces electrons.
-2. The electrons are accelerated using a high potential difference.
-3. Electron lenses focus the electron beam.
-4. The beam interacts with the specimen.
-5. The resulting image is formed and observed using a suitable detector or screen.
-
-The de Broglie wavelength of electrons can be much smaller than the wavelength of visible light.
-
-Therefore, an electron microscope can resolve much smaller details than an ordinary optical microscope.`
-        ],
-
-        [
-            "Explain the characteristics of X-rays and their production.",
-            `X-rays are electromagnetic radiation with very short wavelengths and high frequencies.
-
-Production:
-
-1. Electrons are emitted from a heated cathode.
-2. They are accelerated by a high potential difference.
-3. The fast-moving electrons strike a metal target.
-4. Their sudden deceleration produces X-rays.
-
-Two important types of X-ray spectra:
-
-1. Continuous X-ray spectrum:
-   Produced due to the deceleration of high-speed electrons.
-
-2. Characteristic X-ray spectrum:
-   Produced due to electronic transitions between inner atomic shells.
-
-Applications:
-
-1. Medical diagnosis.
-2. Studying crystal structures.
-3. Detecting defects in materials.
-4. Security inspection.`
-        ]
+At the polarizing angle, the reflected and refracted rays are perpendicular.`]
     ],
 
     worked: [
-        [
-            "Calculate the energy of a photon of wavelength 600 nm.",
-            `Given:
+        ["In Young's double-slit experiment, λ = 600 nm, D = 2 m and d = 1 mm. Find the fringe width.",
+         `Given:
 
-Wavelength, λ = 600 nm
 λ = 600 × 10⁻⁹ m
+D = 2 m
+d = 1 × 10⁻³ m
 
-Planck's constant:
+Formula:
 
-h = 6.626 × 10⁻³⁴ Js
+β = λD/d
 
-Speed of light:
+Substitute:
 
+β = (600 × 10⁻⁹ × 2)/(1 × 10⁻³)
+
+Answer:
+
+β = 1.2 × 10⁻³ m = 1.2 mm.`],
+        ["Find the wavelength if the fringe width is 2 mm, screen distance is 2 m and slit separation is 0.5 mm.",
+         `Given:
+
+β = 2 × 10⁻³ m
+D = 2 m
+d = 0.5 × 10⁻³ m
+
+Formula:
+
+λ = βd/D
+
+Substitute:
+
+λ = (2 × 10⁻³ × 0.5 × 10⁻³)/2
+
+Answer:
+
+λ = 5 × 10⁻⁷ m = 500 nm.`],
+        ["Find the path difference for the third bright fringe when wavelength is 500 nm.",
+         `Given:
+
+n = 3
+λ = 500 nm
+
+For a bright fringe:
+
+Δx = nλ
+
+Substitute:
+
+Δx = 3 × 500
+
+Answer:
+
+Δx = 1500 nm.`],
+        ["Calculate the polarizing angle for a medium of refractive index √3.",
+         `Given:
+
+n = √3
+
+Brewster's law:
+
+tan iB = n
+
+iB = tan⁻¹(√3)
+
+Answer:
+
+iB = 60°.`],
+        ["A light wave has wavelength 500 nm. Find its frequency.",
+         `Given:
+
+λ = 500 × 10⁻⁹ m
 c = 3 × 10⁸ m/s
+
+Formula:
+
+f = c/λ
+
+Substitute:
+
+f = (3 × 10⁸)/(500 × 10⁻⁹)
+
+Answer:
+
+f = 6 × 10¹⁴ Hz.`],
+        ["Find the angular frequency of light having frequency 5 × 10¹⁴ Hz.",
+         `Given:
+
+f = 5 × 10¹⁴ Hz
+
+Formula:
+
+ω = 2πf
+
+Substitute:
+
+ω = 2π × 5 × 10¹⁴
+
+Answer:
+
+ω = 10π × 10¹⁴ rad/s.`]
+    ],
+
+    formula: [
+        "Fringe width: β = λD/d",
+        "Bright fringe: Δx = nλ",
+        "Dark fringe: Δx = (2n + 1)λ/2",
+        "Wave speed: c = fλ",
+        "Brewster's law: n = tan iB",
+        "Angular frequency: ω = 2πf"
+    ]
+},
+
+/* =====================================================
+   UNIT 8 - DUAL NATURE OF RADIATION AND MATTER
+===================================================== */
+
+{
+    title: "Dual Nature of Radiation and Matter",
+    volume: 2,
+
+    bookback: [
+        ["What is the photoelectric effect?",
+         `The photoelectric effect is the emission of electrons from a metal surface when electromagnetic radiation of suitable frequency falls on it.`],
+        ["Define work function.",
+         `Work function is the minimum energy required to remove an electron from the surface of a metal.
+
+φ = h f₀`],
+        ["What is threshold frequency?",
+         `Threshold frequency is the minimum frequency of incident radiation required to produce photoelectric emission from a given metal.`],
+        ["State Einstein's photoelectric equation.",
+         `Einstein's photoelectric equation is:
+
+hf = φ + Kmax
+
+The photon energy is used to overcome the work function and provide kinetic energy to the emitted electron.`],
+        ["What is a photon?",
+         `A photon is a packet or quantum of electromagnetic radiation.
+
+Its energy is:
+
+E = hf`],
+        ["State de Broglie's hypothesis.",
+         `According to de Broglie's hypothesis, every moving material particle has an associated matter wave.
+
+λ = h/p`]
+    ],
+
+    important: [
+        ["Explain the laws of the photoelectric effect.",
+         `1. Photoelectric emission occurs only when the incident frequency is at least the threshold frequency.
+2. Photoelectric current increases with light intensity, for a fixed suitable frequency.
+3. Maximum kinetic energy depends on frequency, not intensity.
+4. Emission occurs almost instantaneously.
+5. The stopping potential increases with the frequency of incident light.`],
+        ["Explain Einstein's photoelectric equation.",
+         `Energy of an incident photon:
+
+E = hf
+
+Part of this energy is used to remove the electron from the metal surface.
+
+The remaining energy becomes maximum kinetic energy.
+
+Therefore:
+
+hf = φ + Kmax
+
+Since φ = hf₀:
+
+Kmax = h(f - f₀).`],
+        ["Explain the experimental observations of the photoelectric effect.",
+         `The important observations are:
+
+1. There is a threshold frequency.
+2. Photoelectric current depends on intensity.
+3. Maximum kinetic energy depends on frequency.
+4. Emission is practically instantaneous.
+
+These observations support the particle nature of light.`],
+        ["Explain de Broglie's matter-wave concept.",
+         `De Broglie proposed that moving particles have wave-like properties.
+
+The wavelength associated with a particle is:
+
+λ = h/p
+
+For a particle of mass m moving with velocity v:
+
+λ = h/mv.`],
+        ["Explain the Davisson-Germer experiment.",
+         `The Davisson-Germer experiment demonstrated the wave nature of electrons.
+
+Electrons were accelerated and directed towards a nickel crystal.
+
+The scattered electrons produced a diffraction pattern.
+
+This confirmed de Broglie's prediction that matter particles have wave properties.`],
+        ["Differentiate between photon and matter waves.",
+         `Photon:
+A photon is a quantum of electromagnetic radiation.
+
+Matter wave:
+A matter wave is associated with a moving material particle.
+
+Both show wave-particle duality and are described using quantum physics.`]
+    ],
+
+    worked: [
+        ["Calculate the energy of a photon of frequency 6 × 10¹⁴ Hz. Take h = 6.63 × 10⁻³⁴ Js.",
+         `Given:
+
+h = 6.63 × 10⁻³⁴ Js
+f = 6 × 10¹⁴ Hz
+
+Formula:
+
+E = hf
+
+Substitute:
+
+E = 6.63 × 10⁻³⁴ × 6 × 10¹⁴
+
+Answer:
+
+E = 3.978 × 10⁻¹⁹ J.`],
+        ["Find the energy of a photon of wavelength 600 nm.",
+         `Given:
+
+h = 6.63 × 10⁻³⁴ Js
+c = 3 × 10⁸ m/s
+λ = 600 × 10⁻⁹ m
 
 Formula:
 
 E = hc/λ
 
-STEP 1: Substitute the values.
+Substitute:
 
-E = (6.626 × 10⁻³⁴ × 3 × 10⁸)/(600 × 10⁻⁹)
+E = (6.63 × 10⁻³⁴ × 3 × 10⁸)/(600 × 10⁻⁹)
 
-STEP 2: Multiply the numerator.
+Answer:
 
-E = 19.878 × 10⁻²⁶/(600 × 10⁻⁹)
+E ≈ 3.315 × 10⁻¹⁹ J.`],
+        ["A metal has a work function of 2 eV. Find its threshold frequency. Take h = 4.14 × 10⁻¹⁵ eV s.",
+         `Given:
 
-STEP 3: Divide.
-
-Final Answer:
-
-E ≈ 3.31 × 10⁻¹⁹ J`
-        ],
-
-        [
-            "A metal has a work function of 2 eV. Calculate its threshold frequency.",
-            `Given:
-
-Work function, φ = 2 eV
-
-Convert into joules:
-
-φ = 2 × 1.602 × 10⁻¹⁹ J
-
-φ = 3.204 × 10⁻¹⁹ J
-
-Planck's constant:
-
-h = 6.626 × 10⁻³⁴ Js
+φ = 2 eV
+h = 4.14 × 10⁻¹⁵ eV s
 
 Formula:
 
-φ = hν₀
+f₀ = φ/h
 
-Rearrange:
+Substitute:
 
-ν₀ = φ/h
+f₀ = 2/(4.14 × 10⁻¹⁵)
 
-STEP 1: Substitute the values.
+Answer:
 
-ν₀ = (3.204 × 10⁻¹⁹)/(6.626 × 10⁻³⁴)
+f₀ ≈ 4.83 × 10¹⁴ Hz.`],
+        ["Find the de Broglie wavelength of a particle of momentum 6.63 × 10⁻²⁴ kg m/s.",
+         `Given:
 
-Final Answer:
-
-ν₀ ≈ 4.84 × 10¹⁴ Hz`
-        ],
-
-        [
-            "The stopping potential in a photoelectric experiment is 5 V. Calculate the maximum kinetic energy of the emitted electrons.",
-            `Given:
-
-Stopping potential, V₀ = 5 V
-
-Electron charge:
-
-e = 1.602 × 10⁻¹⁹ C
+h = 6.63 × 10⁻³⁴ Js
+p = 6.63 × 10⁻²⁴ kg m/s
 
 Formula:
 
-Kmax = eV₀
+λ = h/p
 
-STEP 1: Substitute the values.
+Substitute:
 
-Kmax = 1.602 × 10⁻¹⁹ × 5
+λ = (6.63 × 10⁻³⁴)/(6.63 × 10⁻²⁴)
 
-STEP 2: Multiply.
+Answer:
 
-Final Answer:
+λ = 1 × 10⁻¹⁰ m.`],
+        ["An electron has maximum kinetic energy of 3 eV. Find its stopping potential.",
+         `Given:
 
-Kmax = 8.01 × 10⁻¹⁹ J
+Kmax = 3 eV
 
-In electron volts:
+The stopping potential in volts has the same numerical value as the kinetic energy in electron volts.
 
-Kmax = 5 eV`
-        ],
+Answer:
 
-        [
-            "Calculate the de Broglie wavelength of an electron accelerated through a potential difference of 100 V.",
-            `Given:
+V₀ = 3 V.`],
+        ["A photon has energy 4 eV. Express its energy in joules. Take 1 eV = 1.6 × 10⁻¹⁹ J.",
+         `Given:
 
-Accelerating potential, V = 100 V
+E = 4 eV
 
-Formula:
+Conversion:
 
-λ = 12.27/√V Å
+1 eV = 1.6 × 10⁻¹⁹ J
 
-STEP 1: Substitute the value.
+Substitute:
 
-λ = 12.27/√100
+E = 4 × 1.6 × 10⁻¹⁹
 
-STEP 2: Calculate the square root.
+Answer:
 
-√100 = 10
-
-STEP 3: Divide.
-
-λ = 12.27/10
-
-Final Answer:
-
-λ = 1.227 Å`
-        ],
-
-        [
-            "A photon has a frequency of 5 × 10¹⁴ Hz. Calculate its energy.",
-            `Given:
-
-Frequency, ν = 5 × 10¹⁴ Hz
-
-Planck's constant:
-
-h = 6.626 × 10⁻³⁴ Js
-
-Formula:
-
-E = hν
-
-STEP 1: Substitute the values.
-
-E = 6.626 × 10⁻³⁴ × 5 × 10¹⁴
-
-STEP 2: Multiply.
-
-E = 33.13 × 10⁻²⁰
-
-STEP 3: Express in standard scientific notation.
-
-Final Answer:
-
-E = 3.313 × 10⁻¹⁹ J`
-        ],
-
-        [
-            "An electron has a kinetic energy of 100 eV. Calculate its de Broglie wavelength.",
-            `Given:
-
-Kinetic energy, K = 100 eV
-
-Formula:
-
-λ = h/√(2mK)
-
-For an electron, the convenient expression is:
-
-λ = 12.27/√K Å
-
-STEP 1: Substitute the value.
-
-λ = 12.27/√100
-
-STEP 2: Calculate.
-
-λ = 12.27/10
-
-Final Answer:
-
-λ = 1.227 Å`
-        ]
+E = 6.4 × 10⁻¹⁹ J.`]
     ],
 
     formula: [
-        "Photon energy: E = hν",
+        "Photon energy: E = hf",
         "Photon energy using wavelength: E = hc/λ",
-        "Photon momentum: p = h/λ",
-        "Work function: φ = hν₀",
-        "Einstein's photoelectric equation: hν = φ + Kmax",
-        "Maximum kinetic energy: Kmax = hν - φ",
-        "Maximum kinetic energy using stopping potential: Kmax = eV₀",
-        "Maximum kinetic energy: Kmax = 1/2 mvmax²",
-        "Threshold frequency: ν₀ = φ/h",
-        "de Broglie wavelength: λ = h/p",
-        "de Broglie wavelength: λ = h/mv",
-        "de Broglie wavelength using kinetic energy: λ = h/√(2mK)",
-        "Electron wavelength after acceleration: λ = h/√(2meV)",
-        "Electron wavelength in angstrom: λ = 12.27/√V Å",
-        "Energy conversion: 1 eV = 1.602 × 10⁻¹⁹ J"
+        "Work function: φ = hf₀",
+        "Einstein equation: hf = φ + Kmax",
+        "Maximum kinetic energy: Kmax = eV₀",
+        "de Broglie wavelength: λ = h/p = h/mv"
     ]
 },
 
+/* =====================================================
+   UNIT 9 - ATOMIC AND NUCLEAR PHYSICS
+===================================================== */
+
 {
-    id: 9,
     title: "Atomic and Nuclear Physics",
-    subtitle: "Unit 9 | Volume 2",
+    volume: 2,
 
     bookback: [
-        [
-            "What are cathode rays? Write their properties.",
-            `Cathode rays are streams of negatively charged particles called electrons emitted from the cathode in a discharge tube.
+        ["What is an atom?",
+         `An atom is the smallest unit of an element that retains its chemical properties. It consists of a nucleus surrounded by electrons.`],
+        ["State Bohr's postulates.",
+         `1. Electrons revolve around the nucleus in certain permitted stationary orbits.
+2. Electrons do not radiate energy in stationary orbits.
+3. Angular momentum is quantised.
 
-Properties:
+mvr = nh/2π`],
+        ["Define atomic number and mass number.",
+         `Atomic number (Z) is the number of protons in the nucleus.
 
-1. They travel in straight lines.
-2. They carry negative electric charge.
-3. They are deflected by electric and magnetic fields.
-4. They produce fluorescence when they strike certain materials.
-5. They possess kinetic energy.
-6. Their properties are independent of the nature of the gas and electrode material.`
-        ],
+Mass number (A) is the total number of protons and neutrons.
 
-        [
-            "State the results of Rutherford's alpha-particle scattering experiment.",
-            `Rutherford directed alpha particles towards a thin gold foil.
-
-Important observations:
-
-1. Most alpha particles passed straight through the foil.
-2. Some alpha particles were deflected through small angles.
-3. Very few alpha particles were deflected through large angles.
-4. A very small number of alpha particles returned nearly along their original path.
-
-Conclusions:
-
-1. Most of the atom is empty space.
-2. Nearly all the positive charge is concentrated in a very small central region.
-3. Almost all the mass of the atom is concentrated in the nucleus.
-
-This led to Rutherford's nuclear model of the atom.`
-        ],
-
-        [
-            "State the postulates of Bohr's atomic model.",
-            `Bohr's atomic model is based on the following postulates:
-
-1. Electrons revolve around the nucleus only in certain permitted circular orbits called stationary orbits.
-
-2. Electrons do not radiate energy while moving in these stationary orbits.
-
-3. The angular momentum of an electron is quantized.
-
-mvr = nh/2π
-
-4. Radiation is emitted or absorbed when an electron jumps from one energy level to another.
-
-The energy of the emitted or absorbed photon is:
-
-hν = E₂ - E₁
-
-The model successfully explains the hydrogen spectrum.`
-        ],
-
-        [
-            "What is an isotope? Give an example.",
-            `Isotopes are atoms of the same element having the same atomic number but different mass numbers.
-
-They have the same number of protons but different numbers of neutrons.
-
-Example:
-
-Hydrogen has three isotopes:
-
-1. Protium
-2. Deuterium
-3. Tritium`
-        ],
-
-        [
-            "What is an isobar? Give an example.",
-            `Isobars are nuclei of different elements having the same mass number but different atomic numbers.
-
-Example:
-
-Argon-40 and Calcium-40.
-
-They have the same mass number but different atomic numbers.`
-        ],
-
-        [
-            "What is an isotone? Give an example.",
-            `Isotones are nuclei having the same number of neutrons but different numbers of protons.
-
-Example:
-
-Carbon-14 and Nitrogen-15.
-
-Carbon-14 has 6 protons and 8 neutrons.
-
-Nitrogen-15 has 7 protons and 8 neutrons.
-
-Therefore, both have the same number of neutrons.`
-        ],
-
-        [
-            "What is mass defect?",
-            `Mass defect is the difference between the sum of the masses of the individual nucleons and the actual mass of the nucleus.
-
-Formula:
-
-Δm = Zmp + Nmn - M
-
-Where:
-Z = Number of protons
-N = Number of neutrons
-mp = Mass of a proton
-mn = Mass of a neutron
-M = Mass of the nucleus
-
-The missing mass is converted into binding energy.`
-        ],
-
-        [
-            "Define binding energy.",
-            `Binding energy is the energy required to separate a nucleus completely into its individual protons and neutrons.
-
-It is also the energy released when the individual nucleons combine to form the nucleus.
-
-Formula:
-
-BE = Δmc²
-
-Where:
-Δm = Mass defect
-c = Speed of light
-
-Binding energy per nucleon is:
-
-BE per nucleon = BE/A
-
-Where A is the mass number.`
-        ],
-
-        [
-            "What is radioactivity?",
-            `Radioactivity is the spontaneous emission of penetrating radiations such as alpha particles, beta particles and gamma rays from unstable atomic nuclei.
-
-The radiations are:
-
-1. Alpha radiation (α)
-2. Beta radiation (β)
-3. Gamma radiation (γ)
-
-Radioactive decay is a spontaneous nuclear process.`
-        ]
+A = Z + N`],
+        ["What is radioactivity?",
+         `Radioactivity is the spontaneous disintegration of unstable atomic nuclei with the emission of radiation.`],
+        ["Define half-life.",
+         `Half-life is the time required for half the number of radioactive nuclei in a sample to decay.`],
+        ["What is nuclear fission?",
+         `Nuclear fission is the process in which a heavy nucleus splits into two or more lighter nuclei, releasing energy.`]
     ],
 
     important: [
-        [
-            "Explain Rutherford's alpha-particle scattering experiment and its conclusions.",
-            `EXPERIMENT:
+        ["Explain Bohr's atomic model.",
+         `Bohr proposed that electrons revolve around the nucleus in certain permitted circular orbits.
 
-Rutherford directed a beam of alpha particles towards a very thin gold foil.
-
-A fluorescent screen was placed around the foil to detect the scattered alpha particles.
-
-OBSERVATIONS:
-
-1. Most alpha particles passed through the foil without deflection.
-
-2. Some alpha particles were deflected through small angles.
-
-3. A very small number were deflected through large angles.
-
-4. A few alpha particles were scattered backwards.
-
-CONCLUSIONS:
-
-1. Most of the atom is empty space because most alpha particles passed through.
-
-2. The positive charge is concentrated in a very small central region.
-
-3. Almost the entire mass of the atom is concentrated in this central region.
-
-4. The central region is called the nucleus.
-
-This experiment established the nuclear model of the atom.`
-        ],
-
-        [
-            "Explain Bohr's model of the hydrogen atom.",
-            `Bohr proposed a model to explain the structure and spectrum of the hydrogen atom.
-
-MAIN POSTULATES:
-
-1. Electrons revolve around the nucleus in certain permitted stationary orbits.
-
-2. Electrons do not lose energy while remaining in a stationary orbit.
-
-3. The angular momentum of an electron is quantized.
+The angular momentum is quantised:
 
 mvr = nh/2π
 
-4. An electron emits or absorbs energy when it moves between two permitted energy levels.
+Electrons do not radiate energy in stationary orbits.
 
-Photon energy:
+Radiation is emitted or absorbed when electrons transition between energy levels.`],
+        ["Explain the origin of atomic spectra.",
+         `When an electron moves from a higher energy level to a lower energy level, a photon is emitted.
 
-hν = |E₂ - E₁|
+When it moves to a higher energy level, energy is absorbed.
 
-ENERGY OF THE nth ORBIT:
+The photon energy is:
 
-En = -13.6/n² eV
+hf = E₂ - E₁
 
-For hydrogen:
+This produces characteristic spectral lines.`],
+        ["Explain the law of radioactive decay.",
+         `The rate of disintegration is proportional to the number of undecayed nuclei present.
 
-When n = 1, the electron is in the ground state.
+N = N₀e⁻λt
 
-When n is greater than 1, the electron is in an excited state.
+Here:
+N₀ = initial number of nuclei
+N = number remaining after time t
+λ = decay constant.`],
+        ["Explain alpha, beta and gamma radiations.",
+         `Alpha radiation consists of helium nuclei.
 
-The model explains the line spectrum of hydrogen.`
-        ],
+Beta radiation consists of fast-moving electrons or positrons.
 
-        [
-            "Explain the law of radioactive decay.",
-            `The law of radioactive decay states that the rate of disintegration of radioactive nuclei at any instant is directly proportional to the number of undecayed nuclei present at that instant.
+Gamma radiation consists of high-energy electromagnetic waves.
 
-Let N be the number of undecayed nuclei.
+They differ in charge, penetrating power and ionising ability.`],
+        ["Explain nuclear fission and nuclear fusion.",
+         `Fission:
+A heavy nucleus splits into lighter nuclei and releases energy.
 
-Then:
+Fusion:
+Two light nuclei combine to form a heavier nucleus and release energy.
 
--dN/dt ∝ N
+Both processes release energy due to the mass-energy relationship E = mc².`],
+        ["Explain mass defect and binding energy.",
+         `Mass defect is the difference between the total mass of separate nucleons and the actual mass of the nucleus.
 
-Introducing the decay constant λ:
+Binding energy is the energy required to separate a nucleus completely into its nucleons.
 
--dN/dt = λN
-
-On integrating:
-
-N = N₀e⁻λᵗ
-
-Where:
-N₀ = Initial number of nuclei
-N = Number of nuclei remaining after time t
-λ = Decay constant
-t = Time
-
-The number of undecayed nuclei decreases exponentially with time.`
-        ],
-
-        [
-            "Explain half-life and mean life of a radioactive substance.",
-            `HALF-LIFE:
-
-Half-life is the time required for half of the radioactive nuclei in a sample to decay.
-
-Formula:
-
-T₁/₂ = 0.693/λ
-
-MEAN LIFE:
-
-Mean life is the average lifetime of a radioactive nucleus before it decays.
-
-Formula:
-
-τ = 1/λ
-
-Relationship:
-
-T₁/₂ = 0.693τ
-
-Where:
-λ = Decay constant
-τ = Mean life`
-        ],
-
-        [
-            "Explain alpha, beta and gamma decay.",
-            `ALPHA DECAY:
-
-An unstable nucleus emits an alpha particle, which contains two protons and two neutrons.
-
-Changes:
-Mass number decreases by 4.
-Atomic number decreases by 2.
-
-General equation:
-
-ᵃZX → ᵃ⁻⁴Z₋₂Y + ⁴₂He
-
-BETA DECAY:
-
-In beta-minus decay, a neutron changes into a proton and an electron is emitted.
-
-Changes:
-Mass number remains unchanged.
-Atomic number increases by 1.
-
-General equation:
-
-ᵃZX → ᵃZ₊₁Y + ⁰₋₁e
-
-GAMMA DECAY:
-
-An excited nucleus emits gamma radiation.
-
-Changes:
-Mass number remains unchanged.
-Atomic number remains unchanged.
-
-Gamma radiation carries energy away from the nucleus.`
-        ],
-
-        [
-            "Explain nuclear fission and nuclear fusion.",
-            `NUCLEAR FISSION:
-
-Nuclear fission is the process in which a heavy nucleus splits into two or more lighter nuclei, releasing a large amount of energy.
-
-Example:
-
-Uranium-235 can undergo fission after absorbing a neutron.
-
-Applications:
-Nuclear power generation.
-
-NUCLEAR FUSION:
-
-Nuclear fusion is the process in which two light nuclei combine to form a heavier nucleus, releasing energy.
-
-Example:
-
-Hydrogen nuclei combine in the Sun to produce helium.
-
-Applications:
-Energy production in stars.
-
-Both processes release energy due to changes in nuclear binding energy.`
-        ],
-
-        [
-            "Explain the relationship between mass defect and binding energy.",
-            `When protons and neutrons combine to form a nucleus, the mass of the resulting nucleus is less than the sum of the individual nucleon masses.
-
-This difference is called mass defect.
-
-Mass defect:
-
-Δm = Zmp + Nmn - M
-
-According to Einstein's mass-energy relation:
-
-E = mc²
-
-Therefore, the binding energy is:
-
-BE = Δmc²
-
-Binding energy per nucleon:
-
-BE/A
-
-A larger binding energy per nucleon generally indicates a more stable nucleus.
-
-The binding energy curve helps explain the energy released in nuclear fission and fusion.`
-        ]
+BE = Δmc².`]
     ],
 
     worked: [
-        [
-            "Calculate the energy equivalent of 1 atomic mass unit (u).",
-            `Given:
+        ["A radioactive sample has a half-life of 10 days. What fraction remains after 30 days?",
+         `Given:
 
-1 u = 1.6605 × 10⁻²⁷ kg
+Half-life = 10 days
+Time = 30 days
 
-Speed of light:
+Number of half-lives:
 
+n = 30/10 = 3
+
+Remaining fraction:
+
+N/N₀ = (1/2)ⁿ
+
+N/N₀ = (1/2)³
+
+Answer:
+
+N/N₀ = 1/8.`],
+        ["A radioactive sample initially contains 800 nuclei. Find the number remaining after two half-lives.",
+         `Given:
+
+N₀ = 800
+Number of half-lives = 2
+
+Formula:
+
+N = N₀(1/2)ⁿ
+
+Substitute:
+
+N = 800 × (1/2)²
+
+N = 800/4
+
+Answer:
+
+N = 200 nuclei.`],
+        ["Calculate the energy equivalent of a mass of 1 × 10⁻³ kg. Take c = 3 × 10⁸ m/s.",
+         `Given:
+
+m = 1 × 10⁻³ kg
 c = 3 × 10⁸ m/s
 
 Formula:
 
 E = mc²
 
-STEP 1: Substitute the values.
+Substitute:
 
-E = 1.6605 × 10⁻²⁷ × (3 × 10⁸)²
+E = 1 × 10⁻³ × (3 × 10⁸)²
 
-STEP 2: Square the speed of light.
+Answer:
 
-c² = 9 × 10¹⁶
+E = 9 × 10¹³ J.`],
+        ["A nucleus has a mass defect of 0.01 u. Calculate its binding energy in MeV. Take 1 u = 931.5 MeV/c².",
+         `Given:
 
-STEP 3: Multiply.
+Δm = 0.01 u
 
-E = 1.6605 × 9 × 10⁻¹¹
+Conversion:
 
-Final Answer:
-
-E ≈ 1.494 × 10⁻¹⁰ J
-
-In electron volts:
-
-1 u ≈ 931.5 MeV`
-        ],
-
-        [
-            "A radioactive sample has a half-life of 10 days. Calculate its decay constant.",
-            `Given:
-
-Half-life, T₁/₂ = 10 days
-
-Formula:
-
-T₁/₂ = 0.693/λ
-
-Rearrange:
-
-λ = 0.693/T₁/₂
-
-STEP 1: Substitute the value.
-
-λ = 0.693/10
-
-Final Answer:
-
-λ = 0.0693 day⁻¹`
-        ],
-
-        [
-            "The half-life of a radioactive substance is 5 hours. Find the time required for 75% of the substance to decay.",
-            `Given:
-
-Half-life = 5 hours
-
-If 75% decays, then 25% remains.
-
-STEP 1: Convert the remaining percentage into a fraction.
-
-Remaining fraction = 25/100 = 1/4
-
-STEP 2: Understand the half-life.
-
-After one half-life:
-
-Remaining = 1/2
-
-After two half-lives:
-
-Remaining = 1/4
-
-STEP 3: Calculate the time.
-
-Time = 2 × 5
-
-Final Answer:
-
-Time = 10 hours`
-        ],
-
-        [
-            "A nucleus has a mass defect of 0.2 u. Calculate its binding energy.",
-            `Given:
-
-Mass defect, Δm = 0.2 u
-
-Energy equivalent of 1 u:
-
-1 u = 931.5 MeV
+1 u = 931.5 MeV/c²
 
 Formula:
 
 BE = Δm × 931.5 MeV
 
-STEP 1: Substitute the value.
+Substitute:
 
-BE = 0.2 × 931.5
+BE = 0.01 × 931.5
 
-STEP 2: Multiply.
+Answer:
 
-Final Answer:
+BE = 9.315 MeV.`],
+        ["A radioactive substance has a decay constant of 0.1 day⁻¹. Find its half-life.",
+         `Given:
 
-BE = 186.3 MeV`
-        ],
-
-        [
-            "A radioactive sample initially contains 8000 nuclei. How many nuclei remain after three half-lives?",
-            `Given:
-
-Initial nuclei, N₀ = 8000
-
-Number of half-lives = 3
-
-STEP 1: After the first half-life:
-
-8000/2 = 4000
-
-STEP 2: After the second half-life:
-
-4000/2 = 2000
-
-STEP 3: After the third half-life:
-
-2000/2 = 1000
-
-Final Answer:
-
-N = 1000 nuclei`
-        ],
-
-        [
-            "Calculate the radius of a nucleus having mass number 64. Take R₀ = 1.2 × 10⁻¹⁵ m.",
-            `Given:
-
-Mass number, A = 64
-
-R₀ = 1.2 × 10⁻¹⁵ m
+λ = 0.1 day⁻¹
 
 Formula:
 
-R = R₀A¹/³
+T₁/₂ = 0.693/λ
 
-STEP 1: Substitute the values.
+Substitute:
 
-R = 1.2 × 10⁻¹⁵ × 64¹/³
+T₁/₂ = 0.693/0.1
 
-STEP 2: Calculate the cube root.
+Answer:
 
-64¹/³ = 4
+T₁/₂ = 6.93 days.`],
+        ["An atom has 11 protons and 12 neutrons. Find its atomic number and mass number.",
+         `Given:
 
-STEP 3: Multiply.
+Protons = 11
+Neutrons = 12
 
-R = 1.2 × 4 × 10⁻¹⁵
+Atomic number:
 
-Final Answer:
+Z = 11
 
-R = 4.8 × 10⁻¹⁵ m`
-        ]
+Mass number:
+
+A = Z + N
+
+A = 11 + 12
+
+Answer:
+
+Atomic number = 11
+Mass number = 23.`]
     ],
 
     formula: [
         "Bohr angular momentum: mvr = nh/2π",
-        "Energy of nth hydrogen orbit: En = -13.6/n² eV",
-        "Photon energy during transition: hν = |E₂ - E₁|",
-        "Mass defect: Δm = Zmp + Nmn - M",
-        "Binding energy: BE = Δmc²",
-        "Binding energy per nucleon: BE/A",
-        "Nuclear radius: R = R₀A¹/³",
-        "Radioactive decay law: N = N₀e⁻λᵗ",
-        "Activity: A = λN",
-        "Decay constant: λ = 0.693/T₁/₂",
+        "Mass number: A = Z + N",
+        "Radioactive decay: N = N₀e⁻λt",
         "Half-life: T₁/₂ = 0.693/λ",
         "Mean life: τ = 1/λ",
-        "Relationship between half-life and mean life: T₁/₂ = 0.693τ",
-        "Mass-energy relation: E = mc²",
-        "Energy equivalent: 1 u ≈ 931.5 MeV",
-        "Alpha decay: ᵃZX → ᵃ⁻⁴Z₋₂Y + ⁴₂He"
-    ]
-}
-,
-{
-    id: 10,
-    title: "Electronics and Communication",
-    subtitle: "Semiconductors, diodes, transistors, logic gates and communication systems",
-
-    bookback: [
-        [
-            "What is a semiconductor? Give two examples.",
-            `A semiconductor is a material whose electrical conductivity lies between that of a conductor and an insulator.
-
-Examples:
-1. Silicon (Si)
-2. Germanium (Ge)
-
-The conductivity of a semiconductor increases when its temperature increases. Semiconductors are widely used in electronic devices such as diodes, transistors and integrated circuits.`
-        ],
-        [
-            "What is the difference between intrinsic and extrinsic semiconductors?",
-            `Intrinsic semiconductor:
-An intrinsic semiconductor is a pure semiconductor without any impurity added to it.
-
-Examples: Pure silicon and pure germanium.
-
-Extrinsic semiconductor:
-An extrinsic semiconductor is formed by adding a small, controlled amount of impurity to a pure semiconductor. This process is called doping.
-
-There are two types:
-1. n-type semiconductor – electrons are the majority charge carriers.
-2. p-type semiconductor – holes are the majority charge carriers.`
-        ],
-        [
-            "What is a p-n junction diode?",
-            `A p-n junction diode is formed by joining a p-type semiconductor and an n-type semiconductor.
-
-Working:
-1. When the two regions are joined, electrons from the n-region diffuse towards the p-region.
-2. Holes from the p-region diffuse towards the n-region.
-3. This movement creates a depletion region near the junction.
-4. The depletion region acts as a barrier to the movement of charge carriers.
-
-A diode allows current to flow easily in forward bias and offers very high resistance in reverse bias.`
-        ],
-        [
-            "What is rectification?",
-            `Rectification is the process of converting alternating current (AC) into direct current (DC).
-
-A rectifier circuit uses semiconductor diodes to perform this conversion.
-
-Types:
-1. Half-wave rectifier – uses only one half-cycle of the AC input.
-2. Full-wave rectifier – uses both half-cycles of the AC input.
-
-Rectifiers are used in power supplies to provide DC voltage to electronic circuits.`
-        ],
-        [
-            "Why are NAND and NOR gates called universal gates?",
-            `NAND and NOR gates are called universal gates because any basic logic gate can be constructed using only NAND gates or only NOR gates.
-
-Using these gates, we can construct:
-1. NOT gate
-2. AND gate
-3. OR gate
-
-Therefore, complete digital logic circuits can be designed using either NAND gates alone or NOR gates alone.`
-        ],
-        [
-            "What is modulation? Why is it necessary?",
-            `Modulation is the process of changing one of the characteristics of a high-frequency carrier wave according to the information signal.
-
-The three main types are:
-1. Amplitude Modulation (AM)
-2. Frequency Modulation (FM)
-3. Phase Modulation (PM)
-
-Why is modulation necessary?
-1. It helps transmit signals over long distances.
-2. It reduces the practical size of the transmitting antenna.
-3. It helps different signals use different frequency bands.
-4. It makes wireless communication possible.`
-        ]
-    ],
-
-    important: [
-        [
-            "Explain the formation of an n-type extrinsic semiconductor.",
-            `An n-type semiconductor is formed by adding a pentavalent impurity to a pure semiconductor such as silicon or germanium.
-
-A pentavalent atom has five valence electrons. Examples include phosphorus, arsenic and antimony.
-
-Formation:
-1. A silicon atom has four valence electrons.
-2. A pentavalent impurity atom replaces one silicon atom in the crystal.
-3. Four of its electrons form covalent bonds with neighbouring silicon atoms.
-4. The fifth electron is loosely bound and becomes available for conduction.
-
-Therefore:
-- Electrons are the majority charge carriers.
-- Holes are the minority charge carriers.
-
-The semiconductor remains electrically neutral overall.`
-        ],
-        [
-            "Explain the formation of the depletion region and barrier potential in a p-n junction.",
-            `When p-type and n-type semiconductors are joined, a p-n junction is formed.
-
-Step 1: Diffusion
-Electrons move from the n-region to the p-region because of the difference in electron concentration. Similarly, holes move from the p-region to the n-region.
-
-Step 2: Recombination
-Some electrons and holes recombine near the junction.
-
-Step 3: Formation of depletion region
-The region near the junction becomes depleted of mobile charge carriers. This region is called the depletion region.
-
-Step 4: Barrier potential
-The fixed ions in the depletion region create an electric field. This electric field opposes further diffusion of charge carriers.
-
-The potential difference developed across the depletion region is called barrier potential.`
-        ],
-        [
-            "Explain the working of a transistor as a switch.",
-            `A transistor can operate as an electronic switch by working in two regions:
-
-1. Cut-off region – OFF state
-- The base current is approximately zero.
-- The transistor does not conduct significant collector current.
-- It behaves like an open switch.
-
-2. Saturation region – ON state
-- Sufficient base current is supplied.
-- The transistor conducts a large collector current.
-- It behaves like a closed switch.
-
-Applications:
-- Digital circuits
-- Computer switching circuits
-- Electronic control systems
-
-Thus, a small input signal at the base can control a much larger current through the collector-emitter path.`
-        ],
-        [
-            "Explain the basic elements of a communication system.",
-            `A basic communication system contains the following elements:
-
-1. Information source:
-Produces the message to be transmitted. Example: A person's voice.
-
-2. Input transducer:
-Converts the message into an electrical signal. Example: A microphone.
-
-3. Transmitter:
-Processes the signal and prepares it for transmission. It may include amplification and modulation.
-
-4. Communication channel:
-The medium through which the signal travels. Examples: Free space, optical fibre and cables.
-
-5. Receiver:
-Receives and processes the transmitted signal. It performs operations such as amplification and demodulation.
-
-6. Output transducer:
-Converts the electrical signal back into a form that can be understood. Example: A loudspeaker.
-
-7. Destination:
-The person or device for which the message is intended.
-
-The overall process is:
-Information source → Input transducer → Transmitter → Channel → Receiver → Output transducer → Destination.`
-        ],
-        [
-            "Explain ground wave propagation and space wave propagation.",
-            `Ground wave propagation:
-- Radio waves travel along the surface of the Earth.
-- They can follow the curvature of the Earth.
-- They are generally useful for low-frequency communication.
-- Their range is affected by the electrical properties of the ground.
-
-Space wave propagation:
-- Radio waves travel directly from the transmitting antenna to the receiving antenna.
-- They are generally used at higher frequencies.
-- The transmitting and receiving antennas should normally be within line of sight.
-- They are used in television broadcasting, radar and satellite communication.
-
-The main difference is that ground waves follow the Earth's surface, whereas space waves travel approximately along a direct line between antennas.`
-        ],
-        [
-            "Explain the advantages and limitations of frequency modulation.",
-            `Advantages of FM:
-1. It has better noise immunity than amplitude modulation.
-2. The received signal generally has better sound quality.
-3. The amplitude of the carrier remains constant.
-4. It is suitable for high-quality audio broadcasting.
-
-Limitations of FM:
-1. It requires a larger bandwidth than AM.
-2. The transmitting and receiving circuits are more complex.
-3. Its propagation is generally limited by line-of-sight conditions.
-
-FM is widely used in radio broadcasting because of its improved sound quality and resistance to noise.`
-        ]
-    ],
-
-    worked: [
-        [
-            "Write the truth table of an AND gate and explain its operation.",
-            `An AND gate gives an output of 1 only when all its inputs are 1.
-
-Boolean expression:
-Y = A · B
-
-Truth table:
-
-A    B    Y
-0    0    0
-0    1    0
-1    0    0
-1    1    1
-
-Step-by-step explanation:
-
-Case 1: A = 0, B = 0
-Y = 0 × 0 = 0
-
-Case 2: A = 0, B = 1
-Y = 0 × 1 = 0
-
-Case 3: A = 1, B = 0
-Y = 1 × 0 = 0
-
-Case 4: A = 1, B = 1
-Y = 1 × 1 = 1
-
-Therefore, the AND gate produces HIGH output only when both inputs are HIGH.`
-        ],
-        [
-            "Verify De Morgan's first theorem using a truth table.",
-            `De Morgan's first theorem:
-
-(A + B)' = A' · B'
-
-Here:
-+ represents OR.
-· represents AND.
-' represents NOT.
-
-Truth table:
-
-A  B  A+B  (A+B)'  A'  B'  A'·B'
-0  0   0      1      1   1     1
-0  1   1      0      1   0     0
-1  0   1      0      0   1     0
-1  1   1      0      0   0     0
-
-Step-by-step verification:
-
-1. Calculate A+B for every input combination.
-2. Take the complement of A+B.
-3. Calculate A' and B' separately.
-4. Multiply A' and B' using the AND operation.
-5. Compare the two final columns.
-
-Both columns contain the same values.
-
-Hence,
-
-(A+B)' = A' · B'
-
-Therefore, De Morgan's first theorem is verified.`
-        ],
-        [
-            "A Zener diode has a breakdown voltage of 15 V. It is connected to a 25 V supply through a 500 Ω series resistor. The load resistance is 3 kΩ. Calculate the load current, total current and Zener current.",
-            `Given:
-
-Supply voltage, Vs = 25 V
-Zener voltage, VZ = 15 V
-Series resistance, RS = 500 Ω
-Load resistance, RL = 3 kΩ = 3000 Ω
-
-Step 1: Calculate the load current.
-
-The Zener diode maintains the load voltage at 15 V.
-
-IL = VZ / RL
-
-IL = 15 / 3000
-
-IL = 0.005 A
-
-Therefore,
-
-IL = 5 mA
-
-Step 2: Calculate the total current.
-
-Voltage across the series resistor:
-
-VR = Vs - VZ
-
-VR = 25 - 15
-
-VR = 10 V
-
-Using Ohm's law:
-
-I = VR / RS
-
-I = 10 / 500
-
-I = 0.02 A
-
-Therefore,
-
-I = 20 mA
-
-Step 3: Calculate the Zener current.
-
-The total current divides into load current and Zener current.
-
-I = IL + IZ
-
-IZ = I - IL
-
-IZ = 20 - 5
-
-IZ = 15 mA
-
-Final answers:
-
-Load current = 5 mA
-Total current = 20 mA
-Zener current = 15 mA`
-        ],
-        [
-            "A transistor has a current gain β = 50. If the base current is 0.2 mA, calculate the collector current.",
-            `Given:
-
-Current gain, β = 50
-Base current, IB = 0.2 mA
-
-Formula:
-
-β = IC / IB
-
-Where:
-IC = Collector current
-IB = Base current
-
-Step 1: Rearrange the formula.
-
-IC = β × IB
-
-Step 2: Substitute the values.
-
-IC = 50 × 0.2 mA
-
-Step 3: Calculate.
-
-IC = 10 mA
-
-Final answer:
-
-Collector current = 10 mA
-
-Remember:
-The current gain of a transistor tells us how much larger the collector current is compared with the base current.`
-        ]
-    ],
-
-    formula: [
-        "Current gain of transistor: β = IC / IB",
-        "Collector current: IC = β × IB",
-        "Load current: IL = VZ / RL",
-        "Series current in a Zener regulator: I = (Vs - VZ) / RS",
-        "Zener current: IZ = I - IL",
-        "AND gate: Y = A · B",
-        "OR gate: Y = A + B",
-        "NOT gate: Y = A'",
-        "NAND gate: Y = (A · B)'",
-        "NOR gate: Y = (A + B)'",
-        "De Morgan's first theorem: (A + B)' = A' · B'",
-        "De Morgan's second theorem: (A · B)' = A' + B'"
+        "Mass-energy relation: E = mc²"
     ]
 },
 
+/* =====================================================
+   UNIT 10 - ELECTRONICS AND COMMUNICATION
+===================================================== */
+
 {
-    id: 11,
-    title: "Recent Developments in Physics",
-    subtitle: "Nanoscience, robotics, artificial intelligence, medical physics, particle physics and cosmology",
+    title: "Electronics and Communication",
+    volume: 2,
 
     bookback: [
-        [
-            "What is nanoscience?",
-            `Nanoscience is the study of objects and materials at the nanoscale.
+        ["What is a semiconductor?",
+         `A semiconductor is a material whose electrical conductivity lies between that of a conductor and an insulator.
 
-The typical size range considered in nanoscience is 1 nm to 100 nm.
+Examples: Silicon and germanium.`],
+        ["What is an intrinsic semiconductor?",
+         `An intrinsic semiconductor is a pure semiconductor without intentionally added impurities.`],
+        ["What is doping?",
+         `Doping is the process of adding a small, controlled amount of impurity to a pure semiconductor to increase its conductivity.`],
+        ["Differentiate between N-type and P-type semiconductors.",
+         `N-type: Formed by adding pentavalent impurities. Electrons are majority carriers.
 
-One nanometre is equal to:
-
-1 nm = 10⁻⁹ m
-
-At this scale, materials can show properties that are different from their properties in bulk form.`
-        ],
-        [
-            "What is nanotechnology?",
-            `Nanotechnology is the technology involving the design, production, characterization and applications of nanostructured materials.
-
-It deals with controlling and using materials at the nanoscale.
-
-Applications include:
-1. Medicine
-2. Electronics
-3. Energy technology
-4. Environmental applications
-5. Material science`
-        ],
-        [
-            "What are the two approaches used for preparing nanomaterials?",
-            `The two approaches are:
-
-1. Top-down approach:
-A bulk material is broken down into smaller particles of nanoscale size.
-
-2. Bottom-up approach:
-Nanomaterials are built by combining smaller particles such as atoms and molecules.
-
-The main difference is that the top-down method starts with a larger material, whereas the bottom-up method builds the material from smaller units.`
-        ],
-        [
-            "What is robotics?",
-            `Robotics is a field of technology that deals with the design, construction, operation and application of robots.
-
-Robots are machines that can perform tasks automatically or with programmed control.
-
-Important components of a robot include:
-1. Power conversion unit
-2. Actuators
-3. Electric motors
-4. Sensors
-5. Control system
-6. Robot body and locomotion system
-
-Robots are used in industries, medicine, space exploration and household applications.`
-        ],
-        [
-            "What is artificial intelligence?",
-            `Artificial Intelligence (AI) is a field of technology that aims to develop machines or computer systems capable of performing tasks that normally require human intelligence.
-
-Applications mentioned in the textbook include:
-1. Face recognition
-2. Responding to player actions in computer games
-3. Taking decisions based on previous actions
-4. Analysing traffic density to regulate traffic
-5. Translating words from one language to another
-
-AI helps machines analyse information and make decisions based on the information available to them.`
-        ],
-        [
-            "What is cosmology?",
-            `Cosmology is the branch of science that deals with the origin and evolution of the universe.
-
-It includes the study of:
-1. Formation of stars
-2. Formation of galaxies
-3. Evolution of the universe
-4. Black holes
-5. Gravitational waves
-
-Cosmology helps scientists understand the large-scale structure and history of the universe.`
-        ]
+P-type: Formed by adding trivalent impurities. Holes are majority carriers.`],
+        ["What is a PN junction diode?",
+         `A PN junction diode is formed by joining P-type and N-type semiconductor materials. It allows current mainly in one direction.`],
+        ["What is modulation?",
+         `Modulation is the process of varying a property of a high-frequency carrier wave according to the information signal.`]
     ],
 
     important: [
-        [
-            "Explain the important properties of nanomaterials.",
-            `Nanomaterials can show properties that are significantly different from those of the same material in bulk form.
+        ["Explain the formation of a PN junction diode.",
+         `When P-type and N-type materials are joined, electrons and holes diffuse across the junction.
 
-Two important phenomena influence their properties:
+This creates a depletion region and a potential barrier.
 
-1. Surface effect:
-- Nanoparticles have a large surface area compared with their volume.
-- A greater proportion of their atoms are present at or near the surface.
-- This can change their chemical and physical behaviour.
+The depletion region controls the movement of charge carriers across the junction.`],
+        ["Explain forward and reverse biasing of a PN junction diode.",
+         `Forward bias:
+The P-side is connected to the positive terminal and the N-side to the negative terminal. The depletion region becomes narrower and current flows.
 
-2. Quantum confinement effect:
-- At nanoscale dimensions, the motion of electrons can become restricted.
-- This can change the electronic and optical properties of the material.
+Reverse bias:
+The P-side is connected to the negative terminal and the N-side to the positive terminal. The depletion region becomes wider and only a small leakage current flows.`],
+        ["Explain the working of a half-wave rectifier.",
+         `A half-wave rectifier uses a diode to convert AC into pulsating DC.
 
-Because of these effects, nanomaterials are useful in electronics, medicine, energy systems and other technologies.`
-        ],
-        [
-            "Explain the harmful effects and concerns associated with nanoparticles.",
-            `Nanoparticles require careful handling because their very small size can create health and environmental concerns.
+During one half-cycle, the diode conducts.
 
-Important concerns:
-1. Their dimensions can be comparable to those of biological molecules such as proteins.
-2. They may get absorbed onto the surfaces of living organisms.
-3. Some nanoparticles may enter biological tissues and fluids.
-4. Their effects can depend on their size, shape and surface properties.
+During the opposite half-cycle, it blocks current.
 
-Therefore, the safety of nanomaterials must be considered while developing and using nanotechnology.`
-        ],
-        [
-            "Explain the important components of a robot.",
-            `The important components of a robot include:
+Therefore, only one half of the input waveform appears across the load.`],
+        ["Explain the working of a full-wave rectifier.",
+         `A full-wave rectifier converts both half-cycles of AC into pulsating DC.
 
-1. Power conversion unit:
-Provides the energy required to operate the robot. Sources may include batteries and solar power.
+It may use two diodes with a centre-tapped transformer or four diodes in a bridge arrangement.
 
-2. Actuators:
-Convert energy into movement. They can produce rotational or linear motion.
+The output current through the load has the same direction during both half-cycles.`],
+        ["What is a transistor? Explain its basic function.",
+         `A transistor is a semiconductor device with three regions: emitter, base and collector.
 
-3. Electric motors:
-Used to move parts such as wheels, arms and other mechanical components.
+It can be used as an amplifier or an electronic switch.
 
-4. Pneumatic air muscles:
-Devices that contract and expand when air is supplied or removed.
+A small input signal can control a larger output current.`],
+        ["Explain the need for modulation in communication systems.",
+         `Modulation shifts a low-frequency information signal onto a high-frequency carrier.
 
-5. Muscle wires:
-Thin wires made using shape-memory alloys that contract when electrical current passes through them.
-
-6. Piezo motors and ultrasonic motors:
-Used in certain precision and industrial robotic applications.
-
-7. Sensors:
-Provide information about the robot's surroundings and task environment.
-
-8. Robot locomotion:
-Describes how a robot moves. Examples include wheeled, legged and tracked movement.`
-        ],
-        [
-            "Explain the applications of robots.",
-            `Robots are used in several fields.
-
-1. Industrial applications:
-- Welding
-- Cutting
-- Material handling
-- Assembling
-- Packing
-- Transport
-
-2. Household applications:
-- Vacuum cleaning
-- Floor cleaning
-- Lawn mowing
-- Pool cleaning
-
-3. Medical applications:
-- Robotic surgery
-- Assistance in medical procedures
-- Development of small-scale medical robots
-
-4. Space exploration:
-- Exploring planets and other celestial bodies
-- Studying rocks and soil on Mars
-- Analysing materials found on other planets
-
-5. Laboratory and research applications:
-Robots can perform repetitive tasks and handle certain materials in controlled environments.`
-        ],
-        [
-            "Write a note on particle physics.",
-            `Particle physics is the branch of physics that studies the fundamental particles of nature and their interactions.
-
-Important points:
-1. Atoms contain a central nucleus and surrounding electrons.
-2. The nucleus contains protons and neutrons.
-3. Protons and neutrons are made up of smaller particles called quarks.
-4. Quarks interact through particles called gluons.
-5. The Higgs particle was discovered in 2012 and its discovery was announced in 2013.
-
-Particle physics helps scientists understand the basic building blocks of matter and the interactions between them.`
-        ],
-        [
-            "What are gravitational waves? Mention their source.",
-            `Gravitational waves are disturbances in the curvature of space-time that travel at the speed of light.
-
-Important points:
-1. They are produced by accelerating masses.
-2. They are extremely weak in most ordinary situations.
-3. Black holes are among the strongest sources of gravitational waves.
-4. The discovery of gravitational waves provided a new way to study the universe.
-
-Gravitational waves help scientists investigate events involving massive astronomical objects.`
-        ]
+It helps in efficient transmission, reduces antenna size and allows different signals to use different frequency bands.`]
     ],
 
     worked: [
-        [
-            "A material has a particle size of 30 nm. Is it classified as a nanomaterial or a bulk material?",
-            `Given:
+        ["A diode has a forward voltage of 0.7 V. If the supply is 5 V and a series resistor is 430 Ω, find the current using the ideal series circuit approximation.",
+         `Given:
 
-Particle size = 30 nm
+Supply voltage = 5 V
+Diode voltage = 0.7 V
+R = 430 Ω
 
-Important definition:
+Voltage across resistor:
 
-A material with particle size below 100 nm is classified as a nanomaterial in this unit.
+VR = 5 - 0.7 = 4.3 V
 
-Step 1: Identify the given particle size.
+Ohm's law:
 
-30 nm
+I = VR/R
 
-Step 2: Compare it with 100 nm.
+I = 4.3/430
 
-30 nm is less than 100 nm.
+Answer:
 
-Step 3: Apply the definition.
+I = 0.01 A = 10 mA.`],
+        ["A transistor has a base current of 40 μA and collector current of 4 mA. Find its current gain β.",
+         `Given:
 
-Therefore, the material is classified as a nanomaterial.
+IB = 40 μA
+IC = 4 mA = 4000 μA
 
-Final answer:
+Formula:
 
-Nanomaterial.`
-        ],
-        [
-            "Convert 5 nm into metres.",
-            `Given:
+β = IC/IB
 
-Length = 5 nm
+Substitute:
 
-We know:
+β = 4000/40
 
-1 nm = 10⁻⁹ m
+Answer:
 
-Step 1: Substitute the value.
+β = 100.`],
+        ["A transistor has collector current 9 mA and base current 0.1 mA. Find emitter current.",
+         `Given:
 
-5 nm = 5 × 10⁻⁹ m
+IC = 9 mA
+IB = 0.1 mA
 
-Final answer:
+Formula:
 
-5 nm = 0.000000005 m
+IE = IC + IB
 
-Remember:
-The prefix nano means one-billionth, or 10⁻⁹.`
-        ],
-        [
-            "Differentiate between the top-down and bottom-up approaches used in nanotechnology.",
-            `Top-down approach:
+Substitute:
 
-1. Starts with a bulk material.
-2. The material is broken down into smaller particles.
-3. The process produces nanoscale structures from larger materials.
+IE = 9 + 0.1
 
-Bottom-up approach:
+Answer:
 
-1. Starts with smaller units such as atoms and molecules.
-2. These smaller units are combined to form larger structures.
-3. Nanomaterials are built from the bottom level upwards.
+IE = 9.1 mA.`],
+        ["A signal has a frequency of 1 kHz. Find its time period.",
+         `Given:
 
-Main difference:
+f = 1 kHz = 1000 Hz
 
-Top-down: Large material → Smaller nanoscale particles.
+Formula:
 
-Bottom-up: Atoms or molecules → Nanostructures.`
-        ],
-        [
-            "Explain how sensors and actuators work together in a robot.",
-            `Step 1: Sensors collect information.
+T = 1/f
 
-Sensors detect information about the surroundings, such as distance, position or other conditions.
+Substitute:
 
-Step 2: The control system processes the information.
+T = 1/1000
 
-The robot's control system uses the sensor information to decide what action is required.
+Answer:
 
-Step 3: The actuators perform the action.
+T = 0.001 s = 1 ms.`],
+        ["An amplifier has an output voltage of 20 V and input voltage of 2 V. Find its voltage gain.",
+         `Given:
 
-Actuators convert energy into movement. They may move a robot's arm, wheel or another part.
+Output voltage = 20 V
+Input voltage = 2 V
 
-Step 4: The robot responds to its surroundings.
+Formula:
 
-The sensors can collect information again, allowing the control system to adjust the robot's movement.
+Av = Vout/Vin
 
-Therefore:
+Substitute:
 
-Sensors → Control system → Actuators → Movement
+Av = 20/2
 
-This process helps a robot interact with its environment.`
-        ]
+Answer:
+
+Av = 10.`],
+        ["A carrier wave has a frequency of 1 MHz. Express it in hertz.",
+         `Given:
+
+1 MHz = 1 × 10⁶ Hz
+
+Answer:
+
+Frequency = 1,000,000 Hz.`]
     ],
 
     formula: [
-        "1 nanometre = 10⁻⁹ metre",
-        "Nanoscience typically deals with sizes from 1 nm to 100 nm",
-        "Nanomaterial: particle size below 100 nm",
-        "Top-down approach: Bulk material → Nanoscale particles",
-        "Bottom-up approach: Atoms / molecules → Nanostructures",
-        "Robot operation: Sensors → Control system → Actuators → Movement",
-        "Gravitational waves travel at the speed of light"
+        "Ohm's law: V = IR",
+        "Current gain: β = IC/IB",
+        "Emitter current: IE = IC + IB",
+        "Voltage gain: Av = Vout/Vin",
+        "Time period: T = 1/f",
+        "Modulation index (AM): m = Am/Ac"
+    ]
+},
+
+/* =====================================================
+   UNIT 11 - RECENT DEVELOPMENTS IN PHYSICS
+===================================================== */
+
+{
+    title: "Recent Developments in Physics",
+    volume: 2,
+
+    bookback: [
+        ["What is nanotechnology?",
+         `Nanotechnology is the study and application of materials and devices at the nanoscale, typically around 1 to 100 nanometres.`],
+        ["What are nanomaterials?",
+         `Nanomaterials are materials that have at least one dimension in the nanoscale range and may show special physical and chemical properties.`],
+        ["What is a superconductor?",
+         `A superconductor is a material that exhibits zero electrical resistance below a certain critical temperature.`],
+        ["What is a smart material?",
+         `A smart material can change one or more of its properties in response to external conditions such as temperature, pressure or electric fields.`],
+        ["What is a solar cell?",
+         `A solar cell is a semiconductor device that converts sunlight directly into electrical energy by the photovoltaic effect.`],
+        ["What is a quantum computer?",
+         `A quantum computer uses quantum bits, called qubits, to process information using principles of quantum mechanics.`]
+    ],
+
+    important: [
+        ["Explain the applications of nanotechnology.",
+         `Nanotechnology has applications in:
+
+1. Medicine and drug delivery.
+2. Electronics and sensors.
+3. Energy storage.
+4. Water purification.
+5. Protective coatings.
+6. Materials engineering.`],
+        ["Explain the properties and applications of superconductors.",
+         `A superconductor exhibits zero electrical resistance below its critical temperature.
+
+Some superconductors also show the Meissner effect, in which magnetic flux is expelled from the material.
+
+Applications include powerful electromagnets, medical MRI systems and magnetic levitation research.`],
+        ["Explain the photovoltaic effect.",
+         `The photovoltaic effect is the production of an electrical voltage when light falls on a suitable semiconductor device.
+
+In a solar cell, absorbed photons create charge carriers. The junction separates these charges and produces an electric current through an external circuit.`],
+        ["What are the applications of lasers?",
+         `Lasers are used in:
+
+1. Medical procedures.
+2. Optical communication.
+3. Industrial cutting and welding.
+4. Barcode scanners.
+5. Scientific measurements.
+6. Data storage.`],
+        ["Explain the importance of renewable energy technologies.",
+         `Renewable energy technologies use naturally replenished energy sources such as sunlight, wind and water.
+
+They help reduce dependence on fossil fuels and can lower greenhouse gas emissions.`],
+        ["Write a short note on quantum technology.",
+         `Quantum technology uses quantum effects such as superposition and entanglement.
+
+Applications include quantum computing, quantum communication and highly sensitive quantum measurement devices.`]
+    ],
+
+    worked: [
+        ["Convert 5 nm into metres.",
+         `Given:
+
+1 nm = 10⁻⁹ m
+
+Therefore:
+
+5 nm = 5 × 10⁻⁹ m
+
+Answer:
+
+5 × 10⁻⁹ m.`],
+        ["A solar panel produces 12 V and 2 A. Find its electrical output power.",
+         `Given:
+
+V = 12 V
+I = 2 A
+
+Formula:
+
+P = VI
+
+Substitute:
+
+P = 12 × 2
+
+Answer:
+
+P = 24 W.`],
+        ["A solar cell receives 100 W of solar power and produces 20 W of electrical power. Find its efficiency.",
+         `Given:
+
+Input power = 100 W
+Output power = 20 W
+
+Formula:
+
+Efficiency = (Output/Input) × 100
+
+Substitute:
+
+Efficiency = (20/100) × 100
+
+Answer:
+
+Efficiency = 20%.`],
+        ["A laser emits light of wavelength 600 nm. Find the frequency. Take c = 3 × 10⁸ m/s.",
+         `Given:
+
+λ = 600 × 10⁻⁹ m
+c = 3 × 10⁸ m/s
+
+Formula:
+
+f = c/λ
+
+Substitute:
+
+f = (3 × 10⁸)/(600 × 10⁻⁹)
+
+Answer:
+
+f = 5 × 10¹⁴ Hz.`],
+        ["A device consumes 60 J of energy in 10 seconds. Find its power.",
+         `Given:
+
+Energy = 60 J
+Time = 10 s
+
+Formula:
+
+P = E/t
+
+Substitute:
+
+P = 60/10
+
+Answer:
+
+P = 6 W.`],
+        ["A material has a resistance of 0. Find its conductivity using the relation between conductivity and resistivity.",
+         `Conductivity is the reciprocal of resistivity:
+
+σ = 1/ρ
+
+For an ideal superconductor, resistivity is zero.
+
+Its conductivity is therefore treated as infinite in the ideal model.`]
+    ],
+
+    formula: [
+        "Nanoscale: approximately 1 nm to 100 nm",
+        "Electrical power: P = VI",
+        "Efficiency: η = (Output/Input) × 100%",
+        "Wave relation: c = fλ",
+        "Energy: E = Pt",
+        "Conductivity: σ = 1/ρ"
     ]
 }
 
+/* =====================================================
+   END OF ALL 11 PHYSICS UNITS
+===================================================== */
+
 ];
 
-// --------------------------------------------------
-// COMPLETE JAVASCRIPT FOR THE PHYSICS PAGE
-// --------------------------------------------------
+/* =====================================================
+   CHAPTER SELECTION
+===================================================== */
 
-const chapterSelect = document.getElementById("chapterSelect");
-const welcome = document.getElementById("welcome");
-const intro = document.getElementById("intro");
-const bookmark = document.getElementById("bookmark");
+const params = new URLSearchParams(window.location.search);
+let currentChapter = Number(params.get("chapter")) || 1;
+
+if (currentChapter < 1 || currentChapter > chapters.length) {
+    currentChapter = 1;
+}
+
+const chapterSelect = document.querySelector(
+    "#chapterSelect, #chapterDropdown, #chapterSelector, select"
+);
+
 const panel = document.getElementById("panel");
 const panelTitle = document.getElementById("panelTitle");
 const panelSub = document.getElementById("panelSub");
 const content = document.getElementById("content");
 
-let currentChapter = chapters[0];
-let currentSection = "bookback";
-let savedChapters = [];
+/* Add chapter choices to the dropdown, if one exists. */
+if (chapterSelect) {
+    chapterSelect.innerHTML = "";
 
-const sectionNames = {
-    bookback: "Book-back Practice",
-    important: "Important Questions",
-    worked: "Worked Examples",
-    formula: "Formula Sheet"
-};
-
-// Fill the chapter selection dropdown.
-chapterSelect.innerHTML = chapters.map(chapter =>
-    `<option value="${chapter.id}">
-        Unit ${chapter.id} - ${chapter.title}
-    </option>`
-).join("");
-
-// Display the selected chapter introduction.
-function showChapter(chapter) {
-    currentChapter = chapter;
-
-    welcome.textContent = `Unit ${chapter.id}: ${chapter.title}`;
-    intro.textContent = chapter.subtitle;
-
-    panel.style.display = "none";
-
-    document.querySelectorAll("[data-section]").forEach(button => {
-        button.classList.remove("active");
+    chapters.forEach((chapter, index) => {
+        const option = document.createElement("option");
+        option.value = index + 1;
+        option.textContent = `Unit ${index + 1} - ${chapter.title}`;
+        chapterSelect.appendChild(option);
     });
 
-    updateBookmark();
-}
+    chapterSelect.value = String(currentChapter);
 
-// Display the selected section.
-function showSection(section) {
-    currentSection = section;
-
-    const questions = currentChapter[section];
-
-    if (!questions) return;
-
-    panel.style.display = "block";
-    panelTitle.textContent = sectionNames[section];
-    panelSub.textContent =
-        `Unit ${currentChapter.id}: ${currentChapter.title}`;
-
-    if (section === "formula") {
-        content.innerHTML = questions.map((formula, index) => `
-            <div class="question-card">
-                <h3>Formula ${index + 1}</h3>
-                <p>${escapeHTML(formula)}</p>
-            </div>
-        `).join("");
-    } else {
-        content.innerHTML = questions.map((item, index) => `
-            <div class="question-card">
-                <h3>Question ${index + 1}</h3>
-                <p class="question-text">${escapeHTML(item[0])}</p>
-
-                <button
-                    class="answer-button"
-                    type="button"
-                    data-answer="${index}">
-                    Show Answer
-                </button>
-
-                <div class="answer-content" id="answer-${index}" hidden>
-                    <h4>Detailed Explanation</h4>
-                    <p>${escapeHTML(item[1])}</p>
-                </div>
-            </div>
-        `).join("");
-    }
-
-    document.querySelectorAll("[data-section]").forEach(button => {
-        button.classList.toggle(
-            "active",
-            button.dataset.section === section
+    chapterSelect.addEventListener("change", () => {
+        currentChapter = Number(chapterSelect.value);
+        window.history.replaceState(
+            {},
+            "",
+            `?chapter=${currentChapter}`
         );
-    });
 
-    updateBookmark();
-}
-
-// Escape text before inserting it into HTML.
-function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, character => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
-    })[character]);
-}
-
-// Show Answer / Hide Answer functionality.
-content.addEventListener("click", function(event) {
-    const button = event.target.closest("[data-answer]");
-
-    if (!button) return;
-
-    const answerIndex = button.dataset.answer;
-    const answer = document.getElementById(`answer-${answerIndex}`);
-
-    if (!answer) return;
-
-    const isHidden = answer.hidden;
-
-    answer.hidden = !isHidden;
-    button.textContent = isHidden ? "Hide Answer" : "Show Answer";
-});
-
-// Change chapter when the dropdown selection changes.
-chapterSelect.addEventListener("change", function() {
-    const selectedId = Number(this.value);
-
-    const selectedChapter = chapters.find(
-        chapter => chapter.id === selectedId
-    );
-
-    if (selectedChapter) {
-        showChapter(selectedChapter);
-    }
-});
-
-// Open a section when its card is clicked.
-document.querySelectorAll("[data-section]").forEach(button => {
-    button.addEventListener("click", function() {
-        showSection(this.dataset.section);
-    });
-});
-
-// Bookmark the currently selected chapter.
-function updateBookmark() {
-    const isSaved = savedChapters.includes(currentChapter.id);
-
-    if (bookmark) {
-        bookmark.textContent = isSaved
-            ? "★ Bookmarked"
-            : "☆ Bookmark Chapter";
-    }
-}
-
-if (bookmark) {
-    bookmark.addEventListener("click", function() {
-        const chapterId = currentChapter.id;
-
-        if (savedChapters.includes(chapterId)) {
-            savedChapters = savedChapters.filter(
-                id => id !== chapterId
-            );
-        } else {
-            savedChapters.push(chapterId);
+        if (panel) {
+            panel.hidden = true;
         }
 
-        updateBookmark();
+        document.querySelectorAll(".physics-card").forEach(card => {
+            card.classList.remove("active");
+        });
     });
 }
 
-// Load the first chapter when the page opens.
-chapterSelect.value = String(chapters[0].id);
-showChapter(chapters[0]);
+/* =====================================================
+   DISPLAY QUESTION AND ANSWER ITEMS
+===================================================== */
+
+function showQuestionItems(items) {
+    content.innerHTML = "";
+
+    items.slice(0, 6).forEach((item, index) => {
+        const question = item[0];
+        const answer = item[1];
+
+        const card = document.createElement("article");
+        card.className = "question-item";
+
+        const heading = document.createElement("h3");
+        heading.textContent = `${index + 1}. ${question}`;
+
+        const answerButton = document.createElement("button");
+        answerButton.type = "button";
+        answerButton.className = "answer-btn";
+        answerButton.textContent = "Show Answer";
+
+        const answerBox = document.createElement("div");
+        answerBox.className = "answer-box";
+        answerBox.hidden = true;
+        answerBox.textContent = answer;
+
+        answerButton.addEventListener("click", () => {
+            answerBox.hidden = !answerBox.hidden;
+            answerButton.textContent = answerBox.hidden
+                ? "Show Answer"
+                : "Hide Answer";
+        });
+
+        card.appendChild(heading);
+        card.appendChild(answerButton);
+        card.appendChild(answerBox);
+
+        content.appendChild(card);
+    });
+}
+
+/* =====================================================
+   DISPLAY FORMULAS
+===================================================== */
+
+function showFormulaItems(items) {
+    content.innerHTML = "";
+
+    items.slice(0, 6).forEach((formula, index) => {
+        const card = document.createElement("article");
+        card.className = "formula-item";
+
+        const heading = document.createElement("h3");
+        heading.textContent = `Formula ${index + 1}`;
+
+        const formulaText = document.createElement("p");
+        formulaText.textContent = formula;
+
+        card.appendChild(heading);
+        card.appendChild(formulaText);
+
+        content.appendChild(card);
+    });
+}
+
+/* =====================================================
+   OPEN A LEARNING SECTION
+===================================================== */
+
+function openSection(sectionName) {
+    const chapter = chapters[currentChapter - 1];
+
+    if (!chapter || !panel || !content) {
+        return;
+    }
+
+    const sectionDetails = {
+        bookback: {
+            title: "Book-back Practice",
+            subtitle: "Practise the six selected textbook questions.",
+            items: chapter.bookback
+        },
+
+        important: {
+            title: "Important Questions",
+            subtitle: "Revise six selected exam-oriented questions.",
+            items: chapter.important
+        },
+
+        worked: {
+            title: "Worked Examples",
+            subtitle: "Learn through six step-by-step examples.",
+            items: chapter.worked
+        },
+
+        formula: {
+            title: "Formula Sheet",
+            subtitle: "Quickly revise six important formulas.",
+            items: chapter.formula
+        }
+    };
+
+    const selected = sectionDetails[sectionName];
+
+    if (!selected) {
+        return;
+    }
+
+    panelTitle.textContent =
+        `Unit ${currentChapter}: ${selected.title}`;
+
+    panelSub.textContent = selected.subtitle;
+
+    if (sectionName === "formula") {
+        showFormulaItems(selected.items);
+    } else {
+        showQuestionItems(selected.items);
+    }
+
+    panel.hidden = false;
+
+    panel.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+/* =====================================================
+   CONNECT THE FOUR LEARNING CARDS
+===================================================== */
+
+document.querySelectorAll(".physics-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const sectionName = card.dataset.section;
+
+        document.querySelectorAll(".physics-card").forEach(item => {
+            item.classList.remove("active");
+        });
+
+        card.classList.add("active");
+
+        openSection(sectionName);
+    });
+});
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+const backButton = document.querySelector(
+    ".back-btn, #backToPhysics"
+);
+
+if (backButton) {
+    backButton.addEventListener("click", event => {
+        if (
+            backButton.tagName === "BUTTON" ||
+            backButton.getAttribute("href") === "#"
+        ) {
+            event.preventDefault();
+            window.location.href = "physics.html";
+        }
+    });
+}
+
+/* =====================================================
+   BOOKMARK CHAPTER
+===================================================== */
+
+const bookmarkButton = document.querySelector(
+    "#bookmarkChapter, .bookmark-btn"
+);
+
+if (bookmarkButton) {
+    const bookmarkKey = `starLightPhysicsBookmark${currentChapter}`;
+
+    bookmarkButton.addEventListener("click", () => {
+        const isBookmarked =
+            localStorage.getItem(bookmarkKey) === "true";
+
+        localStorage.setItem(
+            bookmarkKey,
+            String(!isBookmarked)
+        );
+
+        bookmarkButton.textContent = !isBookmarked
+            ? "★ Bookmarked"
+            : "☆ Bookmark Chapter";
+    });
+
+    if (localStorage.getItem(bookmarkKey) === "true") {
+        bookmarkButton.textContent = "★ Bookmarked";
+    }
+}
+
+/* =====================================================
+   INITIALISE CHAPTER TITLE
+===================================================== */
+
+const chapter = chapters[currentChapter - 1];
+
+const chapterHeading = document.querySelector(
+    "#chapterTitle, .chapter-title"
+);
+
+if (chapterHeading && chapter) {
+    chapterHeading.textContent =
+        `Unit ${currentChapter}: ${chapter.title}`;
+}
 
 </script>
 </body>
 </html>
+
