@@ -318,6 +318,207 @@ main {
         align-items: stretch;
     }
 }
+
+/* ==========================================
+   STAR LIGHT - PHYSICS MATHEMATICS THEME
+========================================== */
+
+/* Main page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        120deg,
+        #dceeff 0%,
+        #e9e5ff 50%,
+        #fce1f5 100%
+    );
+    color: #172b5d;
+    line-height: 1.6;
+}
+
+/* Main content */
+main {
+    width: 92%;
+    max-width: 1450px;
+    margin: 30px auto;
+}
+
+/* Main learning cards */
+.physics-card,
+.panel,
+.physics-hero {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #d7def8;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(48, 65, 120, 0.08);
+}
+
+/* Learning card layout */
+.physics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.physics-card {
+    padding: 30px;
+    text-align: left;
+    color: #172b5d;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.physics-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(48, 65, 120, 0.13);
+}
+
+.physics-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.physics-card p {
+    font-size: 17px;
+    color: #42577e;
+}
+
+/* Questions panel */
+.panel {
+    padding: 32px;
+    margin-top: 28px;
+}
+
+.panel h2 {
+    font-size: 28px;
+    color: #172b5d;
+}
+
+/* Individual question cards */
+#content .question-card,
+#content .practice-card,
+#content .worked-card,
+#content .question-item {
+    background: #ffffff;
+    border: 1px solid #dce2f2;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 18px 0;
+}
+
+/* Question headings */
+#content h3,
+#content h4 {
+    color: #172b5d;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Answer buttons */
+#content button,
+#content .answer-button,
+#content .answer-btn {
+    background: #294783;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 8px 0;
+    transition: 0.2s ease;
+}
+
+#content button:hover,
+#content .answer-button:hover,
+#content .answer-btn:hover {
+    background: #172b5d;
+}
+
+/* Detailed solution boxes */
+#content .answer,
+#content .solution,
+#content .solution-box,
+#content .answer-box,
+#content .answer-content,
+#content .explanation {
+    background: #f5f2ff;
+    color: #293e68;
+    border-radius: 13px;
+    padding: 22px;
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* Steps inside solutions */
+#content .solution p,
+#content .solution-box p,
+#content .answer-box p,
+#content .answer-content p,
+#content .explanation p {
+    margin: 12px 0;
+}
+
+/* Learning tip */
+.tip {
+    background: #fff7df;
+    border-left: 6px solid #edbd43;
+    border-radius: 14px;
+    padding: 22px 25px;
+    color: #29436b;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+/* Chapter selection dropdown */
+select {
+    width: min(100%, 680px);
+    padding: 13px 16px;
+    border: 1px solid #cbd5ef;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #172b5d;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    background: #0d2055;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    main {
+        width: 94%;
+    }
+
+    .physics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .physics-card {
+        padding: 22px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    #content h3,
+    #content h4 {
+        font-size: 18px;
+    }
+}
+
 </style>
 </head>
 
