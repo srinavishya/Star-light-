@@ -1,659 +1,308 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Light | Class 12 Physics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Chapter Learning | Star Light</title>
+  <link rel="stylesheet" href="style.css?v=5">
 
-<link rel="stylesheet" href="style.css?v=5">
+  <style>
+    * { box-sizing: border-box; }
 
-<style>
-/* =========================================
-   STAR LIGHT - PHYSICS CHAPTER PAGE
-========================================= */
-
-main {
-    max-width: 1450px;
-    margin: 0 auto;
-    padding: 28px 4% 55px;
-    color: #10265f;
-}
-
-/* Top buttons */
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-}
-
-.back,
-.bookmark {
-    display: inline-block;
-    text-decoration: none;
-    border: none;
-    border-radius: 22px;
-    padding: 11px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.back {
-    background: rgba(255,255,255,0.7);
-    color: #10265f;
-    border: 1px solid rgba(120,153,226,0.25);
-}
-
-.bookmark {
-    background: #fff0c2;
-    color: #765300;
-}
-
-/* Chapter welcome section */
-.physics-hero {
-    text-align: center;
-    padding: 42px 25px;
-    margin-bottom: 35px;
-    background: rgba(255,255,255,0.68);
-    border: 1px solid rgba(120,153,226,0.25);
-    border-radius: 22px;
-    box-shadow: 0 5px 18px rgba(34,55,110,0.07);
-}
-
-.physics-hero h1 {
-    color: #0c2053;
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
-
-.physics-hero p {
-    color: #34466f;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.selectwrap {
-    margin-top: 22px;
-}
-
-.selectwrap select {
-    width: min(100%, 600px);
-    padding: 13px 16px;
-    border: 1px solid rgba(120,153,226,0.45);
-    border-radius: 12px;
-    background: white;
-    color: #10265f;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-/* Learning section */
-.sectiontitle {
-    color: #10265f;
-    font-size: 30px;
-    font-weight: 800;
-    text-align: center;
-    margin: 35px 0 22px;
-}
-
-/* Four learning cards - 2 by 2 layout */
-.physics-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.physics-card {
-    min-height: 155px;
-    padding: 24px 20px;
-    text-align: left;
-    background: rgba(255,255,255,0.75);
-    border: 1px solid rgba(120,153,226,0.3);
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(34,55,110,0.06);
-    color: #10265f;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.physics-card:hover,
-.physics-card.active {
-    background: rgba(255,255,255,0.95);
-    border-color: #a9a4e8;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(34,55,110,0.13);
-}
-
-.physics-card h3 {
-    color: #10265f;
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 13px;
-}
-
-.physics-card p {
-    color: #405477;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* Learning tip */
-.tip {
-    margin-top: 28px;
-    padding: 20px 22px;
-    background: #fff7df;
-    border-left: 5px solid #e4b747;
-    border-radius: 12px;
-    color: #263f60;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* Questions panel */
-.panel {
-    margin-top: 38px;
-    padding: 28px;
-    background: rgba(255,255,255,0.78);
-    border: 1px solid rgba(120,153,226,0.3);
-    border-radius: 20px;
-    box-shadow: 0 5px 18px rgba(34,55,110,0.07);
-}
-
-.panelhead {
-    border-bottom: 2px solid rgba(120,153,226,0.25);
-    padding-bottom: 16px;
-    margin-bottom: 22px;
-}
-
-.panelhead h2 {
-    color: #10265f;
-    font-size: 27px;
-    font-weight: 800;
-    margin: 0 0 7px;
-}
-
-.note {
-    color: #6b65b5;
-    font-size: 15px;
-}
-
-/* Individual question cards */
-.question-card {
-    background: rgba(255,255,255,0.85);
-    border: 1px solid rgba(120,153,226,0.28);
-    border-radius: 17px;
-    padding: 24px;
-    margin: 18px 0;
-    box-shadow: 0 4px 12px rgba(34,55,110,0.05);
-}
-
-.question-card h3 {
-    color: #10265f;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 13px;
-}
-
-.question-text {
-    color: #34466f;
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 16px;
-}
-
-/* Show answer button */
-.answer-button {
-    background: #071c56;
-    color: white;
-    border: none;
-    border-radius: 24px;
-    padding: 11px 22px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.answer-button:hover {
-    background: #354f99;
-    transform: translateY(-2px);
-}
-
-/* Answer content */
-.answer-content {
-    white-space: pre-line;
-    margin-top: 20px;
-    padding: 22px;
-    background: #f1f5ff;
-    border: 1px solid rgba(120,153,226,0.25);
-    border-radius: 14px;
-    color: #34466f;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.answer-content h4 {
-    color: #10265f;
-    font-size: 19px;
-    margin-bottom: 12px;
-}
-
-/* Formula and answer sections */
-.answer,
-.formula {
-    white-space: pre-line;
-    background: #f1f5ff;
-    border-left: 4px solid #8c91d9;
-    border-radius: 10px;
-    padding: 18px;
-    margin-top: 15px;
-    color: #34466f;
-    line-height: 1.8;
-}
-
-/* Footer */
-.footer {
-    background: #071c56;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-}
-
-/* Tablet */
-@media (max-width: 800px) {
-    .physics-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    main {
-        padding: 20px 16px 40px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #263b63;
+      line-height: 1.6;
+      background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
     }
 
-    .physics-hero {
-        padding: 30px 15px;
+    a { color: inherit; text-decoration: none; }
+
+    .header, main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 22px 24px;
     }
 
-    .physics-hero h1 {
-        font-size: 28px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
     }
 
-    .physics-hero p {
-        font-size: 16px;
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      color: #18356b;
     }
 
-    .sectiontitle {
-        font-size: 24px;
+    nav {
+      display: flex;
+      gap: 22px;
+      font-weight: bold;
+      color: #18356b;
     }
 
-    .physics-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .physics-card {
-        min-height: 130px;
-    }
-
-    .panel {
-        padding: 17px;
-    }
-
-    .question-card {
-        padding: 18px;
-    }
+    main { margin: 10px auto 50px; }
 
     .top {
-        align-items: stretch;
-    }
-}
-
-/* ==========================================
-   STAR LIGHT - PHYSICS MATHEMATICS THEME
-========================================== */
-
-/* Main page */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(
-        120deg,
-        #dceeff 0%,
-        #e9e5ff 50%,
-        #fce1f5 100%
-    );
-    color: #172b5d;
-    line-height: 1.6;
-}
-
-/* Main content */
-main {
-    width: 92%;
-    max-width: 1450px;
-    margin: 30px auto;
-}
-
-/* Main learning cards */
-.physics-card,
-.panel,
-.physics-hero {
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid #d7def8;
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(48, 65, 120, 0.08);
-}
-
-/* Learning card layout */
-.physics-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.physics-card {
-    padding: 30px;
-    text-align: left;
-    color: #172b5d;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.physics-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(48, 65, 120, 0.13);
-}
-
-.physics-card h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.physics-card p {
-    font-size: 17px;
-    color: #42577e;
-}
-
-/* Questions panel */
-.panel {
-    padding: 32px;
-    margin-top: 28px;
-}
-
-.panel h2 {
-    font-size: 28px;
-    color: #172b5d;
-}
-
-/* Individual question cards */
-#content .question-card,
-#content .practice-card,
-#content .worked-card,
-#content .question-item {
-    background: #ffffff;
-    border: 1px solid #dce2f2;
-    border-radius: 16px;
-    padding: 22px;
-    margin: 18px 0;
-}
-
-/* Question headings */
-#content h3,
-#content h4 {
-    color: #172b5d;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/* Answer buttons */
-#content button,
-#content .answer-button,
-#content .answer-btn {
-    background: #294783;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 8px 0;
-    transition: 0.2s ease;
-}
-
-#content button:hover,
-#content .answer-button:hover,
-#content .answer-btn:hover {
-    background: #172b5d;
-}
-
-/* Detailed solution boxes */
-#content .answer,
-#content .solution,
-#content .solution-box,
-#content .answer-box,
-#content .answer-content,
-#content .explanation {
-    background: #f5f2ff;
-    color: #293e68;
-    border-radius: 13px;
-    padding: 22px;
-    margin-top: 14px;
-    font-size: 17px;
-    line-height: 1.9;
-}
-
-/* Steps inside solutions */
-#content .solution p,
-#content .solution-box p,
-#content .answer-box p,
-#content .answer-content p,
-#content .explanation p {
-    margin: 12px 0;
-}
-
-/* Learning tip */
-.tip {
-    background: #fff7df;
-    border-left: 6px solid #edbd43;
-    border-radius: 14px;
-    padding: 22px 25px;
-    color: #29436b;
-    font-size: 18px;
-    margin: 30px 0;
-}
-
-/* Chapter selection dropdown */
-select {
-    width: min(100%, 680px);
-    padding: 13px 16px;
-    border: 1px solid #cbd5ef;
-    border-radius: 10px;
-    background: #ffffff;
-    color: #172b5d;
-    font-size: 16px;
-}
-
-/* Footer */
-.footer {
-    background: #0d2055;
-    color: #ffffff;
-    text-align: center;
-    padding: 22px;
-    margin-top: 40px;
-    font-size: 18px;
-}
-
-/* Mobile layout */
-@media (max-width: 700px) {
-    main {
-        width: 94%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0 28px;
+      gap: 14px;
     }
 
-    .physics-grid {
-        grid-template-columns: 1fr;
+    .back { font-weight: bold; color: #18356b; }
+
+    button, select { font: inherit; cursor: pointer; }
+
+    .bookmark {
+      border: 1px solid #b9b0ee;
+      background: white;
+      border-radius: 28px;
+      padding: 10px 18px;
+      font-weight: bold;
+      color: #18356b;
     }
 
-    .physics-card {
-        padding: 22px;
+    .hero, .card, .panel, .tip {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px #455b8610;
+    }
+
+    .hero {
+      padding: 28px;
+      margin-bottom: 38px;
+      min-height: 245px;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: #18356b;
+      font-size: 28px;
+    }
+
+    .hero p {
+      color: #536783;
+      font-size: 17px;
+      margin: 0 0 26px;
+    }
+
+    .selectwrap { text-align: center; }
+
+    select {
+      width: min(520px, 100%);
+      padding: 12px;
+      border: 1px solid #c7cbe0;
+      border-radius: 8px;
+      color: #263b63;
+      background: #fff;
+    }
+
+    h2, h3 { color: #18356b; }
+
+    .sectiontitle {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 26px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 24px;
+      text-align: left;
+      border: 2px solid transparent;
+      min-height: 145px;
+      color: #263b63;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .card:hover, .card.active {
+      border-color: #a99be9;
+      transform: translateY(-2px);
+    }
+
+    .card h3 { font-size: 21px; margin: 0 0 12px; }
+    .card p { margin: 0; color: #536783; }
+
+    .tip {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border-left: 5px solid #9788df;
+      background: #f8f5ff;
     }
 
     .panel {
-        padding: 18px;
+      padding: 25px;
+      margin-top: 25px;
+      scroll-margin-top: 18px;
     }
 
-    #content h3,
-    #content h4 {
-        font-size: 18px;
+    .panelhead {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
     }
-}
 
-</style>
+    .panelhead h2 { margin: 0; }
+    .note { font-size: 13px; color: #6b7890; }
+
+    .question, .formula {
+      border: 1px solid #e1e5f0;
+      border-radius: 13px;
+      padding: 20px;
+      margin: 16px 0;
+      background: white;
+    }
+
+    .question h3 {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 12px 0 18px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #7669b2;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+    .answer {
+      background: #f5f3ff;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+      white-space: pre-line;
+      line-height: 1.8;
+    }
+
+    .answer[hidden], .panel[hidden] { display: none; }
+    .answer p { margin: 9px 0; white-space: pre-wrap; }
+    .answer .step-heading { font-weight: bold; color: #263f7a; margin-top: 17px; }
+    .answer .final-answer {
+      font-weight: bold;
+      color: #176b45;
+      background: #eaf8f0;
+      padding: 13px;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+
+    .action {
+      border: 0;
+      background: #263f7a;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: bold;
+      margin-top: 8px;
+      transition: background .2s ease;
+    }
+
+    .action:hover { background: #405b9b; }
+
+    .formula {
+      background: #f8f7ff;
+      border-left: 4px solid #9b8be4;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    .formula h3 { margin: 0 0 8px; font-size: 18px; }
+    .footer {
+      text-align: center;
+      padding: 23px;
+      background: #1d376e;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .header { align-items: flex-start; flex-direction: column; }
+      nav { flex-wrap: wrap; }
+      .grid { grid-template-columns: 1fr; }
+      .top { align-items: flex-start; flex-direction: column; }
+      .hero { padding: 22px; }
+      .panel { padding: 18px; }
+      .question { padding: 17px; }
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
-<header class="header">
-    <nav class="navbar">
-
-        <a href="index.html" class="brand">
-            <svg class="brand-logo" viewBox="0 0 100 75"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 53 C25 75 72 65 91 22"
-                      fill="none"
-                      stroke="#c66be8"
-                      stroke-width="6"
-                      stroke-linecap="round"/>
-
-                <path d="M48 5 L56 24 L77 25 L61 39
-                         L66 59 L48 48 L30 59 L35 39
-                         L19 25 L40 24 Z"
-                      fill="#10265f"/>
-            </svg>
-
-            <span>Star Light</span>
-        </a>
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#subjects" class="active">Subjects</a>
-            <a href="about.html">About</a>
-        </div>
-
+  <header class="header">
+    <a class="brand" href="index.html">✦ Star Light</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#subjects">Subjects</a>
+      <a href="about.html">About</a>
     </nav>
-</header>
+  </header>
 
-<!-- MAIN CONTENT -->
-<main>
-
+  <main>
     <div class="top">
-        <a class="back" href="physics.html">← Back to Physics</a>
-
-        <button class="bookmark" id="bookmark">
-            ☆ Bookmark Chapter
-        </button>
+      <a class="back" href="physics.html">← Back to Physics</a>
+      <button class="bookmark" id="bookmark" type="button">☆ Bookmark Chapter</button>
     </div>
 
-    <!-- CHAPTER INTRODUCTION -->
-    <section class="physics-hero">
-
-        <h1 id="welcome">Welcome to Physics!</h1>
-
-        <p id="intro">
-            Learn concepts, practise questions and understand every
-            solution step by step.
-        </p>
-
-        <div class="selectwrap">
-            <select id="chapterSelect" aria-label="Choose Physics unit">
-            </select>
-        </div>
-
+    <section class="hero">
+      <h1 id="welcome">Welcome to this chapter!</h1>
+      <p id="intro">Explore the learning resources for this chapter.</p>
+      <div class="selectwrap">
+        <select id="chapterSelect" aria-label="Choose Physics chapter"></select>
+      </div>
     </section>
 
-    <!-- LEARNING OPTIONS -->
     <h2 class="sectiontitle">Explore Your Learning</h2>
 
-    <section class="physics-grid">
-
-        <button class="physics-card" data-section="bookback">
-            <h3>📘 Book-back Practice</h3>
-            <p>
-                Practise textbook-based questions with answers
-                and detailed explanations.
-            </p>
-        </button>
-
-        <button class="physics-card" data-section="important">
-            <h3>⭐ Important Questions</h3>
-            <p>
-                Revise important concepts and exam-oriented questions.
-            </p>
-        </button>
-
-        <button class="physics-card" data-section="worked">
-            <h3>✏️ Worked Examples</h3>
-            <p>
-                Understand numerical problems through detailed solutions.
-            </p>
-        </button>
-
-        <button class="physics-card" data-section="formula">
-            <h3>📐 Formula Sheet</h3>
-            <p>
-                Quickly revise the important formulas in each unit.
-            </p>
-        </button>
-
+    <section class="grid">
+      <button class="card" type="button" data-section="bookback">
+        <h3>📘 Book-back Practice</h3>
+        <p>Practise chapter-based questions with answers and detailed explanations.</p>
+      </button>
+      <button class="card" type="button" data-section="important">
+        <h3>⭐ Important Questions</h3>
+        <p>Revise important questions with complete solutions.</p>
+      </button>
+      <button class="card" type="button" data-section="worked">
+        <h3>✏️ Worked Examples</h3>
+        <p>Learn how to solve problems through detailed explanations.</p>
+      </button>
+      <button class="card" type="button" data-section="formula">
+        <h3>📐 Formula Sheet</h3>
+        <p>Review important formulas and mathematical results.</p>
+      </button>
     </section>
 
-    <!-- LEARNING TIP -->
     <div class="tip">
-        <b>Learning tip:</b>
-        Start with the worked examples. Understand the formula and
-        each calculation before trying the practice questions.
+      <b>Learning tip:</b>
+      Start with the worked examples. Understand each step before trying the practice questions yourself.
     </div>
 
-    <!-- QUESTIONS AND ANSWERS PANEL -->
     <section class="panel" id="panel" hidden>
-
-        <div class="panelhead">
-            <h2 id="panelTitle"></h2>
-            <span class="note" id="panelSub"></span>
-        </div>
-
-        <div id="content"></div>
-
+      <div class="panelhead">
+        <h2 id="panelTitle"></h2>
+        <span class="note" id="panelSub"></span>
+      </div>
+      <div id="content"></div>
     </section>
+  </main>
 
-</main>
+  <footer class="footer">Star Light | Your Learning Companion</footer>
 
-<!-- FOOTER -->
-<footer class="footer">
-    Star Light | Your Learning Companion
-</footer>
-
-<!-- THE CHAPTER DATA AND JAVASCRIPT WILL CONTINUE IN PART 2 -->
-
-<script>
-
-/* =====================================================
-   STAR LIGHT PHYSICS
-   PART 2: UNIT 1 - ELECTROSTATICS
-===================================================== */
-
+  <script>
+    /* Original Star Light Physics data: all 11 units retained below. */
 const chapters = [
 
 {
@@ -3106,268 +2755,203 @@ Its conductivity is therefore treated as infinite in the ideal model.`]
 
 ];
 
-/* =====================================================
-   CHAPTER SELECTION
-===================================================== */
 
-const params = new URLSearchParams(window.location.search);
-let currentChapter = Number(params.get("chapter")) || 1;
+    const chapterSelect = document.getElementById("chapterSelect");
+    const panel = document.getElementById("panel");
+    const panelTitle = document.getElementById("panelTitle");
+    const panelSub = document.getElementById("panelSub");
+    const content = document.getElementById("content");
+    const bookmarkButton = document.getElementById("bookmark");
 
-if (currentChapter < 1 || currentChapter > chapters.length) {
-    currentChapter = 1;
-}
+    let currentChapter = 0;
+    let activeSection = null;
 
-const chapterSelect = document.querySelector(
-    "#chapterSelect, #chapterDropdown, #chapterSelector, select"
-);
-
-const panel = document.getElementById("panel");
-const panelTitle = document.getElementById("panelTitle");
-const panelSub = document.getElementById("panelSub");
-const content = document.getElementById("content");
-
-/* Add chapter choices to the dropdown, if one exists. */
-if (chapterSelect) {
-    chapterSelect.innerHTML = "";
-
+    // Build the chapter dropdown from the original chapter data.
     chapters.forEach((chapter, index) => {
-        const option = document.createElement("option");
-        option.value = index + 1;
-        option.textContent = `Unit ${index + 1} - ${chapter.title}`;
-        chapterSelect.appendChild(option);
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = `Unit ${index + 1} - ${chapter.title}`;
+      chapterSelect.appendChild(option);
     });
 
-    chapterSelect.value = String(currentChapter);
+    function getBookmarks() {
+      try {
+        const saved = JSON.parse(localStorage.getItem("starLightPhysicsBookmarks") || "[]");
+        return Array.isArray(saved) ? saved : [];
+      } catch (error) {
+        return [];
+      }
+    }
 
-    chapterSelect.addEventListener("change", () => {
-        currentChapter = Number(chapterSelect.value);
-        window.history.replaceState(
-            {},
-            "",
-            `?chapter=${currentChapter}`
-        );
+    function updateBookmarkButton() {
+      const saved = getBookmarks();
+      bookmarkButton.textContent = saved.includes(currentChapter + 1)
+        ? "★ Bookmarked"
+        : "☆ Bookmark Chapter";
+    }
 
-        if (panel) {
-            panel.hidden = true;
+    function chooseChapter(index) {
+      if (!Number.isInteger(index) || index < 0 || index >= chapters.length) {
+        index = 0;
+      }
+
+      currentChapter = index;
+      const chapter = chapters[currentChapter];
+      chapterSelect.value = String(currentChapter);
+
+      document.getElementById("welcome").textContent = `Welcome to Chapter ${currentChapter + 1}!`;
+      document.getElementById("intro").textContent =
+        `You are viewing Chapter ${currentChapter + 1} from Physics Volume ${chapter.volume}. Explore the learning resources for this chapter.`;
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("chapter", String(currentChapter + 1));
+      window.history.replaceState({}, "", url);
+
+      panel.hidden = true;
+      activeSection = null;
+      document.querySelectorAll(".card").forEach(card => card.classList.remove("active"));
+      updateBookmarkButton();
+    }
+
+    function appendAnswerLines(answerBox, answerData) {
+      // Physics answers are retained as their original arrays or text strings.
+      const lines = Array.isArray(answerData)
+        ? answerData
+        : String(answerData).split("\n");
+
+      lines.forEach(line => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = String(line);
+        const trimmed = String(line).trim();
+
+        if (/^(concept|given|to find|formula|why|step\s*\d*|substitution|calculation|solution|answer)\s*:/i.test(trimmed)) {
+          paragraph.classList.add("step-heading");
+        }
+        if (/^(final answer|answer)\s*:/i.test(trimmed)) {
+          paragraph.classList.add("final-answer");
         }
 
-        document.querySelectorAll(".physics-card").forEach(card => {
-            card.classList.remove("active");
-        });
-    });
-}
+        answerBox.appendChild(paragraph);
+      });
+    }
 
-/* =====================================================
-   DISPLAY QUESTION AND ANSWER ITEMS
-===================================================== */
+    function showQuestionItems(items, sectionName) {
+      content.replaceChildren();
 
-function showQuestionItems(items) {
-    content.innerHTML = "";
-
-    items.slice(0, 6).forEach((item, index) => {
-        const question = item[0];
-        const answer = item[1];
-
+      items.slice(0, 6).forEach((item, index) => {
         const card = document.createElement("article");
-        card.className = "question-item";
+        card.className = "question";
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.textContent = (sectionName === "worked"
+          ? "WORKED EXAMPLE "
+          : sectionName === "important"
+            ? "IMPORTANT QUESTION "
+            : "BOOK-BACK PRACTICE ") + (index + 1);
 
         const heading = document.createElement("h3");
-        heading.textContent = `${index + 1}. ${question}`;
+        heading.textContent = item[0];
 
         const answerButton = document.createElement("button");
         answerButton.type = "button";
-        answerButton.className = "answer-btn";
-        answerButton.textContent = "Show Answer";
+        answerButton.className = "action";
+        answerButton.textContent = "Show Answer & Step-by-Step Solution";
+        answerButton.setAttribute("aria-expanded", "false");
 
         const answerBox = document.createElement("div");
-        answerBox.className = "answer-box";
+        answerBox.className = "answer";
         answerBox.hidden = true;
-        answerBox.textContent = answer;
+        appendAnswerLines(answerBox, item[1]);
 
         answerButton.addEventListener("click", () => {
-            answerBox.hidden = !answerBox.hidden;
-            answerButton.textContent = answerBox.hidden
-                ? "Show Answer"
-                : "Hide Answer";
+          answerBox.hidden = !answerBox.hidden;
+          answerButton.textContent = answerBox.hidden
+            ? "Show Answer & Step-by-Step Solution"
+            : "Hide Solution";
+          answerButton.setAttribute("aria-expanded", String(!answerBox.hidden));
         });
 
-        card.appendChild(heading);
-        card.appendChild(answerButton);
-        card.appendChild(answerBox);
-
+        card.append(meta, heading, answerButton, answerBox);
         content.appendChild(card);
-    });
-}
+      });
+    }
 
-/* =====================================================
-   DISPLAY FORMULAS
-===================================================== */
+    function showFormulaItems(items) {
+      content.replaceChildren();
 
-function showFormulaItems(items) {
-    content.innerHTML = "";
-
-    items.slice(0, 6).forEach((formula, index) => {
-        const card = document.createElement("article");
-        card.className = "formula-item";
+      items.slice(0, 6).forEach((formulaText, index) => {
+        const formulaCard = document.createElement("article");
+        formulaCard.className = "formula";
 
         const heading = document.createElement("h3");
         heading.textContent = `Formula ${index + 1}`;
 
-        const formulaText = document.createElement("p");
-        formulaText.textContent = formula;
+        const formula = document.createElement("p");
+        formula.textContent = formulaText;
 
-        card.appendChild(heading);
-        card.appendChild(formulaText);
-
-        content.appendChild(card);
-    });
-}
-
-/* =====================================================
-   OPEN A LEARNING SECTION
-===================================================== */
-
-function openSection(sectionName) {
-    const chapter = chapters[currentChapter - 1];
-
-    if (!chapter || !panel || !content) {
-        return;
+        formulaCard.append(heading, formula);
+        content.appendChild(formulaCard);
+      });
     }
 
-    const sectionDetails = {
-        bookback: {
-            title: "Book-back Practice",
-            subtitle: "Practise the six selected textbook questions.",
-            items: chapter.bookback
-        },
+    function showSection(sectionName) {
+      activeSection = sectionName;
+      const chapter = chapters[currentChapter];
+      const titles = {
+        bookback: "📘 Book-back Practice",
+        important: "⭐ Important Questions",
+        worked: "✏️ Worked Examples",
+        formula: "📐 Formula Sheet"
+      };
 
-        important: {
-            title: "Important Questions",
-            subtitle: "Revise six selected exam-oriented questions.",
-            items: chapter.important
-        },
+      document.querySelectorAll(".card").forEach(card => {
+        card.classList.toggle("active", card.dataset.section === sectionName);
+      });
 
-        worked: {
-            title: "Worked Examples",
-            subtitle: "Learn through six step-by-step examples.",
-            items: chapter.worked
-        },
+      panelTitle.textContent = titles[sectionName] || "Learning Resources";
+      panelSub.textContent = `Chapter ${currentChapter + 1}: ${chapter.title}`;
 
-        formula: {
-            title: "Formula Sheet",
-            subtitle: "Quickly revise six important formulas.",
-            items: chapter.formula
-        }
-    };
+      const items = chapter[sectionName] || [];
+      if (sectionName === "formula") {
+        showFormulaItems(items);
+      } else {
+        showQuestionItems(items, sectionName);
+      }
 
-    const selected = sectionDetails[sectionName];
-
-    if (!selected) {
-        return;
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    panelTitle.textContent =
-        `Unit ${currentChapter}: ${selected.title}`;
-
-    panelSub.textContent = selected.subtitle;
-
-    if (sectionName === "formula") {
-        showFormulaItems(selected.items);
-    } else {
-        showQuestionItems(selected.items);
-    }
-
-    panel.hidden = false;
-
-    panel.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => showSection(card.dataset.section));
     });
-}
 
-/* =====================================================
-   CONNECT THE FOUR LEARNING CARDS
-===================================================== */
-
-document.querySelectorAll(".physics-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const sectionName = card.dataset.section;
-
-        document.querySelectorAll(".physics-card").forEach(item => {
-            item.classList.remove("active");
-        });
-
-        card.classList.add("active");
-
-        openSection(sectionName);
+    chapterSelect.addEventListener("change", event => {
+      chooseChapter(Number(event.target.value));
     });
-});
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-const backButton = document.querySelector(
-    ".back-btn, #backToPhysics"
-);
-
-if (backButton) {
-    backButton.addEventListener("click", event => {
-        if (
-            backButton.tagName === "BUTTON" ||
-            backButton.getAttribute("href") === "#"
-        ) {
-            event.preventDefault();
-            window.location.href = "physics.html";
-        }
-    });
-}
-
-/* =====================================================
-   BOOKMARK CHAPTER
-===================================================== */
-
-const bookmarkButton = document.querySelector(
-    "#bookmarkChapter, .bookmark-btn"
-);
-
-if (bookmarkButton) {
-    const bookmarkKey = `starLightPhysicsBookmark${currentChapter}`;
 
     bookmarkButton.addEventListener("click", () => {
-        const isBookmarked =
-            localStorage.getItem(bookmarkKey) === "true";
+      let saved = getBookmarks();
+      const chapterNumber = currentChapter + 1;
+      saved = saved.includes(chapterNumber)
+        ? saved.filter(number => number !== chapterNumber)
+        : [...saved, chapterNumber];
 
-        localStorage.setItem(
-            bookmarkKey,
-            String(!isBookmarked)
-        );
-
-        bookmarkButton.textContent = !isBookmarked
-            ? "★ Bookmarked"
-            : "☆ Bookmark Chapter";
+      try {
+        localStorage.setItem("starLightPhysicsBookmarks", JSON.stringify(saved));
+      } catch (error) {
+        // The learning page remains usable if browser storage is unavailable.
+      }
+      updateBookmarkButton();
     });
 
-    if (localStorage.getItem(bookmarkKey) === "true") {
-        bookmarkButton.textContent = "★ Bookmarked";
-    }
-}
-
-/* =====================================================
-   INITIALISE CHAPTER TITLE
-===================================================== */
-
-const chapter = chapters[currentChapter - 1];
-
-const chapterHeading = document.querySelector(
-    "#chapterTitle, .chapter-title"
-);
-
-if (chapterHeading && chapter) {
-    chapterHeading.textContent =
-        `Unit ${currentChapter}: ${chapter.title}`;
-}
-
-</script>
+    const requestedChapter = Number(new URLSearchParams(window.location.search).get("chapter") || 1);
+    chooseChapter(
+      Number.isInteger(requestedChapter) && requestedChapter >= 1 && requestedChapter <= chapters.length
+        ? requestedChapter - 1
+        : 0
+    );
+  </script>
 </body>
 </html>
