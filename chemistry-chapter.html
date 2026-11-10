@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry Chapter Learning | Star Light</title>
+  <link rel="stylesheet" href="style.css?v=4">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #263b63;
+      line-height: 1.6;
+      background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .header, main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 22px 24px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      color: #18356b;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      font-weight: bold;
+      color: #18356b;
+    }
+
+    main { margin: 10px auto 50px; }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0 28px;
+      gap: 14px;
+    }
+
+    .back {
+      font-weight: bold;
+      color: #18356b;
+    }
+
+    button, select { font: inherit; cursor: pointer; }
+
+    .bookmark {
+      border: 1px solid #b9b0ee;
+      background: white;
+      border-radius: 28px;
+      padding: 10px 18px;
+      font-weight: bold;
+      color: #18356b;
+    }
+
+    .hero, .card, .panel, .tip {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px #455b8610;
+    }
+
+    .hero {
+      padding: 28px;
+      margin-bottom: 38px;
+      min-height: 245px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      text-align: center;
+      color: #18356b;
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    .hero p {
+      color: #536783;
+      font-size: 17px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .selectwrap { text-align: center; }
+
+    select {
+      width: min(100%, 300px);
+      padding: 9px;
+      border: 1px solid #c7cbe0;
+      border-radius: 8px;
+      color: #263b63;
+      background: #fff;
+    }
+
+    h2, h3 { color: #18356b; }
+
+    .sectiontitle {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 26px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 24px;
+      text-align: left;
+      border: 2px solid transparent;
+      min-height: 145px;
+      color: #263b63;
+      transition: 0.2s;
+    }
+
+    .card:hover, .card.active {
+      border-color: #a99be9;
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin: 0 0 12px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #536783;
+    }
+
+    .tip {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border-left: 5px solid #9788df;
+      background: #f8f5ff;
+    }
+
+    .panel {
+      padding: 25px;
+      margin-top: 25px;
+      scroll-margin-top: 18px;
+    }
+
+    .panelhead {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .panelhead h2 { margin: 0; }
+
+    .note {
+      font-size: 13px;
+      color: #6b7890;
+    }
+
+    .question, .formula {
+      border: 1px solid #e1e5f0;
+      border-radius: 13px;
+      padding: 20px;
+      margin: 16px 0;
+      background: #fff;
+    }
+
+    .question h3 {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 5px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #7669b2;
+      font-weight: bold;
+    }
+
+    .answer {
+      background: #f5f3ff;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+      white-space: pre-line;
+      color: #263b63;
+      line-height: 1.8;
+    }
+
+    .answer[hidden], .panel[hidden] {
+      display: none;
+    }
+
+    .action {
+      border: 0;
+      background: #263f7a;
+      color: white;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .action:hover { background: #091f5b; }
+
+    .formula {
+      background: #f8f7ff;
+      border-left: 4px solid #9b8be4;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 23px;
+      background: #1d376e;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .grid { grid-template-columns: 1fr; }
+
+      .top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 22px;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .hero h1 { font-size: 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <a class="brand" href="index.html">✦ Star Light</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chemistry.html">Chemistry</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="top">
+      <a class="back" href="chemistry-chapters.html">
+        ← Back to Chemistry
+      </a>
+
+      <button class="bookmark" id="bookmark">
+        ☆ Bookmark Chapter
+      </button>
+    </div>
+
+    <section class="hero">
+
+      <h1 id="welcome">Welcome to Chapter 1!</h1>
+
+      <p id="intro">
+        Explore the learning resources for this chapter.
+      </p>
+
+      <div class="selectwrap">
+        <select id="chapterSelect" aria-label="Choose chapter"></select>
+      </div>
+
+    </section>
+
+    <h2 class="sectiontitle">Explore Your Learning</h2>
+
+    <section class="grid">
+
+      <button class="card" data-section="bookback">
+        <h3>📘 Book-back Practice</h3>
+        <p>Practise six chapter-based questions with answers.</p>
+      </button>
+
+      <button class="card" data-section="important">
+        <h3>⭐ Important Questions</h3>
+        <p>Revise six selected questions with worked solutions.</p>
+      </button>
+
+      <button class="card" data-section="worked">
+        <h3>✏️ Worked Examples</h3>
+        <p>Study six detailed, step-by-step worked examples.</p>
+      </button>
+
+      <button class="card" data-section="formula">
+        <h3>📐 Formula Sheet</h3>
+        <p>Review important formulas, reactions and results.</p>
+      </button>
+
+    </section>
+
+    <div class="tip">
+      <b>Learning tip:</b>
+      Start with the Worked Examples. Understand each step,
+      then practise the questions yourself before revealing the solutions.
+    </div>
+
+    <section class="panel" id="panel" hidden>
+
+      <div class="panelhead">
+        <h2 id="panelTitle"></h2>
+        <span class="note" id="panelSub"></span>
+      </div>
+
+      <div id="content"></div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Star Light | Your Learning Companion
+  </footer>
+
+  <script src="chemistry-data.js"></script>
+
+  <script>
+    const chapters = window.chemistryChapters || [];
+
+    const params = new URLSearchParams(window.location.search);
+    let chapterNumber = Number(params.get("chapter")) || 1;
+
+    if (chapterNumber < 1 || chapterNumber > chapters.length) {
+      chapterNumber = 1;
+    }
+
+    const chapterSelect = document.getElementById("chapterSelect");
+    const welcome = document.getElementById("welcome");
+    const intro = document.getElementById("intro");
+    const panel = document.getElementById("panel");
+    const panelTitle = document.getElementById("panelTitle");
+    const panelSub = document.getElementById("panelSub");
+    const content = document.getElementById("content");
+    const bookmarkButton = document.getElementById("bookmark");
+
+    const sectionNames = {
+      bookback: "📘 Book-back Practice",
+      important: "⭐ Important Questions",
+      worked: "✏️ Worked Examples",
+      formula: "📐 Formula Sheet"
+    };
+
+    function currentChapter() {
+      return chapters.find(ch => ch.number === chapterNumber);
+    }
+
+    function loadChapter() {
+      const chapter = currentChapter();
+
+      if (!chapter) {
+        welcome.textContent = "Chapter not available";
+        intro.textContent = "Please return to the Chemistry chapter list.";
+        return;
+      }
+
+      welcome.textContent = "Welcome to Chapter " + chapter.number + "!";
+      intro.textContent =
+        "You are viewing Chapter " + chapter.number +
+        " – " + chapter.title +
+        ". Explore the learning resources for this chapter.";
+
+      chapterSelect.value = String(chapter.number);
+      updateBookmarkButton();
+    }
+
+    chapters.forEach(chapter => {
+      const option = document.createElement("option");
+      option.value = chapter.number;
+      option.textContent =
+        "Chapter " + chapter.number + " – " + chapter.title;
+      chapterSelect.appendChild(option);
+    });
+
+    chapterSelect.addEventListener("change", function () {
+      window.location.href =
+        "chemistry-chapter.html?chapter=" + this.value;
+    });
+
+    function updateBookmarkButton() {
+      const saved = JSON.parse(
+        localStorage.getItem("starLightChemistryBookmarks") || "[]"
+      );
+
+      const isSaved = saved.includes(chapterNumber);
+
+      bookmarkButton.textContent = isSaved
+        ? "★ Bookmarked"
+        : "☆ Bookmark Chapter";
+    }
+
+    bookmarkButton.addEventListener("click", function () {
+      let saved = JSON.parse(
+        localStorage.getItem("starLightChemistryBookmarks") || "[]"
+      );
+
+      if (saved.includes(chapterNumber)) {
+        saved = saved.filter(number => number !== chapterNumber);
+      } else {
+        saved.push(chapterNumber);
+      }
+
+      localStorage.setItem(
+        "starLightChemistryBookmarks",
+        JSON.stringify(saved)
+      );
+
+      updateBookmarkButton();
+    });
+
+    function showSection(section) {
+      const chapter = currentChapter();
+      if (!chapter) return;
+
+      document.querySelectorAll(".card").forEach(card => {
+        card.classList.toggle(
+          "active",
+          card.dataset.section === section
+        );
+      });
+
+      panel.hidden = false;
+      panelTitle.textContent = sectionNames[section];
+      panelSub.textContent =
+        "Chapter " + chapter.number + " – " + chapter.title;
+
+      content.innerHTML = "";
+
+      if (section === "formula") {
+        renderFormulas(chapter.formula || []);
+      } else {
+        renderQuestions(chapter[section] || [], section);
+      }
+
+      panel.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    function renderQuestions(questions, section) {
+      if (!questions.length) {
+        content.textContent = "Content for this section is being prepared.";
+        return;
+      }
+
+      questions.forEach((item, index) => {
+        const question = document.createElement("article");
+        question.className = "question";
+
+        const label = document.createElement("div");
+        label.className = "meta";
+        label.textContent =
+          (section === "worked" ? "WORKED EXAMPLE " : "QUESTION ") +
+          (index + 1);
+
+        const heading = document.createElement("h3");
+        heading.textContent = item.question;
+
+        const button = document.createElement("button");
+        button.className = "action";
+        button.textContent = "Show Answer";
+
+        const answer = document.createElement("div");
+        answer.className = "answer";
+        answer.hidden = true;
+        answer.textContent = item.answer;
+
+        button.addEventListener("click", function () {
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden
+            ? "Show Answer"
+            : "Hide Answer";
+        });
+
+        question.append(label, heading, button, answer);
+        content.appendChild(question);
+      });
+    }
+
+    function renderFormulas(formulas) {
+      if (!formulas.length) {
+        content.textContent = "Formula sheet is being prepared.";
+        return;
+      }
+
+      formulas.forEach((item, index) => {
+        const formula = document.createElement("article");
+        formula.className = "formula";
+
+        const heading = document.createElement("h3");
+        heading.textContent = item.name;
+
+        const expression = document.createElement("p");
+        expression.innerHTML = item.expression;
+
+        const explanation = document.createElement("p");
+        explanation.textContent = item.explanation;
+
+        formula.append(heading, expression, explanation);
+        content.appendChild(formula);
+      });
+    }
+
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", function () {
+        showSection(this.dataset.section);
+      });
+    });
+
+    loadChapter();
+  </script>
+
+</body>
+</html>
