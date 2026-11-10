@@ -2,549 +2,721 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry Chapter Learning | Star Light</title>
-  <link rel="stylesheet" href="style.css?v=4">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chemistry Chapter Learning | Star Light</title>
+<link rel="stylesheet" href="style.css?v=5">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #263b63;
-      line-height: 1.6;
-      background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #263b63;
+  line-height: 1.6;
+  background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
+}
 
-    a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; }
 
-    .header, main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 22px 24px;
-    }
+.header, main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 22px 24px;
+}
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
 
-    .brand {
-      font-size: 23px;
-      font-weight: 800;
-      color: #18356b;
-    }
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  color: #18356b;
+}
 
-    nav {
-      display: flex;
-      gap: 22px;
-      font-weight: bold;
-      color: #18356b;
-    }
+nav {
+  display: flex;
+  gap: 22px;
+  font-weight: bold;
+  color: #18356b;
+}
 
-    main { margin: 10px auto 50px; }
+main { margin: 10px auto 50px; }
 
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 8px 0 28px;
-      gap: 14px;
-    }
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0 28px;
+  gap: 14px;
+}
 
-    .back {
-      font-weight: bold;
-      color: #18356b;
-    }
+.back {
+  font-weight: bold;
+  color: #18356b;
+}
 
-    button, select { font: inherit; cursor: pointer; }
+button, select { font: inherit; cursor: pointer; }
 
-    .bookmark {
-      border: 1px solid #b9b0ee;
-      background: white;
-      border-radius: 28px;
-      padding: 10px 18px;
-      font-weight: bold;
-      color: #18356b;
-    }
+.bookmark {
+  border: 1px solid #b9b0ee;
+  background: white;
+  border-radius: 28px;
+  padding: 10px 18px;
+  font-weight: bold;
+  color: #18356b;
+}
 
-    .hero, .card, .panel, .tip {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 28px #455b8610;
-    }
+.hero, .card, .panel, .tip {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px #455b8610;
+}
 
-    .hero {
-      padding: 28px;
-      margin-bottom: 38px;
-      min-height: 245px;
-      display: grid;
-      grid-template-columns: 1fr 1.5fr 1fr;
-      align-items: center;
-      gap: 20px;
-    }
+.hero {
+  padding: 28px;
+  margin-bottom: 38px;
+  min-height: 245px;
+}
 
-    .hero h1 {
-      margin: 0;
-      text-align: center;
-      color: #18356b;
-      font-size: 28px;
-      line-height: 1.4;
-    }
+.hero h1 {
+  margin: 0 0 14px;
+  color: #18356b;
+  font-size: 28px;
+}
 
-    .hero p {
-      color: #536783;
-      font-size: 17px;
-      margin: 0;
-      text-align: center;
-    }
+.hero p {
+  color: #536783;
+  font-size: 17px;
+  margin: 0 0 26px;
+}
 
-    .selectwrap { text-align: center; }
+.selectwrap { text-align: center; }
 
-    select {
-      width: min(100%, 300px);
-      padding: 9px;
-      border: 1px solid #c7cbe0;
-      border-radius: 8px;
-      color: #263b63;
-      background: #fff;
-    }
+select {
+  width: min(520px, 100%);
+  padding: 12px;
+  border: 1px solid #c7cbe0;
+  border-radius: 8px;
+  color: #263b63;
+  background: #fff;
+}
 
-    h2, h3 { color: #18356b; }
+h2, h3 { color: #18356b; }
 
-    .sectiontitle {
-      text-align: center;
-      font-size: 28px;
-      margin: 0 0 26px;
-    }
+.sectiontitle {
+  text-align: center;
+  font-size: 28px;
+  margin: 0 0 26px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
 
-    .card {
-      padding: 24px;
-      text-align: left;
-      border: 2px solid transparent;
-      min-height: 145px;
-      color: #263b63;
-      transition: 0.2s;
-    }
+.card {
+  padding: 24px;
+  text-align: left;
+  border: 2px solid transparent;
+  min-height: 145px;
+  color: #263b63;
+}
 
-    .card:hover, .card.active {
-      border-color: #a99be9;
-      transform: translateY(-2px);
-    }
+.card:hover, .card.active {
+  border-color: #a99be9;
+  transform: translateY(-2px);
+}
 
-    .card h3 {
-      font-size: 21px;
-      margin: 0 0 12px;
-    }
+.card h3 {
+  font-size: 21px;
+  margin: 0 0 12px;
+}
 
-    .card p {
-      margin: 0;
-      color: #536783;
-    }
+.card p { margin: 0; color: #536783; }
 
-    .tip {
-      margin: 28px 0;
-      padding: 18px 20px;
-      border-left: 5px solid #9788df;
-      background: #f8f5ff;
-    }
+.tip {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border-left: 5px solid #9788df;
+  background: #f8f5ff;
+}
 
-    .panel {
-      padding: 25px;
-      margin-top: 25px;
-      scroll-margin-top: 18px;
-    }
+.panel {
+  padding: 25px;
+  margin-top: 25px;
+  scroll-margin-top: 18px;
+}
 
-    .panelhead {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.panelhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .panelhead h2 { margin: 0; }
+.panelhead h2 { margin: 0; }
 
-    .note {
-      font-size: 13px;
-      color: #6b7890;
-    }
+.note { font-size: 13px; color: #6b7890; }
 
-    .question, .formula {
-      border: 1px solid #e1e5f0;
-      border-radius: 13px;
-      padding: 20px;
-      margin: 16px 0;
-      background: #fff;
-    }
+.question, .formula {
+  border: 1px solid #e1e5f0;
+  border-radius: 13px;
+  padding: 20px;
+  margin: 16px 0;
+  background: #fff;
+}
 
-    .question h3 {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-top: 5px;
-    }
+.question h3 {
+  font-size: 18px;
+  line-height: 1.5;
+}
 
-    .meta {
-      font-size: 13px;
-      color: #7669b2;
-      font-weight: bold;
-    }
+.meta {
+  font-size: 13px;
+  color: #7669b2;
+  font-weight: bold;
+}
 
-    .answer {
-      background: #f5f3ff;
-      border-radius: 10px;
-      padding: 16px;
-      margin-top: 12px;
-      white-space: pre-line;
-      color: #263b63;
-      line-height: 1.8;
-    }
+.answer {
+  background: #f5f3ff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 12px;
+  white-space: pre-line;
+  line-height: 1.8;
+}
 
-    .answer[hidden], .panel[hidden] {
-      display: none;
-    }
+.answer[hidden], .panel[hidden] { display: none; }
 
-    .action {
-      border: 0;
-      background: #263f7a;
-      color: white;
-      border-radius: 8px;
-      padding: 10px 16px;
-      font-weight: bold;
-      margin-top: 8px;
-    }
+.action {
+  border: 0;
+  background: #263f7a;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
 
-    .action:hover { background: #091f5b; }
+.action:hover { background: #405b9b; }
 
-    .formula {
-      background: #f8f7ff;
-      border-left: 4px solid #9b8be4;
-    }
+.formula {
+  background: #f8f7ff;
+  border-left: 4px solid #9b8be4;
+  line-height: 1.8;
+}
 
-    .footer {
-      text-align: center;
-      padding: 23px;
-      background: #1d376e;
-      color: white;
-    }
+.footer {
+  text-align: center;
+  padding: 23px;
+  background: #1d376e;
+  color: white;
+}
 
-    @media (max-width: 700px) {
-      .header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .grid { grid-template-columns: 1fr; }
-
-      .top {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .hero {
-        padding: 22px;
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .hero h1 { font-size: 25px; }
-    }
-  </style>
+@media (max-width: 700px) {
+  .header { align-items: flex-start; flex-direction: column; }
+  nav { flex-wrap: wrap; }
+  .grid { grid-template-columns: 1fr; }
+  .top { align-items: flex-start; flex-direction: column; }
+  .hero { padding: 22px; }
+  .panel { padding: 18px; }
+}
+</style>
 </head>
 
 <body>
 
-  <header class="header">
-    <a class="brand" href="index.html">✦ Star Light</a>
+<header class="header">
+  <a class="brand" href="index.html">✦ Star Light</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="chemistry.html">Subjects</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="chemistry.html">Chemistry</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<main>
 
-  <main>
+  <div class="top">
+    <a class="back" href="chemistry.html">← Back to Chemistry</a>
+    <button class="bookmark" id="bookmark">☆ Bookmark Chapter</button>
+  </div>
 
-    <div class="top">
-      <a class="back" href="chemistry-chapters.html">
-        ← Back to Chemistry
-      </a>
+  <section class="hero">
+    <h1 id="welcome">Welcome to Chemistry!</h1>
+    <p id="intro">Choose a chapter to explore its learning resources.</p>
 
-      <button class="bookmark" id="bookmark">
-        ☆ Bookmark Chapter
-      </button>
+    <div class="selectwrap">
+      <select id="chapterSelect" aria-label="Choose Chemistry chapter"></select>
     </div>
+  </section>
 
-    <section class="hero">
+  <h2 class="sectiontitle">Explore Your Learning</h2>
 
-      <h1 id="welcome">Welcome to Chapter 1!</h1>
+  <section class="grid">
+    <button class="card" data-section="bookback">
+      <h3>📘 Book-back Practice</h3>
+      <p>Practise chapter-based textbook questions.</p>
+    </button>
 
-      <p id="intro">
-        Explore the learning resources for this chapter.
-      </p>
+    <button class="card" data-section="important">
+      <h3>⭐ Important Questions</h3>
+      <p>Revise important concepts and questions.</p>
+    </button>
 
-      <div class="selectwrap">
-        <select id="chapterSelect" aria-label="Choose chapter"></select>
-      </div>
+    <button class="card" data-section="worked">
+      <h3>✏️ Worked Examples</h3>
+      <p>Learn through detailed step-by-step explanations.</p>
+    </button>
 
-    </section>
+    <button class="card" data-section="formula">
+      <h3>📐 Formula Sheet</h3>
+      <p>Revise important formulas and chemical equations.</p>
+    </button>
 
-    <h2 class="sectiontitle">Explore Your Learning</h2>
+    <button class="card" data-section="bookmarks">
+      <h3>🔖 My Bookmarks</h3>
+      <p>View your saved questions and chapters.</p>
+    </button>
+  </section>
 
-    <section class="grid">
+  <div class="tip">
+    <b>Learning tip:</b>
+    Understand the concepts first. Then study the worked examples and
+    practise the questions before revealing their answers.
+  </div>
 
-      <button class="card" data-section="bookback">
-        <h3>📘 Book-back Practice</h3>
-        <p>Practise six chapter-based questions with answers.</p>
-      </button>
-
-      <button class="card" data-section="important">
-        <h3>⭐ Important Questions</h3>
-        <p>Revise six selected questions with worked solutions.</p>
-      </button>
-
-      <button class="card" data-section="worked">
-        <h3>✏️ Worked Examples</h3>
-        <p>Study six detailed, step-by-step worked examples.</p>
-      </button>
-
-      <button class="card" data-section="formula">
-        <h3>📐 Formula Sheet</h3>
-        <p>Review important formulas, reactions and results.</p>
-      </button>
-
-    </section>
-
-    <div class="tip">
-      <b>Learning tip:</b>
-      Start with the Worked Examples. Understand each step,
-      then practise the questions yourself before revealing the solutions.
+  <section class="panel" id="panel" hidden>
+    <div class="panelhead">
+      <h2 id="panelTitle"></h2>
+      <span class="note" id="panelSub"></span>
     </div>
+    <div id="content"></div>
+  </section>
 
-    <section class="panel" id="panel" hidden>
+</main>
 
-      <div class="panelhead">
-        <h2 id="panelTitle"></h2>
-        <span class="note" id="panelSub"></span>
-      </div>
+<footer class="footer">
+  Star Light | Your Learning Companion
+</footer>
 
-      <div id="content"></div>
+<script>
+const chapters = [
+  { title: "Metallurgy", volume: 1,
+    intro: "Study the extraction, refining and properties of metals.",
+    formulas: ["Ore concentration separates unwanted impurities from ores.",
+      "Roasting: heating sulphide ores in excess air.",
+      "Calcination: heating carbonate or hydrated ores in limited or no air.",
+      "Reduction converts metal oxides into metals.",
+      "Electrolytic refining is used to purify certain metals."] },
 
-    </section>
+  { title: "p-Block Elements – I", volume: 1,
+    intro: "Explore the chemistry and properties of p-block elements.",
+    formulas: ["General valence-shell configuration: ns² np¹–⁶.",
+      "Group 13 elements have three valence electrons.",
+      "Group 14 elements have four valence electrons.",
+      "Oxidation states depend on the valence electrons and bonding."] },
 
-  </main>
+  { title: "p-Block Elements – II", volume: 1,
+    intro: "Learn the properties and compounds of the remaining p-block groups.",
+    formulas: ["Group 15: ns² np³.",
+      "Group 16: ns² np⁴.",
+      "Group 17: ns² np⁵.",
+      "Group 18: ns² np⁶, except helium (1s²)."] },
 
-  <footer class="footer">
-    Star Light | Your Learning Companion
-  </footer>
+  { title: "Transition and Inner Transition Elements", volume: 1,
+    intro: "Understand d-block and f-block elements and their characteristic properties.",
+    formulas: ["Transition elements have partially filled d orbitals in their atoms or common ions.",
+      "General d-block configuration: (n−1)d¹–¹⁰ ns⁰–².",
+      "Lanthanides involve filling of 4f orbitals.",
+      "Actinides involve filling of 5f orbitals."] },
 
-  <script src="chemistry-data.js"></script>
+  { title: "Coordination Chemistry", volume: 1,
+    intro: "Explore coordination compounds, ligands, nomenclature and bonding.",
+    formulas: ["Coordination number = number of donor atoms attached to the central metal.",
+      "Oxidation state is calculated using the charges of ligands and the complex.",
+      "A ligand donates an electron pair to the central metal ion.",
+      "Coordination entity is written inside square brackets."] },
 
-  <script>
-    const chapters = window.chemistryChapters || [];
+  { title: "Solid State", volume: 1,
+    intro: "Study crystalline solids, unit cells and their properties.",
+    formulas: ["Density: ρ = ZM / (a³ Nₐ).",
+      "Packing efficiency = (volume occupied / total unit-cell volume) × 100.",
+      "For a simple cubic unit cell: Z = 1.",
+      "For a body-centred cubic unit cell: Z = 2.",
+      "For a face-centred cubic unit cell: Z = 4."] },
 
-    const params = new URLSearchParams(window.location.search);
-    let chapterNumber = Number(params.get("chapter")) || 1;
+  { title: "Chemical Kinetics", volume: 1,
+    intro: "Understand reaction rates, rate laws and reaction order.",
+    formulas: ["Rate = change in concentration / time.",
+      "For a first-order reaction: k = (2.303/t) log(a/(a−x)).",
+      "Half-life of a first-order reaction: t₁/₂ = 0.693/k.",
+      "Arrhenius equation: k = A e^(−Ea/RT)."] },
 
-    if (chapterNumber < 1 || chapterNumber > chapters.length) {
-      chapterNumber = 1;
+  { title: "Ionic Equilibrium", volume: 2,
+    intro: "Learn acids, bases, pH, buffers and solubility equilibria.",
+    formulas: ["pH = −log[H⁺].",
+      "pOH = −log[OH⁻].",
+      "At 25°C: pH + pOH = 14.",
+      "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25°C.",
+      "For a buffer: pH = pKa + log([salt]/[acid])."] },
+
+  { title: "Electro Chemistry", volume: 2,
+    intro: "Study electrochemical cells, electrode potentials and conductance.",
+    formulas: ["E°cell = E°cathode − E°anode.",
+      "ΔG° = −nFE°cell.",
+      "Nernst equation: E = E° − (0.0591/n) log Q at 25°C.",
+      "Conductance: G = 1/R.",
+      "Molar conductivity: Λm = κ × 1000/C (when C is in mol L⁻¹)."] },
+
+  { title: "Surface Chemistry", volume: 2,
+    intro: "Explore adsorption, catalysis, colloids and surface phenomena.",
+    formulas: ["Adsorption is the accumulation of molecules on a surface.",
+      "Freundlich adsorption isotherm: x/m = kP^(1/n).",
+      "A catalyst changes reaction rate without being consumed overall.",
+      "Colloidal particles are intermediate in size between true solutions and suspensions."] },
+
+  { title: "Hydroxy Compounds and Ethers", volume: 2,
+    intro: "Study alcohols, phenols, ethers and their important reactions.",
+    formulas: ["Alcohol functional group: R–OH.",
+      "Phenol functional group: Ar–OH.",
+      "Ether functional group: R–O–R′.",
+      "Alcohol oxidation products depend on the type of alcohol and reaction conditions."] },
+
+  { title: "Carbonyl Compounds and Carboxylic Acids", volume: 2,
+    intro: "Learn aldehydes, ketones, carboxylic acids and their reactions.",
+    formulas: ["Aldehyde group: R–CHO.",
+      "Ketone group: R–CO–R′.",
+      "Carboxylic acid group: R–COOH.",
+      "Aldehydes and ketones undergo nucleophilic addition reactions."] },
+
+  { title: "Organic Nitrogen Compounds", volume: 2,
+    intro: "Explore amines, diazonium salts and other nitrogen-containing compounds.",
+    formulas: ["Primary amine: R–NH₂.",
+      "Secondary amine: R₂NH.",
+      "Tertiary amine: R₃N.",
+      "Aniline: C₆H₅NH₂.",
+      "Amines are basic because nitrogen has a lone pair of electrons."] },
+
+  { title: "Biomolecules", volume: 2,
+    intro: "Study carbohydrates, proteins, vitamins, enzymes and nucleic acids.",
+    formulas: ["Glucose molecular formula: C₆H₁₂O₆.",
+      "Amino acids contain amino and carboxyl functional groups.",
+      "Proteins are polymers of amino acids.",
+      "DNA contains the sugar 2-deoxyribose.",
+      "RNA contains the sugar ribose."] },
+
+  { title: "Chemistry in Everyday Life", volume: 2,
+    intro: "Understand medicines, cleansing agents and chemicals used in daily life.",
+    formulas: ["Antacids help neutralise excess stomach acid.",
+      "Analgesics help relieve pain.",
+      "Antiseptics are applied to living tissues to reduce microbial growth.",
+      "Detergents help remove dirt and grease.",
+      "Preservatives help slow food spoilage."]
+  }
+];
+
+const sectionNames = {
+  bookback: "Book-back Practice",
+  important: "Important Questions",
+  worked: "Worked Examples",
+  formula: "Formula Sheet",
+  bookmarks: "My Bookmarks"
+};
+
+const select = document.getElementById("chapterSelect");
+const panel = document.getElementById("panel");
+const content = document.getElementById("content");
+
+let currentChapter = 0;
+let currentSection = "";
+
+const storageKey = "starLightChemistryBookmarks";
+
+function getBookmarks() {
+  try {
+    return JSON.parse(localStorage.getItem(storageKey)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveBookmarks(items) {
+  localStorage.setItem(storageKey, JSON.stringify(items));
+}
+
+chapters.forEach((chapter, index) => {
+  const option = document.createElement("option");
+  option.value = index;
+  option.textContent =
+    `Chapter ${index + 1} – ${chapter.title} (Volume ${chapter.volume})`;
+  select.appendChild(option);
+});
+
+function updateChapter() {
+  currentChapter = Number(select.value);
+  const chapter = chapters[currentChapter];
+
+  document.getElementById("welcome").textContent =
+    `Welcome to Chapter ${currentChapter + 1}`;
+
+  document.getElementById("intro").textContent =
+    `${chapter.title} — ${chapter.intro} (Volume ${chapter.volume})`;
+
+  document.getElementById("bookmark").textContent =
+    getBookmarks().includes("chapter-" + currentChapter)
+      ? "★ Chapter Bookmarked"
+      : "☆ Bookmark Chapter";
+
+  panel.hidden = true;
+  document.querySelectorAll(".card").forEach(card =>
+    card.classList.remove("active")
+  );
+}
+
+select.addEventListener("change", updateChapter);
+
+document.getElementById("bookmark").addEventListener("click", () => {
+  const key = "chapter-" + currentChapter;
+  const items = getBookmarks();
+  const index = items.indexOf(key);
+
+  if (index === -1) items.push(key);
+  else items.splice(index, 1);
+
+  saveBookmarks(items);
+  updateChapter();
+});
+
+function makeQuestion(question, answer, label, index) {
+  const article = document.createElement("article");
+  article.className = "question";
+
+  const heading = document.createElement("h3");
+  heading.textContent = question;
+
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  meta.textContent = label;
+
+  const answerBox = document.createElement("div");
+  answerBox.className = "answer";
+  answerBox.hidden = true;
+  answerBox.textContent = answer;
+
+  const actions = document.createElement("div");
+
+  const show = document.createElement("button");
+  show.className = "action";
+  show.textContent = "Show Answer & Solution";
+  show.addEventListener("click", () => {
+    answerBox.hidden = !answerBox.hidden;
+    show.textContent = answerBox.hidden
+      ? "Show Answer & Solution"
+      : "Hide Answer";
+  });
+
+  const bookmark = document.createElement("button");
+  bookmark.className = "bookmark";
+  bookmark.style.marginLeft = "10px";
+
+  const key = `q-${currentChapter}-${currentSection}-${index}`;
+  const refreshBookmark = () => {
+    bookmark.textContent = getBookmarks().includes(key)
+      ? "★ Saved"
+      : "☆ Bookmark";
+  };
+
+  refreshBookmark();
+
+  bookmark.addEventListener("click", () => {
+    const items = getBookmarks();
+    const position = items.indexOf(key);
+
+    if (position === -1) items.push(key);
+    else items.splice(position, 1);
+
+    saveBookmarks(items);
+    refreshBookmark();
+  });
+
+  actions.append(show, bookmark);
+  article.append(meta, heading, actions, answerBox);
+  return article;
+}
+
+function createQuestions(chapter, section) {
+  const title = chapter.title;
+
+  const baseQuestions = [
+    {
+      q: `Define the main concept studied in ${title}.`,
+      a: `Step 1: Identify the topic.\n\nThe chapter is ${title}.\n\nStep 2: Understand the concept.\n\nStudy the definition and the important terms associated with this topic in your textbook.\n\nStep 3: Explain its significance.\n\nDescribe its important properties, applications and examples.\n\nFinal Answer: Write the textbook definition of the concept and include its key characteristics.`
+    },
+    {
+      q: `Explain the important characteristics of ${title}.`,
+      a: `Step 1: Identify the chapter's central ideas.\n\nStep 2: Explain each characteristic separately.\n\nStep 3: Include relevant chemical terminology, equations or examples from the textbook.\n\nFinal Answer: The characteristics should be explained in an organised manner, with suitable examples.`
+    },
+    {
+      q: `Write a short note on an important application of ${title}.`,
+      a: `Step 1: Identify the application related to ${title}.\n\nStep 2: Explain the chemical principle involved.\n\nStep 3: Describe how the principle is used in practice.\n\nFinal Answer: Connect the application to the relevant chemical concept and explain its importance.`
+    },
+    {
+      q: `Explain one important reaction or process related to ${title}.`,
+      a: `Step 1: Identify the reaction or process from the chapter.\n\nStep 2: Write the correct chemical equation, if applicable.\n\nStep 3: Explain the reactants, products and conditions.\n\nStep 4: State the significance of the reaction.\n\nFinal Answer: Present the balanced equation and explain the reaction using the textbook concept.`
+    },
+    {
+      q: `List the important terms associated with ${title}.`,
+      a: `Step 1: Identify the key terms in the chapter.\n\nStep 2: Write a clear definition for each term.\n\nStep 3: Include a relevant example wherever necessary.\n\nFinal Answer: Revise the glossary and key definitions given in the ${title} chapter.`
+    },
+    {
+      q: `Describe the importance of studying ${title}.`,
+      a: `Step 1: Identify the central chemical principles.\n\nStep 2: Explain how these principles help us understand chemical behaviour.\n\nStep 3: Mention suitable applications.\n\nFinal Answer: The chapter helps us understand the chemical concepts and their applications in science and everyday life.`
     }
+  ];
 
-    const chapterSelect = document.getElementById("chapterSelect");
-    const welcome = document.getElementById("welcome");
-    const intro = document.getElementById("intro");
-    const panel = document.getElementById("panel");
-    const panelTitle = document.getElementById("panelTitle");
-    const panelSub = document.getElementById("panelSub");
-    const content = document.getElementById("content");
-    const bookmarkButton = document.getElementById("bookmark");
-
-    const sectionNames = {
-      bookback: "📘 Book-back Practice",
-      important: "⭐ Important Questions",
-      worked: "✏️ Worked Examples",
-      formula: "📐 Formula Sheet"
-    };
-
-    function currentChapter() {
-      return chapters.find(ch => ch.number === chapterNumber);
+  const importantQuestions = [
+    {
+      q: `Explain the fundamental principles of ${title}.`,
+      a: `Step 1: Begin with the definition of the main concept.\n\nStep 2: Explain the fundamental principles one by one.\n\nStep 3: Include the relevant chemical equations, examples and conditions from the textbook.\n\nStep 4: Conclude with the importance of these principles.\n\nFinal Answer: Present a clear, organised explanation supported by appropriate textbook examples.`
+    },
+    {
+      q: `Discuss the important properties associated with ${title}.`,
+      a: `Step 1: Identify the properties discussed in the chapter.\n\nStep 2: Explain each property and the factors affecting it.\n\nStep 3: Add suitable examples.\n\nFinal Answer: Describe the important properties with their chemical explanations.`
+    },
+    {
+      q: `Explain an important comparison related to ${title}.`,
+      a: `Step 1: Identify the two concepts being compared.\n\nStep 2: Compare their definitions and properties.\n\nStep 3: Explain the reason for the differences.\n\nFinal Answer: Use a comparison table and support the differences with chemical reasoning.`
+    },
+    {
+      q: `Describe a significant chemical reaction from ${title}.`,
+      a: `Step 1: Write the balanced chemical equation.\n\nStep 2: Identify the reactants and products.\n\nStep 3: State the reaction conditions.\n\nStep 4: Explain the reaction mechanism or principle at the level required by the textbook.\n\nFinal Answer: Give the balanced reaction and its explanation.`
+    },
+    {
+      q: `Explain the practical applications of ${title}.`,
+      a: `Step 1: Identify the chemical principle.\n\nStep 2: Describe where it is applied.\n\nStep 3: Explain why the principle is useful.\n\nFinal Answer: Relate the chapter concept to suitable scientific or everyday applications.`
+    },
+    {
+      q: `Write an organised summary of the most important ideas in ${title}.`,
+      a: `Step 1: List the main headings in the chapter.\n\nStep 2: Summarise the definitions, properties and reactions.\n\nStep 3: Include important equations and examples.\n\nFinal Answer: A good summary should cover the chapter's main concepts without leaving out important definitions or reactions.`
     }
+  ];
 
-    function loadChapter() {
-      const chapter = currentChapter();
-
-      if (!chapter) {
-        welcome.textContent = "Chapter not available";
-        intro.textContent = "Please return to the Chemistry chapter list.";
-        return;
-      }
-
-      welcome.textContent = "Welcome to Chapter " + chapter.number + "!";
-      intro.textContent =
-        "You are viewing Chapter " + chapter.number +
-        " – " + chapter.title +
-        ". Explore the learning resources for this chapter.";
-
-      chapterSelect.value = String(chapter.number);
-      updateBookmarkButton();
+  const workedExamples = [
+    {
+      q: `Worked Example 1: Explain a key concept from ${title}.`,
+      a: `Step 1: Identify the concept being studied.\n\nStep 2: Write its definition.\n\nStep 3: Explain the chemical principle behind it.\n\nStep 4: Add a suitable textbook example.\n\nFinal Answer: Use the definition, explanation and example together to demonstrate your understanding.`
+    },
+    {
+      q: `Worked Example 2: Explain a chemical property from ${title}.`,
+      a: `Step 1: Identify the property.\n\nStep 2: State the relevant chemical principle.\n\nStep 3: Explain the behaviour using the principle.\n\nStep 4: Add an appropriate example.\n\nFinal Answer: Explain the property with its chemical reason and example.`
+    },
+    {
+      q: `Worked Example 3: Explain a reaction related to ${title}.`,
+      a: `Step 1: Identify the reactants.\n\nStep 2: Write the balanced chemical equation from the textbook.\n\nStep 3: State the reaction conditions.\n\nStep 4: Identify the products.\n\nFinal Answer: Present the balanced equation and explain the reaction.`
+    },
+    {
+      q: `Worked Example 4: Compare two concepts in ${title}.`,
+      a: `Step 1: Write the definitions of both concepts.\n\nStep 2: Identify their similarities.\n\nStep 3: Identify their differences.\n\nStep 4: Explain the chemical reason for the differences.\n\nFinal Answer: Present the comparison clearly, preferably in a table.`
+    },
+    {
+      q: `Worked Example 5: Describe an application from ${title}.`,
+      a: `Step 1: Identify the application.\n\nStep 2: State the chemical principle involved.\n\nStep 3: Explain how the principle is used.\n\nStep 4: State the result or importance.\n\nFinal Answer: Connect the chemical principle to the application with a clear explanation.`
+    },
+    {
+      q: `Worked Example 6: Summarise an important process from ${title}.`,
+      a: `Step 1: Identify the process.\n\nStep 2: Describe its starting materials or conditions.\n\nStep 3: Explain the stages in the correct order.\n\nStep 4: State the final result.\n\nFinal Answer: Explain the process in a logical sequence, including equations where appropriate.`
     }
+  ];
 
-    chapters.forEach(chapter => {
-      const option = document.createElement("option");
-      option.value = chapter.number;
-      option.textContent =
-        "Chapter " + chapter.number + " – " + chapter.title;
-      chapterSelect.appendChild(option);
+  if (section === "bookback") return baseQuestions;
+  if (section === "important") return importantQuestions;
+  return workedExamples;
+}
+
+function showSection(section) {
+  currentSection = section;
+  const chapter = chapters[currentChapter];
+
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.toggle("active", card.dataset.section === section);
+  });
+
+  panel.hidden = false;
+  document.getElementById("panelTitle").textContent = sectionNames[section];
+  document.getElementById("panelSub").textContent =
+    `Chapter ${currentChapter + 1}: ${chapter.title}`;
+
+  content.innerHTML = "";
+
+  if (section === "formula") {
+    chapter.formulas.forEach((formula, index) => {
+      const item = document.createElement("div");
+      item.className = "formula";
+      item.textContent = `${index + 1}. ${formula}`;
+      content.appendChild(item);
     });
+    panel.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
 
-    chapterSelect.addEventListener("change", function () {
-      window.location.href =
-        "chemistry-chapter.html?chapter=" + this.value;
-    });
+  if (section === "bookmarks") {
+    const saved = getBookmarks();
+    const questionKeys = saved.filter(key => key.startsWith("q-"));
+    const chapterKeys = saved.filter(key => key.startsWith("chapter-"));
 
-    function updateBookmarkButton() {
-      const saved = JSON.parse(
-        localStorage.getItem("starLightChemistryBookmarks") || "[]"
-      );
-
-      const isSaved = saved.includes(chapterNumber);
-
-      bookmarkButton.textContent = isSaved
-        ? "★ Bookmarked"
-        : "☆ Bookmark Chapter";
-    }
-
-    bookmarkButton.addEventListener("click", function () {
-      let saved = JSON.parse(
-        localStorage.getItem("starLightChemistryBookmarks") || "[]"
-      );
-
-      if (saved.includes(chapterNumber)) {
-        saved = saved.filter(number => number !== chapterNumber);
-      } else {
-        saved.push(chapterNumber);
-      }
-
-      localStorage.setItem(
-        "starLightChemistryBookmarks",
-        JSON.stringify(saved)
-      );
-
-      updateBookmarkButton();
-    });
-
-    function showSection(section) {
-      const chapter = currentChapter();
-      if (!chapter) return;
-
-      document.querySelectorAll(".card").forEach(card => {
-        card.classList.toggle(
-          "active",
-          card.dataset.section === section
-        );
+    if (saved.length === 0) {
+      content.textContent = "You have not saved any questions or chapters yet.";
+    } else {
+      chapterKeys.forEach(key => {
+        const number = Number(key.replace("chapter-", ""));
+        const item = document.createElement("div");
+        item.className = "formula";
+        item.textContent = `Bookmarked Chapter ${number + 1}: ${chapters[number].title}`;
+        content.appendChild(item);
       });
 
-      panel.hidden = false;
-      panelTitle.textContent = sectionNames[section];
-      panelSub.textContent =
-        "Chapter " + chapter.number + " – " + chapter.title;
-
-      content.innerHTML = "";
-
-      if (section === "formula") {
-        renderFormulas(chapter.formula || []);
-      } else {
-        renderQuestions(chapter[section] || [], section);
-      }
-
-      panel.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+      questionKeys.forEach(key => {
+        const item = document.createElement("div");
+        item.className = "formula";
+        item.textContent = "Saved question reference: " + key;
+        content.appendChild(item);
       });
     }
 
-    function renderQuestions(questions, section) {
-      if (!questions.length) {
-        content.textContent = "Content for this section is being prepared.";
-        return;
-      }
+    panel.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
 
-      questions.forEach((item, index) => {
-        const question = document.createElement("article");
-        question.className = "question";
+  const questions = createQuestions(chapter, section);
 
-        const label = document.createElement("div");
-        label.className = "meta";
-        label.textContent =
-          (section === "worked" ? "WORKED EXAMPLE " : "QUESTION ") +
-          (index + 1);
+  questions.forEach((item, index) => {
+    content.appendChild(
+      makeQuestion(
+        item.q,
+        item.a,
+        `${sectionNames[section]} · Question ${index + 1}`,
+        index
+      )
+    );
+  });
 
-        const heading = document.createElement("h3");
-        heading.textContent = item.question;
+  panel.scrollIntoView({ behavior: "smooth" });
+}
 
-        const button = document.createElement("button");
-        button.className = "action";
-        button.textContent = "Show Answer";
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => showSection(card.dataset.section));
+});
 
-        const answer = document.createElement("div");
-        answer.className = "answer";
-        answer.hidden = true;
-        answer.textContent = item.answer;
-
-        button.addEventListener("click", function () {
-          answer.hidden = !answer.hidden;
-          button.textContent = answer.hidden
-            ? "Show Answer"
-            : "Hide Answer";
-        });
-
-        question.append(label, heading, button, answer);
-        content.appendChild(question);
-      });
-    }
-
-    function renderFormulas(formulas) {
-      if (!formulas.length) {
-        content.textContent = "Formula sheet is being prepared.";
-        return;
-      }
-
-      formulas.forEach((item, index) => {
-        const formula = document.createElement("article");
-        formula.className = "formula";
-
-        const heading = document.createElement("h3");
-        heading.textContent = item.name;
-
-        const expression = document.createElement("p");
-        expression.innerHTML = item.expression;
-
-        const explanation = document.createElement("p");
-        explanation.textContent = item.explanation;
-
-        formula.append(heading, expression, explanation);
-        content.appendChild(formula);
-      });
-    }
-
-    document.querySelectorAll(".card").forEach(card => {
-      card.addEventListener("click", function () {
-        showSection(this.dataset.section);
-      });
-    });
-
-    loadChapter();
-  </script>
+updateChapter();
+</script>
 
 </body>
 </html>
