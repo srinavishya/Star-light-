@@ -2,224 +2,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry | Star Light</title>
-  <link rel="stylesheet" href="style.css?v=5">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry | Star Light</title>
 
-  <style>
-    * { box-sizing: border-box; }
+    <link rel="stylesheet" href="style.css?v=4">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #263b63;
-      line-height: 1.6;
-      background: linear-gradient(110deg, #dceaff, #eee3ff 52%, #f9ddf5);
-    }
+    <style>
+        .chemistry-hero {
+            text-align: center;
+            padding: 48px 20px 35px;
+            background: linear-gradient(
+                110deg,
+                rgba(190, 225, 255, 0.55),
+                rgba(231, 222, 255, 0.48),
+                rgba(255, 204, 239, 0.55)
+            );
+        }
 
-    a { color: inherit; text-decoration: none; }
+        .chemistry-hero h1 {
+            color: #0c2053;
+            font-size: 43px;
+            margin-bottom: 10px;
+        }
 
-    .header, main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 22px 24px;
-    }
+        .chemistry-hero p {
+            color: #34466f;
+            font-size: 19px;
+        }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
+        .chemistry-container {
+            max-width: 1250px;
+            margin: 35px auto 55px;
+            padding: 0 25px;
+        }
 
-    .brand {
-      font-size: 23px;
-      font-weight: 800;
-      color: #18356b;
-    }
+        .volume-heading {
+            color: #10265f;
+            font-size: 29px;
+            margin: 35px 0 20px;
+            text-align: center;
+        }
 
-    nav {
-      display: flex;
-      gap: 22px;
-      font-weight: bold;
-      color: #18356b;
-    }
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
 
-    main { margin: 10px auto 50px; }
+        .chapter-card {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(120, 153, 226, 0.3);
+            border-radius: 20px;
+            padding: 24px 20px;
+            min-height: 175px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(34, 55, 110, 0.06);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
 
-    .hero, .card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 28px #455b8610;
-    }
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 22px rgba(34, 55, 110, 0.13);
+        }
 
-    .hero {
-      padding: 42px 30px;
-      text-align: center;
-      margin: 20px 0 38px;
-    }
+        .chapter-number {
+            color: #6b65b5;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
 
-    .hero h1 {
-      color: #18356b;
-      font-size: 34px;
-      margin: 0 0 14px;
-    }
+        .chapter-card h3 {
+            color: #10265f;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
 
-    .hero p {
-      color: #536783;
-      font-size: 17px;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
+        .chapter-link {
+            display: inline-block;
+            align-self: flex-start;
+            background: #071c56;
+            color: white;
+            text-decoration: none;
+            padding: 9px 19px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
 
-    .explore {
-      display: inline-block;
-      background: #263f7a;
-      color: white;
-      padding: 13px 26px;
-      border-radius: 9px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+        .chapter-link:hover {
+            background: #354f99;
+        }
 
-    .explore:hover {
-      background: #405b9b;
-      transform: translateY(-2px);
-    }
+        .volume-divider {
+            height: 2px;
+            border: none;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #a9a4e8,
+                transparent
+            );
+            margin: 45px 0;
+        }
 
-    .sectiontitle {
-      text-align: center;
-      color: #18356b;
-      font-size: 28px;
-      margin-bottom: 25px;
-    }
+        @media (max-width: 900px) {
+            .chapter-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
+        @media (max-width: 600px) {
+            .chemistry-hero h1 {
+                font-size: 32px;
+            }
 
-    .card {
-      padding: 25px;
-      min-height: 150px;
-      border: 2px solid transparent;
-    }
+            .chemistry-hero p {
+                font-size: 16px;
+            }
 
-    .card:hover {
-      border-color: #a99be9;
-      transform: translateY(-2px);
-    }
+            .chemistry-container {
+                padding: 0 16px;
+            }
 
-    .card h3 {
-      color: #18356b;
-      margin: 0 0 10px;
-      font-size: 21px;
-    }
+            .chapter-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
 
-    .card p {
-      color: #536783;
-      margin: 0;
-    }
-
-    .tip {
-      background: #f8f5ff;
-      border-left: 5px solid #9788df;
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin-top: 28px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 23px;
-      background: #1d376e;
-      color: white;
-    }
-
-    @media (max-width: 700px) {
-      .header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav { flex-wrap: wrap; }
-
-      .grid { grid-template-columns: 1fr; }
-
-      .hero { padding: 28px 20px; }
-
-      .hero h1 { font-size: 28px; }
-    }
-  </style>
+            .volume-heading {
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header class="header">
-    <a class="brand" href="index.html">✦ Star Light</a>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#subjects">Subjects</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+            <a href="index.html" class="brand">
+                <svg class="brand-logo" viewBox="0 0 100 75"
+                     xmlns="http://www.w3.org/2000/svg">
 
-  <main>
+                    <path d="M8 53 C25 75 72 65 91 22"
+                          fill="none"
+                          stroke="#c66be8"
+                          stroke-width="6"
+                          stroke-linecap="round"/>
 
-    <section class="hero">
-      <h1>Welcome to Chemistry!</h1>
+                    <path d="M48 5 L56 24 L77 25 L61 39
+                             L66 59 L48 48 L30 59 L35 39
+                             L19 25 L40 24 Z"
+                          fill="#10265f"/>
+                </svg>
 
-      <p>
-        Explore the fascinating world of Chemistry through chapter-wise
-        questions, important concepts, worked examples and formula sheets.
-        Learn step by step and strengthen your understanding.
-      </p>
+                <span>Star Light</span>
+            </a>
 
-      <a class="explore" href="chemistry-chapter.html">
-        Explore Chapters →
-      </a>
-    </section>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#subjects" class="active">Subjects</a>
+                <a href="about.html">About</a>
+            </div>
 
-    <h2 class="sectiontitle">Explore Your Chemistry Learning</h2>
+        </nav>
+    </header>
 
-    <section class="grid">
 
-      <div class="card">
-        <h3>📘 Book-back Questions</h3>
-        <p>Practise questions based on the Tamil Nadu State Board textbook.</p>
-      </div>
+    <!-- CHEMISTRY INTRODUCTION -->
+    <main>
 
-      <div class="card">
-        <h3>⭐ Important Questions</h3>
-        <p>Revise important concepts and examination-oriented questions.</p>
-      </div>
+        <section class="chemistry-hero">
+            <h1>Chemistry</h1>
+            <p>Tamil Nadu State Board – Class 12</p>
+            <p>Learn • Practise • Achieve</p>
+        </section>
 
-      <div class="card">
-        <h3>✏️ Worked Examples</h3>
-        <p>Understand chemical problems through detailed explanations.</p>
-      </div>
 
-      <div class="card">
-        <h3>📐 Formula Sheet</h3>
-        <p>Quickly revise important formulas, equations and reactions.</p>
-      </div>
+        <!-- CHAPTER LIST -->
+        <section class="chemistry-container">
 
-    </section>
 
-    <div class="tip">
-      <b>Learning tip:</b>
-      Start with the chapter concepts and worked examples. Then practise
-      the questions and revise the important formulas.
-    </div>
+            <!-- VOLUME 1 -->
+            <h2 class="volume-heading">
+                Chemistry – Volume 1
+            </h2>
 
-  </main>
+            <div class="chapter-grid">
 
-  <footer class="footer">
-    Star Light | Your Learning Companion
-  </footer>
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 01</p>
+                        <h3>Metallurgy</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=1">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 02</p>
+                        <h3>p-Block Elements – I</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=2">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 03</p>
+                        <h3>p-Block Elements – II</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=3">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 04</p>
+                        <h3>Transition and Inner Transition Elements</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=4">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 05</p>
+                        <h3>Coordination Chemistry</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=5">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 06</p>
+                        <h3>Solid State</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=6">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 07</p>
+                        <h3>Chemical Kinetics</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=7">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+            </div>
+
+
+            <hr class="volume-divider">
+
+
+            <!-- VOLUME 2 -->
+            <h2 class="volume-heading">
+                Chemistry – Volume 2
+            </h2>
+
+            <div class="chapter-grid">
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 08</p>
+                        <h3>Ionic Equilibrium</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=8">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 09</p>
+                        <h3>Electro Chemistry</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=9">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 10</p>
+                        <h3>Surface Chemistry</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=10">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 11</p>
+                        <h3>Hydroxy Compounds and Ethers</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=11">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 12</p>
+                        <h3>Carbonyl Compounds and Carboxylic Acids</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=12">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 13</p>
+                        <h3>Organic Nitrogen Compounds</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=13">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 14</p>
+                        <h3>Biomolecules</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=14">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+
+                <article class="chapter-card">
+                    <div>
+                        <p class="chapter-number">CHAPTER 15</p>
+                        <h3>Chemistry in Everyday Life</h3>
+                    </div>
+
+                    <a class="chapter-link"
+                       href="chemistry-chapter.html?chapter=15">
+                        Explore Chapter →
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Star Light | Your Learning Companion</p>
+    </footer>
 
 </body>
 </html>
