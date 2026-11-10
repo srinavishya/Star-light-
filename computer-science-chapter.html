@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Chapters | Star Light</title>
+    <link rel="stylesheet" href="style.css?v=4">
+
+    <style>
+        .cs-hero {
+            text-align: center;
+            padding: 38px 20px;
+            background: linear-gradient(
+                110deg,
+                rgba(190,225,255,.55),
+                rgba(231,222,255,.48),
+                rgba(255,204,239,.55)
+            );
+        }
+
+        .cs-hero h1 {
+            color: #10265f;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .cs-hero p {
+            color: #34466f;
+            font-size: 17px;
+        }
+
+        .page-container {
+            max-width: 1150px;
+            margin: 35px auto 60px;
+            padding: 0 22px;
+        }
+
+        .chapter-picker,
+        .learning-card,
+        .content-card {
+            background: rgba(255,255,255,.78);
+            border: 1px solid rgba(120,153,226,.3);
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(34,55,110,.07);
+        }
+
+        .chapter-picker {
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .chapter-picker h2,
+        .section-heading {
+            color: #10265f;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .chapter-picker select {
+            display: block;
+            width: 100%;
+            max-width: 650px;
+            margin: auto;
+            padding: 13px 15px;
+            border-radius: 12px;
+            border: 1px solid #b8c5e8;
+            background: white;
+            color: #10265f;
+            font-size: 16px;
+        }
+
+        .chapter-welcome {
+            text-align: center;
+            margin: 35px 0 25px;
+        }
+
+        .chapter-welcome h2 {
+            color: #10265f;
+            font-size: 30px;
+        }
+
+        .chapter-welcome p {
+            color: #53678b;
+            margin-top: 8px;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 20px;
+            margin: 25px 0 35px;
+        }
+
+        .learning-card {
+            padding: 24px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 9px 20px rgba(34,55,110,.13);
+        }
+
+        .learning-card .symbol {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .learning-card h3 {
+            color: #10265f;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .learning-card p {
+            color: #53678b;
+            font-size: 14px;
+        }
+
+        .section-panel {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .section-panel.active {
+            display: block;
+        }
+
+        .section-heading {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #53678b;
+            margin-bottom: 22px;
+        }
+
+        .content-card {
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .content-card h3 {
+            color: #10265f;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .content-card p {
+            color: #34466f;
+            line-height: 1.7;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(226,239,255,.65);
+            border-left: 4px solid #7774c8;
+            border-radius: 10px;
+            color: #263d69;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .answer-box.show {
+            display: block;
+        }
+
+        .action-button {
+            border: none;
+            border-radius: 20px;
+            padding: 9px 18px;
+            margin-top: 13px;
+            margin-right: 7px;
+            background: #071c56;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .action-button:hover {
+            background: #354f99;
+        }
+
+        .bookmark-button {
+            background: #7564ad;
+        }
+
+        .bookmark-button.saved {
+            background: #347a62;
+        }
+
+        .concept-list {
+            color: #34466f;
+            line-height: 1.9;
+            padding-left: 22px;
+        }
+
+        .code-example {
+            background: #101d3c;
+            color: #e8f0ff;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .output-box {
+            background: #edf6ee;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 10px;
+            color: #245c38;
+            white-space: pre-wrap;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #10265f;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #53678b;
+            padding: 25px;
+        }
+
+        @media(max-width:850px) {
+            .learning-grid {
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }
+        }
+
+        @media(max-width:550px) {
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cs-hero h1 {
+                font-size: 29px;
+            }
+
+            .chapter-welcome h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <svg class="brand-logo" viewBox="0 0 100 75"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 53 C25 75 72 65 91 22"
+                      fill="none" stroke="#c66be8"
+                      stroke-width="6" stroke-linecap="round"/>
+                <path d="M48 5 L56 24 L77 25 L61 39
+                         L66 59 L48 48 L30 59 L35 39
+                         L19 25 L40 24 Z"
+                      fill="#10265f"/>
+            </svg>
+            <span>Star Light</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#subjects" class="active">Subjects</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="cs-hero">
+        <h1>Computer Science</h1>
+        <p>Tamil Nadu State Board – Class 12</p>
+        <p>Learn • Practise • Create</p>
+    </section>
+
+    <div class="page-container">
+
+        <a href="computer-science.html" class="back-link">
+            ← Back to Computer Science Chapters
+        </a>
+
+        <section class="chapter-picker">
+            <h2>Choose Your Chapter</h2>
+
+            <select id="chapterSelect" onchange="changeChapter()">
+                <optgroup label="UNIT I – Problem Solving Techniques">
+                    <option value="1">Chapter 1 – Function</option>
+                    <option value="2">Chapter 2 – Data Abstraction</option>
+                    <option value="3">Chapter 3 – Scoping</option>
+                    <option value="4">Chapter 4 – Algorithmic Strategies</option>
+                </optgroup>
+
+                <optgroup label="UNIT II – Core Python">
+                    <option value="5">Chapter 5 – Python Variables and Operators</option>
+                    <option value="6">Chapter 6 – Control Structures</option>
+                    <option value="7">Chapter 7 – Python Functions</option>
+                    <option value="8">Chapter 8 – Strings and String Manipulation</option>
+                </optgroup>
+
+                <optgroup label="UNIT III – Modularity and OOPS">
+                    <option value="9">Chapter 9 – Lists, Tuples, Sets and Dictionary</option>
+                    <option value="10">Chapter 10 – Python Classes and Objects</option>
+                </optgroup>
+
+                <optgroup label="UNIT IV – Database Concepts and MySQL">
+                    <option value="11">Chapter 11 – Database Concepts</option>
+                    <option value="12">Chapter 12 – Structured Query Language (SQL)</option>
+                    <option value="13">Chapter 13 – Python and CSV Files</option>
+                </optgroup>
+
+                <optgroup label="UNIT V – Integrating Python with MySQL and C++">
+                    <option value="14">Chapter 14 – Importing C++ Programs in Python</option>
+                    <option value="15">Chapter 15 – Data Manipulation Through SQL</option>
+                    <option value="16">Chapter 16 – Data Visualization Using Pyplot</option>
+                </optgroup>
+            </select>
+        </section>
+
+        <section class="chapter-welcome">
+            <h2 id="chapterTitle">Welcome to Chapter 1</h2>
+            <p id="chapterSubtitle">Explore Your Learning</p>
+        </section>
+
+        <h2 class="section-heading">Explore Your Learning</h2>
+
+        <section class="learning-grid">
+
+            <div class="learning-card" onclick="showSection('bookback')">
+                <div class="symbol">📘</div>
+                <h3>Book-back Questions</h3>
+                <p>Practise questions from your textbook.</p>
+            </div>
+
+            <div class="learning-card" onclick="showSection('important')">
+                <div class="symbol">⭐</div>
+                <h3>Important Questions</h3>
+                <p>Revise important examination topics.</p>
+            </div>
+
+            <div class="learning-card" onclick="showSection('worked')">
+                <div class="symbol">💡</div>
+                <h3>Worked Examples</h3>
+                <p>Understand concepts with examples and programs.</p>
+            </div>
+
+            <div class="learning-card" onclick="showSection('formula')">
+                <div class="symbol">📝</div>
+                <h3>Formula / Concept Sheet</h3>
+                <p>Quickly revise important concepts and syntax.</p>
+            </div>
+
+            <div class="learning-card" onclick="showSection('bookmarks')">
+                <div class="symbol">🔖</div>
+                <h3>My Bookmarks</h3>
+                <p>Find the questions you have saved.</p>
+            </div>
+
+        </section>
+
+
+        <!-- BOOK-BACK QUESTIONS -->
+        <section id="bookback" class="section-panel">
+            <h2 class="section-heading">Book-back Questions</h2>
+            <p class="section-intro">
+                Chapter-based practice questions and explanations.
+            </p>
+            <div id="bookbackContent"></div>
+        </section>
+
+
+        <!-- IMPORTANT QUESTIONS -->
+        <section id="important" class="section-panel">
+            <h2 class="section-heading">Important Questions</h2>
+            <p class="section-intro">
+                Important concepts to practise and revise.
+            </p>
+            <div id="importantContent"></div>
+        </section>
+
+
+        <!-- WORKED EXAMPLES -->
+        <section id="worked" class="section-panel">
+            <h2 class="section-heading">Worked Examples</h2>
+            <p class="section-intro">
+                Understand programming concepts through examples.
+            </p>
+            <div id="workedContent"></div>
+        </section>
+
+
+        <!-- FORMULA / CONCEPT SHEET -->
+        <section id="formula" class="section-panel">
+            <h2 class="section-heading">Formula / Concept Sheet</h2>
+            <p class="section-intro">
+                Important definitions, syntax and concepts.
+            </p>
+            <div id="formulaContent"></div>
+        </section>
+
+
+        <!-- BOOKMARKS -->
+        <section id="bookmarks" class="section-panel">
+            <h2 class="section-heading">My Bookmarks</h2>
+            <p class="section-intro">
+                Your saved questions for revision.
+            </p>
+            <div id="bookmarkContent"></div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>Star Light | Your Learning Companion</p>
+</footer>
+
+
+<script>
+
+const chapters = [
+    {
+        title: "Function",
+        concepts: [
+            "A function is a reusable block of code that performs a specific task.",
+            "Parameters are variables written in a function definition. Arguments are values passed to the function.",
+            "A function specification describes its purpose, inputs, conditions and expected result.",
+            "A pure function returns a result without changing external data or producing side effects.",
+            "An impure function may change external data or produce side effects.",
+            "Interface describes how a function is used, while implementation describes how it works internally."
+        ],
+        topics: [
+            "Function specification",
+            "Parameters and arguments",
+            "Interface and implementation",
+            "Pure functions",
+            "Impure functions and side effects",
+            "Function definitions"
+        ],
+        example: "def square(n):\n    return n * n\n\nresult = square(5)\nprint(result)",
+        output: "25",
+        explanation: "The function square() receives 5 as its argument. The parameter n stores this value. The function calculates 5 × 5 and returns 25."
+    },
+    {
+        title: "Data Abstraction",
+        concepts: [
+            "Data abstraction focuses on essential features while hiding unnecessary implementation details.",
+            "It helps programmers work with data without needing to know every internal detail.",
+            "An abstract data type describes data and the operations that can be performed on it.",
+            "A stack is a linear data structure that follows Last In, First Out (LIFO).",
+            "A queue follows First In, First Out (FIFO).",
+            "Abstraction improves modularity and makes programs easier to manage."
+        ],
+        topics: [
+            "Meaning of data abstraction",
+            "Abstract data types",
+            "Data structures",
+            "Stack and LIFO",
+            "Queue and FIFO",
+            "Advantages of abstraction"
+        ],
+        example: "numbers = [10, 20, 30]\nnumbers.append(40)\nprint(numbers)",
+        output: "[10, 20, 30, 40]",
+        explanation: "The append() operation adds an element to the list. We use the operation without needing to manage the internal memory implementation of the list."
+    },
+    {
+        title: "Scoping",
+        concepts: [
+            "Scope determines where a variable can be accessed in a program.",
+            "A local variable is created inside a function and is normally accessible only there.",
+            "A global variable is defined outside functions and can be accessed throughout the module.",
+            "The global keyword allows a function to refer to a global variable.",
+            "The lifetime of a variable describes how long it exists during program execution.",
+            "Understanding scope helps prevent naming conflicts and unexpected changes."
+        ],
+        topics: [
+            "Meaning of scope",
+            "Local variables",
+            "Global variables",
+            "Global keyword",
+            "Variable lifetime",
+            "Local and global scope differences"
+        ],
+        example: "x = 10\n\ndef display():\n    y = 5\n    print(x)\n    print(y)\n\ndisplay()",
+        output: "10\n5",
+        explanation: "The variable x is global, so it can be accessed inside display(). The variable y is local to the function."
+    },
+    {
+        title: "Algorithmic Strategies",
+        concepts: [
+            "An algorithm is a finite sequence of well-defined steps used to solve a problem.",
+            "A good algorithm should be clear, finite and effective.",
+            "Brute force solves a problem by trying possible solutions directly.",
+            "Divide and conquer breaks a problem into smaller subproblems.",
+            "Greedy strategies make a locally best choice at each step.",
+            "The choice of strategy depends on the problem and its requirements."
+        ],
+        topics: [
+            "Algorithm definition",
+            "Characteristics of algorithms",
+            "Brute force strategy",
+            "Divide and conquer",
+            "Greedy method",
+            "Choosing an algorithmic strategy"
+        ],
+        example: "numbers = [8, 3, 6, 2]\nlargest = numbers[0]\n\nfor n in numbers:\n    if n > largest:\n        largest = n\n\nprint(largest)",
+        output: "8",
+        explanation: "The algorithm compares each element with the current largest value. Whenever a larger value is found, it updates largest. At the end, the largest element is 8."
+    },
+    {
+        title: "Python – Variables and Operators",
+        concepts: [
+            "A variable is a name used to refer to a value in a program.",
+            "Python assigns values using the assignment operator =.",
+            "Common data types include int, float, str and bool.",
+            "Arithmetic operators include +, -, *, /, //, % and **.",
+            "Comparison operators compare values and return Boolean results.",
+            "Logical operators include and, or and not."
+        ],
+        topics: [
+            "Variables and assignment",
+            "Python data types",
+            "Arithmetic operators",
+            "Relational operators",
+            "Logical operators",
+            "Operator precedence"
+        ],
+        example: "a = 10\nb = 3\nprint(a + b)\nprint(a // b)\nprint(a % b)",
+        output: "13\n3\n1",
+        explanation: "10 + 3 gives 13. Integer division 10 // 3 gives 3. The remainder operator 10 % 3 gives 1."
+    },
+    {
+        title: "Control Structures",
+        concepts: [
+            "Control structures determine the order in which program statements execute.",
+            "Sequential execution runs statements one after another.",
+            "Selection statements choose a path based on a condition.",
+            "The if, if-else and if-elif-else statements are used for selection.",
+            "Iteration repeats a block of statements using for or while loops.",
+            "The break and continue statements change normal loop execution."
+        ],
+        topics: [
+            "Sequential execution",
+            "if statement",
+            "if-else statement",
+            "if-elif-else statement",
+            "for and while loops",
+            "break and continue"
+        ],
+        example: "for i in range(1, 6):\n    print(i)",
+        output: "1\n2\n3\n4\n5",
+        explanation: "range(1, 6) generates the values 1, 2, 3, 4 and 5. The for loop prints each value once."
+    },
+    {
+        title: "Python Functions",
+        concepts: [
+            "A Python function is a reusable block of statements.",
+            "Functions are defined using the def keyword.",
+            "Parameters receive values passed as arguments.",
+            "The return statement sends a result back to the caller.",
+            "A function can have default arguments.",
+            "A recursive function calls itself to solve a problem."
+        ],
+        topics: [
+            "Defining a function",
+            "Calling a function",
+            "Parameters and arguments",
+            "Return statement",
+            "Default arguments",
+            "Recursive functions"
+        ],
+        example: "def add(a, b):\n    return a + b\n\nprint(add(12, 8))",
+        output: "20",
+        explanation: "The function add() receives two arguments, 12 and 8. It adds them and returns 20."
+    },
+    {
+        title: "Strings and String Manipulation",
+        concepts: [
+            "A string is a sequence of characters enclosed in quotes.",
+            "Strings are immutable in Python.",
+            "String indexing accesses individual characters.",
+            "String slicing extracts a portion of a string.",
+            "The len() function returns the number of characters.",
+            "Methods such as upper(), lower(), strip() and replace() help manipulate strings."
+        ],
+        topics: [
+            "Creating strings",
+            "String indexing",
+            "String slicing",
+            "String immutability",
+            "String operators",
+            "String methods"
+        ],
+        example: "text = 'Computer Science'\nprint(text.upper())\nprint(len(text))",
+        output: "COMPUTER SCIENCE\n16",
+        explanation: "upper() converts the letters to uppercase. len() counts all characters, including the space."
+    },
+    {
+        title: "Lists, Tuples, Sets and Dictionary",
+        concepts: [
+            "A list is an ordered and mutable collection.",
+            "A tuple is an ordered and immutable collection.",
+            "A set stores unique elements and does not maintain ordinary positional indexing.",
+            "A dictionary stores data as key-value pairs.",
+            "Lists use square brackets, tuples use parentheses, sets use braces and dictionaries use key-value pairs.",
+            "Each collection type is useful for different data-management requirements."
+        ],
+        topics: [
+            "Lists and list methods",
+            "Tuples",
+            "Sets and set operations",
+            "Dictionaries",
+            "Collection operations",
+            "Differences between collections"
+        ],
+        example: "numbers = [10, 20, 30]\nnumbers.append(40)\nprint(numbers)\n\nstudent = {'name': 'Anu', 'mark': 95}\nprint(student['name'])",
+        output: "[10, 20, 30, 40]\nAnu",
+        explanation: "append() adds 40 to the list. The dictionary stores values using keys. student['name'] retrieves the value associated with the name key."
+    },
+    {
+        title: "Python Classes and Objects",
+        concepts: [
+            "A class is a blueprint used to create objects.",
+            "An object is an instance of a class.",
+            "Attributes store the data associated with an object.",
+            "Methods define the behaviour of objects.",
+            "The __init__() method initializes a newly created object.",
+            "The self parameter refers to the current object."
+        ],
+        topics: [
+            "Classes and objects",
+            "Attributes",
+            "Methods",
+            "Constructor",
+            "The self parameter",
+            "Object creation"
+        ],
+        example: "class Student:\n    def __init__(self, name):\n        self.name = name\n\ns = Student('Anu')\nprint(s.name)",
+        output: "Anu",
+        explanation: "Student is a class. Student('Anu') creates an object. The constructor stores the supplied name in the object's name attribute."
+    },
+    {
+        title: "Database Concepts",
+        concepts: [
+            "A database is an organized collection of related data.",
+            "A DBMS is software used to create and manage databases.",
+            "A table stores data in rows and columns.",
+            "A primary key uniquely identifies each record in a table.",
+            "A foreign key establishes a relationship between tables.",
+            "Database systems help organize, retrieve and maintain information."
+        ],
+        topics: [
+            "Database and DBMS",
+            "Tables, records and fields",
+            "Primary key",
+            "Foreign key",
+            "Database relationships",
+            "Advantages of DBMS"
+        ],
+        example: "A STUDENT table:\n\nRollNo | Name | Mark\n1      | Anu  | 95\n2      | Ravi | 88",
+        output: "Two student records stored in a table.",
+        explanation: "Each row represents one student record. RollNo can be used as a primary key if every student has a unique roll number."
+    },
+    {
+        title: "Structured Query Language (SQL)",
+        concepts: [
+            "SQL stands for Structured Query Language.",
+            "SQL is used to communicate with relational databases.",
+            "CREATE is used to create database objects.",
+            "INSERT adds records to a table.",
+            "SELECT retrieves data from a table.",
+            "UPDATE modifies existing records and DELETE removes records."
+        ],
+        topics: [
+            "Introduction to SQL",
+            "CREATE and database objects",
+            "INSERT statement",
+            "SELECT statement",
+            "UPDATE statement",
+            "DELETE statement"
+        ],
+        example: "CREATE TABLE Student (\n    RollNo INT PRIMARY KEY,\n    Name VARCHAR(30)\n);\n\nSELECT * FROM Student;",
+        output: "Creates a Student table and retrieves its records.",
+        explanation: "CREATE TABLE defines a new table with two columns. SELECT * retrieves all columns and rows from the table."
+    },
+    {
+        title: "Python and CSV Files",
+        concepts: [
+            "CSV stands for Comma-Separated Values.",
+            "CSV files store tabular data as text.",
+            "Python provides the csv module for working with CSV files.",
+            "The open() function opens a file.",
+            "csv.reader() reads rows from a CSV file.",
+            "csv.writer() writes rows into a CSV file."
+        ],
+        topics: [
+            "CSV file format",
+            "Python csv module",
+            "Opening files",
+            "Reading CSV data",
+            "Writing CSV data",
+            "Closing files"
+        ],
+        example: "import csv\n\nwith open('students.csv', 'w', newline='') as f:\n    writer = csv.writer(f)\n    writer.writerow(['Name', 'Mark'])\n    writer.writerow(['Anu', 95])",
+        output: "A CSV file is created with a header and one student record.",
+        explanation: "The csv.writer() object writes rows to the file. The with statement automatically closes the file after the block finishes."
+    },
+    {
+        title: "Importing C++ Programs in Python",
+        concepts: [
+            "Python can work with compiled code written in other programming languages.",
+            "C++ is a compiled programming language.",
+            "Interoperability allows different programming languages to work together.",
+            "A compiled C++ component can be exposed for use by Python through suitable interfaces.",
+            "The Python program can use the functionality exposed by the compiled component.",
+            "Integration requires compatible tools and a suitable interface."
+        ],
+        topics: [
+            "Python and C++ integration",
+            "Interoperability",
+            "Compiled programs",
+            "Interfaces between languages",
+            "Using external functionality",
+            "Benefits of integration"
+        ],
+        example: "Python and C++ can be integrated using suitable extension interfaces. The exact build and import steps depend on the interface and development environment.",
+        output: "A Python program can call functionality exposed by a compatible C++ extension.",
+        explanation: "The C++ code must be compiled and exposed through a compatible interface before Python can import and use it."
+    },
+    {
+        title: "Data Manipulation Through SQL",
+        concepts: [
+            "Data manipulation means adding, modifying, retrieving and deleting records.",
+            "INSERT adds new records to a table.",
+            "UPDATE changes existing records.",
+            "DELETE removes selected records.",
+            "WHERE specifies the condition used to select records.",
+            "ORDER BY sorts query results."
+        ],
+        topics: [
+            "Data manipulation language",
+            "INSERT command",
+            "UPDATE command",
+            "DELETE command",
+            "WHERE clause",
+            "ORDER BY clause"
+        ],
+        example: "SELECT * FROM Student\nWHERE Mark >= 90\nORDER BY Mark DESC;",
+        output: "Displays students with marks of at least 90, sorted from highest to lowest.",
+        explanation: "WHERE filters the records. ORDER BY sorts the selected records by Mark in descending order."
+    },
+    {
+        title: "Data Visualization Using Pyplot",
+        concepts: [
+            "Data visualization presents information using graphical representations.",
+            "Matplotlib is a Python library used for creating graphs.",
+            "Pyplot provides functions for creating and customizing plots.",
+            "A line chart displays trends and changes.",
+            "A pie chart displays proportions of a whole.",
+            "A bar chart compares values across categories."
+        ],
+        topics: [
+            "Introduction to data visualization",
+            "Matplotlib and pyplot",
+            "Line charts",
+            "Pie charts",
+            "Bar charts",
+            "Titles, labels and legends"
+        ],
+        example: "import matplotlib.pyplot as plt\n\nsubjects = ['Maths', 'Physics', 'Chemistry']\nmarks = [90, 85, 95]\n\nplt.bar(subjects, marks)\nplt.xlabel('Subjects')\nplt.ylabel('Marks')\nplt.title('Student Marks')\nplt.show()",
+        output: "Displays a bar chart comparing marks in three subjects.",
+        explanation: "plt.bar() creates the bar chart. xlabel() and ylabel() label the axes, title() adds a heading, and show() displays the graph."
+    }
+];
+
+let currentChapter = 1;
+
+function getChapterNumber() {
+    const params = new URLSearchParams(window.location.search);
+    const value = Number(params.get("chapter"));
+
+    if (Number.isInteger(value) && value >= 1 && value <= 16) {
+        return value;
+    }
+
+    return 1;
+}
+
+function changeChapter() {
+    const number = Number(
+        document.getElementById("chapterSelect").value
+    );
+
+    window.location.href =
+        "computer-science-chapter.html?chapter=" + number;
+}
+
+function updateChapter() {
+    currentChapter = getChapterNumber();
+
+    const chapter = chapters[currentChapter - 1];
+
+    document.getElementById("chapterSelect").value =
+        String(currentChapter);
+
+    document.getElementById("chapterTitle").textContent =
+        "Welcome to Chapter " + currentChapter;
+
+    document.getElementById("chapterSubtitle").textContent =
+        chapter.title + " – Explore Your Learning";
+
+    renderContent();
+}
+
+function showSection(sectionId) {
+    document.querySelectorAll(".section-panel").forEach(panel => {
+        panel.classList.remove("active");
+    });
+
+    const selected = document.getElementById(sectionId);
+
+    selected.classList.add("active");
+
+    selected.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    if (sectionId === "bookmarks") {
+        renderBookmarks();
+    }
+}
+
+function makeCard(title, question, answer, key, code = "", output = "") {
+    const card = document.createElement("article");
+    card.className = "content-card";
+
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+
+    const questionText = document.createElement("p");
+    questionText.textContent = question;
+
+    const answerBox = document.createElement("div");
+    answerBox.className = "answer-box";
+    answerBox.id = "answer-" + key;
+
+    const answerText = document.createElement("p");
+    answerText.textContent = answer;
+    answerBox.appendChild(answerText);
+
+    if (code) {
+        const codeBlock = document.createElement("pre");
+        codeBlock.className = "code-example";
+        codeBlock.textContent = code;
+        answerBox.appendChild(codeBlock);
+    }
+
+    if (output) {
+        const outputBlock = document.createElement("div");
+        outputBlock.className = "output-box";
+        outputBlock.textContent = "Expected Output:\n" + output;
+        answerBox.appendChild(outputBlock);
+    }
+
+    const showButton = document.createElement("button");
+    showButton.className = "action-button";
+    showButton.textContent = "Show Answer & Explanation";
+
+    showButton.onclick = () => {
+        const visible = answerBox.classList.toggle("show");
+        showButton.textContent = visible
+            ? "Hide Answer"
+            : "Show Answer & Explanation";
+    };
+
+    const bookmarkButton = document.createElement("button");
+    bookmarkButton.className = "action-button bookmark-button";
+    bookmarkButton.textContent = "☆ Bookmark";
+
+    const storageKey = "cs-bookmarks";
+    let saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+
+    if (saved.some(item => item.key === key)) {
+        bookmarkButton.textContent = "★ Bookmarked";
+        bookmarkButton.classList.add("saved");
+    }
+
+    bookmarkButton.onclick = () => {
+        saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+
+        const exists = saved.some(item => item.key === key);
+
+        if (exists) {
+            saved = saved.filter(item => item.key !== key);
+            bookmarkButton.textContent = "☆ Bookmark";
+            bookmarkButton.classList.remove("saved");
+        } else {
+            saved.push({
+                key,
+                chapter: currentChapter,
+                title,
+                question,
+                answer,
+                code,
+                output
+            });
+
+            bookmarkButton.textContent = "★ Bookmarked";
+            bookmarkButton.classList.add("saved");
+        }
+
+        localStorage.setItem(storageKey, JSON.stringify(saved));
+    };
+
+    card.appendChild(heading);
+    card.appendChild(questionText);
+    card.appendChild(showButton);
+    card.appendChild(bookmarkButton);
+    card.appendChild(answerBox);
+
+    return card;
+}
+
+function renderContent() {
+    const chapter = chapters[currentChapter - 1];
+
+    const bookback = document.getElementById("bookbackContent");
+    const important = document.getElementById("importantContent");
+    const worked = document.getElementById("workedContent");
+    const formula = document.getElementById("formulaContent");
+
+    bookback.innerHTML = "";
+    important.innerHTML = "";
+    worked.innerHTML = "";
+    formula.innerHTML = "";
+
+    chapter.topics.forEach((topic, index) => {
+        bookback.appendChild(
+            makeCard(
+                "Practice Topic " + (index + 1),
+                "Explain the concept of " + topic + " with a suitable example.",
+                chapter.concepts[index],
+                "bookback-" + currentChapter + "-" + index
+            )
+        );
+    });
+
+    chapter.topics.forEach((topic, index) => {
+        important.appendChild(
+            makeCard(
+                "Important Question " + (index + 1),
+                "Write a detailed note on " + topic + ". Explain its purpose and importance.",
+                chapter.concepts[index],
+                "important-" + currentChapter + "-" + index
+            )
+        );
+    });
+
+    worked.appendChild(
+        makeCard(
+            "Worked Example 1 – " + chapter.title,
+            "Study the following example and explain how it works.",
+            chapter.explanation,
+            "worked-" + currentChapter,
+            chapter.example,
+            chapter.output
+        )
+    );
+
+    chapter.concepts.forEach((concept, index) => {
+        const item = document.createElement("article");
+        item.className = "content-card";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "Concept " + (index + 1);
+
+        const description = document.createElement("p");
+        description.textContent = concept;
+
+        item.appendChild(heading);
+        item.appendChild(description);
+        formula.appendChild(item);
+    });
+}
+
+function renderBookmarks() {
+    const container = document.getElementById("bookmarkContent");
+    container.innerHTML = "";
+
+    const saved = JSON.parse(
+        localStorage.getItem("cs-bookmarks") || "[]"
+    );
+
+    if (saved.length === 0) {
+        container.innerHTML =
+            '<p class="empty-message">You have not bookmarked any questions yet. Save questions using the Bookmark button.</p>';
+        return;
+    }
+
+    saved.forEach(item => {
+        const card = makeCard(
+            "Chapter " + item.chapter + " – " + item.title,
+            item.question,
+            item.answer,
+            "saved-" + item.key,
+            item.code,
+            item.output
+        );
+
+        container.appendChild(card);
+    });
+}
+
+updateChapter();
+
+</script>
+
+</body>
+</html>
